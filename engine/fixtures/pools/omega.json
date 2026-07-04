@@ -1,0 +1,13 @@
+{
+  "packId": "omega",
+  "cards": [
+    { "weight": 20, "card": { "id": "omega-snorlax", "name": "Snorlax", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 25, "fmvIsAssumption": true } },
+    { "weight": 6, "card": { "id": "omega-pikachu-vunion", "name": "Pikachu V-UNION", "grade": "PSA 10", "set": "Sword & Shield Promo", "fmvUsd": 90, "fmvIsAssumption": true } },
+    { "weight": 5, "card": { "id": "omega-greninja-ex", "name": "Greninja ex (SIR)", "grade": "PSA 10", "set": "Twilight Masquerade", "fmvUsd": 110, "fmvIsAssumption": true } },
+    { "weight": 4, "card": { "id": "omega-mewtwo-ex", "name": "Mewtwo ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 140, "fmvIsAssumption": true } },
+    { "weight": 2, "card": { "id": "omega-giratina-v", "name": "Giratina V (Alt Art)", "grade": "PSA 10", "set": "Lost Origin", "fmvUsd": 220, "fmvIsAssumption": true } },
+    { "weight": 2, "card": { "id": "omega-charizard-ex", "name": "Charizard ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 320, "fmvIsAssumption": true } },
+    { "weight": 1, "card": { "id": "omega-rayquaza-vmax", "name": "Rayquaza VMAX (Alt Art)", "grade": "PSA 10", "set": "Evolving Skies", "fmvUsd": 480, "fmvIsAssumption": true } },
+    { "weight": 1, "card": { "id": "omega-umbreon-vmax", "name": "Umbreon VMAX (Alt Art)", "grade": "PSA 10", "set": "Evolving Skies", "fmvUsd": 600, "fmvIsAssumption": true } }
+  ]
+}

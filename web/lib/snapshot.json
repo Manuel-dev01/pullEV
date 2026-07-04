@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-06-25T00:00:00Z",
+  "packs": [
+    { "id": "eden", "name": "Eden Pack", "priceUsd": 150, "priceIsAssumption": true, "tagline": "Premium BGS Black Label 10 chase pool" },
+    { "id": "omega", "name": "Omega Pack", "priceUsd": 48, "priceIsAssumption": false, "tagline": "Mid-tier graded chase — verified $48" },
+    { "id": "renacrypt", "name": "Renacrypt Pack", "priceUsd": 88, "priceIsAssumption": false, "tagline": "Renaiss x Collector Crypt collab — verified $88" }
+  ],
+  "pools": {
+    "omega": {
+      "packId": "omega",
+      "cards": [
+        { "weight": 20, "card": { "id": "omega-snorlax", "name": "Snorlax", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 25, "fmvIsAssumption": true } },
+        { "weight": 6, "card": { "id": "omega-pikachu-vunion", "name": "Pikachu V-UNION", "grade": "PSA 10", "set": "Sword & Shield Promo", "fmvUsd": 90, "fmvIsAssumption": true } },
+        { "weight": 5, "card": { "id": "omega-greninja-ex", "name": "Greninja ex (SIR)", "grade": "PSA 10", "set": "Twilight Masquerade", "fmvUsd": 110, "fmvIsAssumption": true } },
+        { "weight": 4, "card": { "id": "omega-mewtwo-ex", "name": "Mewtwo ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 140, "fmvIsAssumption": true } },
+        { "weight": 2, "card": { "id": "omega-giratina-v", "name": "Giratina V (Alt Art)", "grade": "PSA 10", "set": "Lost Origin", "fmvUsd": 220, "fmvIsAssumption": true } },
+        { "weight": 2, "card": { "id": "omega-charizard-ex", "name": "Charizard ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 320, "fmvIsAssumption": true } },
+        { "weight": 1, "card": { "id": "omega-rayquaza-vmax", "name": "Rayquaza VMAX (Alt Art)", "grade": "PSA 10", "set": "Evolving Skies", "fmvUsd": 480, "fmvIsAssumption": true } },
+        { "weight": 1, "card": { "id": "omega-umbreon-vmax", "name": "Umbreon VMAX (Alt Art)", "grade": "PSA 10", "set": "Evolving Skies", "fmvUsd": 600, "fmvIsAssumption": true } }
+      ]
+    },
+    "renacrypt": {
+      "packId": "renacrypt",
+      "cards": [
+        { "weight": 18, "card": { "id": "rena-eevee", "name": "Eevee", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 30, "fmvIsAssumption": true } },
+        { "weight": 5, "card": { "id": "rena-pikachu-vmax", "name": "Pikachu VMAX (Rainbow Rare)", "grade": "PSA 10", "set": "Vivid Voltage", "fmvUsd": 120, "fmvIsAssumption": true } },
+        { "weight": 4, "card": { "id": "rena-mew-ex", "name": "Mew ex (SIR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 130, "fmvIsAssumption": true } },
+        { "weight": 2, "card": { "id": "rena-blastoise", "name": "Blastoise (Base Set)", "grade": "PSA 9", "set": "Base Set (Unlimited)", "fmvUsd": 300, "fmvIsAssumption": true } },
+        { "weight": 2, "card": { "id": "rena-charizard-151", "name": "Charizard ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 320, "fmvIsAssumption": true } },
+        { "weight": 1, "card": { "id": "rena-charizard-base", "name": "Charizard (Base Set)", "grade": "PSA 9", "set": "Base Set (Unlimited)", "fmvUsd": 400, "fmvIsAssumption": true } },
+        { "weight": 1, "card": { "id": "rena-lugia-neo", "name": "Lugia (Neo Genesis 1st Ed)", "grade": "PSA 8", "set": "Neo Genesis", "fmvUsd": 700, "fmvIsAssumption": true } }
+      ]
+    },
+    "eden": {
+      "packId": "eden",
+      "cards": [
+        { "weight": 15, "card": { "id": "eden-pikachu", "name": "Pikachu", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 40, "fmvIsAssumption": true } },
+        { "weight": 6, "card": { "id": "eden-mewtwo-vstar", "name": "Mewtwo VSTAR (Rainbow Rare)", "grade": "PSA 10", "set": "Pokemon GO", "fmvUsd": 180, "fmvIsAssumption": true } },
+        { "weight": 4, "card": { "id": "eden-lugia-v", "name": "Lugia V (Alt Art)", "grade": "BGS 9.5", "set": "Silver Tempest", "fmvUsd": 250, "fmvIsAssumption": true } },
+        { "weight": 1, "card": { "id": "eden-giratina-v", "name": "Giratina V (Alt Art)", "grade": "BGS Black Label 10", "set": "Lost Origin", "fmvUsd": 900, "fmvIsAssumption": true } },
+        { "weight": 1, "card": { "id": "eden-charizard-vmax", "name": "Charizard VMAX (Rainbow Rare)", "grade": "BGS Black Label 10", "set": "Champion's Path", "fmvUsd": 1200, "fmvIsAssumption": true } },
+        { "weight": 1, "card": { "id": "eden-umbreon-vmax", "name": "Umbreon VMAX (Alt Art)", "grade": "BGS Black Label 10", "set": "Evolving Skies", "fmvUsd": 1500, "fmvIsAssumption": true } }
+      ]
+    }
+  }
+}

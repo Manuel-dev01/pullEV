@@ -1,0 +1,11 @@
+{
+  "packId": "eden",
+  "cards": [
+    { "weight": 15, "card": { "id": "eden-pikachu", "name": "Pikachu", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 40, "fmvIsAssumption": true } },
+    { "weight": 6, "card": { "id": "eden-mewtwo-vstar", "name": "Mewtwo VSTAR (Rainbow Rare)", "grade": "PSA 10", "set": "Pokemon GO", "fmvUsd": 180, "fmvIsAssumption": true } },
+    { "weight": 4, "card": { "id": "eden-lugia-v", "name": "Lugia V (Alt Art)", "grade": "BGS 9.5", "set": "Silver Tempest", "fmvUsd": 250, "fmvIsAssumption": true } },
+    { "weight": 1, "card": { "id": "eden-giratina-v", "name": "Giratina V (Alt Art)", "grade": "BGS Black Label 10", "set": "Lost Origin", "fmvUsd": 900, "fmvIsAssumption": true } },
+    { "weight": 1, "card": { "id": "eden-charizard-vmax", "name": "Charizard VMAX (Rainbow Rare)", "grade": "BGS Black Label 10", "set": "Champion's Path", "fmvUsd": 1200, "fmvIsAssumption": true } },
+    { "weight": 1, "card": { "id": "eden-umbreon-vmax", "name": "Umbreon VMAX (Alt Art)", "grade": "BGS Black Label 10", "set": "Evolving Skies", "fmvUsd": 1500, "fmvIsAssumption": true } }
+  ]
+}

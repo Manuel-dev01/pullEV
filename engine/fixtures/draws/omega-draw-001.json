@@ -1,0 +1,14 @@
+{
+  "id": "omega-draw-001",
+  "packId": "omega",
+  "cardId": "omega-charizard-ex",
+  "proof": {
+    "leaf": "PLACEHOLDER_LEAF_HEX",
+    "proofPath": [
+      { "hash": "PLACEHOLDER_SIBLING_1", "position": "R" },
+      { "hash": "PLACEHOLDER_SIBLING_2", "position": "L" }
+    ],
+    "publishedRoot": "PLACEHOLDER_ROOT_HEX",
+    "schemeNote": "PLACEHOLDER for Slice 2. ASSUMPTION until confirmed at coaching: leaf = sha256(drawId|cardId), parent = sha256(left||right) over raw 32-byte hashes. Real, internally-consistent proof values are generated in Slice 2 (fairness verifier)."
+  }
+}
