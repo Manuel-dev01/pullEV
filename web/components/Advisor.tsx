@@ -69,7 +69,7 @@ export function Advisor({
           <div style={{ flex: 1, overflowY: "auto", padding: 18, display: "flex", flexDirection: "column", gap: 14, minHeight: 120 }}>
             {msgs.length === 0 && (
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: C.muted, lineHeight: 1.6 }}>
-                Ask about <strong style={{ color: C.ink }}>{pack.name}</strong> — I answer only from its computed EV, distribution, pool, and Renaiss Index prices, citing each number.
+                Ask about <strong style={{ color: C.ink }}>{pack.name}</strong>. I answer only from its computed EV, distribution, pool, and Renaiss Index prices, citing each number.
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 12 }}>
                   {[`Should I rip ${pack.name}?`, "What's the chance of profit?", "What's the top card worth?"].map((q) => (
                     <button key={q} onClick={() => ask(q)} style={{ cursor: "pointer", fontFamily: "var(--font-mono)", fontSize: 10.5, color: "#c9c1e0", border: "1px solid rgba(255,255,255,.14)", borderRadius: 999, padding: "5px 10px", background: "transparent" }}>{q}</button>

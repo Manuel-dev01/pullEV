@@ -14,7 +14,7 @@ const dataAsOf = "2026-06-25T00:00:00Z"
 const mockNotes = "Deterministic offline fixtures for pool STRUCTURE. Pack prices verified where noted " +
 	"(Omega $48, Renacrypt $88); Eden price is an ASSUMPTION pending live re-confirmation. " +
 	"Most per-card FMVs are ASSUMPTIONs (PSA-10 market ranges); cards badged LIVE carry real " +
-	"Renaiss Index (beta) valuations — see each card's own source."
+	"Renaiss Index (beta) valuations. See each card's own source."
 
 // Draws are no longer static fixtures — example proofs are generated from the live
 // pool commitment (see merkle.go + the /example-proof handler).

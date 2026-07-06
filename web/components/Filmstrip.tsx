@@ -41,8 +41,8 @@ const HUES = [
 
 function verdictOf(ratio: number) {
   if (ratio >= 1.05) return { text: "RIP IT", color: C.teal, sub: "EV beats cost by a healthy margin" };
-  if (ratio >= 0.98) return { text: "MARGINAL", color: "#ffd76a", sub: "EV ≈ cost — coin-flip territory" };
-  return { text: "SKIP", color: "#ff8fa0", sub: "house edge — EV below cost" };
+  if (ratio >= 0.98) return { text: "MARGINAL", color: "#ffd76a", sub: "EV ≈ cost, coin-flip territory" };
+  return { text: "SKIP", color: "#ff8fa0", sub: "house edge, EV below cost" };
 }
 const edgePct = (ratio: number) => (ratio - 1) * 100;
 
@@ -254,7 +254,7 @@ export function Filmstrip({
             STEP ONTO<br />THE FLOOR.
           </h1>
           <p style={{ fontSize: 16, color: "#c3bad8", maxWidth: 460, lineHeight: 1.55 }}>
-            Pick a pack to send it down the line. Live EV on every one — from real Renaiss Index prices.
+            Pick a pack to send it down the line. Live EV on every one, from real Renaiss Index prices.
           </p>
           <div style={{ marginTop: 8 }}>
             <ProvenanceBadge provenance={packsProvenance} fallback={false} />
@@ -296,7 +296,7 @@ export function Filmstrip({
         </Station>
 
         {/* STATION 2 — X-RAY BAY */}
-        <Station n="02" title="Station 02 · X-Ray Bay — see through the pack">
+        <Station n="02" title="Station 02 · X-Ray Bay · see through the pack">
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, alignItems: "stretch" }}>
             <div style={{ flex: "1 1 340px", minWidth: 320, display: "flex", flexDirection: "column", gap: 16 }}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 18, alignItems: "center", borderRadius: 16, padding: "20px 22px", background: "linear-gradient(120deg,rgba(63,240,207,.08),rgba(123,123,255,.06))", border: `1px solid ${v.color}44` }}>
@@ -362,7 +362,7 @@ export function Filmstrip({
               RIP FOR {money(active.pack.priceUsd)} →
             </button>
           </div>
-          <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, marginTop: 10 }}>Informational only — not financial advice.</p>
+          <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, marginTop: 10 }}>Informational only. Not financial advice.</p>
         </Station>
 
         {/* STATION 3 — RIP CHAMBER */}
@@ -404,13 +404,13 @@ export function Filmstrip({
         </Station>
 
         {/* STATION 4 — PROOF VAULT */}
-        <Station n="04" title="Station 04 · Proof Vault — verify it yourself">
+        <Station n="04" title="Station 04 · Proof Vault · verify it yourself">
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(30px,4vw,52px)", lineHeight: 0.92, margin: "0 0 18px" }}>SEAL THE PROOF.</h1>
           {ripped ? (
             <ProofVault valid={ripped.draw} tampered={ripped.tampered} cardName={ripped.cardName} />
           ) : (
             <p style={{ color: C.muted, fontFamily: "var(--font-mono)", fontSize: 13 }}>
-              Rip a pull first (Station 03) to get a proof to verify — or{" "}
+              Rip a pull first (Station 03) to get a proof to verify, or{" "}
               <Link href="/verify" style={{ color: C.teal }}>paste your own on /verify</Link>.
             </p>
           )}

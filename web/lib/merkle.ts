@@ -170,7 +170,7 @@ export async function buildCommitment(cards: PoolEntry[]): Promise<{
       schemeNote:
         "ASSUMED SCHEME (client-built): SHA-256 domain-separated; leaf=SHA256(0x00||preimage), node=SHA256(0x01||l||r).",
       rootNote:
-        "Root computed in your browser over the bundled snapshot pool — not Renaiss's on-chain root.",
+        "Root computed in your browser over the bundled snapshot pool, not Renaiss's on-chain root.",
     };
   };
 

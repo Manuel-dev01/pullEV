@@ -1,0 +1,9 @@
+# Keep secrets, runtime cache, tests, and local binaries out of the build context.
+.env
+.env.*
+!.env.example
+cache/
+*_test.go
+*.exe
+engine
+bin/

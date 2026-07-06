@@ -18,10 +18,10 @@ import (
 //	odd node counts duplicate the last node up a level.
 //
 // web/lib/merkle.ts implements this byte-for-byte identically.
-const merkleSchemeNote = "ASSUMED SCHEME (pending Renaiss confirmation): SHA-256, domain-separated — " +
+const merkleSchemeNote = "ASSUMED SCHEME (pending Renaiss confirmation): SHA-256, domain-separated: " +
 	"leaf=SHA256(0x00||\"cardId:fmv:weight\"), node=SHA256(0x01||left||right), odd nodes duplicated."
 
-const rootNote = "Root computed by PullEV over the labeled pool — not Renaiss's on-chain root."
+const rootNote = "Root computed by PullEV over the labeled pool, not Renaiss's on-chain root."
 
 const (
 	leafPrefix byte = 0x00

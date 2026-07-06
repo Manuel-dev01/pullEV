@@ -126,7 +126,7 @@ func TestComputeEV_Caveats(t *testing.T) {
 	for _, s := range c {
 		joined += s + "\n"
 	}
-	for _, want := range []string{"All card FMVs are assumptions", "price is unconfirmed", "not financial advice"} {
+	for _, want := range []string{"All card FMVs are assumptions", "price is unconfirmed", "financial advice"} {
 		if !strings.Contains(joined, want) {
 			t.Errorf("caveats missing %q; got:\n%s", want, joined)
 		}

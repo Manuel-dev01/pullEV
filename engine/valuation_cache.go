@@ -102,14 +102,14 @@ func (vc *ValuationCache) Get(ctx context.Context, cert string) (Valuation, Prov
 	if ok {
 		note := "committed seed (offline fallback)"
 		if err == ErrRateLimited {
-			note = "rate limit reached — committed seed fallback"
+			note = "rate limit reached, committed seed fallback"
 		}
 		return s, valProv(s, note), true
 	}
 
 	origin := "not found"
 	if err == ErrRateLimited {
-		origin = "rate limit reached — no cached value"
+		origin = "rate limit reached, no cached value"
 	}
 	return v, Provenance{
 		Source:     SourceIndex,
@@ -128,7 +128,7 @@ func valProv(v Valuation, origin string) Provenance {
 		Source:     SourceIndex,
 		FetchedAt:  asOf,
 		IsOfficial: true,
-		Notes: "Renaiss Index API (beta) — experimental reference, " + origin +
+		Notes: "Renaiss Index API (beta), experimental reference, " + origin +
 			". Confidence: " + v.Confidence + ".",
 	}
 }

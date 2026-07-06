@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getPacks, getEV } from "@/lib/api";
+import { ProvenanceBadge } from "@/components/ProvenanceBadge";
 import type { EVResult, Pack } from "@shared/types";
 
 // FOIL marketing landing. Server-rendered with REAL featured-pack EV + marquee.
@@ -18,6 +19,9 @@ export default async function Landing() {
   }
   evs.sort((a, b) => b.ev.evToCostRatio - a.ev.evToCostRatio);
   const featured = evs[0];
+  // When the engine is unreachable, every number below comes from the bundled
+  // snapshot. Surface that honestly instead of claiming "computed live".
+  const offline = packs.fallback;
 
   return (
     <div style={{ fontFamily: "var(--font-sans)", color: "#f6f2fb", background: "#08070c", overflowX: "hidden" }}>
@@ -43,15 +47,11 @@ export default async function Landing() {
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px 40px 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 720, marginTop: 24 }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".24em", textTransform: "uppercase", color: "#c9c1e0", border: "1px solid rgba(255,255,255,.14)", borderRadius: 999, padding: "7px 14px", marginBottom: 26 }}>
-                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#3ff0cf", boxShadow: "0 0 10px #3ff0cf" }} />
-                Provably-fair gacha, for Renaiss
-              </div>
               <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(64px,9vw,132px)", lineHeight: 0.86, margin: 0, textShadow: "0 8px 60px rgba(0,0,0,.6)" }}>
                 KNOW THE<br />EV BEFORE<br />YOU <span style={{ background: "linear-gradient(115deg,#ff5fb4,#c95cf5 34%,#7b7bff 60%,#3ff0cf 80%)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>RIP.</span>
               </h1>
               <p style={{ maxWidth: 460, fontSize: 17, lineHeight: 1.6, color: "#c3bad8", margin: "26px 0 30px" }}>
-                Live expected value on every Infinite Gacha pack — from real Renaiss Index prices — then verify any pull&apos;s fairness yourself, client-side. Trust the math, not the claim.
+                Live expected value on every Infinite Gacha pack, from real Renaiss Index prices, then verify any pull&apos;s fairness yourself, client-side. Trust the math, not the claim.
               </p>
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
                 <Link href="/app" style={{ ...heroBtn, background: GRAD, color: "#08070c" }}>RIP THE FIRST PACK</Link>
@@ -80,7 +80,14 @@ export default async function Landing() {
                     <Stat label="MEDIAN" value={money(featured.ev.distribution.median)} />
                     <Stat label="TOP" value={money(featured.ev.distribution.p90)} color="#ff5fb4" />
                   </div>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "#6f6885", marginTop: 12 }}>computed live by PullEV · not financial advice</div>
+                  {offline && (
+                    <div style={{ marginTop: 12 }}>
+                      <ProvenanceBadge provenance={packs.provenance} fallback />
+                    </div>
+                  )}
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: offline ? "#f0b23f" : "#6f6885", marginTop: 12 }}>
+                    {offline ? "bundled snapshot · live engine offline · not financial advice" : "computed live by PullEV · not financial advice"}
+                  </div>
                 </div>
               </div>
             )}
@@ -111,7 +118,7 @@ export default async function Landing() {
       <div id="how" style={{ maxWidth: 1300, margin: "0 auto", padding: "120px 40px 80px" }}>
         <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 48 }}>Two questions every ripper asks</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 30, alignItems: "flex-start" }}>
-          <QCard n="01" title={<>SHOULD I RIP<br />THIS PACK?</>} body="Live EV from the pack's vault-backed pool and Renaiss's FMV/CMV oracle, with the whole value distribution — not just an average. See your edge, your odds of profit, and the fat tail before you spend a cent." tags={["EV vs cost", "Full distribution", "Oracle prices"]} border="rgba(255,255,255,.09)" glow="rgba(201,92,245,.35)" />
+          <QCard n="01" title={<>SHOULD I RIP<br />THIS PACK?</>} body="Live EV from the pack's vault-backed pool and Renaiss's FMV/CMV oracle, with the whole value distribution, not just an average. See your edge, your odds of profit, and the fat tail before you spend a cent." tags={["EV vs cost", "Full distribution", "Oracle prices"]} border="rgba(255,255,255,.09)" glow="rgba(201,92,245,.35)" />
           <div style={{ marginTop: 70, flex: 1, minWidth: 340 }}>
             <QCard n="02" title={<>WAS MY<br />PULL FAIR?</>} body="An independent Merkle-proof verifier recomputes your draw's inclusion proof entirely in your browser. If the root matches Renaiss's published commitment, it's provably fair. No server, no trust required." tags={["Client-side", "Merkle proof", "Zero trust"]} border="rgba(63,240,207,.18)" glow="rgba(63,240,207,.28)" />
           </div>
@@ -142,11 +149,11 @@ export default async function Landing() {
           <div style={{ flex: 1, minWidth: 300 }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 18 }}>Vault-backed pool</div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,5vw,64px)", lineHeight: 0.94, margin: "0 0 22px" }}>EVERY PULL IS<br />BACKED BY REAL<br />INVENTORY.</h2>
-            <p style={{ fontSize: 16, lineHeight: 1.65, color: "#c3bad8", maxWidth: 480 }}>The EV isn&apos;t a vibe — it&apos;s computed against real graded cards, each priced by the Renaiss Index oracle (beta). PullEV reads the same valuations, so the number you see is grounded in real market data.</p>
+            <p style={{ fontSize: 16, lineHeight: 1.65, color: "#c3bad8", maxWidth: 480 }}>The EV isn&apos;t a vibe. It&apos;s computed against real graded cards, each priced by the Renaiss Index oracle (beta). PullEV reads the same valuations, so the number you see is grounded in real market data.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, marginTop: 30 }}>
               <VaultStat big={`${evs.length}`} small="packs analyzed" />
-              <VaultStat big={featured ? `${edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}${edgePct(featured.ev.evToCostRatio).toFixed(0)}%` : "—"} small={`top edge (${featured?.pack.name ?? ""})`} color="#3ff0cf" />
-              <VaultStat big="live" small="oracle sync" />
+              <VaultStat big={featured ? `${edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}${edgePct(featured.ev.evToCostRatio).toFixed(0)}%` : "N/A"} small={`top edge (${featured?.pack.name ?? ""})`} color="#3ff0cf" />
+              <VaultStat big={offline ? "offline" : "live"} small={offline ? "bundled snapshot" : "oracle sync"} color={offline ? "#f0b23f" : undefined} />
             </div>
           </div>
         </div>
@@ -158,7 +165,7 @@ export default async function Landing() {
           <div style={{ flex: 1, minWidth: 300 }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 18 }}>AI Pull Advisor</div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,5vw,64px)", lineHeight: 0.94, margin: "0 0 22px" }}>EVERY VERDICT,<br />IN PLAIN WORDS.</h2>
-            <p style={{ fontSize: 16, lineHeight: 1.65, color: "#c3bad8", maxWidth: 460 }}>Ask whether a pack is worth it and the advisor answers with the math — grounded, and citing every number back to the pool, the oracle, or the proof. It refuses anything it can&apos;t source. No hype it can&apos;t back up.</p>
+            <p style={{ fontSize: 16, lineHeight: 1.65, color: "#c3bad8", maxWidth: 460 }}>Ask whether a pack is worth it and the advisor answers with the math: grounded, and citing every number back to the pool, the oracle, or the proof. It refuses anything it can&apos;t source. No hype it can&apos;t back up.</p>
             <Link href="/app" style={{ ...heroBtn, display: "inline-block", marginTop: 24, background: GRAD, color: "#08070c" }}>Ask the advisor →</Link>
           </div>
           <div style={{ flex: 1, minWidth: 300, borderRadius: 22, padding: 22, background: "linear-gradient(180deg,#12101a,#0b0912)", border: "1px solid rgba(255,255,255,.1)" }}>

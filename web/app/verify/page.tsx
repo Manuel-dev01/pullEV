@@ -41,18 +41,18 @@ export default async function VerifyPage({
             </h1>
             <p style={{ color: "#c3bad8" }} className="mt-3 max-w-xl text-sm leading-relaxed">
               Recompute a draw&apos;s Merkle inclusion proof in your own browser. If the root you compute
-              matches the published root, the card and its odds were committed — provably, without trusting
+              matches the published root, the card and its odds were committed, provably, without trusting
               PullEV or Renaiss.
             </p>
           </div>
           <div className="flex flex-col items-end gap-2">
             {valid && <ProvenanceBadge provenance={valid.provenance} fallback={valid.fallback} />}
             <Link
-              href={activeId ? `/?pack=${activeId}` : "/"}
+              href="/"
               style={{ fontFamily: "var(--font-mono)", color: "#8a83a0" }}
               className="text-xs hover:text-neutral-300"
             >
-              ← back to EV
+              ← back to home
             </Link>
           </div>
         </div>
@@ -95,9 +95,9 @@ export default async function VerifyPage({
 
         {/* Honesty footer */}
         <p style={{ color: "#6f6885" }} className="mt-8 text-xs leading-relaxed">
-          The example proofs are labeled <strong style={{ color: "#9c94b6" }}>EXAMPLE</strong> — they are
+          The example proofs are labeled <strong style={{ color: "#9c94b6" }}>EXAMPLE</strong>: they are
           not real Renaiss draws. The published root is computed by PullEV over a labeled pool
-          (mock/assumption data), not Renaiss&apos;s on-chain root. Renaiss&apos;s current builder tooling
+          (PullEV assumption data), not Renaiss&apos;s on-chain root. Renaiss&apos;s current builder tooling
           exposes card valuations but not draw proofs; when it does, this same verifier checks them
           unmodified. The verification math is genuine and runs entirely client-side.
         </p>

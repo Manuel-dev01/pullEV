@@ -129,7 +129,7 @@ func handleEV(w http.ResponseWriter, r *http.Request) {
 		FetchedAt:  time.Now().UTC().Format(time.RFC3339),
 		IsOfficial: false,
 		Notes: "EV computed by the PullEV engine from " + string(activeAdapter.Source()) +
-			" inputs. Informational only — not financial advice.",
+			" inputs. Informational only. Not financial advice.",
 	}
 	writeJSON(w, http.StatusOK, Sourced[EVResult]{Data: result, Provenance: outProv})
 }
@@ -177,7 +177,7 @@ func handleExampleProof(w http.ResponseWriter, r *http.Request) {
 			proof.PublishedRoot = corruptHexChar(proof.PublishedRoot)
 		}
 		label = "EXAMPLE (tampered) · should FAIL verification"
-		note = "Deliberately corrupted proof — recomputation must NOT match the root. Demonstrates MISMATCH."
+		note = "Deliberately corrupted proof: recomputation must NOT match the root. Demonstrates MISMATCH."
 	}
 
 	draw := Draw{

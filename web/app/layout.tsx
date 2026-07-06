@@ -22,7 +22,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PullEV — provably-fair gacha EV & fairness",
+  title: "PullEV · provably-fair gacha EV & fairness",
   description:
     "Expected-value verdicts and independent, client-side fairness verification for Renaiss Infinite Gacha packs.",
 };

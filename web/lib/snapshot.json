@@ -13,14 +13,14 @@
       "name": "Omega Pack",
       "priceUsd": 48,
       "priceIsAssumption": false,
-      "tagline": "Mid-tier graded chase — verified $48"
+      "tagline": "Mid-tier graded chase, verified $48"
     },
     {
       "id": "renacrypt",
       "name": "Renacrypt Pack",
       "priceUsd": 88,
       "priceIsAssumption": false,
-      "tagline": "Renaiss x Collector Crypt collab — verified $88"
+      "tagline": "Renaiss x Collector Crypt collab, verified $88"
     }
   ],
   "pools": {

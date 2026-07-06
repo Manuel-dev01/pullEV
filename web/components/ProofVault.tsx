@@ -16,7 +16,7 @@ const C = {
 };
 
 const short = (h: string, n = 10) =>
-  !h ? "—" : h.length <= n * 2 + 1 ? h : `${h.slice(0, n)}…${h.slice(-6)}`;
+  !h ? "N/A" : h.length <= n * 2 + 1 ? h : `${h.slice(0, n)}…${h.slice(-6)}`;
 
 type Source = { key: "valid" | "tampered" | "paste"; label: string };
 const SOURCES: Source[] = [
@@ -108,7 +108,7 @@ export function ProofVault({
         }}
       >
         ⛨ Runs entirely in your browser via Web Crypto (SHA-256). PullEV&apos;s server is not involved in
-        this check — recompute it yourself.
+        this check. Recompute it yourself.
       </div>
 
       {/* Source selector */}
@@ -287,13 +287,13 @@ export function ProofVault({
                   color: verified ? C.teal : C.pink,
                 }}
               >
-                {verified ? "VERIFIED — ROOT MATCH ✓" : "MISMATCH — DO NOT TRUST ✕"}
+                {verified ? "VERIFIED · ROOT MATCH ✓" : "MISMATCH · DO NOT TRUST ✕"}
               </div>
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, color: C.muted, marginTop: 6 }}>
                 {verified
                   ? "your browser's recomputed root equals the published root"
                   : !result.leafOk
-                    ? "leaf does not match its preimage — the committed card/odds were altered"
+                    ? "leaf does not match its preimage; the committed card/odds were altered"
                     : "recomputed root differs from the published root"}
               </div>
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, marginTop: 8 }}>

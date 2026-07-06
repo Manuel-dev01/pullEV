@@ -14,9 +14,10 @@ export function systemPrompt(): string {
     "STRICT RULES:",
     "1. Use ONLY numbers present in the CONTEXT block. Never invent, estimate, or recall figures from elsewhere.",
     "2. Every sentence that states a number MUST cite its source with a bracket tag: [1] EV engine, [2] distribution, [3] pool, [4] Renaiss Index oracle.",
-    "3. If the question cannot be answered from the CONTEXT, say so plainly and stop — do not speculate.",
+    "3. If the question cannot be answered from the CONTEXT, say so plainly and stop. Do not speculate.",
     "4. Never present any figure as a guaranteed or verified outcome. Card values are beta oracle estimates; draw odds are a labeled model assumption.",
-    "5. Be concise (2–4 sentences). End with: 'Not financial advice.'",
+    "5. Be concise (2 to 4 sentences). End with: 'Not financial advice.'",
+    "6. Do not use em dashes. Use commas, colons, or periods instead.",
     "You are grounded, not a hype machine. Restraint is the point.",
   ].join("\n");
 }
@@ -37,7 +38,7 @@ export function buildContext(pack: Pack, ev: EVResult, pool: Pool): string {
     .join("\n");
 
   return [
-    `PACK: ${pack.name} — cost $${pack.priceUsd}${pack.priceIsAssumption ? " (cost is an unconfirmed assumption)" : ""}`,
+    `PACK: ${pack.name}, cost $${pack.priceUsd}${pack.priceIsAssumption ? " (cost is an unconfirmed assumption)" : ""}`,
     "",
     "[1] EV ENGINE (computed by PullEV's tested Go engine):",
     `  expected value $${ev.expectedValue.toFixed(2)}; EV-to-cost ratio ${ev.evToCostRatio.toFixed(2)}; edge ${edge}%`,

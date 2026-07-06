@@ -58,7 +58,7 @@ export default async function ValuePage({
             </h1>
             <p style={{ color: "#c3bad8" }} className="mt-3 max-w-xl text-sm leading-relaxed">
               Enter a PSA/CGC/BGS cert number to pull its <strong>real</strong> valuation from the Renaiss
-              Index API — the same oracle that grounds our EV. Data is beta/experimental, cached, and
+              Index API, the same oracle that grounds our EV. Data is beta/experimental, cached, and
               labeled.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default async function ValuePage({
                     {money(v.priceUsd)}
                   </div>
                   <div style={{ fontFamily: "var(--font-mono)", color: "#9c94b6" }} className="mt-1 text-xs">
-                    confidence <span className="text-neutral-200">{v.confidence || "—"}</span>
+                    confidence <span className="text-neutral-200">{v.confidence || "N/A"}</span>
                     {typeof v.deltaPct === "number" && (
                       <>
                         {" · trend "}
@@ -164,7 +164,7 @@ export default async function ValuePage({
               </div>
 
               <p style={{ color: "#6f6885" }} className="mt-5 text-[11px] leading-relaxed">
-                Source: Renaiss Index API (beta) — experimental reference, not a final verified market fact.
+                Source: Renaiss Index API (beta), experimental reference, not a final verified market fact.
                 {v.rateRemaining >= 0 && ` API calls remaining today: ${v.rateRemaining}.`}
               </p>
             </div>
@@ -188,7 +188,7 @@ export default async function ValuePage({
           </p>
         )}
         <p style={{ color: "#4f495e" }} className="mt-10 text-[11px] leading-relaxed">
-          Values are Renaiss Index (beta) estimates — experimental references, not verified market facts.
+          Values are Renaiss Index (beta) estimates, experimental references, not verified market facts.
           Independent, unofficial tooling for Renaiss · not financial advice. Card names for identification
           only; Pokémon / One Piece marks © their respective owners.
         </p>

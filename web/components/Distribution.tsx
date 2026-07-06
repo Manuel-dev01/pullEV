@@ -28,7 +28,7 @@ export function Distribution({
           return (
             <div
               key={i}
-              title={`$${Math.round((i / BINS) * max)}–$${Math.round(((i + 1) / BINS) * max)} · ${(b * 100).toFixed(1)}%`}
+              title={`$${Math.round((i / BINS) * max)}-$${Math.round(((i + 1) / BINS) * max)} · ${(b * 100).toFixed(1)}%`}
               style={{
                 flex: 1,
                 height: `${h}%`,

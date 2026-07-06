@@ -22,7 +22,7 @@ function snapshotProvenance(): Provenance {
     fetchedAt: snapshot.generatedAt,
     isOfficial: false,
     notes:
-      "BUNDLED SNAPSHOT — live engine unreachable, serving offline fallback data. " +
+      "BUNDLED SNAPSHOT, live engine unreachable, serving offline fallback data. " +
       "Same deterministic fixtures; card FMVs and Eden price are ASSUMPTIONs.",
   };
 }
@@ -113,7 +113,7 @@ export async function lookupCert(cert: string): Promise<Fetched<Valuation> | nul
         source: "Index",
         fetchedAt: seed.lastSaleAt,
         isOfficial: true,
-        notes: `Renaiss Index API (beta) — bundled seed (engine unreachable). Confidence: ${seed.confidence}.`,
+        notes: `Renaiss Index API (beta), bundled seed (engine unreachable). Confidence: ${seed.confidence}.`,
       },
       fallback: true,
     };

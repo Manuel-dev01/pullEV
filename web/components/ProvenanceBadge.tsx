@@ -8,9 +8,9 @@ function label(p: Provenance, fallback: boolean): string {
   if (p.source === "Index") return "OFFICIAL · Renaiss Index (beta)";
   if (p.isOfficial) return "OFFICIAL";
   if (fallback) return "BUNDLED SNAPSHOT";
-  if (p.source === "Mock") return "MOCK DATA";
-  if (p.source === "Public") return "UNOFFICIAL · SCRAPED";
-  return "SDK";
+  // Pool membership + weights are a PullEV model (labeled assumptions); per-card
+  // prices carry their own LIVE / ASSUMED tag. Renaiss exposes no pool/odds API.
+  return "PULLEV MODEL";
 }
 
 function tone(p: Provenance, fallback: boolean): string {
@@ -44,7 +44,7 @@ export function ProvenanceBadge({
       <span className="text-current/60">· {fmtTime(provenance.fetchedAt)}</span>
       {/* Hover surfaces the full provenance note — the "reachable provenance" rule. */}
       <span className="pointer-events-none absolute left-0 top-full z-10 mt-1 hidden w-72 rounded-md border border-white/10 bg-neutral-900 p-2 text-xs font-normal leading-snug text-neutral-300 shadow-xl group-hover:block">
-        <strong className="text-neutral-100">{provenance.source} source.</strong>{" "}
+        <strong className="text-neutral-100">{label(provenance, fallback)}.</strong>{" "}
         {provenance.notes}
       </span>
     </span>
