@@ -157,6 +157,8 @@ func deriveCaveats(in EVInput) []string {
 	if in.PriceIsAssumption {
 		caveats = append(caveats, "Pack price is unconfirmed and pending live verification.")
 	}
+	caveats = append(caveats,
+		"Pull odds (weights) and the commons tier are PullEV assumptions — Renaiss exposes no pool/odds API.")
 	caveats = append(caveats, "Model assumes one card drawn per pack. Informational only — not financial advice.")
 	return caveats
 }

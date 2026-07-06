@@ -9,7 +9,7 @@ const money = (n: number) =>
 // Curated REAL cert examples (validated against the live Renaiss Index API).
 const EXAMPLES = [{ cert: "PSA149595098", label: "Roronoa Zoro · PSA 10" }];
 
-function Sparkline({ points }: { points: number[] }) {
+function Sparkline({ points }: { points: number[] | null }) {
   if (!points || points.length < 2) return null;
   const w = 220;
   const h = 44;

@@ -30,6 +30,9 @@ func main() {
 		case "refresh":
 			runRefresh()
 			return
+		case "commons":
+			runCommons()
+			return
 		}
 	}
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T00:00:00Z",
+  "generatedAt": "2026-07-06T12:00:00.000Z",
   "packs": [
     {
       "id": "eden",
@@ -13,20 +13,72 @@
       "name": "Omega Pack",
       "priceUsd": 48,
       "priceIsAssumption": false,
-      "tagline": "Mid-tier graded chase \u2014 verified $48"
+      "tagline": "Mid-tier graded chase — verified $48"
     },
     {
       "id": "renacrypt",
       "name": "Renacrypt Pack",
       "priceUsd": 88,
       "priceIsAssumption": false,
-      "tagline": "Renaiss x Collector Crypt collab \u2014 verified $88"
+      "tagline": "Renaiss x Collector Crypt collab — verified $88"
     }
   ],
   "pools": {
     "eden": {
       "packId": "eden",
       "cards": [
+        {
+          "card": {
+            "id": "eden-common-uta",
+            "name": "Uta",
+            "grade": "PSA 9",
+            "set": "One Piece Japanese OP05 Awakening Of The New Era",
+            "fmvUsd": 22,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 340
+        },
+        {
+          "card": {
+            "id": "eden-common-shanks",
+            "name": "Shanks",
+            "grade": "PSA 9",
+            "set": "Romance Dawn",
+            "fmvUsd": 48,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 200
+        },
+        {
+          "card": {
+            "id": "eden-common-leafeon-ex",
+            "name": "Leafeon Ex",
+            "grade": "PSA 9",
+            "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+            "fmvUsd": 66,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 110
+        },
+        {
+          "card": {
+            "id": "eden-common-jolteon-ex",
+            "name": "Jolteon Ex",
+            "grade": "PSA 9",
+            "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+            "fmvUsd": 88,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 55
+        },
         {
           "card": {
             "id": "eden-monkeydluffy-wanted-poster-sp",
@@ -41,7 +93,7 @@
             "fmvConfidence": "low",
             "fmvDeltaPct": 2.82
           },
-          "weight": 80
+          "weight": 40
         },
         {
           "card": {
@@ -57,7 +109,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -17.71
           },
-          "weight": 22
+          "weight": 24
         },
         {
           "card": {
@@ -73,7 +125,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -25.34
           },
-          "weight": 9
+          "weight": 14
         },
         {
           "card": {
@@ -89,7 +141,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -28.54
           },
-          "weight": 4
+          "weight": 8
         },
         {
           "card": {
@@ -105,7 +157,7 @@
             "fmvConfidence": "medium",
             "fmvDeltaPct": -65.08
           },
-          "weight": 2
+          "weight": 5
         },
         {
           "card": {
@@ -121,13 +173,65 @@
             "fmvConfidence": "medium",
             "fmvDeltaPct": -18.81
           },
-          "weight": 1
+          "weight": 3
         }
       ]
     },
     "omega": {
       "packId": "omega",
       "cards": [
+        {
+          "card": {
+            "id": "omega-common-psyduck",
+            "name": "Psyduck",
+            "grade": "PSA 9",
+            "set": "Pokemon Japanese M2a-Mega Dream Ex",
+            "fmvUsd": 7,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 120
+        },
+        {
+          "card": {
+            "id": "omega-common-haunter",
+            "name": "Haunter",
+            "grade": "PSA 9",
+            "set": "Pokemon Japanese Mbg Mega Starter Set",
+            "fmvUsd": 12,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 90
+        },
+        {
+          "card": {
+            "id": "omega-common-meowth-ex",
+            "name": "Meowth Ex",
+            "grade": "PSA 9",
+            "set": "Nullifying Zero",
+            "fmvUsd": 19,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 60
+        },
+        {
+          "card": {
+            "id": "omega-common-eevee-ex",
+            "name": "Eevee Ex",
+            "grade": "PSA 9",
+            "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+            "fmvUsd": 30,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 40
+        },
         {
           "card": {
             "id": "omega-ionos-wattrel",
@@ -142,7 +246,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -10.98
           },
-          "weight": 80
+          "weight": 50
         },
         {
           "card": {
@@ -158,7 +262,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -16.62
           },
-          "weight": 22
+          "weight": 34
         },
         {
           "card": {
@@ -174,7 +278,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -14.17
           },
-          "weight": 9
+          "weight": 24
         },
         {
           "card": {
@@ -190,7 +294,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -15.06
           },
-          "weight": 4
+          "weight": 16
         },
         {
           "card": {
@@ -206,7 +310,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -30.56
           },
-          "weight": 2
+          "weight": 12
         },
         {
           "card": {
@@ -222,7 +326,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -16.87
           },
-          "weight": 1
+          "weight": 12
         },
         {
           "card": {
@@ -238,7 +342,7 @@
             "fmvConfidence": "high",
             "fmvDeltaPct": -22.45
           },
-          "weight": 1
+          "weight": 8
         },
         {
           "card": {
@@ -254,13 +358,65 @@
             "fmvConfidence": "medium",
             "fmvDeltaPct": -15.33
           },
-          "weight": 1
+          "weight": 5
         }
       ]
     },
     "renacrypt": {
       "packId": "renacrypt",
       "cards": [
+        {
+          "card": {
+            "id": "rena-common-nami",
+            "name": "Nami",
+            "grade": "PSA 9",
+            "set": "Romance Dawn",
+            "fmvUsd": 9,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 180
+        },
+        {
+          "card": {
+            "id": "rena-common-perona",
+            "name": "Perona",
+            "grade": "PSA 9",
+            "set": "Prize Cards Alternate Art",
+            "fmvUsd": 16,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 120
+        },
+        {
+          "card": {
+            "id": "rena-common-sabo",
+            "name": "Sabo",
+            "grade": "PSA 9",
+            "set": "Winner Prize For Sealed Battle 2023 Vol 1",
+            "fmvUsd": 27,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 70
+        },
+        {
+          "card": {
+            "id": "rena-common-gear-two",
+            "name": "Gear Two",
+            "grade": "PSA 9",
+            "set": "A Fist Of Divine Speed",
+            "fmvUsd": 44,
+            "fmvIsAssumption": true,
+            "fmvSource": "Mock",
+            "fmvConfidence": "assumed"
+          },
+          "weight": 40
+        },
         {
           "card": {
             "id": "rena-boa-hancock",
@@ -275,7 +431,7 @@
             "fmvConfidence": "low",
             "fmvDeltaPct": -16.89
           },
-          "weight": 80
+          "weight": 60
         },
         {
           "card": {
@@ -291,7 +447,7 @@
             "fmvConfidence": "low",
             "fmvDeltaPct": 0.64
           },
-          "weight": 22
+          "weight": 36
         },
         {
           "card": {
@@ -307,7 +463,7 @@
             "fmvConfidence": "low",
             "fmvDeltaPct": 19.29
           },
-          "weight": 9
+          "weight": 20
         },
         {
           "card": {
@@ -323,7 +479,7 @@
             "fmvConfidence": "medium",
             "fmvDeltaPct": -10.42
           },
-          "weight": 4
+          "weight": 12
         },
         {
           "card": {
@@ -339,7 +495,7 @@
             "fmvConfidence": "medium",
             "fmvDeltaPct": 34.42
           },
-          "weight": 2
+          "weight": 7
         },
         {
           "card": {
@@ -355,7 +511,7 @@
             "fmvConfidence": "low",
             "fmvDeltaPct": -6.34
           },
-          "weight": 1
+          "weight": 5
         },
         {
           "card": {
@@ -371,7 +527,7 @@
             "fmvConfidence": "medium",
             "fmvDeltaPct": -33.89
           },
-          "weight": 1
+          "weight": 3
         },
         {
           "card": {
@@ -387,7 +543,7 @@
             "fmvConfidence": "medium",
             "fmvDeltaPct": -18.81
           },
-          "weight": 1
+          "weight": 2
         }
       ]
     }

@@ -3,6 +3,58 @@
   "cards": [
     {
       "card": {
+        "id": "eden-common-uta",
+        "name": "Uta",
+        "grade": "PSA 9",
+        "set": "One Piece Japanese OP05 Awakening Of The New Era",
+        "fmvUsd": 22,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 340
+    },
+    {
+      "card": {
+        "id": "eden-common-shanks",
+        "name": "Shanks",
+        "grade": "PSA 9",
+        "set": "Romance Dawn",
+        "fmvUsd": 48,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 200
+    },
+    {
+      "card": {
+        "id": "eden-common-leafeon-ex",
+        "name": "Leafeon Ex",
+        "grade": "PSA 9",
+        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "fmvUsd": 66,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 110
+    },
+    {
+      "card": {
+        "id": "eden-common-jolteon-ex",
+        "name": "Jolteon Ex",
+        "grade": "PSA 9",
+        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "fmvUsd": 88,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 55
+    },
+    {
+      "card": {
         "id": "eden-monkeydluffy-wanted-poster-sp",
         "name": "Monkey.D.Luffy WANTED POSTER SP",
         "grade": "PSA 10",
@@ -15,7 +67,7 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": 2.82
       },
-      "weight": 80
+      "weight": 40
     },
     {
       "card": {
@@ -31,7 +83,7 @@
         "fmvConfidence": "high",
         "fmvDeltaPct": -17.71
       },
-      "weight": 22
+      "weight": 24
     },
     {
       "card": {
@@ -47,7 +99,7 @@
         "fmvConfidence": "high",
         "fmvDeltaPct": -25.34
       },
-      "weight": 9
+      "weight": 14
     },
     {
       "card": {
@@ -63,7 +115,7 @@
         "fmvConfidence": "high",
         "fmvDeltaPct": -28.54
       },
-      "weight": 4
+      "weight": 8
     },
     {
       "card": {
@@ -79,7 +131,7 @@
         "fmvConfidence": "medium",
         "fmvDeltaPct": -65.08
       },
-      "weight": 2
+      "weight": 5
     },
     {
       "card": {
@@ -95,7 +147,7 @@
         "fmvConfidence": "medium",
         "fmvDeltaPct": -18.81
       },
-      "weight": 1
+      "weight": 3
     }
   ]
 }

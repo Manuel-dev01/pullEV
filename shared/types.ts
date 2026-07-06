@@ -137,8 +137,8 @@ export interface Valuation {
   confidence: string;
   /** trend % */
   deltaPct: number;
-  /** sparkline points (USD) */
-  spark: number[];
+  /** sparkline points (USD); null when the source has no recent-sale series */
+  spark: number[] | null;
   lastSaleAt: string;
   imageUrl?: string;
   /** X-RateLimit-Remaining, -1 if unknown */
