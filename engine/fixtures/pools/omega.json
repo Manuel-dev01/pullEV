@@ -1,13 +1,133 @@
 {
   "packId": "omega",
   "cards": [
-    { "weight": 80, "card": { "id": "omega-snorlax", "name": "Snorlax", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 25, "fmvIsAssumption": true } },
-    { "weight": 10, "card": { "id": "omega-pikachu-vunion", "name": "Pikachu V-UNION", "grade": "PSA 10", "set": "Sword & Shield Promo", "fmvUsd": 90, "fmvIsAssumption": true } },
-    { "weight": 4, "card": { "id": "omega-greninja-ex", "name": "Greninja ex (SIR)", "grade": "PSA 10", "set": "Twilight Masquerade", "fmvUsd": 110, "fmvIsAssumption": true } },
-    { "weight": 2, "card": { "id": "omega-mewtwo-ex", "name": "Mewtwo ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 140, "fmvIsAssumption": true } },
-    { "weight": 1, "card": { "id": "omega-giratina-v", "name": "Giratina V (Alt Art)", "grade": "PSA 10", "set": "Lost Origin", "fmvUsd": 220, "fmvIsAssumption": true } },
-    { "weight": 1, "card": { "id": "omega-charizard-ex", "name": "Charizard ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 320, "fmvIsAssumption": true } },
-    { "weight": 1, "card": { "id": "omega-rayquaza-vmax", "name": "Rayquaza VMAX (Alt Art)", "grade": "PSA 10", "set": "Evolving Skies", "fmvUsd": 480, "fmvIsAssumption": true } },
-    { "weight": 1, "card": { "id": "omega-umbreon-vmax", "name": "Umbreon VMAX (Alt Art)", "grade": "PSA 10", "set": "Evolving Skies", "fmvUsd": 600, "fmvIsAssumption": true } }
+    {
+      "card": {
+        "id": "omega-ionos-wattrel",
+        "name": "Iono's Wattrel",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Sv-P Promo",
+        "fmvUsd": 39.72,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/items/8c640637-4d42-4418-a050-1938e630dafb.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-05T07:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -10.98
+      },
+      "weight": 80
+    },
+    {
+      "card": {
+        "id": "omega-mega-lucario-ex",
+        "name": "Mega Lucario Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 70.18,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140264280/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T05:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -16.62
+      },
+      "weight": 22
+    },
+    {
+      "card": {
+        "id": "omega-pikachu",
+        "name": "Pikachu",
+        "grade": "PSA 10",
+        "set": "McDONALD'S Japanese M-P Promo",
+        "fmvUsd": 87.7,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA132422841/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T07:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -14.17
+      },
+      "weight": 9
+    },
+    {
+      "card": {
+        "id": "omega-glaceon-ex",
+        "name": "Glaceon Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "fmvUsd": 114.6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140546624/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -15.06
+      },
+      "weight": 4
+    },
+    {
+      "card": {
+        "id": "omega-mega-charizard-x-ex",
+        "name": "Mega Charizard X Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 138.71,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_223_ja_mega-charizard-x-ex_mega-attack-rare_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T09:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -30.56
+      },
+      "weight": 2
+    },
+    {
+      "card": {
+        "id": "omega-magikarp",
+        "name": "Magikarp",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Sv1a-Triplet Beat",
+        "fmvUsd": 307.35,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_080_ja_magikarp_art-rare_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T00:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -16.87
+      },
+      "weight": 1
+    },
+    {
+      "card": {
+        "id": "omega-pikachu-ex",
+        "name": "Pikachu Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 514.67,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA145824266/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T06:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -22.45
+      },
+      "weight": 1
+    },
+    {
+      "card": {
+        "id": "omega-mew-ex",
+        "name": "Mew Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
+        "fmvUsd": 854.69,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA122230503/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": -15.33
+      },
+      "weight": 1
+    }
   ]
 }

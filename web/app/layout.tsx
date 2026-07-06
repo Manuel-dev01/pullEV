@@ -39,17 +39,6 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-neutral-950 text-neutral-100">
         {children}
-        <footer className="mx-auto w-full max-w-5xl px-6 py-8 text-xs leading-relaxed text-neutral-600">
-          <p>
-            PullEV is an independent, unofficial tool built for the Renaiss Tech Hackathon. It is not
-            affiliated with or endorsed by Renaiss. Pack data shown is mock/assumed unless badged
-            OFFICIAL — never treat it as authoritative.
-          </p>
-          <p className="mt-2">
-            Card names are shown for identification only. Pokémon and related marks are the property
-            of their respective owners (The Pokémon Company / Nintendo). Card grades reference PSA/BGS.
-          </p>
-        </footer>
       </body>
     </html>
   );

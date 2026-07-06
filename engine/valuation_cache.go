@@ -87,7 +87,7 @@ func (vc *ValuationCache) Get(ctx context.Context, cert string) (Valuation, Prov
 	}
 	vc.mu.RUnlock()
 
-	v, err := vc.client.LookupCert(ctx, cert)
+	v, err := vc.client.LookupKey(ctx, cert)
 	if err == nil && v.Found {
 		vc.mu.Lock()
 		vc.mem[cert] = v

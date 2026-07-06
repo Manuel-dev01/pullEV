@@ -1,4 +1,25 @@
 {
-  "_note": "Maps a pool card id -> a REAL Renaiss cert number. The card's identity (name/grade/set) must genuinely match the cert. GetPool overlays the real cached valuation onto these cards (fmvSource=Index). Unmapped cards stay MOCK. Expand as more real cert-backed cards are added.",
-  "rena-zoro-op01": "PSA149595098"
+  "_note": "cardId -\u003e Renaiss structured card path (game/set/slug). Real live valuations; pool membership + weights are labeled assumptions. Rebuild with `engine curate`, refresh with `engine refresh`.",
+  "eden-birthday-pikachu-holo": "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/007-birthday-pikachu-holo-psa-10-japanese-680e0afb",
+  "eden-charizard-holo": "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/001-charizard-holo-psa-10-japanese-f3df80aa",
+  "eden-luffy-\u0026-ace": "one-piece/luffy-ace/001-luffy-ace-psa-10-japanese-fe0bffcc",
+  "eden-monkeydluffy": "one-piece/a-fist-of-divine-speed/118-monkey-d-luffy-psa-10-japanese-6dfff8cd",
+  "eden-monkeydluffy-wanted-poster-sp": "one-piece/one-piece-card-game-pillars-of-strength-japanese/012-monkey-d-luffy-wanted-poster-sp-psa-10-japanese-337d58ca",
+  "eden-umbreon-ex": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/217-umbreon-ex-psa-10-japanese-6665a22b",
+  "omega-glaceon-ex": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/206-glaceon-ex-psa-10-japanese-a1a9f07f",
+  "omega-ionos-wattrel": "pokemon/pokemon-japanese-sv-p-promo/232-iono-s-wattrel-psa-10-japanese-0db0d045",
+  "omega-magikarp": "pokemon/pokemon-japanese-sv1a-triplet-beat/080-magikarp-psa-10-japanese-c9809b63",
+  "omega-mega-charizard-x-ex": "pokemon/pokemon-japanese-m2a-mega-dream-ex/223-mega-charizard-x-ex-psa-10-japanese-ea02529a",
+  "omega-mega-lucario-ex": "pokemon/pokemon-japanese-m2a-mega-dream-ex/228-mega-lucario-ex-psa-10-japanese-329d23a3",
+  "omega-mew-ex": "pokemon/pokemon-japanese-sv4a-shiny-treasure-ex/347-mew-ex-psa-10-japanese-3570bc6b",
+  "omega-pikachu": "pokemon/mcdonald-s-japanese-m-p-promo/020-pikachu-psa-10-japanese-2fabc70d",
+  "omega-pikachu-ex": "pokemon/pokemon-japanese-m2a-mega-dream-ex/234-pikachu-ex-psa-10-japanese-781f51ab",
+  "rena-boa-hancock": "one-piece/emperors-in-the-new-world/051-boa-hancock-psa-10-japanese-50e35ee3",
+  "rena-monkey-d-luffy": "one-piece/adventure-on-kami-s-island/005-monkey-d-luffy-psa-10-japanese-5b8f1756",
+  "rena-monkeydluffy": "one-piece/a-fist-of-divine-speed/118-monkey-d-luffy-psa-10-japanese-6dfff8cd",
+  "rena-monkeydluffy-l": "one-piece/one-piece-card-game-lecafig-promo-japanese/001-monkey-d-luffy-l-psa-10-japanese-c890eb09",
+  "rena-monkeydluffy-parallel": "one-piece/awakening-of-the-new-era/012-monkey-d-luffy-parallel-psa-10-japanese-3396dd3e",
+  "rena-o-nami": "one-piece/500-years-in-the-future/101-o-nami-psa-10-japanese-c0496d94",
+  "rena-yamato-sr-flagship-battle-2024-august-top-8-prize": "one-piece/one-piece-card-game-promos-japanese/112-yamato-sr-flagship-battle-2024-august-top-8-prize-psa-10-japanese-1700376c",
+  "rena-zoro-juurou": "one-piece/emperors-in-the-new-world/004-zoro-juurou-psa-10-b4e13749"
 }

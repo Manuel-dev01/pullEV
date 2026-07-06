@@ -124,11 +124,19 @@ func TestValuationCache_SeedFallbackOnMiss(t *testing.T) {
 	vc := NewValuationCache(&IndexClient{base: srv.URL, http: srv.Client()})
 	vc.path = filepath.Join(t.TempDir(), "v.json")
 
-	v, prov, ok := vc.Get(context.Background(), "PSA149595098") // seeded cert
-	if !ok {
-		t.Fatal("seed fallback should succeed")
+	if len(vc.seed) == 0 {
+		t.Fatal("committed seed should not be empty")
 	}
-	if v.Name != "Roronoa Zoro" || v.PriceUsd != 215.89 {
+	var key string
+	for k := range vc.seed {
+		key = k
+		break
+	}
+	v, prov, ok := vc.Get(context.Background(), key)
+	if !ok {
+		t.Fatalf("seed fallback should succeed for %q", key)
+	}
+	if v.PriceUsd <= 0 || v.Name == "" {
 		t.Errorf("seed value wrong: %+v", v)
 	}
 	if prov.Source != SourceIndex || !prov.IsOfficial {
@@ -138,11 +146,15 @@ func TestValuationCache_SeedFallbackOnMiss(t *testing.T) {
 
 func TestValuationCache_CardMapLoaded(t *testing.T) {
 	vc := NewValuationCache(&IndexClient{base: "http://unused", http: http.DefaultClient})
-	cert, ok := vc.CertForCard("rena-zoro-op01")
-	if !ok || cert != "PSA149595098" {
-		t.Errorf("card map: got %q %v", cert, ok)
+	if len(vc.cardMap) == 0 {
+		t.Error("card map should load at least one entry from valuation-map.json")
 	}
 	if _, ok := vc.CertForCard("_note"); ok {
 		t.Error("_note should be filtered from the card map")
+	}
+	for id := range vc.cardMap {
+		if c, ok := vc.CertForCard(id); !ok || c == "" {
+			t.Errorf("card %q maps to empty identifier", id)
+		}
 	}
 }

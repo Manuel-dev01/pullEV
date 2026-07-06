@@ -11,9 +11,10 @@ import (
 // this as fetchedAt — honest, because mock data was authored then, not "fetched now".
 const dataAsOf = "2026-06-25T00:00:00Z"
 
-const mockNotes = "Deterministic offline fixtures. Pack prices verified where noted " +
+const mockNotes = "Deterministic offline fixtures for pool STRUCTURE. Pack prices verified where noted " +
 	"(Omega $48, Renacrypt $88); Eden price is an ASSUMPTION pending live re-confirmation. " +
-	"All per-card FMVs are ASSUMPTIONs grounded in PSA-10 market ranges, not live oracle reads."
+	"Most per-card FMVs are ASSUMPTIONs (PSA-10 market ranges); cards badged LIVE carry real " +
+	"Renaiss Index (beta) valuations — see each card's own source."
 
 // Draws are no longer static fixtures — example proofs are generated from the live
 // pool commitment (see merkle.go + the /example-proof handler).

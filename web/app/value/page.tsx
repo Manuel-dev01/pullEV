@@ -187,6 +187,11 @@ export default async function ValuePage({
             Enter a cert number or pick an example to see a real valuation.
           </p>
         )}
+        <p style={{ color: "#4f495e" }} className="mt-10 text-[11px] leading-relaxed">
+          Values are Renaiss Index (beta) estimates — experimental references, not verified market facts.
+          Independent, unofficial tooling for Renaiss · not financial advice. Card names for identification
+          only; Pokémon / One Piece marks © their respective owners.
+        </p>
       </div>
     </main>
   );

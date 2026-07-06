@@ -101,6 +101,10 @@ export default async function VerifyPage({
           exposes card valuations but not draw proofs; when it does, this same verifier checks them
           unmodified. The verification math is genuine and runs entirely client-side.
         </p>
+        <p style={{ color: "#4f495e" }} className="mt-3 text-[11px] leading-relaxed">
+          Independent, unofficial tooling for Renaiss · not financial advice. Card names shown for
+          identification only; Pokémon / One Piece marks © their respective owners.
+        </p>
       </div>
     </main>
   );

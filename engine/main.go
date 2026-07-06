@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -14,10 +15,28 @@ var activeAdapter PackDataAdapter = NewMockAdapter()
 
 // The real Renaiss Index API (beta) client + cache. Grounds per-card FMV in real
 // valuations where a card is mapped to a real cert; everything else stays Mock.
-var indexClient = NewIndexClient()
-var valuationCache = NewValuationCache(indexClient)
+// Initialized in main() AFTER loadDotEnv so env-provided keys are picked up (Go
+// initializes package-level vars before any init(), so this can't be a var initializer).
+var indexClient *IndexClient
+var valuationCache *ValuationCache
 
 func main() {
+	// Data tooling subcommands (build real pools / refresh prices), then exit.
+	if len(os.Args) > 1 {
+		switch os.Args[1] {
+		case "curate":
+			runCurate()
+			return
+		case "refresh":
+			runRefresh()
+			return
+		}
+	}
+
+	loadDotEnv(".env")
+	indexClient = NewIndexClient()
+	valuationCache = NewValuationCache(indexClient)
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /api/health", handleHealth)
 	mux.HandleFunc("GET /api/packs", handlePacks)
@@ -220,6 +239,33 @@ func envOr(key, def string) string {
 		return v
 	}
 	return def
+}
+
+// loadDotEnv loads KEY=VALUE lines from a .env file into the process environment
+// without overriding vars already set. Best-effort: a missing file is fine (the
+// engine runs on the public Renaiss Index tier without keys). Secrets never logged.
+func loadDotEnv(path string) {
+	f, err := os.Open(path)
+	if err != nil {
+		return
+	}
+	defer f.Close()
+	sc := bufio.NewScanner(f)
+	for sc.Scan() {
+		line := strings.TrimSpace(sc.Text())
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+		k, v, ok := strings.Cut(line, "=")
+		if !ok {
+			continue
+		}
+		k = strings.TrimSpace(k)
+		v = strings.Trim(strings.TrimSpace(v), `"'`)
+		if _, exists := os.LookupEnv(k); !exists {
+			os.Setenv(k, v)
+		}
+	}
 }
 
 // withCORS allows the configured web origin(s). Default covers local dev; set
