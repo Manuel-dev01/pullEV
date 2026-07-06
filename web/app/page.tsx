@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { getPacks, getEV } from "@/lib/api";
+import { getPacks, getEV, getPool } from "@/lib/api";
 import { ProvenanceBadge } from "@/components/ProvenanceBadge";
-import type { EVResult, Pack } from "@shared/types";
+import { CardArt } from "@/components/CardArt";
+import type { EVResult, Pack, Pool } from "@shared/types";
 
 // FOIL marketing landing. Server-rendered with REAL featured-pack EV + marquee.
 const money = (n: number, d = 0) =>
@@ -9,6 +10,14 @@ const money = (n: number, d = 0) =>
 const edgePct = (r: number) => (r - 1) * 100;
 
 const GRAD = "linear-gradient(115deg,#ff5fb4,#c95cf5 45%,#3ff0cf)";
+
+// The highest-FMV card image in a pool, used as the featured pack's console art.
+function topCardImage(pool: Pool | undefined): string | undefined {
+  if (!pool) return undefined;
+  let top = pool.cards[0];
+  for (const e of pool.cards) if (e.card.fmvUsd > (top?.card.fmvUsd ?? 0)) top = e;
+  return top?.card.imageUrl;
+}
 
 export default async function Landing() {
   const packs = await getPacks();
@@ -19,6 +28,7 @@ export default async function Landing() {
   }
   evs.sort((a, b) => b.ev.evToCostRatio - a.ev.evToCostRatio);
   const featured = evs[0];
+  const featuredImg = featured ? topCardImage((await getPool(featured.pack.id))?.data) : undefined;
   // When the engine is unreachable, every number below comes from the bundled
   // snapshot. Surface that honestly instead of claiming "computed live".
   const offline = packs.fallback;
@@ -44,23 +54,25 @@ export default async function Landing() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/image_1.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 78% 30%, rgba(8,7,12,0) 0%, rgba(8,7,12,.55) 46%, #08070c 82%)" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(8,7,12,.35) 0%,transparent 22%,transparent 55%,#08070c 100%)" }} />
-        {/* floating slab chips (real featured edge + rarity flavor) */}
-        {featured && (
-          <div style={{ position: "absolute", top: "20%", left: "8%", zIndex: 5, animation: "pv-floaty 7s ease-in-out infinite" }}>
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)" }}>
-              {edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}% EDGE
-            </div>
-          </div>
-        )}
-        <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 5, animation: "pv-floaty 9s ease-in-out .6s infinite" }}>
-          <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)" }}>MYTHIC · 1.2%</div>
-        </div>
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px 40px 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 720, marginTop: 24 }}>
-              <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(64px,9vw,132px)", lineHeight: 0.86, margin: 0, textShadow: "0 8px 60px rgba(0,0,0,.6)" }}>
-                KNOW THE<br />EV BEFORE<br />YOU <span style={{ background: "linear-gradient(115deg,#ff5fb4,#c95cf5 34%,#7b7bff 60%,#4bc6ff 80%,#3ff0cf)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent", animation: "pv-shimmer 6s linear infinite" }}>RIP.</span>
-              </h1>
+              {/* headline with floating slab chips hugging it (matches the FOIL design) */}
+              <div style={{ position: "relative", display: "inline-block" }}>
+                {featured && (
+                  <div style={{ position: "absolute", top: -16, left: -18, zIndex: 6, animation: "pv-floaty 7s ease-in-out infinite" }}>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>
+                      {edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}% EDGE
+                    </div>
+                  </div>
+                )}
+                <div style={{ position: "absolute", bottom: 30, left: -26, zIndex: 6, animation: "pv-floaty 9s ease-in-out .6s infinite" }}>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>MYTHIC · 1.2%</div>
+                </div>
+                <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(64px,9vw,132px)", lineHeight: 0.86, margin: 0, textShadow: "0 8px 60px rgba(0,0,0,.6)" }}>
+                  KNOW THE<br />EV BEFORE<br />YOU <span style={{ background: "linear-gradient(115deg,#ff5fb4,#c95cf5 34%,#7b7bff 60%,#4bc6ff 80%,#3ff0cf)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent", animation: "pv-shimmer 6s linear infinite" }}>RIP.</span>
+                </h1>
+              </div>
               <p style={{ maxWidth: 460, fontSize: 17, lineHeight: 1.6, color: "#c3bad8", margin: "26px 0 30px" }}>
                 Live expected value on every Infinite Gacha pack, from real Renaiss Index prices, then verify any pull&apos;s fairness yourself, client-side. Trust the math, not the claim.
               </p>
@@ -77,7 +89,7 @@ export default async function Landing() {
                   <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 38, background: "linear-gradient(90deg,rgba(255,95,180,.16),rgba(63,240,207,.12))", mixBlendMode: "screen", filter: "blur(8px)", animation: "pv-scan 4s linear infinite", pointerEvents: "none" }} />
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
-                      <div style={{ width: 34, height: 44, borderRadius: 6, background: GRAD, padding: 2 }}><div style={{ width: "100%", height: "100%", borderRadius: 5, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.06) 0 3px,transparent 3px 6px)" }} /></div>
+                      <div style={{ width: 34, height: 44, flex: "none" }}><CardArt src={featuredImg} hue={GRAD} radius={6} pad={2} sizes="40px" priority /></div>
                       <div><div style={{ fontFamily: "var(--font-display)", fontSize: 20, lineHeight: 1 }}>{featured.pack.name.toUpperCase()}</div><div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "#9c94b6", marginTop: 3 }}>renaiss · cost {money(featured.pack.priceUsd)}</div></div>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: 6, background: "rgba(63,240,207,.12)", border: "1px solid rgba(63,240,207,.4)", borderRadius: 999, padding: "5px 11px" }}><span style={{ width: 7, height: 7, borderRadius: "50%", background: "#3ff0cf", boxShadow: "0 0 9px #3ff0cf" }} /><span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "#3ff0cf", letterSpacing: ".08em" }}>{edgePct(featured.ev.evToCostRatio) >= 0 ? "RIP" : "SKIP"}</span></div>

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"sort"
+	"strings"
 	"time"
 )
 
@@ -46,15 +47,19 @@ type packCommons struct {
 	chaseLadder []float64 // weight per chase card, cheapest→priciest
 }
 
+// Commons use low-tier minor-character names (PSA 9) so they never collide with the
+// real high-value chase cards curated into the pools. FMVs + weights are labeled
+// assumptions representing the bulk of a pool; runCommons also dedupes by name as a
+// safety net against any residual overlap.
 var commonsConfig = map[string]packCommons{
-	// Omega ($48, Pokémon): light commons + a fatter top-chase tail → thin positive EV.
+	// Omega ($48, Pokémon): commons-heavy so the cheap pack is only a THIN RIP.
 	"omega": {
 		prefix: "omega",
 		commons: []commonCard{
-			{"Psyduck", "PSA 9", "Pokemon Japanese M2a-Mega Dream Ex", 7, 120},
-			{"Haunter", "PSA 9", "Pokemon Japanese Mbg Mega Starter Set", 12, 90},
-			{"Meowth Ex", "PSA 9", "Nullifying Zero", 19, 60},
-			{"Eevee Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 30, 40},
+			{"Rattata", "PSA 9", "Pokemon Base Common", 7, 240},
+			{"Pidgey", "PSA 9", "Pokemon Base Common", 12, 180},
+			{"Zubat", "PSA 9", "Pokemon Base Common", 19, 120},
+			{"Caterpie", "PSA 9", "Pokemon Base Common", 30, 80},
 		},
 		chaseLadder: []float64{50, 34, 24, 16, 12, 12, 8, 5},
 	},
@@ -62,10 +67,10 @@ var commonsConfig = map[string]packCommons{
 	"renacrypt": {
 		prefix: "rena",
 		commons: []commonCard{
-			{"Nami", "PSA 9", "Romance Dawn", 9, 180},
-			{"Perona", "PSA 9", "Prize Cards Alternate Art", 16, 120},
-			{"Sabo", "PSA 9", "Winner Prize For Sealed Battle 2023 Vol 1", 27, 70},
-			{"Gear Two", "PSA 9", "A Fist Of Divine Speed", 44, 40},
+			{"Coby", "PSA 9", "One Piece Common", 9, 180},
+			{"Buggy", "PSA 9", "One Piece Common", 16, 120},
+			{"Alvida", "PSA 9", "One Piece Common", 27, 70},
+			{"Helmeppo", "PSA 9", "One Piece Common", 44, 40},
 		},
 		chaseLadder: []float64{60, 36, 20, 12, 7, 5, 3, 2},
 	},
@@ -73,10 +78,10 @@ var commonsConfig = map[string]packCommons{
 	"eden": {
 		prefix: "eden",
 		commons: []commonCard{
-			{"Uta", "PSA 9", "One Piece Japanese OP05 Awakening Of The New Era", 22, 340},
-			{"Shanks", "PSA 9", "Romance Dawn", 48, 200},
-			{"Leafeon Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 66, 110},
-			{"Jolteon Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 88, 55},
+			{"Coby", "PSA 9", "One Piece Common", 22, 340},
+			{"Buggy", "PSA 9", "One Piece Common", 48, 200},
+			{"Alvida", "PSA 9", "One Piece Common", 66, 110},
+			{"Helmeppo", "PSA 9", "One Piece Common", 88, 55},
 		},
 		chaseLadder: []float64{40, 24, 14, 8, 5, 3},
 	},
@@ -84,10 +89,10 @@ var commonsConfig = map[string]packCommons{
 	"voyaga": {
 		prefix: "voyaga",
 		commons: []commonCard{
-			{"Nami", "PSA 9", "Romance Dawn", 9, 260},
-			{"Perona", "PSA 9", "Prize Cards Alternate Art", 16, 150},
-			{"Sabo", "PSA 9", "Winner Prize For Sealed Battle 2023 Vol 1", 27, 80},
-			{"Gear Two", "PSA 9", "A Fist Of Divine Speed", 44, 44},
+			{"Kaya", "PSA 9", "One Piece Common", 9, 260},
+			{"Morgan", "PSA 9", "One Piece Common", 16, 150},
+			{"Bepo", "PSA 9", "One Piece Common", 27, 80},
+			{"Kuro", "PSA 9", "One Piece Common", 44, 44},
 		},
 		chaseLadder: []float64{44, 26, 15, 9, 6, 4},
 	},
@@ -95,10 +100,10 @@ var commonsConfig = map[string]packCommons{
 	"frozen": {
 		prefix: "frozen",
 		commons: []commonCard{
-			{"Psyduck", "PSA 9", "Pokemon Japanese M2a-Mega Dream Ex", 7, 110},
-			{"Haunter", "PSA 9", "Pokemon Japanese Mbg Mega Starter Set", 12, 80},
-			{"Meowth Ex", "PSA 9", "Nullifying Zero", 19, 55},
-			{"Eevee Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 30, 36},
+			{"Weedle", "PSA 9", "Pokemon Base Common", 7, 52},
+			{"Spearow", "PSA 9", "Pokemon Base Common", 12, 38},
+			{"Ekans", "PSA 9", "Pokemon Base Common", 19, 24},
+			{"Sandshrew", "PSA 9", "Pokemon Base Common", 30, 16},
 		},
 		chaseLadder: []float64{46, 30, 20, 14, 12, 12},
 	},
@@ -106,10 +111,10 @@ var commonsConfig = map[string]packCommons{
 	"legacy-8": {
 		prefix: "legacy",
 		commons: []commonCard{
-			{"Uta", "PSA 9", "One Piece Japanese OP05 Awakening Of The New Era", 22, 360},
-			{"Shanks", "PSA 9", "Romance Dawn", 48, 210},
-			{"Leafeon Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 66, 120},
-			{"Jolteon Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 88, 60},
+			{"Rattata", "PSA 9", "Pokemon Base Common", 22, 360},
+			{"Pidgey", "PSA 9", "Pokemon Base Common", 48, 210},
+			{"Zubat", "PSA 9", "Pokemon Base Common", 66, 120},
+			{"Caterpie", "PSA 9", "Pokemon Base Common", 88, 60},
 		},
 		chaseLadder: []float64{40, 24, 14, 8, 5, 3},
 	},
@@ -148,10 +153,20 @@ func runCommons() {
 			}
 		}
 
+		// Names already used by real chase cards, so commons never duplicate them.
+		chaseNames := map[string]bool{}
+		for _, e := range chase {
+			chaseNames[strings.ToLower(e.Card.Name)] = true
+		}
+
 		// Build the labeled commons tier, cheapest first.
 		commons := make([]PoolEntry, 0, len(cfg.commons))
 		seen := map[string]bool{}
 		for _, c := range cfg.commons {
+			if chaseNames[strings.ToLower(c.name)] {
+				fmt.Printf("  skip common %q in %s (collides with a real chase card)\n", c.name, id)
+				continue
+			}
 			cid := cfg.prefix + "-common-" + slugName(c.name)
 			for seen[cid] {
 				cid += "-x"

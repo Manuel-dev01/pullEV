@@ -82,6 +82,20 @@ func dedupeByName(cards []curatedCard) []curatedCard {
 	return out
 }
 
+// splitAlt splits a slice into two disjoint halves by alternating index, so two packs
+// drawing on the same card list end up with distinct (non-overlapping) cards.
+func splitAlt(cards []curatedCard) ([]curatedCard, []curatedCard) {
+	var a, b []curatedCard
+	for i, c := range cards {
+		if i%2 == 0 {
+			a = append(a, c)
+		} else {
+			b = append(b, c)
+		}
+	}
+	return a, b
+}
+
 // pickSpread returns n cards spanning cheap→expensive from a price-sorted slice.
 func pickSpread(cards []curatedCard, n int) []curatedCard {
 	if len(cards) <= n {
@@ -160,21 +174,29 @@ func runCurate() {
 	fmt.Printf("Pricing %d one-piece + %d pokemon slugs (live)…\n", len(op), len(pkm))
 
 	fmt.Println("[one-piece]")
-	opCards := priceSlugs(ctx, client, op, 40)
+	opCards := priceSlugs(ctx, client, op, 50)
 	fmt.Println("[pokemon]")
-	pkmCards := priceSlugs(ctx, client, pkm, 40)
+	pkmCards := priceSlugs(ctx, client, pkm, 50)
 
 	opCards = dedupeByName(opCards)
 	pkmCards = dedupeByName(pkmCards)
 	sort.Slice(opCards, func(i, j int) bool { return opCards[i].val.PriceUsd < opCards[j].val.PriceUsd })
 	sort.Slice(pkmCards, func(i, j int) bool { return pkmCards[i].val.PriceUsd < pkmCards[j].val.PriceUsd })
+	fmt.Printf("distinct priced cards: %d one-piece, %d pokemon\n", len(opCards), len(pkmCards))
 
-	// Combined premium band (highest priced, distinct names) for Eden.
+	// Split each game's cards into two DISTINCT halves (alternating by price rank) so the
+	// two packs drawing on that game don't share cards. Premium (eden/legacy) is split the
+	// same way from the highest-value combined band.
+	opA, opB := splitAlt(opCards)   // renacrypt, voyaga
+	pkmA, pkmB := splitAlt(pkmCards) // omega, frozen
 	combined := dedupeByName(append(append([]curatedCard{}, pkmCards...), opCards...))
 	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
-	premium := combined
-	if len(premium) > 12 {
-		premium = premium[:12]
+	premA, premB := splitAlt(combined) // eden, legacy-8
+	if len(premA) > 8 {
+		premA = premA[:8]
+	}
+	if len(premB) > 8 {
+		premB = premB[:8]
 	}
 
 	vmap := map[string]string{
@@ -182,30 +204,36 @@ func runCurate() {
 			"pool membership + weights are labeled assumptions. Rebuild with `engine curate`, refresh with `engine refresh`.",
 	}
 	seed := map[string]Valuation{}
-
-	// Renacrypt (One Piece × Collector Crypt, $88) — One Piece cards.
-	renacrypt := buildPool("renacrypt", "rena", pickSpread(opCards, 8), vmap, seed)
-	// Omega ($48) — Pokémon, lower/mid band.
-	omega := buildPool("omega", "omega", pickSpread(pkmCards, 8), vmap, seed)
-	// Eden ($150) — premium chase, mixed.
-	eden := buildPool("eden", "eden", pickSpread(premium, 6), vmap, seed)
-
-	// Guard: never clobber good fixtures with a throttled/empty run.
-	if len(renacrypt.Cards) < 4 || len(omega.Cards) < 4 || len(eden.Cards) < 4 {
-		fmt.Printf("ABORT: too few cards resolved (rena=%d omega=%d eden=%d) — likely rate-throttled. "+
-			"Existing fixtures left untouched; retry later.\n", len(renacrypt.Cards), len(omega.Cards), len(eden.Cards))
-		os.Exit(1)
+	// Seed the WHOLE priced library (not just selected cards) so offline rebuilds have depth.
+	for _, c := range append(append([]curatedCard{}, opCards...), pkmCards...) {
+		seed[c.slug] = c.val
 	}
 
-	must(writeJSONFile("fixtures/pools/renacrypt.json", renacrypt))
-	must(writeJSONFile("fixtures/pools/omega.json", omega))
-	must(writeJSONFile("fixtures/pools/eden.json", eden))
+	built := map[string]Pool{
+		"renacrypt": buildPool("renacrypt", "rena", pickSpread(opA, 8), vmap, seed),   // One Piece x Collector Crypt, $88
+		"voyaga":    buildPool("voyaga", "voyaga", pickSpread(opB, 8), vmap, seed),     // One Piece Grand Line, $120
+		"omega":     buildPool("omega", "omega", pickSpread(pkmA, 8), vmap, seed),      // Pokemon, $48
+		"frozen":    buildPool("frozen", "frozen", pickSpread(pkmB, 8), vmap, seed),    // Pokemon icy, $60
+		"eden":      buildPool("eden", "eden", premA, vmap, seed),                       // premium mixed, $150
+		"legacy-8":  buildPool("legacy-8", "legacy", premB, vmap, seed),                 // vintage premium, $200
+	}
+
+	// Guard: never clobber good fixtures with a throttled/empty run.
+	for id, p := range built {
+		if len(p.Cards) < 4 {
+			fmt.Printf("ABORT: pool %s resolved only %d cards — likely rate-throttled. "+
+				"Existing fixtures left untouched; retry later.\n", id, len(p.Cards))
+			os.Exit(1)
+		}
+	}
+	for id, p := range built {
+		must(writeJSONFile(fmt.Sprintf("fixtures/pools/%s.json", id), p))
+	}
 	must(writeJSONFile("fixtures/valuation-map.json", vmap))
 	must(writeJSONFile("fixtures/valuations.seed.json", seed))
 
-	fmt.Printf("\nCurated pools: renacrypt=%d omega=%d eden=%d cards · seed=%d valuations\n",
-		len(renacrypt.Cards), len(omega.Cards), len(eden.Cards), len(seed))
-	fmt.Println("Rebuild the web snapshot next (see scripts/gen-snapshot).")
+	fmt.Printf("\nCurated %d pools · seed=%d valuations\n", len(built), len(seed))
+	fmt.Println("Run `engine commons` next, then rebuild the binary + web snapshot.")
 }
 
 // runRefresh re-prices every mapped card and rewrites the committed seed so prices

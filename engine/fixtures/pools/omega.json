@@ -3,11 +3,37 @@
   "cards": [
     {
       "card": {
-        "id": "omega-common-psyduck",
-        "name": "Psyduck",
+        "id": "omega-common-rattata",
+        "name": "Rattata",
         "grade": "PSA 9",
-        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "set": "Pokemon Base Common",
         "fmvUsd": 7,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 240
+    },
+    {
+      "card": {
+        "id": "omega-common-pidgey",
+        "name": "Pidgey",
+        "grade": "PSA 9",
+        "set": "Pokemon Base Common",
+        "fmvUsd": 12,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 180
+    },
+    {
+      "card": {
+        "id": "omega-common-zubat",
+        "name": "Zubat",
+        "grade": "PSA 9",
+        "set": "Pokemon Base Common",
+        "fmvUsd": 19,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
@@ -16,42 +42,16 @@
     },
     {
       "card": {
-        "id": "omega-common-haunter",
-        "name": "Haunter",
+        "id": "omega-common-caterpie",
+        "name": "Caterpie",
         "grade": "PSA 9",
-        "set": "Pokemon Japanese Mbg Mega Starter Set",
-        "fmvUsd": 12,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 90
-    },
-    {
-      "card": {
-        "id": "omega-common-meowth-ex",
-        "name": "Meowth Ex",
-        "grade": "PSA 9",
-        "set": "Nullifying Zero",
-        "fmvUsd": 19,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 60
-    },
-    {
-      "card": {
-        "id": "omega-common-eevee-ex",
-        "name": "Eevee Ex",
-        "grade": "PSA 9",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "set": "Pokemon Base Common",
         "fmvUsd": 30,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 40
+      "weight": 80
     },
     {
       "card": {
@@ -59,77 +59,77 @@
         "name": "Iono's Wattrel",
         "grade": "PSA 10",
         "set": "Pokemon Japanese Sv-P Promo",
-        "fmvUsd": 39.72,
+        "fmvUsd": 40.06,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/items/8c640637-4d42-4418-a050-1938e630dafb.webp",
         "fmvSource": "Index",
         "fmvAsOf": "2026-07-05T07:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -10.98
+        "fmvDeltaPct": -10.22
       },
       "weight": 50
     },
     {
       "card": {
-        "id": "omega-mega-lucario-ex",
-        "name": "Mega Lucario Ex",
+        "id": "omega-haunter",
+        "name": "Haunter",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese M2a-Mega Dream Ex",
-        "fmvUsd": 70.18,
+        "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
+        "fmvUsd": 73.96,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140264280/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA131553295/item.webp",
         "fmvSource": "Index",
         "fmvAsOf": "2026-07-06T05:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -16.62
+        "fmvDeltaPct": -6.61
       },
       "weight": 34
     },
     {
       "card": {
-        "id": "omega-pikachu",
-        "name": "Pikachu",
+        "id": "omega-jolteon-ex",
+        "name": "Jolteon Ex",
         "grade": "PSA 10",
-        "set": "McDONALD'S Japanese M-P Promo",
-        "fmvUsd": 87.7,
+        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "fmvUsd": 94.7,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA132422841/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA112865583/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T07:00:00.000Z",
+        "fmvAsOf": "2026-07-06T03:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -14.17
+        "fmvDeltaPct": -13.44
       },
       "weight": 24
     },
     {
       "card": {
-        "id": "omega-glaceon-ex",
-        "name": "Glaceon Ex",
+        "id": "omega-oricorio-ex",
+        "name": "Oricorio ex",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-        "fmvUsd": 114.6,
+        "set": "Mega Promos",
+        "fmvUsd": 125.3,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140546624/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mep_24_en_372f3d0b56844abfb2b19498e8b12f40_sm.png?v=ff8c312d",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvAsOf": "2026-07-05T00:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -15.06
+        "fmvDeltaPct": -10.42
       },
       "weight": 16
     },
     {
       "card": {
-        "id": "omega-mega-charizard-x-ex",
-        "name": "Mega Charizard X Ex",
+        "id": "omega-charizard-vstar",
+        "name": "Charizard Vstar",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese M2a-Mega Dream Ex",
-        "fmvUsd": 138.71,
+        "set": "Pokemon Japanese Sword \u0026 Shield Vstar Universe",
+        "fmvUsd": 202.34,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_223_ja_mega-charizard-x-ex_mega-attack-rare_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA139924431/item.webp",
         "fmvSource": "Index",
         "fmvAsOf": "2026-07-06T09:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -30.56
+        "fmvDeltaPct": -23.98
       },
       "weight": 12
     },
@@ -151,33 +151,33 @@
     },
     {
       "card": {
-        "id": "omega-pikachu-ex",
-        "name": "Pikachu Ex",
+        "id": "omega-detective-pikachu",
+        "name": "Detective Pikachu",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese M2a-Mega Dream Ex",
-        "fmvUsd": 514.67,
+        "set": "Pokemon Japanese Sv-P Promo",
+        "fmvUsd": 376.06,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA145824266/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA128426802/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T06:00:00.000Z",
+        "fmvAsOf": "2026-07-06T17:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -22.45
+        "fmvDeltaPct": -22.86
       },
       "weight": 8
     },
     {
       "card": {
-        "id": "omega-mew-ex",
-        "name": "Mew Ex",
+        "id": "omega-pikachu-with-grey-felt-hat",
+        "name": "Pikachu with Grey Felt Hat",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
-        "fmvUsd": 854.69,
+        "set": "Pokemon SVP Black Star Promos",
+        "fmvUsd": 2871.79,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA122230503/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA120383833/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T10:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -15.33
+        "fmvAsOf": "2026-07-06T13:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -7.18
       },
       "weight": 5
     }

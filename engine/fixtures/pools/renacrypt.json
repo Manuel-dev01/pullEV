@@ -3,10 +3,10 @@
   "cards": [
     {
       "card": {
-        "id": "rena-common-nami",
-        "name": "Nami",
+        "id": "rena-common-coby",
+        "name": "Coby",
         "grade": "PSA 9",
-        "set": "Romance Dawn",
+        "set": "One Piece Common",
         "fmvUsd": 9,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -16,10 +16,10 @@
     },
     {
       "card": {
-        "id": "rena-common-perona",
-        "name": "Perona",
+        "id": "rena-common-buggy",
+        "name": "Buggy",
         "grade": "PSA 9",
-        "set": "Prize Cards Alternate Art",
+        "set": "One Piece Common",
         "fmvUsd": 16,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -29,10 +29,10 @@
     },
     {
       "card": {
-        "id": "rena-common-sabo",
-        "name": "Sabo",
+        "id": "rena-common-alvida",
+        "name": "Alvida",
         "grade": "PSA 9",
-        "set": "Winner Prize For Sealed Battle 2023 Vol 1",
+        "set": "One Piece Common",
         "fmvUsd": 27,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -42,10 +42,10 @@
     },
     {
       "card": {
-        "id": "rena-common-gear-two",
-        "name": "Gear Two",
+        "id": "rena-common-helmeppo",
+        "name": "Helmeppo",
         "grade": "PSA 9",
-        "set": "A Fist Of Divine Speed",
+        "set": "One Piece Common",
         "fmvUsd": 44,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -79,73 +79,73 @@
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_c0496d947ce6457c87ad0b206a5cb5f0_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T15:00:00.000Z",
+        "fmvAsOf": "2026-07-06T11:00:00.000Z",
         "fmvConfidence": "low",
-        "fmvDeltaPct": 0.64
+        "fmvDeltaPct": -2.12
       },
       "weight": 36
     },
     {
       "card": {
-        "id": "rena-yamato-sr-flagship-battle-2024-august-top-8-prize",
-        "name": "Yamato SR/(Flagship Battle 2024 August Top 8 Prize)",
+        "id": "rena-perona",
+        "name": "Perona",
         "grade": "PSA 10",
-        "set": "One Piece Card Game Promos Japanese",
-        "fmvUsd": 244.56,
+        "set": "Prize Cards Alternate Art",
+        "fmvUsd": 183.11,
         "fmvIsAssumption": false,
-        "imageUrl": "https://8nothtoc5ds7a0x3.public.blob.vercel-storage.com/pokemon-cards/BGS0017392861/card.jpg",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_093_ja_59d0747fad504240ba0683c4bfebe63f_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-02T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": 19.29
+        "fmvAsOf": "2026-07-05T14:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": -9.14
       },
       "weight": 20
     },
     {
       "card": {
-        "id": "rena-monkeydluffy-parallel",
-        "name": "Monkey.D.Luffy (Parallel)",
+        "id": "rena-uta",
+        "name": "Uta",
         "grade": "PSA 10",
-        "set": "Awakening of the New Era",
-        "fmvUsd": 280.88,
+        "set": "One Piece Japanese OP05-Awakening of the New Era",
+        "fmvUsd": 252.28,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_3396dd3ee69e403095a47d94dd4eb939_sm.webp",
+        "imageUrl": "https://8nothtoc5ds7a0x3.public.blob.vercel-storage.com/pokemon-cards/PSA87812672/card.jpg",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvAsOf": "2026-07-06T05:00:00.000Z",
         "fmvConfidence": "medium",
-        "fmvDeltaPct": -10.42
+        "fmvDeltaPct": -0.31
       },
       "weight": 12
     },
     {
       "card": {
-        "id": "rena-zoro-juurou",
-        "name": "Zoro-Juurou",
+        "id": "rena-monkeydluffy-wanted-poster-sp",
+        "name": "Monkey.D.Luffy WANTED POSTER SP",
         "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 390.08,
+        "set": "One Piece Card Game Pillars of Strength Japanese",
+        "fmvUsd": 432.39,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": 34.42
+        "fmvAsOf": "2026-07-04T05:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 2.82
       },
       "weight": 7
     },
     {
       "card": {
-        "id": "rena-monkeydluffy-l",
-        "name": "Monkey.D.Luffy L",
+        "id": "rena-gear-two",
+        "name": "Gear Two",
         "grade": "PSA 10",
-        "set": "One Piece Card Game LECAFIG Promo Japanese",
-        "fmvUsd": 577.98,
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 677.85,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_001_ja_c890eb09285e44a2bd41df110151eae3_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T03:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -6.34
+        "fmvAsOf": "2026-07-05T00:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": 23.09
       },
       "weight": 5
     },
@@ -167,17 +167,17 @@
     },
     {
       "card": {
-        "id": "rena-monkeydluffy",
-        "name": "Monkey.D.Luffy",
+        "id": "rena-shanks",
+        "name": "Shanks",
         "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 1392,
+        "set": "Romance Dawn",
+        "fmvUsd": 2214,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T12:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -18.81
+        "fmvAsOf": "2026-07-06T14:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 10.78
       },
       "weight": 2
     }

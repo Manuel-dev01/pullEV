@@ -3,135 +3,167 @@
   "cards": [
     {
       "card": {
-        "id": "frozen-common-psyduck",
-        "name": "Psyduck",
+        "id": "frozen-common-weedle",
+        "name": "Weedle",
         "grade": "PSA 9",
-        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "set": "Pokemon Base Common",
         "fmvUsd": 7,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 110
+      "weight": 52
     },
     {
       "card": {
-        "id": "frozen-common-haunter",
-        "name": "Haunter",
+        "id": "frozen-common-spearow",
+        "name": "Spearow",
         "grade": "PSA 9",
-        "set": "Pokemon Japanese Mbg Mega Starter Set",
+        "set": "Pokemon Base Common",
         "fmvUsd": 12,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 80
+      "weight": 38
     },
     {
       "card": {
-        "id": "frozen-common-meowth-ex",
-        "name": "Meowth Ex",
+        "id": "frozen-common-ekans",
+        "name": "Ekans",
         "grade": "PSA 9",
-        "set": "Nullifying Zero",
+        "set": "Pokemon Base Common",
         "fmvUsd": 19,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 55
+      "weight": 24
     },
     {
       "card": {
-        "id": "frozen-common-eevee-ex",
-        "name": "Eevee Ex",
+        "id": "frozen-common-sandshrew",
+        "name": "Sandshrew",
         "grade": "PSA 9",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "set": "Pokemon Base Common",
         "fmvUsd": 30,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 36
+      "weight": 16
     },
     {
       "card": {
-        "id": "frozen-ionos-wattrel",
-        "name": "Iono's Wattrel",
+        "id": "frozen-team-rockets-mimikyu",
+        "name": "Team Rocket's Mimikyu",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv-P Promo",
-        "fmvUsd": 39.72,
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 46.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/items/8c640637-4d42-4418-a050-1938e630dafb.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140547917/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T07:00:00.000Z",
+        "fmvAsOf": "2026-07-06T15:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -10.98
+        "fmvDeltaPct": -21.08
       },
       "weight": 46
     },
     {
       "card": {
-        "id": "frozen-mega-lucario-ex",
-        "name": "Mega Lucario Ex",
+        "id": "frozen-mega-gengar-ex",
+        "name": "Mega Gengar Ex",
         "grade": "PSA 10",
         "set": "Pokemon Japanese M2a-Mega Dream Ex",
-        "fmvUsd": 70.18,
+        "fmvUsd": 84.22,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140264280/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA141600867/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T05:00:00.000Z",
+        "fmvAsOf": "2026-07-06T13:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -16.62
+        "fmvDeltaPct": -33.64
       },
       "weight": 30
     },
     {
       "card": {
-        "id": "frozen-glaceon-ex",
-        "name": "Glaceon Ex",
+        "id": "frozen-psyduck",
+        "name": "Psyduck",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-        "fmvUsd": 114.6,
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 103.55,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140546624/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_199_ja_psyduck_art-rare_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvAsOf": "2026-07-06T13:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -15.06
+        "fmvDeltaPct": -30.17
       },
       "weight": 20
     },
     {
       "card": {
-        "id": "frozen-magikarp",
-        "name": "Magikarp",
+        "id": "frozen-espeon-ex",
+        "name": "Espeon Ex",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv1a-Triplet Beat",
-        "fmvUsd": 307.35,
+        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "fmvUsd": 131.17,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_080_ja_magikarp_art-rare_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA122678825/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T00:00:00.000Z",
+        "fmvAsOf": "2026-07-06T18:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -16.87
+        "fmvDeltaPct": -17.18
       },
       "weight": 14
     },
     {
       "card": {
-        "id": "frozen-umbreon-ex",
-        "name": "Umbreon Ex",
+        "id": "frozen-lucario-vstar",
+        "name": "Lucario Vstar",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-        "fmvUsd": 599.29,
+        "set": "Pokemon Swsh Black Star Promo",
+        "fmvUsd": 165.51,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_217_ja_pokemon-japanese-sv8a-terastal-fest-ex_umbreon-ex_special-art-rare_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA127215975/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T07:00:00.000Z",
+        "fmvAsOf": "2026-07-06T00:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -17.71
+        "fmvDeltaPct": 11.12
       },
       "weight": 12
+    },
+    {
+      "card": {
+        "id": "frozen-fukuokas-pikachu",
+        "name": "Fukuoka's Pikachu",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Sv-P Promo",
+        "fmvUsd": 270.04,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA135966493/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T17:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -34.04
+      },
+      "weight": 12
+    },
+    {
+      "card": {
+        "id": "frozen-umbreon-gold-star",
+        "name": "Umbreon-Gold Star",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
+        "fmvUsd": 358.68,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA83727882/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T12:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -24.91
+      },
+      "weight": 1
     },
     {
       "card": {
@@ -139,15 +171,15 @@
         "name": "Mew Ex",
         "grade": "PSA 10",
         "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
-        "fmvUsd": 854.69,
+        "fmvUsd": 853.41,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA122230503/item.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvAsOf": "2026-07-06T11:00:00.000Z",
         "fmvConfidence": "medium",
-        "fmvDeltaPct": -15.33
+        "fmvDeltaPct": -15.46
       },
-      "weight": 12
+      "weight": 1
     }
   ]
 }

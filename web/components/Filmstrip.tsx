@@ -312,7 +312,7 @@ export function Filmstrip({
                   style={{ flex: "none", width: 210, cursor: "pointer", borderRadius: 18, padding: 16, background: C.panel, border: `1px solid ${pd.pack.id === activeId ? "rgba(201,92,245,.55)" : C.border}` }}
                 >
                   <div style={{ height: 210, boxShadow: "0 16px 40px rgba(0,0,0,.5)" }}>
-                    <CardArt src={coverImage(pd.pool)} hue={HUES[i % HUES.length]} radius={12} name={pd.pack.name.split(" ")[0].toUpperCase()} />
+                    <CardArt src={coverImage(pd.pool)} hue={HUES[i % HUES.length]} radius={12} name={pd.pack.name.split(" ")[0].toUpperCase()} sizes="210px" />
                   </div>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 14 }}>
                     <div>
@@ -383,7 +383,7 @@ export function Filmstrip({
                 .map((e) => (
                   <div key={e.card.id} style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 2px", borderTop: "1px solid rgba(255,255,255,.05)", fontSize: 12 }}>
                     <div style={{ flex: "none", width: 22, height: 30 }}>
-                      <CardArt src={e.card.imageUrl} hue={HUES[0]} radius={5} pad={1.5} />
+                      <CardArt src={e.card.imageUrl} hue={HUES[0]} radius={5} pad={1.5} sizes="32px" />
                     </div>
                     <span style={{ flex: 2, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{e.card.name}</span>
                     <span style={{ flex: 1.3, textAlign: "right", fontFamily: "var(--font-mono)", color: C.ink }}>
@@ -411,9 +411,18 @@ export function Filmstrip({
             <div title={SAMPLE_TOOLTIP} style={{ display: "inline-block", cursor: "help", fontFamily: "var(--font-mono)", fontSize: 10, color: "#ffd76a", border: "1px solid rgba(255,215,106,.4)", borderRadius: 999, padding: "5px 12px", marginBottom: 16 }}>
               {SAMPLE_LABEL}
             </div>
-            <div style={{ width: 210, height: 294, margin: "0 auto 16px", boxShadow: "0 30px 80px rgba(201,92,245,.5)", animation: "pv-floaty 6s ease-in-out infinite" }}>
+            <div style={{ position: "relative", width: 210, height: 294, margin: "0 auto 18px", boxShadow: "0 30px 80px rgba(201,92,245,.5)", animation: "pv-floaty 6s ease-in-out infinite" }}>
               {ripped && !ripping ? (
-                <CardArt src={ripped.image} hue={HUES[0]} radius={20} pad={4} name={ripped.cardName.split(" · ")[0]} />
+                <>
+                  <CardArt src={ripped.image} hue={HUES[0]} radius={20} pad={4} sizes="220px" priority />
+                  {/* name + FMV overlaid on the card (matches the design) */}
+                  <div style={{ position: "absolute", left: 4, right: 4, bottom: 4, padding: "24px 12px 12px", borderRadius: "0 0 16px 16px", background: "linear-gradient(transparent,rgba(8,7,12,.55) 40%,rgba(8,7,12,.94))", textAlign: "center" }}>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 20, lineHeight: 0.95, textShadow: "0 2px 10px rgba(0,0,0,.8)" }}>{ripped.cardName.split(" · ")[0]}</div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "#d3cce4", marginTop: 4 }}>
+                      {ripped.cardName.split(" · ")[1]} · <span style={{ color: C.teal }}>FMV {money(ripped.value, 2)}</span>
+                    </div>
+                  </div>
+                </>
               ) : (
                 <div style={{ width: "100%", height: "100%", borderRadius: 20, background: HUES[0], padding: 4 }}>
                   <div style={{ width: "100%", height: "100%", borderRadius: 16, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 5px,transparent 5px 10px)", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
@@ -422,14 +431,6 @@ export function Filmstrip({
                 </div>
               )}
             </div>
-            {ripped && !ripping && (
-              <div style={{ marginBottom: 16 }}>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 22, lineHeight: 0.95 }}>{ripped.cardName.split(" · ")[0]}</div>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.muted, marginTop: 3 }}>
-                  {ripped.cardName.split(" · ")[1]} · <span style={{ color: C.teal }}>FMV {money(ripped.value, 2)}</span>
-                </div>
-              </div>
-            )}
             {ripped && !ripping && (
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.muted, marginBottom: 20 }}>
                 draw leaf <span style={{ color: "#c3bad8" }}>0x{ripped.draw.proof.leaf.slice(0, 10)}…</span>

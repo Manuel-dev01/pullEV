@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 // Renders a real card image (from the Renaiss Index `imageUrl`) inside a gradient
 // frame, falling back to the striped placeholder when there is no image or it fails
-// to load (e.g. the labeled commons tier, which has no art). Plain <img> on purpose:
-// the blob hosts aren't in next.config remotePatterns, and this matches the existing
-// pattern in web/app/value/page.tsx. Identification use only (IP belongs to owners).
+// to load (e.g. the labeled commons tier, which has no art). Uses next/image so the
+// large source PNGs are resized + served as WebP through Vercel's image CDN (fast).
+// Identification use only (IP belongs to the respective owners).
 export function CardArt({
   src,
   name,
@@ -14,6 +15,8 @@ export function CardArt({
   radius = 12,
   pad = 3,
   label,
+  sizes = "220px",
+  priority = false,
 }: {
   src?: string;
   name?: string;
@@ -21,6 +24,8 @@ export function CardArt({
   radius?: number;
   pad?: number;
   label?: string;
+  sizes?: string;
+  priority?: boolean;
 }) {
   const [err, setErr] = useState(false);
   const show = !!src && !err;
@@ -44,12 +49,14 @@ export function CardArt({
         }}
       >
         {show ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={src}
+          <Image
+            src={src as string}
             alt={name ?? "graded card"}
+            fill
+            sizes={sizes}
+            priority={priority}
             onError={() => setErr(true)}
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            style={{ objectFit: "cover" }}
           />
         ) : (
           <span

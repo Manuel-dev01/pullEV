@@ -3,10 +3,10 @@
   "cards": [
     {
       "card": {
-        "id": "eden-common-uta",
-        "name": "Uta",
+        "id": "eden-common-coby",
+        "name": "Coby",
         "grade": "PSA 9",
-        "set": "One Piece Japanese OP05 Awakening Of The New Era",
+        "set": "One Piece Common",
         "fmvUsd": 22,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -16,10 +16,10 @@
     },
     {
       "card": {
-        "id": "eden-common-shanks",
-        "name": "Shanks",
+        "id": "eden-common-buggy",
+        "name": "Buggy",
         "grade": "PSA 9",
-        "set": "Romance Dawn",
+        "set": "One Piece Common",
         "fmvUsd": 48,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -29,10 +29,10 @@
     },
     {
       "card": {
-        "id": "eden-common-leafeon-ex",
-        "name": "Leafeon Ex",
+        "id": "eden-common-alvida",
+        "name": "Alvida",
         "grade": "PSA 9",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "set": "One Piece Common",
         "fmvUsd": 66,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -42,10 +42,10 @@
     },
     {
       "card": {
-        "id": "eden-common-jolteon-ex",
-        "name": "Jolteon Ex",
+        "id": "eden-common-helmeppo",
+        "name": "Helmeppo",
         "grade": "PSA 9",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "set": "One Piece Common",
         "fmvUsd": 88,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
@@ -71,19 +71,35 @@
     },
     {
       "card": {
-        "id": "eden-umbreon-ex",
-        "name": "Umbreon Ex",
+        "id": "eden-monkeydluffy-l",
+        "name": "Monkey.D.Luffy L",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-        "fmvUsd": 599.29,
+        "set": "One Piece Card Game LECAFIG Promo Japanese",
+        "fmvUsd": 577.98,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_217_ja_pokemon-japanese-sv8a-terastal-fest-ex_umbreon-ex_special-art-rare_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_001_ja_c890eb09285e44a2bd41df110151eae3_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T07:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -17.71
+        "fmvAsOf": "2026-07-06T03:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -6.34
       },
       "weight": 24
+    },
+    {
+      "card": {
+        "id": "eden-gear-two",
+        "name": "Gear Two",
+        "grade": "PSA 10",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 677.85,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-05T00:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": 23.09
+      },
+      "weight": 14
     },
     {
       "card": {
@@ -91,15 +107,15 @@
         "name": "Birthday Pikachu-Holo",
         "grade": "PSA 10",
         "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-        "fmvUsd": 695.74,
+        "fmvUsd": 696.18,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA77457280/item.webp",
         "fmvSource": "Index",
         "fmvAsOf": "2026-07-06T10:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -25.34
+        "fmvDeltaPct": -25.3
       },
-      "weight": 14
+      "weight": 8
     },
     {
       "card": {
@@ -113,9 +129,9 @@
         "fmvSource": "Index",
         "fmvAsOf": "2026-07-06T05:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -28.54
+        "fmvDeltaPct": -28.57
       },
-      "weight": 8
+      "weight": 5
     },
     {
       "card": {
@@ -123,15 +139,15 @@
         "name": "Luffy \u0026 Ace",
         "grade": "PSA 10",
         "set": "Luffy \u0026 Ace",
-        "fmvUsd": 1075.26,
+        "fmvUsd": 1066.86,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T16:00:00.000Z",
+        "fmvAsOf": "2026-07-06T10:00:00.000Z",
         "fmvConfidence": "medium",
-        "fmvDeltaPct": -65.08
+        "fmvDeltaPct": -65.35
       },
-      "weight": 5
+      "weight": 3
     },
     {
       "card": {
@@ -139,15 +155,31 @@
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
         "set": "A Fist Of Divine Speed",
-        "fmvUsd": 1392,
+        "fmvUsd": 1409.38,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T12:00:00.000Z",
+        "fmvAsOf": "2026-07-06T13:00:00.000Z",
         "fmvConfidence": "medium",
-        "fmvDeltaPct": -18.81
+        "fmvDeltaPct": -17.8
       },
-      "weight": 3
+      "weight": 1
+    },
+    {
+      "card": {
+        "id": "eden-pikachu-with-grey-felt-hat",
+        "name": "Pikachu with Grey Felt Hat",
+        "grade": "PSA 10",
+        "set": "Pokemon SVP Black Star Promos",
+        "fmvUsd": 2871.79,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA120383833/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T13:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -7.18
+      },
+      "weight": 1
     }
   ]
 }
