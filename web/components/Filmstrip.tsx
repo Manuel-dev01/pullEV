@@ -8,6 +8,19 @@ import { ProvenanceBadge, LiveTag, AssumptionTag } from "./ProvenanceBadge";
 import { Distribution } from "./Distribution";
 import { ProofVault } from "./ProofVault";
 import { Advisor } from "./Advisor";
+import { CardArt } from "./CardArt";
+
+// Honest label for the client-side sample rip: a genuine weighted draw over the live
+// pool, but not Renaiss's official on-chain sealed draw (Renaiss exposes no draw API).
+const SAMPLE_LABEL = "SAMPLE PULL · real odds, client-side";
+const SAMPLE_TOOLTIP = "A real weighted draw over the live pool. Not Renaiss's official on-chain sealed draw.";
+
+// The highest-FMV card's image, used as a pack's cover art on The Floor.
+function coverImage(pool: Pool): string | undefined {
+  let top = pool.cards[0];
+  for (const e of pool.cards) if (e.card.fmvUsd > (top?.card.fmvUsd ?? 0)) top = e;
+  return top?.card.imageUrl;
+}
 
 const C = {
   bg: "#08070c",
@@ -46,7 +59,7 @@ function verdictOf(ratio: number) {
 }
 const edgePct = (ratio: number) => (ratio - 1) * 100;
 
-type Ripped = { draw: Draw; tampered: Draw; cardName: string; value: number };
+type Ripped = { draw: Draw; tampered: Draw; cardName: string; value: number; image?: string };
 
 export function Filmstrip({
   packs,
@@ -61,6 +74,7 @@ export function Filmstrip({
   const [dir, setDir] = useState(1);
   const [ripped, setRipped] = useState<Ripped | null>(null);
   const [ripping, setRipping] = useState(false);
+  const [session, setSession] = useState(0); // running P/L across sample rips: Σ(FMV − cost)
   const [advisorOpen, setAdvisorOpen] = useState(false);
   const lockRef = useRef(0);
   const tsRef = useRef<{ x: number; y: number } | null>(null);
@@ -144,11 +158,12 @@ export function Filmstrip({
         cardId: picked.card.id,
         proof,
         isExample: true,
-        label: "EXAMPLE PULL · demonstration, not a real Renaiss draw",
+        label: SAMPLE_LABEL,
       };
       const tamperedProof = { ...proof, proofPath: proof.proofPath.map((s, i) => (i === 0 ? { ...s, hash: corruptHexChar(s.hash) } : s)) };
-      const tampered: Draw = { ...draw, proof: tamperedProof, label: "EXAMPLE (tampered) · should FAIL" };
-      setRipped({ draw, tampered, cardName: `${picked.card.name} · ${picked.card.grade}`, value: picked.card.fmvUsd });
+      const tampered: Draw = { ...draw, proof: tamperedProof, label: "SAMPLE (tampered) · should FAIL" };
+      setRipped({ draw, tampered, cardName: `${picked.card.name} · ${picked.card.grade}`, value: picked.card.fmvUsd, image: picked.card.imageUrl });
+      setSession((s) => s + picked.card.fmvUsd - active.pack.priceUsd);
     }
     setRipping(false);
   }, [active]);
@@ -208,6 +223,26 @@ export function Filmstrip({
           <div style={{ flex: 1, position: "relative", height: 44, display: "flex", alignItems: "center" }}>
             <div style={{ position: "absolute", left: 8, right: 8, top: "50%", height: 2, background: "rgba(255,255,255,.1)", borderRadius: 2 }} />
             <div style={{ position: "absolute", left: 8, top: "50%", height: 2, borderRadius: 2, background: "linear-gradient(90deg,#ff5fb4,#c95cf5,#3ff0cf)", width: `${(station / 3) * 100}%`, transition: "width .8s cubic-bezier(.72,0,.18,1)", boxShadow: "0 0 12px rgba(201,92,245,.6)" }} />
+            {/* gliding pack token that rides the rail between stations */}
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: `${(station / 3) * 100}%`,
+                width: 18,
+                height: 24,
+                borderRadius: 5,
+                background: HUES[0],
+                boxShadow: "0 0 16px rgba(201,92,245,.8)",
+                zIndex: 3,
+                transform: `translate(-50%,-50%) rotate(${moving ? dir * 20 : 8}deg) scale(${moving ? 1.18 : 1})`,
+                filter: moving ? "blur(1.2px)" : "none",
+                transition: "left .78s cubic-bezier(.72,0,.18,1), transform .45s ease, filter .3s",
+              }}
+            >
+              <div style={{ width: "100%", height: "100%", borderRadius: 4, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.12) 0 2px,transparent 2px 4px)" }} />
+            </div>
             <div style={{ position: "relative", display: "flex", justifyContent: "space-between", width: "100%" }}>
               {LABELS.map((label, i) => {
                 const activeNode = i === station;
@@ -239,9 +274,11 @@ export function Filmstrip({
               })}
             </div>
           </div>
-          <div style={{ flex: "none", textAlign: "right" }}>
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: C.muted }}>VERDICT</div>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 18, color: v.color, lineHeight: 1 }}>{v.text}</div>
+          <div style={{ flex: "none", textAlign: "right" }} title="Running profit/loss across your sample rips this session (FMV minus pack cost).">
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: C.muted }}>SESSION</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 18, color: session >= 0 ? C.teal : "#ff8fa0", lineHeight: 1 }}>
+              {session >= 0 ? "+" : "-"}{money(Math.abs(session))}
+            </div>
           </div>
         </div>
       </div>
@@ -266,6 +303,7 @@ export function Filmstrip({
               return (
                 <div
                   key={pd.pack.id}
+                  className="pv-lift"
                   onClick={() => {
                     setActiveId(pd.pack.id);
                     setRipped(null);
@@ -273,10 +311,8 @@ export function Filmstrip({
                   }}
                   style={{ flex: "none", width: 210, cursor: "pointer", borderRadius: 18, padding: 16, background: C.panel, border: `1px solid ${pd.pack.id === activeId ? "rgba(201,92,245,.55)" : C.border}` }}
                 >
-                  <div style={{ height: 210, borderRadius: 12, background: HUES[i % HUES.length], padding: 3, boxShadow: "0 16px 40px rgba(0,0,0,.5)" }}>
-                    <div style={{ width: "100%", height: "100%", borderRadius: 9, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.06) 0 4px,transparent 4px 8px)", display: "flex", alignItems: "flex-end", justifyContent: "center", paddingBottom: 16 }}>
-                      <span style={{ fontFamily: "var(--font-display)", fontSize: 22, letterSpacing: ".04em" }}>{pd.pack.name.split(" ")[0].toUpperCase()}</span>
-                    </div>
+                  <div style={{ height: 210, boxShadow: "0 16px 40px rgba(0,0,0,.5)" }}>
+                    <CardArt src={coverImage(pd.pool)} hue={HUES[i % HUES.length]} radius={12} name={pd.pack.name.split(" ")[0].toUpperCase()} />
                   </div>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 14 }}>
                     <div>
@@ -345,7 +381,10 @@ export function Filmstrip({
                 .slice()
                 .sort((a, b) => b.card.fmvUsd - a.card.fmvUsd)
                 .map((e) => (
-                  <div key={e.card.id} style={{ display: "flex", alignItems: "center", padding: "8px 2px", borderTop: "1px solid rgba(255,255,255,.05)", fontSize: 12 }}>
+                  <div key={e.card.id} style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 2px", borderTop: "1px solid rgba(255,255,255,.05)", fontSize: 12 }}>
+                    <div style={{ flex: "none", width: 22, height: 30 }}>
+                      <CardArt src={e.card.imageUrl} hue={HUES[0]} radius={5} pad={1.5} />
+                    </div>
                     <span style={{ flex: 2, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{e.card.name}</span>
                     <span style={{ flex: 1.3, textAlign: "right", fontFamily: "var(--font-mono)", color: C.ink }}>
                       {money(e.card.fmvUsd)}
@@ -369,24 +408,28 @@ export function Filmstrip({
         <Station n="03" title="Station 03 · Rip Chamber" center>
           <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "min(640px,90vw)", height: "min(640px,80vh)", background: "radial-gradient(circle,rgba(201,92,245,.3),transparent 62%)", pointerEvents: "none" }} />
           <div style={{ position: "relative", textAlign: "center", maxWidth: 460, margin: "0 auto" }}>
-            <div style={{ display: "inline-block", fontFamily: "var(--font-mono)", fontSize: 10, color: "#ffd76a", border: "1px solid rgba(255,215,106,.4)", borderRadius: 999, padding: "5px 12px", marginBottom: 16 }}>
-              EXAMPLE PULL · demonstration, not a real Renaiss draw
+            <div title={SAMPLE_TOOLTIP} style={{ display: "inline-block", cursor: "help", fontFamily: "var(--font-mono)", fontSize: 10, color: "#ffd76a", border: "1px solid rgba(255,215,106,.4)", borderRadius: 999, padding: "5px 12px", marginBottom: 16 }}>
+              {SAMPLE_LABEL}
             </div>
-            <div style={{ width: 210, height: 294, margin: "0 auto 22px", borderRadius: 20, background: HUES[0], padding: 4, boxShadow: "0 30px 80px rgba(201,92,245,.5)", animation: "pv-floaty 6s ease-in-out infinite" }}>
-              <div style={{ width: "100%", height: "100%", borderRadius: 16, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 5px,transparent 5px 10px)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10, padding: 16, textAlign: "center" }}>
-                {ripping ? (
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: C.teal }}>RIPPING…</div>
-                ) : ripped ? (
-                  <>
-                    <div style={{ fontFamily: "var(--font-display)", fontSize: 22, lineHeight: 0.95 }}>{ripped.cardName.split(" · ")[0]}</div>
-                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.muted }}>{ripped.cardName.split(" · ")[1]}</div>
-                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 13, color: C.teal }}>FMV {money(ripped.value, 2)}</div>
-                  </>
-                ) : (
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: C.muted }}>press RIP</div>
-                )}
+            <div style={{ width: 210, height: 294, margin: "0 auto 16px", boxShadow: "0 30px 80px rgba(201,92,245,.5)", animation: "pv-floaty 6s ease-in-out infinite" }}>
+              {ripped && !ripping ? (
+                <CardArt src={ripped.image} hue={HUES[0]} radius={20} pad={4} name={ripped.cardName.split(" · ")[0]} />
+              ) : (
+                <div style={{ width: "100%", height: "100%", borderRadius: 20, background: HUES[0], padding: 4 }}>
+                  <div style={{ width: "100%", height: "100%", borderRadius: 16, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 5px,transparent 5px 10px)", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: ripping ? C.teal : C.muted }}>{ripping ? "RIPPING…" : "press RIP"}</div>
+                  </div>
+                </div>
+              )}
+            </div>
+            {ripped && !ripping && (
+              <div style={{ marginBottom: 16 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 22, lineHeight: 0.95 }}>{ripped.cardName.split(" · ")[0]}</div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.muted, marginTop: 3 }}>
+                  {ripped.cardName.split(" · ")[1]} · <span style={{ color: C.teal }}>FMV {money(ripped.value, 2)}</span>
+                </div>
               </div>
-            </div>
+            )}
             {ripped && !ripping && (
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.muted, marginBottom: 20 }}>
                 draw leaf <span style={{ color: "#c3bad8" }}>0x{ripped.draw.proof.leaf.slice(0, 10)}…</span>

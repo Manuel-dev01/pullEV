@@ -3,8 +3,29 @@
     "id": "eden",
     "name": "Eden Pack",
     "priceUsd": 150,
+    "priceIsAssumption": false,
+    "tagline": "Premium chase pool, verified $150"
+  },
+  {
+    "id": "voyaga",
+    "name": "Voyaga Pack",
+    "priceUsd": 120,
     "priceIsAssumption": true,
-    "tagline": "Premium BGS Black Label 10 chase pool"
+    "tagline": "One Piece Grand Line chase, price pending confirmation"
+  },
+  {
+    "id": "frozen",
+    "name": "Frozen Pack",
+    "priceUsd": 60,
+    "priceIsAssumption": true,
+    "tagline": "Pokemon icy pull, price pending confirmation"
+  },
+  {
+    "id": "legacy-8",
+    "name": "Legacy Pack #8",
+    "priceUsd": 200,
+    "priceIsAssumption": true,
+    "tagline": "Vintage premium mixed chase, price pending confirmation"
   },
   {
     "id": "omega",

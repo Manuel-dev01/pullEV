@@ -57,3 +57,18 @@ body {
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
 }
+/* Scan-line sweep for the hero EV console (mirrors FOIL `scan`). */
+@keyframes pv-scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(400%); }
+}
+
+/* Hover-lift for pack cards on The Floor (inline styles can't express :hover). */
+.pv-lift {
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.pv-lift:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 92, 245, .55) !important;
+  box-shadow: 0 22px 48px rgba(201, 92, 245, .28);
+}

@@ -1,0 +1,153 @@
+{
+  "packId": "legacy-8",
+  "cards": [
+    {
+      "card": {
+        "id": "legacy-common-uta",
+        "name": "Uta",
+        "grade": "PSA 9",
+        "set": "One Piece Japanese OP05 Awakening Of The New Era",
+        "fmvUsd": 22,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 360
+    },
+    {
+      "card": {
+        "id": "legacy-common-shanks",
+        "name": "Shanks",
+        "grade": "PSA 9",
+        "set": "Romance Dawn",
+        "fmvUsd": 48,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 210
+    },
+    {
+      "card": {
+        "id": "legacy-common-leafeon-ex",
+        "name": "Leafeon Ex",
+        "grade": "PSA 9",
+        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "fmvUsd": 66,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 120
+    },
+    {
+      "card": {
+        "id": "legacy-common-jolteon-ex",
+        "name": "Jolteon Ex",
+        "grade": "PSA 9",
+        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+        "fmvUsd": 88,
+        "fmvIsAssumption": true,
+        "fmvSource": "Mock",
+        "fmvConfidence": "assumed"
+      },
+      "weight": 60
+    },
+    {
+      "card": {
+        "id": "legacy-mega-charizard-x-ex",
+        "name": "Mega Charizard X Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 138.71,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_223_ja_mega-charizard-x-ex_mega-attack-rare_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T09:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -30.56
+      },
+      "weight": 40
+    },
+    {
+      "card": {
+        "id": "legacy-yamato-sr-flagship-battle-2024-august-top-8-prize",
+        "name": "Yamato SR/(Flagship Battle 2024 August Top 8 Prize)",
+        "grade": "PSA 10",
+        "set": "One Piece Card Game Promos Japanese",
+        "fmvUsd": 244.56,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://8nothtoc5ds7a0x3.public.blob.vercel-storage.com/pokemon-cards/BGS0017392861/card.jpg",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-02T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 19.29
+      },
+      "weight": 24
+    },
+    {
+      "card": {
+        "id": "legacy-pikachu-ex",
+        "name": "Pikachu Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 514.67,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA145824266/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T06:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -22.45
+      },
+      "weight": 14
+    },
+    {
+      "card": {
+        "id": "legacy-birthday-pikachu-holo",
+        "name": "Birthday Pikachu-Holo",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
+        "fmvUsd": 695.74,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA77457280/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -25.34
+      },
+      "weight": 8
+    },
+    {
+      "card": {
+        "id": "legacy-charizard-holo",
+        "name": "Charizard-Holo",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
+        "fmvUsd": 784.91,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA69077892/item.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T05:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -28.54
+      },
+      "weight": 5
+    },
+    {
+      "card": {
+        "id": "legacy-monkeydluffy",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 1392,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-05T12:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": -18.81
+      },
+      "weight": 3
+    }
+  ]
+}

@@ -33,6 +33,9 @@ func main() {
 		case "commons":
 			runCommons()
 			return
+		case "packs":
+			runPacks()
+			return
 		}
 	}
 

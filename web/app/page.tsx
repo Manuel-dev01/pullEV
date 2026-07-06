@@ -44,11 +44,22 @@ export default async function Landing() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/image_1.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 78% 30%, rgba(8,7,12,0) 0%, rgba(8,7,12,.55) 46%, #08070c 82%)" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(8,7,12,.35) 0%,transparent 22%,transparent 55%,#08070c 100%)" }} />
+        {/* floating slab chips (real featured edge + rarity flavor) */}
+        {featured && (
+          <div style={{ position: "absolute", top: "20%", left: "8%", zIndex: 5, animation: "pv-floaty 7s ease-in-out infinite" }}>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)" }}>
+              {edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}% EDGE
+            </div>
+          </div>
+        )}
+        <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 5, animation: "pv-floaty 9s ease-in-out .6s infinite" }}>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)" }}>MYTHIC · 1.2%</div>
+        </div>
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px 40px 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 720, marginTop: 24 }}>
               <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(64px,9vw,132px)", lineHeight: 0.86, margin: 0, textShadow: "0 8px 60px rgba(0,0,0,.6)" }}>
-                KNOW THE<br />EV BEFORE<br />YOU <span style={{ background: "linear-gradient(115deg,#ff5fb4,#c95cf5 34%,#7b7bff 60%,#3ff0cf 80%)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>RIP.</span>
+                KNOW THE<br />EV BEFORE<br />YOU <span style={{ background: "linear-gradient(115deg,#ff5fb4,#c95cf5 34%,#7b7bff 60%,#4bc6ff 80%,#3ff0cf)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent", animation: "pv-shimmer 6s linear infinite" }}>RIP.</span>
               </h1>
               <p style={{ maxWidth: 460, fontSize: 17, lineHeight: 1.6, color: "#c3bad8", margin: "26px 0 30px" }}>
                 Live expected value on every Infinite Gacha pack, from real Renaiss Index prices, then verify any pull&apos;s fairness yourself, client-side. Trust the math, not the claim.
@@ -62,7 +73,8 @@ export default async function Landing() {
             {/* 3D verdict console — REAL featured pack */}
             {featured && (
               <div style={{ perspective: 1600, marginTop: 40 }}>
-                <div style={{ width: 420, maxWidth: "88vw", transform: "rotateY(-16deg) rotateX(6deg) rotate(1deg)", borderRadius: 22, padding: 24, background: "linear-gradient(180deg,rgba(20,16,25,.9),rgba(10,8,15,.92))", border: "1px solid rgba(255,255,255,.12)", boxShadow: "0 40px 90px rgba(0,0,0,.6),0 0 60px rgba(123,123,255,.2)", backdropFilter: "blur(10px)" }}>
+                <div style={{ position: "relative", width: 420, maxWidth: "88vw", transform: "rotateY(-16deg) rotateX(6deg) rotate(1deg)", borderRadius: 22, padding: 24, background: "linear-gradient(180deg,rgba(20,16,25,.9),rgba(10,8,15,.92))", border: "1px solid rgba(255,255,255,.12)", boxShadow: "0 40px 90px rgba(0,0,0,.6),0 0 60px rgba(123,123,255,.2)", backdropFilter: "blur(10px)", overflow: "hidden", animation: "pv-floaty 8s ease-in-out infinite" }}>
+                  <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 38, background: "linear-gradient(90deg,rgba(255,95,180,.16),rgba(63,240,207,.12))", mixBlendMode: "screen", filter: "blur(8px)", animation: "pv-scan 4s linear infinite", pointerEvents: "none" }} />
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
                       <div style={{ width: 34, height: 44, borderRadius: 6, background: GRAD, padding: 2 }}><div style={{ width: "100%", height: "100%", borderRadius: 5, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.06) 0 3px,transparent 3px 6px)" }} /></div>
@@ -75,7 +87,20 @@ export default async function Landing() {
                     <div style={{ fontFamily: "var(--font-display)", fontSize: 66, lineHeight: 0.9 }}>{money(featured.ev.expectedValue)}</div>
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 18, color: "#3ff0cf" }}>{edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}%</div>
                   </div>
-                  <div style={{ display: "flex", gap: 8, marginTop: 14 }}>
+                  {/* illustrative value-distribution curve with a cost marker */}
+                  <svg viewBox="0 0 380 84" style={{ width: "100%", height: 78, marginTop: 10 }}>
+                    <defs>
+                      <linearGradient id="heroFill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stopColor="#ff5fb4" stopOpacity=".5" />
+                        <stop offset="1" stopColor="#ff5fb4" stopOpacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,74 C46,74 74,20 140,17 C214,14 250,64 320,70 C350,72 368,73 380,73 L380,84 L0,84 Z" fill="url(#heroFill)" />
+                    <path d="M0,74 C46,74 74,20 140,17 C214,14 250,64 320,70 C350,72 368,73 380,73" fill="none" stroke="#ff5fb4" strokeWidth="2.4" />
+                    <line x1="210" y1="6" x2="210" y2="84" stroke="#3ff0cf" strokeDasharray="3 3" strokeWidth="1.3" />
+                    <text x="214" y="16" fontFamily="var(--font-mono)" fontSize="9" fill="#3ff0cf">cost</text>
+                  </svg>
+                  <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
                     <Stat label="P(PROFIT)" value={`${(featured.ev.chanceOfProfit * 100).toFixed(0)}%`} />
                     <Stat label="MEDIAN" value={money(featured.ev.distribution.median)} />
                     <Stat label="TOP" value={money(featured.ev.distribution.p90)} color="#ff5fb4" />
@@ -92,6 +117,11 @@ export default async function Landing() {
               </div>
             )}
           </div>
+        </div>
+        {/* scroll cue */}
+        <div style={{ position: "absolute", bottom: 150, left: "50%", transform: "translateX(-50%)", zIndex: 5, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".3em", color: "#8a83a0", textAlign: "center" }}>
+          SCROLL
+          <div style={{ width: 1, height: 34, margin: "10px auto 0", background: "linear-gradient(#8a83a0,transparent)" }} />
         </div>
       </div>
 
@@ -126,7 +156,7 @@ export default async function Landing() {
       </div>
 
       {/* CHROME GRAFFITI break */}
-      <div id="fair" style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
+      <div style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/image_2.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,#08070c 2%,rgba(8,7,12,.6) 40%,rgba(8,7,12,.15) 70%,rgba(8,7,12,.7) 100%)" }} />
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1300, margin: "0 auto", padding: "0 40px", width: "100%" }}>
@@ -143,6 +173,7 @@ export default async function Landing() {
         <div style={{ display: "flex", flexWrap: "wrap", gap: 60, alignItems: "center" }}>
           <div style={{ flex: 1, minWidth: 300, position: "relative", display: "flex", justifyContent: "center" }}>
             <div style={{ position: "absolute", width: 320, height: 320, borderRadius: "50%", background: "radial-gradient(circle,rgba(123,123,255,.4),transparent 68%)", filter: "blur(6px)" }} />
+            <div style={{ position: "absolute", width: 300, height: 300, border: "1px solid rgba(255,255,255,.1)", borderRadius: "50%", animation: "pv-spin 40s linear infinite" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/image_3.png" alt="Renaiss vault case" style={{ position: "relative", maxWidth: 400, width: "100%", filter: "drop-shadow(0 30px 60px rgba(0,0,0,.6))", animation: "pv-floaty 9s ease-in-out infinite" }} />
           </div>
@@ -154,6 +185,46 @@ export default async function Landing() {
               <VaultStat big={`${evs.length}`} small="packs analyzed" />
               <VaultStat big={featured ? `${edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}${edgePct(featured.ev.evToCostRatio).toFixed(0)}%` : "N/A"} small={`top edge (${featured?.pack.name ?? ""})`} color="#3ff0cf" />
               <VaultStat big={offline ? "offline" : "live"} small={offline ? "bundled snapshot" : "oracle sync"} color={offline ? "#f0b23f" : undefined} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* MERKLE explainer — HOW A PROOF CHECKS OUT */}
+      <div id="fair" style={{ background: "linear-gradient(180deg,#08070c,#0b0912 50%,#08070c)", borderTop: "1px solid rgba(255,255,255,.06)", borderBottom: "1px solid rgba(255,255,255,.06)", padding: "110px 40px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 16 }}>Provably fair · client-side</div>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,5vw,68px)", lineHeight: 0.94, margin: 0 }}>HOW A PROOF CHECKS OUT</h2>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 40, alignItems: "center", justifyContent: "center" }}>
+            <svg viewBox="0 0 420 260" style={{ flex: 1, minWidth: 340, maxWidth: 460 }}>
+              <defs>
+                <linearGradient id="rootg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stopColor="#ff5fb4" />
+                  <stop offset="1" stopColor="#3ff0cf" />
+                </linearGradient>
+              </defs>
+              <g stroke="rgba(255,255,255,.14)" strokeWidth="1.5">
+                <line x1="210" y1="40" x2="110" y2="110" /><line x1="210" y1="40" x2="310" y2="110" />
+                <line x1="110" y1="110" x2="60" y2="190" /><line x1="110" y1="110" x2="160" y2="190" />
+                <line x1="310" y1="110" x2="260" y2="190" /><line x1="310" y1="110" x2="360" y2="190" />
+              </g>
+              <g stroke="#ff5fb4" strokeWidth="2.6"><line x1="210" y1="40" x2="110" y2="110" /><line x1="110" y1="110" x2="60" y2="190" /></g>
+              <circle cx="160" cy="190" r="11" fill="#12101a" stroke="rgba(255,255,255,.2)" />
+              <circle cx="260" cy="190" r="11" fill="#12101a" stroke="rgba(255,255,255,.2)" />
+              <circle cx="360" cy="190" r="11" fill="#12101a" stroke="rgba(255,255,255,.2)" />
+              <circle cx="310" cy="110" r="12" fill="#12101a" stroke="rgba(255,255,255,.2)" />
+              <circle cx="60" cy="190" r="12" fill="#ff5fb4" />
+              <circle cx="110" cy="110" r="13" fill="#c95cf5" />
+              <circle cx="210" cy="40" r="15" fill="url(#rootg)" />
+              <text x="60" y="224" fontFamily="var(--font-mono)" fontSize="10" fill="#ff5fb4" textAnchor="middle">your leaf</text>
+              <text x="210" y="18" fontFamily="var(--font-mono)" fontSize="10" fill="#3ff0cf" textAnchor="middle">root</text>
+            </svg>
+            <div style={{ flex: 1, minWidth: 320, maxWidth: 480, display: "flex", flexDirection: "column", gap: 14 }}>
+              <ProofStep n="01" color="#ff5fb4" title="Hash your draw into a leaf" body="Your card, its serial and value become one leaf hash: deterministic and yours alone." />
+              <ProofStep n="02" color="#c95cf5" title="Walk the sibling path" body="Combine with each sibling hash up the tree, the proof PullEV recomputes in your browser." />
+              <ProofStep n="03" color="#3ff0cf" title="Match the committed root" body="If your recomputed root equals the published one, the pull was fair. Full stop." />
             </div>
           </div>
         </div>
@@ -217,6 +288,18 @@ function Stat({ label, value, color }: { label: string; value: string; color?: s
     <div style={{ flex: 1, background: "rgba(255,255,255,.04)", borderRadius: 9, padding: "9px 10px" }}>
       <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "#9c94b6" }}>{label}</div>
       <div style={{ fontFamily: "var(--font-mono)", fontSize: 15, color: color ?? "#f6f2fb" }}>{value}</div>
+    </div>
+  );
+}
+
+function ProofStep({ n, color, title, body }: { n: string; color: string; title: string; body: string }) {
+  return (
+    <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+      <div style={{ fontFamily: "var(--font-display)", fontSize: 22, color, minWidth: 34 }}>{n}</div>
+      <div>
+        <div style={{ fontWeight: 600, fontSize: 16, marginBottom: 4 }}>{title}</div>
+        <div style={{ fontSize: 14, color: "#9c94b6", lineHeight: 1.5 }}>{body}</div>
+      </div>
     </div>
   );
 }

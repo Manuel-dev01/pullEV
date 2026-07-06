@@ -80,12 +80,45 @@ var commonsConfig = map[string]packCommons{
 		},
 		chaseLadder: []float64{40, 24, 14, 8, 5, 3},
 	},
+	// Voyaga ($120, One Piece Grand Line): premium One Piece chase → house-edge SKIP.
+	"voyaga": {
+		prefix: "voyaga",
+		commons: []commonCard{
+			{"Nami", "PSA 9", "Romance Dawn", 9, 260},
+			{"Perona", "PSA 9", "Prize Cards Alternate Art", 16, 150},
+			{"Sabo", "PSA 9", "Winner Prize For Sealed Battle 2023 Vol 1", 27, 80},
+			{"Gear Two", "PSA 9", "A Fist Of Divine Speed", 44, 44},
+		},
+		chaseLadder: []float64{44, 26, 15, 9, 6, 4},
+	},
+	// Frozen ($60, Pokemon icy lean): light commons + fat tail → thin RIP.
+	"frozen": {
+		prefix: "frozen",
+		commons: []commonCard{
+			{"Psyduck", "PSA 9", "Pokemon Japanese M2a-Mega Dream Ex", 7, 110},
+			{"Haunter", "PSA 9", "Pokemon Japanese Mbg Mega Starter Set", 12, 80},
+			{"Meowth Ex", "PSA 9", "Nullifying Zero", 19, 55},
+			{"Eevee Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 30, 36},
+		},
+		chaseLadder: []float64{46, 30, 20, 14, 12, 12},
+	},
+	// Legacy Pack #8 ($200, vintage premium mixed): deep chase → SKIP with big tail.
+	"legacy-8": {
+		prefix: "legacy",
+		commons: []commonCard{
+			{"Uta", "PSA 9", "One Piece Japanese OP05 Awakening Of The New Era", 22, 360},
+			{"Shanks", "PSA 9", "Romance Dawn", 48, 210},
+			{"Leafeon Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 66, 120},
+			{"Jolteon Ex", "PSA 9", "Pokemon Japanese Sv8a-Terastal Fest Ex", 88, 60},
+		},
+		chaseLadder: []float64{40, 24, 14, 8, 5, 3},
+	},
 }
 
 func runCommons() {
 	packs := loadPacksForCommons()
 
-	for _, id := range []string{"omega", "renacrypt", "eden"} {
+	for _, id := range []string{"omega", "renacrypt", "eden", "voyaga", "frozen", "legacy-8"} {
 		cfg, ok := commonsConfig[id]
 		if !ok {
 			continue
