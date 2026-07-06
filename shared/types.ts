@@ -5,12 +5,12 @@
 // Rule: every number the UI renders must be reachable to a Provenance. No value is
 // ever shown without its source, freshness, and official/unofficial status.
 
-/** Which data source produced a value. */
-export type SourceKind = "Mock" | "Public" | "Sdk";
+/** Which data source produced a value. Index = real Renaiss Index API (beta). */
+export type SourceKind = "Mock" | "Public" | "Sdk" | "Index";
 
 /** Travels with every datapoint so the UI can badge its origin and freshness. */
 export interface Provenance {
-  /** Mock | Public | Sdk */
+  /** Mock | Public | Sdk | Index */
   source: SourceKind;
   /** RFC3339 timestamp of when this data was fetched/produced. */
   fetchedAt: string;
@@ -35,6 +35,15 @@ export interface Card {
   fmvIsAssumption: boolean;
   /** Optional image URL for identification. */
   imageUrl?: string;
+
+  /** Per-FMV provenance: "Mock" (assumed) or "Index" (real, cached). Absent ⇒ treat as Mock. */
+  fmvSource?: SourceKind;
+  /** RFC3339 freshness of a real valuation (Index only). */
+  fmvAsOf?: string;
+  /** Confidence of a real valuation: high | medium | low (Index only). */
+  fmvConfidence?: string;
+  /** Trend % of a real valuation (Index only). */
+  fmvDeltaPct?: number;
 }
 
 /** A purchasable Infinite Gacha pack. */
@@ -69,18 +78,26 @@ export interface Draw {
   /** ID of the card that was drawn. */
   cardId: string;
   proof: MerkleProof;
+  /** True for demonstration data (not a real Renaiss draw). */
+  isExample: boolean;
+  /** Human-readable badge, e.g. "EXAMPLE · not a real Renaiss draw". */
+  label: string;
 }
 
 /** Inputs for independent, client-side Merkle inclusion recomputation (Slice 2). */
 export interface MerkleProof {
-  /** Hex leaf hash (or pre-image, depending on scheme — see schemeNote). */
+  /** Exact bytes hashed to form the leaf, so the browser recomputes the leaf itself. */
+  leafPreimage: string;
+  /** Hex SHA-256 of the (domain-separated) preimage. */
   leaf: string;
   /** Sibling hashes from leaf to root, in order. */
   proofPath: ProofStep[];
-  /** The root Renaiss published for this draw's batch. */
+  /** The published root the proof recomputes to. See rootNote for what it represents. */
   publishedRoot: string;
   /** Which hash + leaf-encoding scheme this proof assumes. Labeled until confirmed. */
   schemeNote: string;
+  /** Labels what publishedRoot actually is (e.g. PullEV-computed over a MOCK pool). */
+  rootNote: string;
 }
 
 export interface ProofStep {
@@ -101,7 +118,31 @@ export interface EVResult {
   inputsHash: string;
   /** Provenance of every input that fed the computation. */
   sources: Provenance[];
+  /** Honest limitations inherited from inputs (assumed FMVs, unconfirmed price). */
+  caveats: string[];
   computedAt: string;
+}
+
+/** A normalized real card valuation from the Renaiss Index API (beta). */
+export interface Valuation {
+  cert: string;
+  found: boolean;
+  name: string;
+  setName: string;
+  gradeLabel: string;
+  game: string;
+  /** priceUsdCents / 100 */
+  priceUsd: number;
+  /** high | medium | low */
+  confidence: string;
+  /** trend % */
+  deltaPct: number;
+  /** sparkline points (USD) */
+  spark: number[];
+  lastSaleAt: string;
+  imageUrl?: string;
+  /** X-RateLimit-Remaining, -1 if unknown */
+  rateRemaining: number;
 }
 
 /** Standard envelope: a payload plus the provenance that governs it. */

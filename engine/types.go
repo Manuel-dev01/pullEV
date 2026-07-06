@@ -11,6 +11,7 @@ const (
 	SourceMock   SourceKind = "Mock"
 	SourcePublic SourceKind = "Public"
 	SourceSdk    SourceKind = "Sdk"
+	SourceIndex  SourceKind = "Index" // real Renaiss Index API (beta) — official valuations
 )
 
 // Provenance travels with every datapoint so the UI can badge origin and freshness.
@@ -30,6 +31,12 @@ type Card struct {
 	FMVUsd          float64 `json:"fmvUsd"`
 	FMVIsAssumption bool    `json:"fmvIsAssumption"`
 	ImageURL        string  `json:"imageUrl,omitempty"`
+
+	// Per-FMV provenance — a card's price may be MOCK (assumed) or Index (real, cached).
+	FMVSource     SourceKind `json:"fmvSource"`               // Mock | Index
+	FMVAsOf       string     `json:"fmvAsOf,omitempty"`       // RFC3339 freshness of a real valuation
+	FMVConfidence string     `json:"fmvConfidence,omitempty"` // high | medium | low (Index only)
+	FMVDeltaPct   float64    `json:"fmvDeltaPct,omitempty"`   // trend % (Index only)
 }
 
 // Pack is a purchasable Infinite Gacha pack.
@@ -60,11 +67,18 @@ type ProofStep struct {
 }
 
 // MerkleProof carries the inputs for client-side inclusion recomputation (Slice 2).
+// The client recomputes leaf = H(leafPreimage), folds proofPath, and compares to
+// publishedRoot — trusting its own math, not our claim.
 type MerkleProof struct {
-	Leaf          string      `json:"leaf"`
+	// LeafPreimage is the exact bytes hashed to form the leaf, so the browser can
+	// recompute the leaf itself rather than trust a supplied leaf hash.
+	LeafPreimage  string      `json:"leafPreimage"`
+	Leaf          string      `json:"leaf"` // hex SHA-256 of the (domain-separated) preimage
 	ProofPath     []ProofStep `json:"proofPath"`
 	PublishedRoot string      `json:"publishedRoot"`
 	SchemeNote    string      `json:"schemeNote"`
+	// RootNote labels what publishedRoot actually is — honesty about provenance.
+	RootNote string `json:"rootNote"`
 }
 
 // Draw is a recorded draw with the proof needed to verify it.
@@ -73,6 +87,10 @@ type Draw struct {
 	PackID string      `json:"packId"`
 	CardID string      `json:"cardId"`
 	Proof  MerkleProof `json:"proof"`
+	// IsExample marks demonstration data (not a real Renaiss draw). Label carries
+	// the human-readable badge text, e.g. "EXAMPLE · not a real Renaiss draw".
+	IsExample bool   `json:"isExample"`
+	Label     string `json:"label"`
 }
 
 // Distribution holds percentile outcomes of a pull's value.
@@ -91,7 +109,27 @@ type EVResult struct {
 	ChanceOfProfit float64      `json:"chanceOfProfit"`
 	InputsHash     string       `json:"inputsHash"`
 	Sources        []Provenance `json:"sources"`
-	ComputedAt     string       `json:"computedAt"`
+	// Caveats are honest, human-readable limitations inherited from the inputs
+	// (e.g. assumed FMVs, unconfirmed price). The UI surfaces these on the verdict.
+	Caveats    []string `json:"caveats"`
+	ComputedAt string   `json:"computedAt"`
+}
+
+// Valuation is a normalized real card valuation from the Renaiss Index API (beta).
+type Valuation struct {
+	Cert          string    `json:"cert"`
+	Found         bool      `json:"found"`
+	Name          string    `json:"name"`
+	SetName       string    `json:"setName"`
+	GradeLabel    string    `json:"gradeLabel"`
+	Game          string    `json:"game"`
+	PriceUsd      float64   `json:"priceUsd"`   // priceUsdCents / 100
+	Confidence    string    `json:"confidence"` // high | medium | low
+	DeltaPct      float64   `json:"deltaPct"`   // trend %
+	Spark         []float64 `json:"spark"`      // sparkline points (USD)
+	LastSaleAt    string    `json:"lastSaleAt"`
+	ImageURL      string    `json:"imageUrl,omitempty"`
+	RateRemaining int       `json:"rateRemaining"` // X-RateLimit-Remaining, -1 if unknown
 }
 
 // Sourced is the standard envelope: a payload plus the provenance governing it.

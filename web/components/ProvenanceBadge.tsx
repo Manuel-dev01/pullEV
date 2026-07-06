@@ -5,6 +5,7 @@ import type { Provenance } from "@shared/types";
 // are always one glance (or hover) away. Never render a value without one.
 
 function label(p: Provenance, fallback: boolean): string {
+  if (p.source === "Index") return "OFFICIAL · Renaiss Index (beta)";
   if (p.isOfficial) return "OFFICIAL";
   if (fallback) return "BUNDLED SNAPSHOT";
   if (p.source === "Mock") return "MOCK DATA";
@@ -13,7 +14,8 @@ function label(p: Provenance, fallback: boolean): string {
 }
 
 function tone(p: Provenance, fallback: boolean): string {
-  if (p.isOfficial) return "border-emerald-500/40 bg-emerald-500/10 text-emerald-300";
+  if (p.source === "Index" || p.isOfficial)
+    return "border-emerald-500/40 bg-emerald-500/10 text-emerald-300";
   if (fallback) return "border-amber-500/40 bg-amber-500/10 text-amber-300";
   return "border-sky-500/40 bg-sky-500/10 text-sky-300";
 }
@@ -57,6 +59,20 @@ export function AssumptionTag({ note = "Assumption" }: { note?: string }) {
       className="ml-1 rounded border border-amber-500/40 bg-amber-500/10 px-1 text-[10px] font-semibold uppercase tracking-wide text-amber-300"
     >
       assumed
+    </span>
+  );
+}
+
+/** Marks a card FMV sourced live from the real Renaiss Index API (beta). */
+export function LiveTag({ confidence, deltaPct, asOf }: { confidence?: string; deltaPct?: number; asOf?: string }) {
+  const trend = typeof deltaPct === "number" ? `${deltaPct >= 0 ? "▲" : "▼"}${Math.abs(deltaPct).toFixed(1)}%` : "";
+  const title = `Real Renaiss Index valuation (beta)${confidence ? ` · confidence ${confidence}` : ""}${asOf ? ` · as of ${asOf.slice(0, 10)}` : ""}`;
+  return (
+    <span
+      title={title}
+      className="ml-1 inline-flex items-center gap-1 rounded border border-emerald-500/40 bg-emerald-500/10 px-1 text-[10px] font-semibold uppercase tracking-wide text-emerald-300"
+    >
+      live{trend && <span className="font-normal normal-case text-emerald-400/80">{trend}</span>}
     </span>
   );
 }

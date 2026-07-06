@@ -9,15 +9,22 @@ import (
 	"time"
 )
 
-// activeAdapter is the single data source for the whole service. Slice 0 uses Mock;
-// Slice 3 will let this switch to Public (best-effort scrape) with fallback to Mock.
+// activeAdapter is the single data source for pool STRUCTURE (which cards are in a pack).
 var activeAdapter PackDataAdapter = NewMockAdapter()
+
+// The real Renaiss Index API (beta) client + cache. Grounds per-card FMV in real
+// valuations where a card is mapped to a real cert; everything else stays Mock.
+var indexClient = NewIndexClient()
+var valuationCache = NewValuationCache(indexClient)
 
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /api/health", handleHealth)
 	mux.HandleFunc("GET /api/packs", handlePacks)
 	mux.HandleFunc("GET /api/packs/{id}/pool", handlePool)
+	mux.HandleFunc("GET /api/packs/{id}/ev", handleEV)
+	mux.HandleFunc("GET /api/packs/{id}/example-proof", handleExampleProof)
+	mux.HandleFunc("GET /api/value/cert/{cert}", handleValueCert)
 	mux.HandleFunc("GET /api/draws/{id}", handleDraw)
 
 	addr := ":" + envOr("PORT", "8080")
@@ -60,6 +67,123 @@ func handlePool(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, Sourced[Pool]{Data: pool, Provenance: prov})
 }
 
+func handleEV(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+
+	pool, poolProv, err := activeAdapter.GetPool(r.Context(), id)
+	if err != nil {
+		writeError(w, statusFor(err), err)
+		return
+	}
+	packs, packProv, err := activeAdapter.ListPacks(r.Context())
+	if err != nil {
+		writeError(w, http.StatusBadGateway, err)
+		return
+	}
+	var pack *Pack
+	for i := range packs {
+		if packs[i].ID == id {
+			pack = &packs[i]
+			break
+		}
+	}
+	if pack == nil {
+		writeError(w, http.StatusNotFound, ErrNotFound)
+		return
+	}
+
+	in := EVInput{
+		PackID:            id,
+		Cost:              pack.PriceUsd,
+		Cards:             pool.Cards,
+		PriceIsAssumption: pack.PriceIsAssumption,
+	}
+	// Inner sources = the input provenances that fed the math.
+	result := ComputeEV(in, []Provenance{poolProv, packProv}, time.Now())
+
+	// Outer provenance describes the computation itself (not a data fetch).
+	outProv := Provenance{
+		Source:     activeAdapter.Source(),
+		FetchedAt:  time.Now().UTC().Format(time.RFC3339),
+		IsOfficial: false,
+		Notes: "EV computed by the PullEV engine from " + string(activeAdapter.Source()) +
+			" inputs. Informational only — not financial advice.",
+	}
+	writeJSON(w, http.StatusOK, Sourced[EVResult]{Data: result, Provenance: outProv})
+}
+
+// handleExampleProof builds a real Merkle inclusion proof over the pack's committed
+// pool and returns it as clearly-labeled EXAMPLE data (never a real Renaiss draw).
+// variant=tampered deliberately corrupts one hash so the client verification fails.
+func handleExampleProof(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	variant := r.URL.Query().Get("variant")
+	if variant != "tampered" {
+		variant = "valid"
+	}
+
+	pool, _, err := activeAdapter.GetPool(r.Context(), id)
+	if err != nil {
+		writeError(w, statusFor(err), err)
+		return
+	}
+	if len(pool.Cards) == 0 {
+		writeError(w, http.StatusNotFound, ErrNotFound)
+		return
+	}
+
+	pc := BuildPoolCommitment(pool)
+	// Pick the highest-FMV card (the "chase") — the most compelling thing to prove was committed.
+	chase := pool.Cards[0]
+	for _, e := range pool.Cards {
+		if e.Card.FMVUsd > chase.Card.FMVUsd {
+			chase = e
+		}
+	}
+	proof, ok := pc.ProofFor(chase.Card.ID)
+	if !ok {
+		writeError(w, http.StatusInternalServerError, ErrNotFound)
+		return
+	}
+
+	label := "EXAMPLE · not a real Renaiss draw"
+	note := "Demonstration proof over the labeled pool. PullEV does not sell packs or perform real draws."
+	if variant == "tampered" {
+		if len(proof.ProofPath) > 0 {
+			proof.ProofPath[0].Hash = corruptHexChar(proof.ProofPath[0].Hash)
+		} else {
+			proof.PublishedRoot = corruptHexChar(proof.PublishedRoot)
+		}
+		label = "EXAMPLE (tampered) · should FAIL verification"
+		note = "Deliberately corrupted proof — recomputation must NOT match the root. Demonstrates MISMATCH."
+	}
+
+	draw := Draw{
+		ID:        "example-" + id + "-" + variant,
+		PackID:    id,
+		CardID:    chase.Card.ID,
+		Proof:     proof,
+		IsExample: true,
+		Label:     label,
+	}
+	prov := Provenance{
+		Source:     activeAdapter.Source(),
+		FetchedAt:  time.Now().UTC().Format(time.RFC3339),
+		IsOfficial: false,
+		Notes:      "EXAMPLE proof built by PullEV over the " + string(activeAdapter.Source()) + " pool. " + note,
+	}
+	writeJSON(w, http.StatusOK, Sourced[Draw]{Data: draw, Provenance: prov})
+}
+
+// handleValueCert returns a real Renaiss Index valuation for a cert number, with
+// live → cache → committed-seed fallback. Always 200 (found flag lives in the body)
+// so the UI can show a graceful "not found" rather than erroring.
+func handleValueCert(w http.ResponseWriter, r *http.Request) {
+	cert := r.PathValue("cert")
+	v, prov, _ := valuationCache.Get(r.Context(), cert)
+	writeJSON(w, http.StatusOK, Sourced[Valuation]{Data: v, Provenance: prov})
+}
+
 func handleDraw(w http.ResponseWriter, r *http.Request) {
 	id := r.PathValue("id")
 	draw, prov, err := activeAdapter.GetDraw(r.Context(), id)
@@ -80,7 +204,7 @@ func statusFor(err error) int {
 }
 
 func writeJSON(w http.ResponseWriter, status int, v any) {
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(status)
 	if err := json.NewEncoder(w).Encode(v); err != nil {
 		log.Printf("encode error: %v", err)

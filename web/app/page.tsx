@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { getPacks, getPool } from "@/lib/api";
-import { ProvenanceBadge, AssumptionTag } from "@/components/ProvenanceBadge";
+import { getPacks, getPool, getEV } from "@/lib/api";
+import { ProvenanceBadge, AssumptionTag, LiveTag } from "@/components/ProvenanceBadge";
+import { EVVerdict } from "@/components/EVVerdict";
 
 const money = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
@@ -13,7 +14,9 @@ export default async function Home({
   const { pack: packParam } = await searchParams;
   const packs = await getPacks();
   const activeId = packs.data.find((p) => p.id === packParam)?.id ?? packs.data[0]?.id;
-  const pool = activeId ? await getPool(activeId) : null;
+  const [pool, ev] = activeId
+    ? await Promise.all([getPool(activeId), getEV(activeId)])
+    : [null, null];
   const activePack = packs.data.find((p) => p.id === activeId);
 
   const totalWeight = pool ? pool.data.cards.reduce((s, e) => s + e.weight, 0) : 0;
@@ -26,7 +29,21 @@ export default async function Home({
           <h1 className="text-2xl font-bold tracking-tight">
             Pull<span className="text-sky-400">EV</span>
           </h1>
-          <ProvenanceBadge provenance={packs.provenance} fallback={packs.fallback} />
+          <div className="flex items-center gap-3">
+            <Link
+              href="/value"
+              className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300 hover:bg-emerald-500/20"
+            >
+              Price a slab →
+            </Link>
+            <Link
+              href={`/verify?pack=${activeId ?? ""}`}
+              className="rounded-full border border-sky-500/40 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300 hover:bg-sky-500/20"
+            >
+              Was my pull fair? →
+            </Link>
+            <ProvenanceBadge provenance={packs.provenance} fallback={packs.fallback} />
+          </div>
         </div>
         <p className="mt-2 max-w-2xl text-sm text-neutral-400">
           Provably-fair gacha decision tool for Renaiss Infinite Gacha. Pick a pack to see its
@@ -99,8 +116,16 @@ export default async function Home({
                         <td className="px-5 py-2.5 text-neutral-300">{e.card.grade}</td>
                         <td className="px-5 py-2.5 text-right tabular-nums text-neutral-100">
                           {money(e.card.fmvUsd)}
-                          {e.card.fmvIsAssumption && (
-                            <AssumptionTag note="FMV is an assumption, not a live oracle read" />
+                          {e.card.fmvSource === "Index" ? (
+                            <LiveTag
+                              confidence={e.card.fmvConfidence}
+                              deltaPct={e.card.fmvDeltaPct}
+                              asOf={e.card.fmvAsOf}
+                            />
+                          ) : (
+                            e.card.fmvIsAssumption && (
+                              <AssumptionTag note="FMV is an assumption, not a live oracle read" />
+                            )
                           )}
                         </td>
                         <td className="px-5 py-2.5 text-right tabular-nums text-neutral-400">
@@ -113,11 +138,19 @@ export default async function Home({
             </table>
           </div>
 
-          {/* EV verdict placeholder — Slice 1 fills this with the sourced EV engine output. */}
-          <div className="border-t border-white/10 px-5 py-3 text-xs text-neutral-500">
-            EV verdict (expected value vs. cost, distribution, chance-of-profit) arrives in Slice 1.
-            Draw odds shown are derived from pool weights for transparency, not financial advice.
-          </div>
+          {/* EV verdict — sourced output of the tested Go EV engine (Slice 1). */}
+          {ev ? (
+            <EVVerdict
+              ev={ev.data}
+              cost={activePack.priceUsd}
+              provenance={ev.provenance}
+              fallback={ev.fallback}
+            />
+          ) : (
+            <div className="border-t border-white/10 px-5 py-3 text-xs text-neutral-500">
+              EV verdict unavailable for this pack.
+            </div>
+          )}
         </section>
       ) : (
         <p className="rounded-xl border border-white/10 bg-white/[0.02] px-5 py-8 text-center text-sm text-neutral-500">

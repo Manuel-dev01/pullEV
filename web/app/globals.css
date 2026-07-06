@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-grotesk);
+  --font-display: var(--font-anton);
+  --font-mono: var(--font-mono);
 }
 
 html {
@@ -10,5 +11,37 @@ html {
 }
 
 body {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-grotesk), system-ui, sans-serif;
 }
+
+/* PullEV design system — palette tokens (from PullEV Pipeline.dc.html) */
+:root {
+  --pv-bg: #08070c;
+  --pv-panel: #0f0b16;
+  --pv-ink: #f6f2fb;
+  --pv-muted: #9c94b6;
+  --pv-dim: #6f6885;
+  --pv-pink: #ff5fb4;
+  --pv-purple: #c95cf5;
+  --pv-indigo: #7b7bff;
+  --pv-teal: #3ff0cf;
+}
+
+/* Pipeline animations */
+@keyframes pv-beam {
+  0%, 100% { opacity: .35; transform: translateY(-6px); }
+  50% { opacity: .9; transform: translateY(6px); }
+}
+@keyframes pv-rise {
+  from { opacity: 0; transform: translateY(20px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes pv-floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+@keyframes pv-pulse {
+  0%, 100% { opacity: .5; }
+  50% { opacity: 1; }
+}
+@keyframes pv-spin { to { transform: rotate(360deg); } }

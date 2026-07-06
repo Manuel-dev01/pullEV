@@ -1,12 +1,13 @@
 {
   "packId": "renacrypt",
   "cards": [
-    { "weight": 18, "card": { "id": "rena-eevee", "name": "Eevee", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 30, "fmvIsAssumption": true } },
-    { "weight": 5, "card": { "id": "rena-pikachu-vmax", "name": "Pikachu VMAX (Rainbow Rare)", "grade": "PSA 10", "set": "Vivid Voltage", "fmvUsd": 120, "fmvIsAssumption": true } },
-    { "weight": 4, "card": { "id": "rena-mew-ex", "name": "Mew ex (SIR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 130, "fmvIsAssumption": true } },
-    { "weight": 2, "card": { "id": "rena-blastoise", "name": "Blastoise (Base Set)", "grade": "PSA 9", "set": "Base Set (Unlimited)", "fmvUsd": 300, "fmvIsAssumption": true } },
-    { "weight": 2, "card": { "id": "rena-charizard-151", "name": "Charizard ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 320, "fmvIsAssumption": true } },
-    { "weight": 1, "card": { "id": "rena-charizard-base", "name": "Charizard (Base Set)", "grade": "PSA 9", "set": "Base Set (Unlimited)", "fmvUsd": 400, "fmvIsAssumption": true } },
-    { "weight": 1, "card": { "id": "rena-lugia-neo", "name": "Lugia (Neo Genesis 1st Ed)", "grade": "PSA 8", "set": "Neo Genesis", "fmvUsd": 700, "fmvIsAssumption": true } }
+    { "weight": 70, "card": { "id": "rena-eevee", "name": "Eevee", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 30, "fmvIsAssumption": true } },
+    { "weight": 10, "card": { "id": "rena-pikachu-vmax", "name": "Pikachu VMAX (Rainbow Rare)", "grade": "PSA 10", "set": "Vivid Voltage", "fmvUsd": 120, "fmvIsAssumption": true } },
+    { "weight": 8, "card": { "id": "rena-mew-ex", "name": "Mew ex (SIR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 130, "fmvIsAssumption": true } },
+    { "weight": 4, "card": { "id": "rena-blastoise", "name": "Blastoise (Base Set)", "grade": "PSA 9", "set": "Base Set (Unlimited)", "fmvUsd": 300, "fmvIsAssumption": true } },
+    { "weight": 3, "card": { "id": "rena-charizard-151", "name": "Charizard ex (SAR)", "grade": "PSA 10", "set": "Scarlet & Violet 151", "fmvUsd": 320, "fmvIsAssumption": true } },
+    { "weight": 3, "card": { "id": "rena-charizard-base", "name": "Charizard (Base Set)", "grade": "PSA 9", "set": "Base Set (Unlimited)", "fmvUsd": 400, "fmvIsAssumption": true } },
+    { "weight": 2, "card": { "id": "rena-lugia-neo", "name": "Lugia (Neo Genesis 1st Ed)", "grade": "PSA 8", "set": "Neo Genesis", "fmvUsd": 700, "fmvIsAssumption": true } },
+    { "weight": 3, "card": { "id": "rena-zoro-op01", "name": "Roronoa Zoro (25th Anniversary)", "grade": "PSA 10", "set": "One Piece OP01 (Japanese)", "fmvUsd": 216, "fmvIsAssumption": true } }
   ]
 }

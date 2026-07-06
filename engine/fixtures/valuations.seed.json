@@ -1,0 +1,17 @@
+{
+  "PSA149595098": {
+    "cert": "PSA149595098",
+    "found": true,
+    "name": "Roronoa Zoro",
+    "setName": "25th Anniversary Premium Card Collection Japanese",
+    "gradeLabel": "PSA 10",
+    "game": "one-piece",
+    "priceUsd": 215.89,
+    "confidence": "low",
+    "deltaPct": 53.88,
+    "spark": [200, 128, 150, 150.83, 126.25, 101.32, 78, 121.67, 138.53, 149.42, 134.8, 147.1, 190.66, 220, 199.27],
+    "lastSaleAt": "2026-06-28T00:00:00.000Z",
+    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_001_ja_7c0c928ff0ab4d0a94f2ba3c4410e0f7_thumb.webp",
+    "rateRemaining": -1
+  }
+}

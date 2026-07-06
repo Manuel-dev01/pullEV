@@ -1,0 +1,4 @@
+{
+  "_note": "Maps a pool card id -> a REAL Renaiss cert number. The card's identity (name/grade/set) must genuinely match the cert. GetPool overlays the real cached valuation onto these cards (fmvSource=Index). Unmapped cards stay MOCK. Expand as more real cert-backed cards are added.",
+  "rena-zoro-op01": "PSA149595098"
+}

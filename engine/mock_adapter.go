@@ -15,7 +15,10 @@ const mockNotes = "Deterministic offline fixtures. Pack prices verified where no
 	"(Omega $48, Renacrypt $88); Eden price is an ASSUMPTION pending live re-confirmation. " +
 	"All per-card FMVs are ASSUMPTIONs grounded in PSA-10 market ranges, not live oracle reads."
 
-//go:embed fixtures/packs.json fixtures/pools/*.json fixtures/draws/*.json
+// Draws are no longer static fixtures — example proofs are generated from the live
+// pool commitment (see merkle.go + the /example-proof handler).
+//
+//go:embed fixtures/packs.json fixtures/pools/*.json
 var fixtureFS embed.FS
 
 // MockAdapter serves deterministic fixtures from embedded JSON. Offline-safe and the
@@ -49,7 +52,38 @@ func (m *MockAdapter) GetPool(_ context.Context, packID string) (Pool, Provenanc
 	if err := readFixture(path, &pool); err != nil {
 		return Pool{}, Provenance{}, ErrNotFound
 	}
+	enrichPoolValuations(&pool)
 	return pool, m.provenance(), nil
+}
+
+// enrichPoolValuations overlays real Renaiss Index valuations onto pool cards that
+// are mapped to a real cert (via valuation-map.json). Overlaid cards become
+// fmvSource=Index with confidence/trend/freshness; every other card is labeled Mock.
+// No network call — reads only the committed seed / session cache.
+func enrichPoolValuations(pool *Pool) {
+	for i := range pool.Cards {
+		c := &pool.Cards[i].Card
+		if c.FMVSource == "" {
+			c.FMVSource = SourceMock
+		}
+		cert, ok := valuationCache.CertForCard(c.ID)
+		if !ok {
+			continue
+		}
+		v, ok := valuationCache.Seed(cert)
+		if !ok || !v.Found {
+			continue
+		}
+		c.FMVUsd = v.PriceUsd
+		c.FMVIsAssumption = false
+		c.FMVSource = SourceIndex
+		c.FMVAsOf = v.LastSaleAt
+		c.FMVConfidence = v.Confidence
+		c.FMVDeltaPct = v.DeltaPct
+		if c.ImageURL == "" {
+			c.ImageURL = v.ImageURL
+		}
+	}
 }
 
 func (m *MockAdapter) GetDraw(_ context.Context, drawID string) (Draw, Provenance, error) {
