@@ -17,8 +17,8 @@ Built for the **Renaiss Tech Hackathon Season 1** (Tool track, with a grounded A
 
 ## Live demo
 
-- App: `TODO_WEB_URL`
-- Engine health: `TODO_ENGINE_URL/api/health`
+- App: https://pullev.vercel.app
+- Engine health: https://pullev-engine-production.up.railway.app/api/health
 
 A 60 to 90 second walkthrough lives in [`docs/demo-script.md`](docs/demo-script.md).
 

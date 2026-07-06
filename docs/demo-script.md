@@ -5,8 +5,8 @@ fairness, live, in the viewer's own browser.
 
 ## Setup
 
-- App: `TODO_WEB_URL`
-- Have the engine live so numbers read LIVE, not BUNDLED SNAPSHOT.
+- App: https://pullev.vercel.app
+- Engine: https://pullev-engine-production.up.railway.app (keep it live so numbers read LIVE, not BUNDLED SNAPSHOT).
 
 ## Beat 1: the fairness verifier (about 30s)
 
