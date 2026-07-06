@@ -40,6 +40,11 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
 }
+/* Slanted float for the hero slab chips (rotation held via --r, matches FOIL design). */
+@keyframes pv-floaty-r {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-14px) rotate(var(--r, 0deg)); }
+}
 @keyframes pv-pulse {
   0%, 100% { opacity: .5; }
   50% { opacity: 1; }

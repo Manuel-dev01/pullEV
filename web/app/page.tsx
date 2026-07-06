@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { getPacks, getEV, getPool } from "@/lib/api";
 import { ProvenanceBadge } from "@/components/ProvenanceBadge";
 import { CardArt } from "@/components/CardArt";
@@ -54,21 +55,21 @@ export default async function Landing() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/image_1.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 78% 30%, rgba(8,7,12,0) 0%, rgba(8,7,12,.55) 46%, #08070c 82%)" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(8,7,12,.35) 0%,transparent 22%,transparent 55%,#08070c 100%)" }} />
+        {/* floating slab chips — anchored to the hero and slanted, floating over the nebula (matches FOIL design) */}
+        {featured && (
+          <div style={{ position: "absolute", top: "20%", left: "8%", zIndex: 4, "--r": "-8deg", animation: "pv-floaty-r 7s ease-in-out infinite" } as CSSProperties}>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>
+              {edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}% EDGE
+            </div>
+          </div>
+        )}
+        <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 4, "--r": "6deg", animation: "pv-floaty-r 9s ease-in-out .6s infinite" } as CSSProperties}>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>MYTHIC · 1.2%</div>
+        </div>
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px 40px 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 720, marginTop: 24 }}>
-              {/* headline with floating slab chips hugging it (matches the FOIL design) */}
-              <div style={{ position: "relative", display: "inline-block" }}>
-                {featured && (
-                  <div style={{ position: "absolute", top: -16, left: -18, zIndex: 6, animation: "pv-floaty 7s ease-in-out infinite" }}>
-                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>
-                      {edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}% EDGE
-                    </div>
-                  </div>
-                )}
-                <div style={{ position: "absolute", bottom: 30, left: -26, zIndex: 6, animation: "pv-floaty 9s ease-in-out .6s infinite" }}>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>MYTHIC · 1.2%</div>
-                </div>
+              <div>
                 <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "clamp(64px,9vw,132px)", lineHeight: 0.86, margin: 0, textShadow: "0 8px 60px rgba(0,0,0,.6)" }}>
                   KNOW THE<br />EV BEFORE<br />YOU <span style={{ background: "linear-gradient(115deg,#ff5fb4,#c95cf5 34%,#7b7bff 60%,#4bc6ff 80%,#3ff0cf)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent", animation: "pv-shimmer 6s linear infinite" }}>RIP.</span>
                 </h1>
