@@ -5,6 +5,7 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"time"
 )
 
 // dataAsOf is the authored date of the deterministic fixtures. MockAdapter reports
@@ -48,6 +49,13 @@ func (m *MockAdapter) ListPacks(_ context.Context) ([]Pack, Provenance, error) {
 }
 
 func (m *MockAdapter) GetPool(_ context.Context, packID string) (Pool, Provenance, error) {
+	// Prefer the autonomously refreshed + rotated pool (real prices, real timestamp)
+	// when the live manager has one; otherwise serve the embedded fixture unchanged.
+	if livePools != nil {
+		if pool, ts, ok := livePools.Get(packID); ok {
+			return pool, livePoolProvenance(ts), nil
+		}
+	}
 	var pool Pool
 	path := fmt.Sprintf("fixtures/pools/%s.json", packID)
 	if err := readFixture(path, &pool); err != nil {
@@ -55,6 +63,20 @@ func (m *MockAdapter) GetPool(_ context.Context, packID string) (Pool, Provenanc
 	}
 	enrichPoolValuations(&pool)
 	return pool, m.provenance(), nil
+}
+
+// livePoolProvenance labels an autonomously rebuilt pool. Source stays Mock so the badge
+// reads PULLEV MODEL (structure IS a PullEV model — no Renaiss odds API); FetchedAt is
+// the real last-refresh time, and per-card LIVE tags carry each price's own freshness.
+func livePoolProvenance(ts time.Time) Provenance {
+	return Provenance{
+		Source:     SourceMock,
+		FetchedAt:  ts.UTC().Format(time.RFC3339),
+		IsOfficial: false,
+		Notes: "Pool STRUCTURE is a PullEV model (Renaiss exposes no odds/pool API), " +
+			"rotated autonomously. Card PRICES are live Renaiss Index (beta) valuations, " +
+			"re-priced this cycle; each card carries its own LIVE freshness tag.",
+	}
 }
 
 // enrichPoolValuations overlays real Renaiss Index valuations onto pool cards that

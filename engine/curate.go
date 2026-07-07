@@ -108,6 +108,26 @@ func pickSpread(cards []curatedCard, n int) []curatedCard {
 	return out
 }
 
+// pickSpreadRotated is pickSpread with a per-cycle offset, so a pack's membership
+// rotates over time (fresh cards surface) while keeping a cheap→pricey spread. The
+// live pool manager calls this each refresh cycle; offset 0 ≡ pickSpread.
+func pickSpreadRotated(cards []curatedCard, n, offset int) []curatedCard {
+	if len(cards) <= n {
+		return cards
+	}
+	used := make(map[int]bool, n)
+	out := make([]curatedCard, 0, n)
+	for i := 0; i < n; i++ {
+		idx := (i*(len(cards)-1)/(n-1) + offset) % len(cards)
+		for used[idx] {
+			idx = (idx + 1) % len(cards)
+		}
+		used[idx] = true
+		out = append(out, cards[idx])
+	}
+	return out
+}
+
 func cardID(prefix string, v Valuation) string {
 	name := strings.ToLower(v.Name)
 	repl := strings.NewReplacer(" ", "-", ".", "", "'", "", "’", "", "/", "-", "(", "", ")", "")
@@ -118,11 +138,16 @@ func cardID(prefix string, v Valuation) string {
 	return prefix + "-" + strings.Trim(name, "-")
 }
 
-func buildPool(packID, prefix string, cards []curatedCard, vmap map[string]string, seed map[string]Valuation) Pool {
-	sort.Slice(cards, func(i, j int) bool { return cards[i].val.PriceUsd < cards[j].val.PriceUsd })
-	pool := Pool{PackID: packID}
+// poolEntriesFrom builds weighted chase PoolEntries from real priced cards
+// (cheap→pricey, rarity weight ladder). Pure: no file/vmap/seed side effects, so both
+// `engine curate` (offline) and the live pool manager (runtime) share one builder.
+// Returns the entries plus the price-sorted cards aligned by index (for id→slug mapping).
+func poolEntriesFrom(prefix string, cards []curatedCard) ([]PoolEntry, []curatedCard) {
+	sorted := append([]curatedCard{}, cards...)
+	sort.Slice(sorted, func(i, j int) bool { return sorted[i].val.PriceUsd < sorted[j].val.PriceUsd })
+	entries := make([]PoolEntry, 0, len(sorted))
 	seenID := map[string]bool{}
-	for i, c := range cards {
+	for i, c := range sorted {
 		id := cardID(prefix, c.val)
 		for seenID[id] {
 			id += "-x"
@@ -132,7 +157,7 @@ func buildPool(packID, prefix string, cards []curatedCard, vmap map[string]strin
 		if i < len(weightLadder) {
 			w = weightLadder[i]
 		}
-		pool.Cards = append(pool.Cards, PoolEntry{
+		entries = append(entries, PoolEntry{
 			Weight: w,
 			Card: Card{
 				ID: id, Name: c.val.Name, Grade: c.val.GradeLabel, Set: c.val.SetName,
@@ -141,10 +166,17 @@ func buildPool(packID, prefix string, cards []curatedCard, vmap map[string]strin
 				ImageURL: c.val.ImageURL,
 			},
 		})
-		vmap[id] = c.slug
-		seed[c.slug] = c.val
 	}
-	return pool
+	return entries, sorted
+}
+
+func buildPool(packID, prefix string, cards []curatedCard, vmap map[string]string, seed map[string]Valuation) Pool {
+	entries, sorted := poolEntriesFrom(prefix, cards)
+	for i, e := range entries {
+		vmap[e.Card.ID] = sorted[i].slug
+		seed[sorted[i].slug] = sorted[i].val
+	}
+	return Pool{PackID: packID, Cards: entries}
 }
 
 func writeJSONFile(path string, v any) error {

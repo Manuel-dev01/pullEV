@@ -21,8 +21,10 @@ function tone(p: Provenance, fallback: boolean): string {
 }
 
 function fmtTime(iso: string): string {
-  // Compact: just the date so the pill never wraps. Full timestamp lives in the hover note.
-  return iso.slice(0, 10);
+  // Compact date + HH:MM UTC (real once pools refresh live). The pill is nowrap, so it
+  // stays one line; the full ISO note lives in the hover tooltip.
+  const m = /^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})/.exec(iso);
+  return m ? `${m[1]} ${m[2]} UTC` : iso.slice(0, 10);
 }
 
 export function ProvenanceBadge({

@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"context"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -19,6 +20,10 @@ var activeAdapter PackDataAdapter = NewMockAdapter()
 // initializes package-level vars before any init(), so this can't be a var initializer).
 var indexClient *IndexClient
 var valuationCache *ValuationCache
+
+// livePools autonomously re-prices + rotates pack pools from the real Index (beta).
+// Nil until started; GetPool falls back to embedded fixtures whenever it has no pool.
+var livePools *LivePoolManager
 
 func main() {
 	// Data tooling subcommands (build real pools / refresh prices), then exit.
@@ -39,6 +44,17 @@ func main() {
 	loadDotEnv(".env")
 	indexClient = NewIndexClient()
 	valuationCache = NewValuationCache(indexClient)
+	livePools = NewLivePoolManager(indexClient, valuationCache)
+
+	// Autonomous refresh runs where we can actually reach the Index (partner keys), or
+	// when explicitly enabled. Otherwise the embedded fixtures serve unchanged (offline).
+	if indexClient.authed() || os.Getenv("REFRESH_ENABLED") == "1" {
+		interval := parseDurationOr("REFRESH_INTERVAL", 6*time.Hour)
+		go livePools.Start(context.Background(), interval)
+		log.Printf("live pool refresh enabled (interval=%s)", interval)
+	} else {
+		log.Printf("live pool refresh disabled (no partner keys) — serving embedded fixtures")
+	}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /api/health", handleHealth)
@@ -48,6 +64,7 @@ func main() {
 	mux.HandleFunc("GET /api/packs/{id}/example-proof", handleExampleProof)
 	mux.HandleFunc("GET /api/value/cert/{cert}", handleValueCert)
 	mux.HandleFunc("GET /api/draws/{id}", handleDraw)
+	mux.HandleFunc("POST /api/admin/refresh", handleRefresh)
 
 	addr := ":" + envOr("PORT", "8080")
 	handler := withCORS(withLog(mux))
@@ -206,6 +223,27 @@ func handleValueCert(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, Sourced[Valuation]{Data: v, Provenance: prov})
 }
 
+// handleRefresh manually triggers a live re-price + pool rotation (for demos). Disabled
+// unless REFRESH_TOKEN is set; the caller must send it as X-Refresh-Token. Runs async so
+// the request returns immediately — reload the app ~15s later to see the fresh cycle.
+func handleRefresh(w http.ResponseWriter, r *http.Request) {
+	token := os.Getenv("REFRESH_TOKEN")
+	if token == "" {
+		writeError(w, http.StatusNotFound, ErrNotFound)
+		return
+	}
+	if r.Header.Get("X-Refresh-Token") != token {
+		writeJSON(w, http.StatusUnauthorized, map[string]string{"error": "bad token"})
+		return
+	}
+	if livePools == nil {
+		writeJSON(w, http.StatusServiceUnavailable, map[string]string{"error": "live pools not enabled"})
+		return
+	}
+	go livePools.Refresh(context.Background())
+	writeJSON(w, http.StatusAccepted, map[string]string{"status": "refreshing"})
+}
+
 func handleDraw(w http.ResponseWriter, r *http.Request) {
 	id := r.PathValue("id")
 	draw, prov, err := activeAdapter.GetDraw(r.Context(), id)
@@ -240,6 +278,15 @@ func writeError(w http.ResponseWriter, status int, err error) {
 func envOr(key, def string) string {
 	if v := os.Getenv(key); v != "" {
 		return v
+	}
+	return def
+}
+
+func parseDurationOr(key string, def time.Duration) time.Duration {
+	if v := os.Getenv(key); v != "" {
+		if d, err := time.ParseDuration(v); err == nil {
+			return d
+		}
 	}
 	return def
 }

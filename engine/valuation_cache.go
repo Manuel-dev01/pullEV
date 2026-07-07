@@ -64,6 +64,36 @@ func (vc *ValuationCache) CertForCard(cardID string) (string, bool) {
 	return c, ok
 }
 
+// SeedSnapshot returns the full card library keyed by lookup path/cert: committed seed
+// with any live-refreshed values (mem) overlaid. The live pool manager builds its
+// candidate library from this so rotation and re-pricing share one source of truth.
+func (vc *ValuationCache) SeedSnapshot() map[string]Valuation {
+	vc.mu.RLock()
+	defer vc.mu.RUnlock()
+	out := make(map[string]Valuation, len(vc.seed)+len(vc.mem))
+	for k, v := range vc.seed {
+		out[k] = v
+	}
+	for k, v := range vc.mem { // fresher live values win
+		out[k] = v
+	}
+	return out
+}
+
+// SetMemBatch stores a batch of freshly-fetched valuations into the session cache (one
+// persist), so a background refresh updates prices for both the pool overlay and /value.
+func (vc *ValuationCache) SetMemBatch(vals map[string]Valuation) {
+	if len(vals) == 0 {
+		return
+	}
+	vc.mu.Lock()
+	for k, v := range vals {
+		vc.mem[k] = v
+	}
+	vc.persistLocked()
+	vc.mu.Unlock()
+}
+
 // Seed returns a committed/cached real valuation for a cert WITHOUT any network
 // call — used by the pool overlay so GetPool never blocks on the API.
 func (vc *ValuationCache) Seed(cert string) (Valuation, bool) {

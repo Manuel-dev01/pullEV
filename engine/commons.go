@@ -120,12 +120,59 @@ var commonsConfig = map[string]packCommons{
 	},
 }
 
+// rebalanceWithCommons takes a pack's real chase cards (Index-priced), re-weights them
+// into the pack's rarity ladder, and prepends the labeled commons tier so the mix reads
+// like a real pool (commons dominate, chase is a thin upside tail). Pure — no file IO —
+// so `engine commons` (offline) and the live pool manager (runtime) share one path.
+// Commons whose name collides with a real chase card are skipped (dedupe safety net).
+func rebalanceWithCommons(id string, chase []PoolEntry) []PoolEntry {
+	cfg, ok := commonsConfig[id]
+	if !ok {
+		return chase
+	}
+	out := append([]PoolEntry{}, chase...)
+	sort.Slice(out, func(i, j int) bool { return out[i].Card.FMVUsd < out[j].Card.FMVUsd })
+	for i := range out {
+		if i < len(cfg.chaseLadder) {
+			out[i].Weight = cfg.chaseLadder[i]
+		} else {
+			out[i].Weight = 1
+		}
+	}
+
+	chaseNames := map[string]bool{}
+	for _, e := range out {
+		chaseNames[strings.ToLower(e.Card.Name)] = true
+	}
+
+	commons := make([]PoolEntry, 0, len(cfg.commons))
+	seen := map[string]bool{}
+	for _, c := range cfg.commons {
+		if chaseNames[strings.ToLower(c.name)] {
+			continue
+		}
+		cid := cfg.prefix + "-common-" + slugName(c.name)
+		for seen[cid] {
+			cid += "-x"
+		}
+		seen[cid] = true
+		commons = append(commons, PoolEntry{
+			Weight: c.weight,
+			Card: Card{
+				ID: cid, Name: c.name, Grade: c.grade, Set: c.set,
+				FMVUsd: c.fmv, FMVIsAssumption: true, FMVSource: SourceMock,
+				FMVConfidence: "assumed",
+			},
+		})
+	}
+	return append(commons, out...)
+}
+
 func runCommons() {
 	packs := loadPacksForCommons()
 
 	for _, id := range []string{"omega", "renacrypt", "eden", "voyaga", "frozen", "legacy-8"} {
-		cfg, ok := commonsConfig[id]
-		if !ok {
+		if _, ok := commonsConfig[id]; !ok {
 			continue
 		}
 		path := fmt.Sprintf("fixtures/pools/%s.json", id)
@@ -142,47 +189,8 @@ func runCommons() {
 			}
 			chase = append(chase, e)
 		}
-		sort.Slice(chase, func(i, j int) bool { return chase[i].Card.FMVUsd < chase[j].Card.FMVUsd })
 
-		// Re-weight chase into the rarity ladder (extra cards past the ladder stay weight 1).
-		for i := range chase {
-			if i < len(cfg.chaseLadder) {
-				chase[i].Weight = cfg.chaseLadder[i]
-			} else {
-				chase[i].Weight = 1
-			}
-		}
-
-		// Names already used by real chase cards, so commons never duplicate them.
-		chaseNames := map[string]bool{}
-		for _, e := range chase {
-			chaseNames[strings.ToLower(e.Card.Name)] = true
-		}
-
-		// Build the labeled commons tier, cheapest first.
-		commons := make([]PoolEntry, 0, len(cfg.commons))
-		seen := map[string]bool{}
-		for _, c := range cfg.commons {
-			if chaseNames[strings.ToLower(c.name)] {
-				fmt.Printf("  skip common %q in %s (collides with a real chase card)\n", c.name, id)
-				continue
-			}
-			cid := cfg.prefix + "-common-" + slugName(c.name)
-			for seen[cid] {
-				cid += "-x"
-			}
-			seen[cid] = true
-			commons = append(commons, PoolEntry{
-				Weight: c.weight,
-				Card: Card{
-					ID: cid, Name: c.name, Grade: c.grade, Set: c.set,
-					FMVUsd: c.fmv, FMVIsAssumption: true, FMVSource: SourceMock,
-					FMVConfidence: "assumed",
-				},
-			})
-		}
-
-		pool.Cards = append(commons, chase...)
+		pool.Cards = rebalanceWithCommons(id, chase)
 		must(writeJSONFile(path, pool))
 
 		printPoolVerdict(id, pool, packs[id])
