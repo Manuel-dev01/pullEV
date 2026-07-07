@@ -420,7 +420,7 @@ export function Filmstrip({
               {SAMPLE_LABEL}
             </div>
             <div style={{ position: "relative", width: 210, height: 294, margin: "0 auto 18px", boxShadow: "0 30px 80px rgba(201,92,245,.5)", animation: "pv-floaty 6s ease-in-out infinite" }}>
-              {ripped && !ripping ? (
+              {ripped && !ripping && ripped.image ? (
                 <>
                   <CardArt src={ripped.image} hue={HUES[0]} radius={20} pad={4} sizes="220px" priority />
                   {/* name + FMV overlaid on the card (matches the design) */}
@@ -431,6 +431,16 @@ export function Filmstrip({
                     </div>
                   </div>
                 </>
+              ) : ripped && !ripping ? (
+                /* No art on file (labeled commons): the design's centered name/grade/FMV card. */
+                <div style={{ width: "100%", height: "100%", borderRadius: 20, background: "linear-gradient(135deg,#ff5fb4,#c95cf5 40%,#7b7bff 70%,#3ff0cf)", padding: 4, boxSizing: "border-box" }}>
+                  <div style={{ width: "100%", height: "100%", borderRadius: 16, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 5px,transparent 5px 10px)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 9, textAlign: "center", padding: "0 14px" }}>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".2em", color: C.pink }}>{ripped.cardName.split(" · ")[1]}</div>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 26, lineHeight: 0.95 }}>{ripped.cardName.split(" · ")[0]}</div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.teal }}>FMV {money(ripped.value, 2)}</div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 8.5, color: C.dim, marginTop: 2 }}>artwork not on file</div>
+                  </div>
+                </div>
               ) : (
                 <div style={{ width: "100%", height: "100%", borderRadius: 20, background: "linear-gradient(135deg,#ff5fb4,#c95cf5 40%,#7b7bff 70%,#3ff0cf)", padding: 4, boxSizing: "border-box" }}>
                   <div style={{ width: "100%", height: "100%", borderRadius: 16, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 5px,transparent 5px 10px)", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
