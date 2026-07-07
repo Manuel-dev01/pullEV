@@ -31,7 +31,7 @@ export function CardArt({
   const show = !!src && !err;
   const inner = Math.max(0, radius - pad);
   return (
-    <div style={{ width: "100%", height: "100%", borderRadius: radius, background: hue, padding: pad }}>
+    <div style={{ width: "100%", height: "100%", borderRadius: radius, background: hue, padding: pad, boxSizing: "border-box" }}>
       <div
         style={{
           position: "relative",

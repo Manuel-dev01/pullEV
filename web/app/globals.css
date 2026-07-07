@@ -14,6 +14,34 @@ body {
   font-family: var(--font-grotesk), system-ui, sans-serif;
 }
 
+/* Custom scrollbars (from the design) — no chunky OS bars on the dark UI. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2338 transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2338;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3350;
+}
+/* The pack shelf: keep the rail feel, hide the bar entirely (drag/scroll still works). */
+.pv-shelf {
+  scrollbar-width: none;
+}
+.pv-shelf::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
 /* PullEV design system — palette tokens (from PullEV Pipeline.dc.html) */
 :root {
   --pv-bg: #08070c;

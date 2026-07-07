@@ -21,8 +21,8 @@ function tone(p: Provenance, fallback: boolean): string {
 }
 
 function fmtTime(iso: string): string {
-  // Keep it stable across server/client render — show the raw date portion.
-  return iso.replace("T", " ").replace("Z", " UTC");
+  // Compact: just the date so the pill never wraps. Full timestamp lives in the hover note.
+  return iso.slice(0, 10);
 }
 
 export function ProvenanceBadge({
@@ -34,12 +34,12 @@ export function ProvenanceBadge({
 }) {
   return (
     <span
-      className={`group relative inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-medium ${tone(
+      className={`group relative inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border px-2.5 py-0.5 text-[11px] font-medium leading-none ${tone(
         provenance,
         fallback,
       )}`}
     >
-      <span className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden />
+      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-current" aria-hidden />
       {label(provenance, fallback)}
       <span className="text-current/60">· {fmtTime(provenance.fetchedAt)}</span>
       {/* Hover surfaces the full provenance note — the "reachable provenance" rule. */}

@@ -223,25 +223,33 @@ export function Filmstrip({
           <div style={{ flex: 1, position: "relative", height: 44, display: "flex", alignItems: "center" }}>
             <div style={{ position: "absolute", left: 8, right: 8, top: "50%", height: 2, background: "rgba(255,255,255,.1)", borderRadius: 2 }} />
             <div style={{ position: "absolute", left: 8, top: "50%", height: 2, borderRadius: 2, background: "linear-gradient(90deg,#ff5fb4,#c95cf5,#3ff0cf)", width: `${(station / 3) * 100}%`, transition: "width .8s cubic-bezier(.72,0,.18,1)", boxShadow: "0 0 12px rgba(201,92,245,.6)" }} />
-            {/* gliding pack token that rides the rail between stations */}
+            {/* gliding pack token — rides ABOVE the rail (never overlaps the station nodes) */}
             <div
               aria-hidden
               style={{
                 position: "absolute",
                 top: "50%",
-                left: `${(station / 3) * 100}%`,
+                left: `calc(13px + (100% - 26px) * ${station / 3})`,
                 width: 18,
-                height: 24,
+                height: 25,
                 borderRadius: 5,
                 background: HUES[0],
-                boxShadow: "0 0 16px rgba(201,92,245,.8)",
-                zIndex: 3,
-                transform: `translate(-50%,-50%) rotate(${moving ? dir * 20 : 8}deg) scale(${moving ? 1.18 : 1})`,
-                filter: moving ? "blur(1.2px)" : "none",
-                transition: "left .78s cubic-bezier(.72,0,.18,1), transform .45s ease, filter .3s",
+                padding: 2,
+                boxSizing: "border-box",
+                boxShadow: "0 8px 22px rgba(201,92,245,.85), 0 0 0 3px rgba(8,7,12,.92)",
+                zIndex: 6,
+                pointerEvents: "none",
+                transform: moving
+                  ? `translate(-50%, calc(-50% - 21px)) rotate(${dir * 19}deg) scale(1.1)`
+                  : "translate(-50%, calc(-50% - 15px)) rotate(7deg)",
+                filter: moving ? "blur(.8px)" : "none",
+                transition:
+                  "left .78s cubic-bezier(.72,0,.18,1), transform .78s cubic-bezier(.72,0,.18,1), filter .78s ease",
               }}
             >
-              <div style={{ width: "100%", height: "100%", borderRadius: 4, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.12) 0 2px,transparent 2px 4px)" }} />
+              <div style={{ width: "100%", height: "100%", borderRadius: 3, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.16) 0 2px,transparent 2px 4px)" }} />
+              {/* thin connector down to the rail */}
+              <div style={{ position: "absolute", left: "50%", top: "100%", width: 1, height: 11, transform: "translateX(-50%)", background: "linear-gradient(rgba(201,92,245,.7),transparent)" }} />
             </div>
             <div style={{ position: "relative", display: "flex", justifyContent: "space-between", width: "100%" }}>
               {LABELS.map((label, i) => {
@@ -296,7 +304,7 @@ export function Filmstrip({
           <div style={{ marginTop: 8 }}>
             <ProvenanceBadge provenance={packsProvenance} fallback={false} />
           </div>
-          <div data-noswipe="1" style={{ display: "flex", gap: 20, overflowX: "auto", padding: "30px 4px 24px", marginTop: 8 }}>
+          <div data-noswipe="1" className="pv-shelf" style={{ display: "flex", gap: 20, overflowX: "auto", padding: "30px 4px 24px", marginTop: 8 }}>
             {packs.map((pd, i) => {
               const e = edgePct(pd.ev.evToCostRatio);
               const pos = e >= 0;
@@ -368,8 +376,8 @@ export function Filmstrip({
             </div>
 
             <div style={{ flex: "0 0 320px", borderRadius: 16, padding: 20, background: C.panel, border: `1px solid ${C.border}`, alignSelf: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0" }}>Pool · oracle-priced</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0", whiteSpace: "nowrap" }}>Pool · oracle-priced</div>
                 <ProvenanceBadge provenance={active.poolProvenance} fallback={active.poolFallback} />
               </div>
               <div style={{ display: "flex", fontFamily: "var(--font-mono)", fontSize: 9, color: C.dim, padding: "0 2px 8px" }}>
@@ -424,7 +432,7 @@ export function Filmstrip({
                   </div>
                 </>
               ) : (
-                <div style={{ width: "100%", height: "100%", borderRadius: 20, background: HUES[0], padding: 4 }}>
+                <div style={{ width: "100%", height: "100%", borderRadius: 20, background: "linear-gradient(135deg,#ff5fb4,#c95cf5 40%,#7b7bff 70%,#3ff0cf)", padding: 4, boxSizing: "border-box" }}>
                   <div style={{ width: "100%", height: "100%", borderRadius: 16, background: "#0b0810", backgroundImage: "repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 5px,transparent 5px 10px)", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: ripping ? C.teal : C.muted }}>{ripping ? "RIPPING…" : "press RIP"}</div>
                   </div>
