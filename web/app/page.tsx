@@ -57,7 +57,7 @@ export default async function Landing() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg,rgba(8,7,12,.35) 0%,transparent 22%,transparent 55%,#08070c 100%)" }} />
         {/* floating slab chips — anchored to the hero and slanted, floating over the nebula (matches FOIL design) */}
         {featured && (
-          <div style={{ position: "absolute", top: "20%", left: "8%", zIndex: 4, "--r": "-8deg", animation: "pv-floaty-r 7s ease-in-out infinite" } as CSSProperties}>
+          <div style={{ position: "absolute", top: "9%", left: "6%", zIndex: 4, "--r": "-8deg", animation: "pv-floaty-r 7s ease-in-out infinite" } as CSSProperties}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>
               {edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}% EDGE
             </div>

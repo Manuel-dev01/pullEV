@@ -66,6 +66,17 @@ func (lp *LivePoolManager) Get(packID string) (Pool, time.Time, bool) {
 	return p, lp.lastRefresh, ok
 }
 
+// LastRefresh reports when the manager last rebuilt pools live (false until it has run),
+// so the pack-list provenance can show the real freshness instead of the authored date.
+func (lp *LivePoolManager) LastRefresh() (time.Time, bool) {
+	lp.mu.RLock()
+	defer lp.mu.RUnlock()
+	if lp.lastRefresh.IsZero() || len(lp.pools) == 0 {
+		return time.Time{}, false
+	}
+	return lp.lastRefresh, true
+}
+
 // candidates builds each pack's disjoint candidate card list from the (freshly-priced)
 // library, mirroring curate's split: one-piece → renacrypt/voyaga, pokemon → omega/
 // frozen, premium (priciest combined) → eden/legacy. Lists are price-sorted ascending.

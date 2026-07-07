@@ -45,6 +45,20 @@ func (m *MockAdapter) ListPacks(_ context.Context) ([]Pack, Provenance, error) {
 	if err := readFixture("fixtures/packs.json", &packs); err != nil {
 		return nil, Provenance{}, err
 	}
+	// Once the live loop has run, stamp the shelf with the real refresh time — its EV
+	// edges are computed from live-priced pools, so the authored fixture date is stale.
+	if livePools != nil {
+		if ts, ok := livePools.LastRefresh(); ok {
+			return packs, Provenance{
+				Source:     SourceMock,
+				FetchedAt:  ts.UTC().Format(time.RFC3339),
+				IsOfficial: false,
+				Notes: "Pack facts (id, name, price) are authored/verified; the shelf's EV " +
+					"edges are computed from pools re-priced live off the Renaiss Index (beta) " +
+					"at this time. Pool membership is a labeled PullEV model.",
+			}, nil
+		}
+	}
 	return packs, m.provenance(), nil
 }
 
