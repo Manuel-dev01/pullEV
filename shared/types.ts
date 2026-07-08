@@ -6,11 +6,11 @@
 // ever shown without its source, freshness, and official/unofficial status.
 
 /** Which data source produced a value. Index = real Renaiss Index API (beta). */
-export type SourceKind = "Mock" | "Public" | "Sdk" | "Index";
+export type SourceKind = "Mock" | "Index";
 
 /** Travels with every datapoint so the UI can badge its origin and freshness. */
 export interface Provenance {
-  /** Mock | Public | Sdk | Index */
+  /** Mock | Index */
   source: SourceKind;
   /** RFC3339 timestamp of when this data was fetched/produced. */
   fetchedAt: string;

@@ -20,6 +20,17 @@ function topCardImage(pool: Pool | undefined): string | undefined {
   return top?.card.imageUrl;
 }
 
+// The rarest card's real draw odds (lowest weight / total), so the hero "MYTHIC" chip
+// shows a real number from the live pool instead of a hardcoded figure.
+function rarestOdds(pool: Pool): { name: string; pct: number } | undefined {
+  if (!pool.cards.length) return undefined;
+  const total = pool.cards.reduce((s, e) => s + e.weight, 0);
+  if (total <= 0) return undefined;
+  let min = pool.cards[0];
+  for (const e of pool.cards) if (e.weight < min.weight) min = e;
+  return { name: min.card.name, pct: (min.weight / total) * 100 };
+}
+
 export default async function Landing() {
   const packs = await getPacks();
   const evs: { pack: Pack; ev: EVResult }[] = [];
@@ -29,10 +40,15 @@ export default async function Landing() {
   }
   evs.sort((a, b) => b.ev.evToCostRatio - a.ev.evToCostRatio);
   const featured = evs[0];
-  const featuredImg = featured ? topCardImage((await getPool(featured.pack.id))?.data) : undefined;
-  // When the engine is unreachable, every number below comes from the bundled
-  // snapshot. Surface that honestly instead of claiming "computed live".
-  const offline = packs.fallback;
+  // Fetch the featured pool for the console art, the rarest-card odds (MYTHIC chip), and
+  // its provenance, so every number on this page routes through a reachable badge.
+  const featuredPoolF = featured ? await getPool(featured.pack.id) : null;
+  const featuredPool = featuredPoolF?.data;
+  const featuredImg = topCardImage(featuredPool);
+  const mythic = featuredPool ? rarestOdds(featuredPool) : undefined;
+  const consoleProv = featuredPoolF?.provenance ?? packs.provenance;
+  // When the engine is unreachable, numbers come from the bundled snapshot. Label it.
+  const offline = packs.fallback || (featuredPoolF?.fallback ?? false);
 
   return (
     <div style={{ fontFamily: "var(--font-sans)", color: "#f6f2fb", background: "#08070c", overflowX: "hidden" }}>
@@ -64,7 +80,7 @@ export default async function Landing() {
           </div>
         )}
         <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 4, "--r": "6deg", animation: "pv-floaty-r 9s ease-in-out .6s infinite" } as CSSProperties}>
-          <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>MYTHIC · 1.2%</div>
+          <div title={mythic ? `Rarest card in the featured pool: ${mythic.name}, ${mythic.pct.toFixed(1)}% draw chance (live pool odds)` : "Illustrative rarity"} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap", cursor: "help" }}>MYTHIC · {mythic ? mythic.pct.toFixed(1) : "1.2"}%</div>
         </div>
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px 40px 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
@@ -118,13 +134,11 @@ export default async function Landing() {
                     <Stat label="MEDIAN" value={money(featured.ev.distribution.median)} />
                     <Stat label="TOP" value={money(featured.ev.distribution.p90)} color="#ff5fb4" />
                   </div>
-                  {offline && (
-                    <div style={{ marginTop: 12 }}>
-                      <ProvenanceBadge provenance={packs.provenance} fallback />
-                    </div>
-                  )}
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: offline ? "#f0b23f" : "#6f6885", marginTop: 12 }}>
-                    {offline ? "bundled snapshot · live engine offline · not financial advice" : "computed live by PullEV · not financial advice"}
+                  <div style={{ marginTop: 12 }}>
+                    <ProvenanceBadge provenance={consoleProv} fallback={offline} />
+                  </div>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: offline ? "#f0b23f" : "#6f6885", marginTop: 10 }}>
+                    {offline ? "bundled snapshot · live engine offline · not financial advice" : "live oracle prices · not financial advice"}
                   </div>
                 </div>
               </div>
@@ -138,22 +152,28 @@ export default async function Landing() {
         </div>
       </div>
 
-      {/* MARQUEE — real edges */}
-      <div style={{ borderTop: "1px solid rgba(255,255,255,.08)", borderBottom: "1px solid rgba(255,255,255,.08)", background: "#0b0810", padding: "16px 0", overflow: "hidden", position: "relative", marginTop: -80 }}>
-        <div style={{ display: "flex", width: "max-content", animation: "pv-marquee 26s linear infinite" }}>
-          {[0, 1].map((rep) => (
-            <div key={rep} style={{ display: "flex", gap: 40, paddingRight: 40, fontFamily: "var(--font-mono)", fontSize: 15 }}>
-              {evs.map(({ pack, ev }) => {
-                const e = edgePct(ev.evToCostRatio);
-                return (
-                  <span key={pack.id + rep} style={{ color: "#f6f2fb" }}>
-                    {pack.name.toUpperCase()} <span style={{ color: e >= 0 ? "#3ff0cf" : "#ff8fa0" }}>{e >= 0 ? "+" : ""}{e.toFixed(1)}%</span>
-                    <span style={{ color: "#3a3450", marginLeft: 40 }}>/</span>
-                  </span>
-                );
-              })}
-            </div>
-          ))}
+      {/* MARQUEE — real edges, governed by a reachable provenance badge */}
+      <div style={{ borderTop: "1px solid rgba(255,255,255,.08)", borderBottom: "1px solid rgba(255,255,255,.08)", background: "#0b0810", padding: "14px 0", position: "relative", marginTop: -80, display: "flex", alignItems: "center", gap: 18 }}>
+        <div style={{ flex: "none", paddingLeft: 24, display: "flex", alignItems: "center", gap: 10 }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".18em", color: "#8a83a0" }}>PACK EDGES</span>
+          <ProvenanceBadge provenance={consoleProv} fallback={offline} />
+        </div>
+        <div style={{ flex: 1, overflow: "hidden" }}>
+          <div style={{ display: "flex", width: "max-content", animation: "pv-marquee 26s linear infinite" }}>
+            {[0, 1].map((rep) => (
+              <div key={rep} style={{ display: "flex", gap: 40, paddingRight: 40, fontFamily: "var(--font-mono)", fontSize: 15 }}>
+                {evs.map(({ pack, ev }) => {
+                  const e = edgePct(ev.evToCostRatio);
+                  return (
+                    <span key={pack.id + rep} style={{ color: "#f6f2fb" }}>
+                      {pack.name.toUpperCase()} <span style={{ color: e >= 0 ? "#3ff0cf" : "#ff8fa0" }}>{e >= 0 ? "+" : ""}{e.toFixed(1)}%</span>
+                      <span style={{ color: "#3a3450", marginLeft: 40 }}>/</span>
+                    </span>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -198,6 +218,9 @@ export default async function Landing() {
               <VaultStat big={`${evs.length}`} small="packs analyzed" />
               <VaultStat big={featured ? `${edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}${edgePct(featured.ev.evToCostRatio).toFixed(0)}%` : "N/A"} small={`top edge (${featured?.pack.name ?? ""})`} color="#3ff0cf" />
               <VaultStat big={offline ? "offline" : "live"} small={offline ? "bundled snapshot" : "oracle sync"} color={offline ? "#f0b23f" : undefined} />
+            </div>
+            <div style={{ marginTop: 18 }}>
+              <ProvenanceBadge provenance={consoleProv} fallback={offline} />
             </div>
           </div>
         </div>

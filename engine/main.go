@@ -38,6 +38,9 @@ func main() {
 		case "commons":
 			runCommons()
 			return
+		case "snapshot":
+			runSnapshot()
+			return
 		}
 	}
 
@@ -63,7 +66,6 @@ func main() {
 	mux.HandleFunc("GET /api/packs/{id}/ev", handleEV)
 	mux.HandleFunc("GET /api/packs/{id}/example-proof", handleExampleProof)
 	mux.HandleFunc("GET /api/value/cert/{cert}", handleValueCert)
-	mux.HandleFunc("GET /api/draws/{id}", handleDraw)
 	mux.HandleFunc("POST /api/admin/refresh", handleRefresh)
 
 	addr := ":" + envOr("PORT", "8080")
@@ -242,16 +244,6 @@ func handleRefresh(w http.ResponseWriter, r *http.Request) {
 	}
 	go livePools.Refresh(context.Background())
 	writeJSON(w, http.StatusAccepted, map[string]string{"status": "refreshing"})
-}
-
-func handleDraw(w http.ResponseWriter, r *http.Request) {
-	id := r.PathValue("id")
-	draw, prov, err := activeAdapter.GetDraw(r.Context(), id)
-	if err != nil {
-		writeError(w, statusFor(err), err)
-		return
-	}
-	writeJSON(w, http.StatusOK, Sourced[Draw]{Data: draw, Provenance: prov})
 }
 
 // --- helpers ---

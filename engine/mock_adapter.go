@@ -123,15 +123,6 @@ func enrichPoolValuations(pool *Pool) {
 	}
 }
 
-func (m *MockAdapter) GetDraw(_ context.Context, drawID string) (Draw, Provenance, error) {
-	var draw Draw
-	path := fmt.Sprintf("fixtures/draws/%s.json", drawID)
-	if err := readFixture(path, &draw); err != nil {
-		return Draw{}, Provenance{}, ErrNotFound
-	}
-	return draw, m.provenance(), nil
-}
-
 func readFixture(path string, v any) error {
 	b, err := fixtureFS.ReadFile(path)
 	if err != nil {

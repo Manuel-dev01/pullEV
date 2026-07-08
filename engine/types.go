@@ -8,10 +8,8 @@ package main
 type SourceKind string
 
 const (
-	SourceMock   SourceKind = "Mock"
-	SourcePublic SourceKind = "Public"
-	SourceSdk    SourceKind = "Sdk"
-	SourceIndex  SourceKind = "Index" // real Renaiss Index API (beta) — official valuations
+	SourceMock  SourceKind = "Mock"
+	SourceIndex SourceKind = "Index" // real Renaiss Index API (beta) — official valuations
 )
 
 // Provenance travels with every datapoint so the UI can badge origin and freshness.
