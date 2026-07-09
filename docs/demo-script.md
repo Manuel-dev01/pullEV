@@ -21,12 +21,14 @@ fairness, live, in the viewer's own browser.
 
 ## Beat 2: the EV verdict (about 20s)
 
-1. Swipe back to **Station 01, Floor**. Each pack shows its live edge.
-2. Open **Station 02, X-Ray Bay** on a pack. Show EV vs cost, the edge, chance of profit, and the value
-   histogram. Note the per-card LIVE and ASSUMED tags, and that the verdict spread is believable:
-   Omega reads RIP, Renacrypt and Eden read SKIP (house edge).
-3. Say: "Card prices are real Renaiss Index valuations. The pool model and odds are a labeled PullEV
-   assumption, because Renaiss exposes no odds API."
+1. Swipe back to **Station 01, Floor**. Each of the six packs shows its live edge, and the shelf badge
+   shows the real last-refresh time (prices are re-priced off the Index on a schedule, not frozen).
+2. Open **Station 02, X-Ray Bay** on a positive-edge pack. Show EV vs cost, the edge, chance of profit, and
+   the value histogram. Note the per-card LIVE and ASSUMED tags. The spread is believable: a pack or two
+   read RIP (positive EV) and the rest read SKIP (house edge). Do not memorize which pack is which, the
+   membership rotates each refresh cycle.
+3. Say: "Card prices are real Renaiss Index valuations, re-priced live. The pool model and odds are a
+   labeled PullEV assumption, because Renaiss exposes no odds API."
 
 ## Beat 3: the grounded advisor (about 20s)
 

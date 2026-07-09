@@ -24,9 +24,10 @@ A 60 to 90 second walkthrough lives in [`docs/demo-script.md`](docs/demo-script.
 
 ## What it does
 
-- **EV verdict (`/app`, `/`).** Pick a pack, see EV vs cost, the edge, chance of profit, and a value
-  histogram. Every card shows whether its price is a live Renaiss Index valuation (LIVE) or a labeled
-  assumption (ASSUMED).
+- **EV verdict (`/app`, `/`).** Pick one of six packs, see EV vs cost, the edge, chance of profit, and a
+  value histogram, computed from prices re-priced live off the Renaiss Index. Every card shows whether its
+  price is a live Renaiss Index valuation (LIVE) or a labeled assumption (ASSUMED), and the pool badge
+  shows its real last-refresh time.
 - **Fairness verifier (`/verify`, and Station 04 in `/app`).** Paste your own `{leafPreimage, proofPath,
   publishedRoot}`, or load a labeled EXAMPLE, and watch the Merkle root recompute in your browser via Web
   Crypto. Green VERIFIED on a match, red MISMATCH on a tampered proof. PullEV's server is not involved.
@@ -54,6 +55,21 @@ membership and draw weights are a **PullEV model** (labeled assumptions), while 
 Renaiss Index valuations wherever a card resolves. Everything routes through one `PackDataAdapter`
 interface, and every number reaches a provenance badge in the UI. See
 [`docs/data-sources.md`](docs/data-sources.md) for the per-datapoint breakdown.
+
+The pools cover six real packs (Eden $150, Omega $48, Renacrypt $88, Voyaga $120, Frozen $60, Legacy
+Pack #8 $200) built from a library of 84 distinct real graded cards (One Piece and Pokémon) curated off
+the Renaiss Index.
+
+### Autonomous live pools
+
+The engine runs a background loop ([`engine/livepool.go`](engine/livepool.go)) that re-prices the whole
+card library off the Renaiss Index on a schedule and rotates each pack's chase cards from that library, so
+prices and pool membership stay fresh instead of frozen at build time. Each pool then carries a real
+last-refresh timestamp (the badge shows the date and time). A rotated pool is only accepted if its EV
+verdict lands in a believable band, so a demo never shows an absurd edge; otherwise the previous pool (or
+the embedded fixture) stands. With no partner keys the loop stays off and the embedded fixtures serve
+unchanged, so the app is always demo-safe. A guarded `POST /api/admin/refresh` (header `X-Refresh-Token`
+matching `REFRESH_TOKEN`) triggers a cycle on demand.
 
 ### The EV engine (the trust core)
 
@@ -98,6 +114,8 @@ Engine (`engine/.env`):
 | `RENAISS_API_KEY` | Partner key (`rk_...`), optional | public tier if empty |
 | `RENAISS_API_SECRET` | Partner secret (`rsk_...`), optional | public tier if empty |
 | `VALUATION_CACHE` | Runtime cache path | `cache/valuations.json` |
+| `REFRESH_INTERVAL` | Autonomous re-price + rotation interval (Go duration) | `6h` (Railway runs `1h`) |
+| `REFRESH_TOKEN` | Enables the guarded `POST /api/admin/refresh` trigger | unset (endpoint disabled) |
 
 Web (`web/.env`):
 
@@ -110,11 +128,13 @@ Keys are read from the environment only and are never committed. `.env` files ar
 
 ## Data sources, assumptions, and limitations
 
-- **Real (Renaiss Index API, beta):** card valuations (price, grade, confidence, trend, freshness). Badged
-  LIVE per card and OFFICIAL on the oracle page. Verified pack prices: Omega $48, Renacrypt $88.
+- **Real (Renaiss Index API, beta):** card valuations (price, grade, confidence, trend, freshness) for a
+  library of 84 distinct graded cards, re-priced autonomously on a schedule. Badged LIVE per card and
+  OFFICIAL on the oracle page. Verified pack prices: Eden $150, Omega $48, Renacrypt $88.
 - **PullEV model (labeled assumptions):** pack pool membership, draw weights, and the representative
-  commons tier. Renaiss exposes no pool or odds API, so these are our construction, badged PULLEV MODEL and
-  ASSUMED. Eden pack price ($150) is from project notes, pending live re-confirmation.
+  commons tier, across six packs. Renaiss exposes no pool or odds API, so these are our construction,
+  badged PULLEV MODEL and ASSUMED, and the membership rotates each refresh cycle. The three newer pack
+  prices (Voyaga $120, Frozen $60, Legacy Pack #8 $200) are assumptions pending live re-confirmation.
 - **EXAMPLE (labeled):** the demo Merkle proofs. Renaiss exposes no draw or proof API, so PullEV generates
   example proofs (one valid, one tampered) over the labeled pool. They are never presented as real Renaiss
   draws, and the published root is labeled "computed by PullEV over the labeled pool, not Renaiss's on-chain
@@ -125,7 +145,8 @@ Keys are read from the environment only and are never committed. `.env` files ar
 ## Deploy
 
 - **Engine to Railway:** the multi-stage [`engine/Dockerfile`](engine/Dockerfile) builds a static binary
-  with fixtures embedded. Set `WEB_ORIGIN` to the web URL and the Renaiss keys, then `railway up`.
+  with fixtures embedded. Set `WEB_ORIGIN` to the web URL, the Renaiss keys, and (optionally)
+  `REFRESH_INTERVAL` and `REFRESH_TOKEN`, then `railway up`.
 - **Web to Vercel:** set the project root to `web/`, set `ENGINE_URL` to the engine URL and
   `DEEPSEEK_API_KEY`, then deploy. The `../shared` types resolve from the monorepo clone.
 
