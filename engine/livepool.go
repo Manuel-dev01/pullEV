@@ -105,13 +105,15 @@ func (lp *LivePoolManager) candidates() map[string][]curatedCard {
 	byPrice := func(cs []curatedCard) { sort.Slice(cs, func(i, j int) bool { return cs[i].val.PriceUsd < cs[j].val.PriceUsd }) }
 	byPrice(op)
 	byPrice(pkm)
-	op = dedupeByName(op)
-	pkm = dedupeByName(pkm)
+	// Keep distinct real variants (name+set), matching curate — so the runtime rotation
+	// has the same deep candidate pool and wide packs stay full (especially One Piece).
+	op = dedupeByIdentity(op)
+	pkm = dedupeByIdentity(pkm)
 
 	opA, opB := splitAlt(op)
 	pkmA, pkmB := splitAlt(pkm)
 
-	combined := dedupeByName(append(append([]curatedCard{}, pkm...), op...))
+	combined := dedupeByIdentity(append(append([]curatedCard{}, pkm...), op...))
 	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
 	premA, premB := splitAlt(combined)
 	// Keep premium packs among the priciest cards, but leave room to rotate the chase set.
