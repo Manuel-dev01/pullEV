@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T21:07:31.628Z",
+  "generatedAt": "2026-07-09T06:17:36.412Z",
   "packs": [
     {
       "id": "eden",
@@ -59,7 +59,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 340
+          "weight": 430
         },
         {
           "card": {
@@ -72,7 +72,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 200
+          "weight": 260
         },
         {
           "card": {
@@ -85,7 +85,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 110
+          "weight": 150
         },
         {
           "card": {
@@ -98,39 +98,39 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 55
+          "weight": 80
         },
         {
           "card": {
-            "id": "eden-monkeydluffy-wanted-poster-sp",
-            "name": "Monkey.D.Luffy WANTED POSTER SP",
+            "id": "eden-pikachu-ex",
+            "name": "Pikachu Ex",
             "grade": "PSA 10",
-            "set": "One Piece Card Game Pillars of Strength Japanese",
-            "fmvUsd": 432.39,
+            "set": "Pokemon Japanese M2a-Mega Dream Ex",
+            "fmvUsd": 511.28,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_234_ja_781f51ab14784fe9bf32b3c674c7ece0_sm.webp?v=bfcf7c96",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-04T05:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": 2.82
+            "fmvAsOf": "2026-07-09T04:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -18.98
           },
           "weight": 40
         },
         {
           "card": {
-            "id": "eden-monkeydluffy-l",
-            "name": "Monkey.D.Luffy L",
+            "id": "eden-monkeydluffy",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "One Piece Card Game LECAFIG Promo Japanese",
-            "fmvUsd": 577.98,
+            "set": "One Piece Card Game 2nd Anniversary Set",
+            "fmvUsd": 606.98,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_001_ja_c890eb09285e44a2bd41df110151eae3_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_015_ja_5c93524f5c6544f9a7ff3a9499ac0250_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T03:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": -6.34
+            "fmvAsOf": "2026-07-08T13:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -35.37
           },
-          "weight": 24
+          "weight": 30
         },
         {
           "card": {
@@ -138,31 +138,47 @@
             "name": "Gear Two",
             "grade": "PSA 10",
             "set": "A Fist Of Divine Speed",
-            "fmvUsd": 677.85,
+            "fmvUsd": 654.13,
             "fmvIsAssumption": false,
             "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T00:00:00.000Z",
+            "fmvAsOf": "2026-07-07T00:00:00.000Z",
             "fmvConfidence": "medium",
-            "fmvDeltaPct": 23.09
+            "fmvDeltaPct": 6.1
           },
-          "weight": 14
+          "weight": 22
         },
         {
           "card": {
-            "id": "eden-birthday-pikachu-holo",
-            "name": "Birthday Pikachu-Holo",
+            "id": "eden-monkey-d-luffy",
+            "name": "Monkey D. Luffy",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-            "fmvUsd": 696.18,
+            "set": "Adventure On Kami’s Island",
+            "fmvUsd": 685.89,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA77457280/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T10:00:00.000Z",
+            "fmvAsOf": "2026-07-08T13:00:00.000Z",
             "fmvConfidence": "high",
-            "fmvDeltaPct": -25.3
+            "fmvDeltaPct": -41.39
           },
-          "weight": 8
+          "weight": 16
+        },
+        {
+          "card": {
+            "id": "eden-nami",
+            "name": "Nami",
+            "grade": "PSA 10",
+            "set": "Wings of the Captain",
+            "fmvUsd": 714.09,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_007_en_dd7faa724d7b492bb0eab2dd2e7dbb03_sm.webp",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-06T00:00:00.000Z",
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": 20.32
+          },
+          "weight": 12
         },
         {
           "card": {
@@ -170,63 +186,111 @@
             "name": "Charizard-Holo",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-            "fmvUsd": 784.91,
+            "fmvUsd": 774.01,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA69077892/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_001_ja_f3df80aa23b8463d940161109c82cc14_sm.webp?v=a40cdc01",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T16:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -24.7
+          },
+          "weight": 9
+        },
+        {
+          "card": {
+            "id": "eden-mew-ex",
+            "name": "Mew Ex",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
+            "fmvUsd": 847.86,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_347_ja_3570bc6b826c4566bcc3916dd7d43f7d_sm.webp?v=db2f2d70",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T14:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -13.87
+          },
+          "weight": 7
+        },
+        {
+          "card": {
+            "id": "eden-monkeydluffy-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "One Piece Card Game X Psa Exclusive Promo Card",
+            "fmvUsd": 1012.11,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op05_060_en_187d60e26dff4be9ac15edb4f0838e89_sm.png",
             "fmvSource": "Index",
             "fmvAsOf": "2026-07-06T05:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -28.57
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": -26.49
           },
           "weight": 5
         },
         {
           "card": {
-            "id": "eden-luffy-\u0026-ace",
-            "name": "Luffy \u0026 Ace",
+            "id": "eden-nami-x",
+            "name": "Nami",
             "grade": "PSA 10",
-            "set": "Luffy \u0026 Ace",
-            "fmvUsd": 1066.86,
+            "set": "One Piece Card The Best",
+            "fmvUsd": 1240.87,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T10:00:00.000Z",
+            "fmvAsOf": "2026-07-07T12:00:00.000Z",
             "fmvConfidence": "medium",
-            "fmvDeltaPct": -65.35
+            "fmvDeltaPct": -14.93
+          },
+          "weight": 4
+        },
+        {
+          "card": {
+            "id": "eden-monkeydluffy-x-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "One Piece Card Game And Football Team Dortmund Collaboration Event",
+            "fmvUsd": 1573.92,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_003_en_984c453b9dee4fd2ae708bb737c583f7_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T13:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -32.27
           },
           "weight": 3
         },
         {
           "card": {
-            "id": "eden-monkeydluffy",
-            "name": "Monkey.D.Luffy",
+            "id": "eden-pikachu-ex-x",
+            "name": "Pikachu Ex",
             "grade": "PSA 10",
-            "set": "A Fist Of Divine Speed",
-            "fmvUsd": 1409.38,
+            "set": "Pokemon Japanese MC-Start Deck 100 Battle Collection",
+            "fmvUsd": 2262.88,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mc_764_ja_f65addd1b0f74829a74ca5f4d6d0b4b0_sm.webp?v=21481669",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T13:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": -17.8
+            "fmvAsOf": "2026-07-08T16:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -34.99
           },
-          "weight": 1
+          "weight": 2
         },
         {
           "card": {
-            "id": "eden-pikachu-with-grey-felt-hat",
-            "name": "Pikachu with Grey Felt Hat",
+            "id": "eden-monkeydluffy-x-x-x",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "Pokemon SVP Black Star Promos",
-            "fmvUsd": 2871.79,
+            "set": "Dodgers One Piece Night",
+            "fmvUsd": 4493.68,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA120383833/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T13:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -7.18
+            "fmvAsOf": "2026-07-07T00:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -9.86
           },
-          "weight": 1
+          "weight": 2
         }
       ]
     },
@@ -244,7 +308,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 52
+          "weight": 150
         },
         {
           "card": {
@@ -257,7 +321,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 38
+          "weight": 110
         },
         {
           "card": {
@@ -270,7 +334,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 24
+          "weight": 68
         },
         {
           "card": {
@@ -283,69 +347,101 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 16
-        },
-        {
-          "card": {
-            "id": "frozen-team-rockets-mimikyu",
-            "name": "Team Rocket's Mimikyu",
-            "grade": "PSA 10",
-            "set": "Pokemon Japanese M2a-Mega Dream Ex",
-            "fmvUsd": 46.4,
-            "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA140547917/item.webp",
-            "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T15:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -21.08
-          },
-          "weight": 46
+          "weight": 42
         },
         {
           "card": {
             "id": "frozen-mega-gengar-ex",
             "name": "Mega Gengar Ex",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese M2a-Mega Dream Ex",
-            "fmvUsd": 84.22,
+            "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
+            "fmvUsd": 42.01,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA141600867/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_003_ja_de0d46db148a4f6ba0d64f1195c73e6e_sm.webp?v=5c4e345e",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T13:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -33.64
+            "fmvAsOf": "2026-07-07T06:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -11.59
           },
-          "weight": 30
+          "weight": 46
         },
         {
           "card": {
-            "id": "frozen-psyduck",
-            "name": "Psyduck",
+            "id": "frozen-mega-dragonite-ex",
+            "name": "Mega Dragonite Ex",
             "grade": "PSA 10",
             "set": "Pokemon Japanese M2a-Mega Dream Ex",
-            "fmvUsd": 103.55,
+            "fmvUsd": 56.05,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_199_ja_psyduck_art-rare_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_232_ja_mega-dragonite-ex_secret-rare_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T13:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -30.17
+            "fmvAsOf": "2026-07-08T16:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -35.74
           },
-          "weight": 20
+          "weight": 36
         },
         {
           "card": {
-            "id": "frozen-espeon-ex",
-            "name": "Espeon Ex",
+            "id": "frozen-pikachu",
+            "name": "Pikachu",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese Sv-P Promo",
+            "fmvUsd": 73.11,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_120_ja_f9e8e4ac07884ee1b31c3d9fbec31139_sm.webp?v=f30637f0",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T10:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -24.76
+          },
+          "weight": 28
+        },
+        {
+          "card": {
+            "id": "frozen-eevee-ex",
+            "name": "Eevee Ex",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-            "fmvUsd": 131.17,
+            "fmvUsd": 87.73,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA122678825/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_224_ja_4e7712347aa8465a91d2d11a992552e1_sm.webp?v=3e3a1cb7",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T18:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -17.18
+            "fmvAsOf": "2026-07-09T05:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -19.89
+          },
+          "weight": 22
+        },
+        {
+          "card": {
+            "id": "frozen-pikachu-x",
+            "name": "Pikachu",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese Sv Promo",
+            "fmvUsd": 109.23,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_001_ja_3755455e10164953846a97c9ad3aa1cb_sm.webp?v=47815b52",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-09T04:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -15.51
+          },
+          "weight": 17
+        },
+        {
+          "card": {
+            "id": "frozen-pikachu-x-x",
+            "name": "Pikachu",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese Sv2a-Pokemon 151",
+            "fmvUsd": 132.19,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv2a_173_ja_a7ab285232ff462c8d986c36184d4dff_sm.webp?v=aebf695f",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T13:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -18.23
           },
           "weight": 14
         },
@@ -355,15 +451,31 @@
             "name": "Lucario Vstar",
             "grade": "PSA 10",
             "set": "Pokemon Swsh Black Star Promo",
-            "fmvUsd": 165.51,
+            "fmvUsd": 157.43,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA127215975/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_swsh_291_en_95b7788de7b74c2c8e86fa9c9c7b4009_sm.webp?v=76a6e692",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T00:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": 11.12
+            "fmvAsOf": "2026-07-08T00:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": 4.7
           },
           "weight": 12
+        },
+        {
+          "card": {
+            "id": "frozen-sylveon-ex",
+            "name": "Sylveon Ex",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+            "fmvUsd": 205.81,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_212_ja_694bdec2ec414a2a89c10949369b2514_sm.webp?v=ef030cf1",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-09T02:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -14.77
+          },
+          "weight": 10
         },
         {
           "card": {
@@ -371,15 +483,15 @@
             "name": "Fukuoka's Pikachu",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Sv-P Promo",
-            "fmvUsd": 270.04,
+            "fmvUsd": 267.25,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA135966493/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_289_ja_c8157b311e484ef394094399f9e394f8_sm.webp?v=0b5e82df",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T17:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -34.04
+            "fmvAsOf": "2026-07-08T22:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -31.02
           },
-          "weight": 12
+          "weight": 8
         },
         {
           "card": {
@@ -387,31 +499,47 @@
             "name": "Umbreon-Gold Star",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-            "fmvUsd": 358.68,
+            "fmvUsd": 358.82,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA83727882/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_012_ja_17c2c539ef644bc0bbb626abb852dcf0_sm.webp?v=e1da8a13",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T12:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -24.91
+            "fmvAsOf": "2026-07-08T11:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -21.02
           },
-          "weight": 1
+          "weight": 7
         },
         {
           "card": {
-            "id": "frozen-mew-ex",
-            "name": "Mew Ex",
+            "id": "frozen-umbreon-ex",
+            "name": "Umbreon Ex",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
-            "fmvUsd": 853.41,
+            "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+            "fmvUsd": 614.06,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA122230503/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_217_ja_pokemon-japanese-sv8a-terastal-fest-ex_umbreon-ex_special-art-rare_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T11:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": -15.46
+            "fmvAsOf": "2026-07-09T04:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -14.12
           },
-          "weight": 1
+          "weight": 6
+        },
+        {
+          "card": {
+            "id": "frozen-pikachu-ex",
+            "name": "Pikachu Ex",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese MC-Start Deck 100 Battle Collection",
+            "fmvUsd": 2262.88,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mc_764_ja_f65addd1b0f74829a74ca5f4d6d0b4b0_sm.webp?v=21481669",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T16:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -34.99
+          },
+          "weight": 5
         }
       ]
     },
@@ -429,7 +557,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 360
+          "weight": 470
         },
         {
           "card": {
@@ -442,7 +570,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 210
+          "weight": 280
         },
         {
           "card": {
@@ -455,7 +583,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 120
+          "weight": 160
         },
         {
           "card": {
@@ -468,39 +596,39 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 60
+          "weight": 90
         },
         {
           "card": {
-            "id": "legacy-zoro-juurou",
-            "name": "Zoro-Juurou",
+            "id": "legacy-boa-hancock",
+            "name": "Boa Hancock",
             "grade": "PSA 10",
             "set": "Emperors In The New World",
-            "fmvUsd": 390.08,
+            "fmvUsd": 508.71,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T00:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": 34.42
+            "fmvAsOf": "2026-07-08T15:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -30.59
           },
           "weight": 40
         },
         {
           "card": {
-            "id": "legacy-pikachu-ex",
-            "name": "Pikachu Ex",
+            "id": "legacy-monkeydluffy-l",
+            "name": "Monkey.D.Luffy L",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese M2a-Mega Dream Ex",
-            "fmvUsd": 514.53,
+            "set": "One Piece Card Game LECAFIG Promo Japanese",
+            "fmvUsd": 603.06,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA145824266/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_001_ja_c890eb09285e44a2bd41df110151eae3_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T08:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -22.47
+            "fmvAsOf": "2026-07-08T12:00:00.000Z",
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": -34.14
           },
-          "weight": 24
+          "weight": 30
         },
         {
           "card": {
@@ -508,79 +636,127 @@
             "name": "Umbreon Ex",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-            "fmvUsd": 600.3,
+            "fmvUsd": 614.06,
             "fmvIsAssumption": false,
             "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_217_ja_pokemon-japanese-sv8a-terastal-fest-ex_umbreon-ex_special-art-rare_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T17:00:00.000Z",
+            "fmvAsOf": "2026-07-09T04:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -14.12
+          },
+          "weight": 22
+        },
+        {
+          "card": {
+            "id": "legacy-monkeydluffy",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "Promotion Pack Ex Vol.3",
+            "fmvUsd": 672.21,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_006_ja_1797bc085c834815b3408e2168caa868_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T14:00:00.000Z",
             "fmvConfidence": "high",
-            "fmvDeltaPct": -17.57
+            "fmvDeltaPct": -26.64
           },
-          "weight": 14
+          "weight": 16
         },
         {
           "card": {
-            "id": "legacy-sabo",
-            "name": "Sabo",
+            "id": "legacy-monkeydluffy-x",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "Winner Prize For Sealed Battle 2023 Vol.1",
-            "fmvUsd": 688.02,
+            "set": "Misc. Promos",
+            "fmvUsd": 689.23,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_083_ja_5b564ccec0604bc1806872ea337c6372_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_055_en_48959d2235ee4a11bd92031c2894209c_sm.webp?v=37f641d4",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T02:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": -28.91
+            "fmvAsOf": "2026-07-08T17:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -28.98
           },
-          "weight": 8
+          "weight": 12
         },
         {
           "card": {
-            "id": "legacy-monkey-d-luffy",
-            "name": "Monkey D. Luffy",
+            "id": "legacy-birthday-pikachu-holo",
+            "name": "Birthday Pikachu-Holo",
             "grade": "PSA 10",
-            "set": "Adventure On Kami's Island",
-            "fmvUsd": 707.22,
+            "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
+            "fmvUsd": 724.59,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_007_ja_680e0afba87f4ad0b6360cc56dd22853_sm.webp?v=62c3d7fe",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T12:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": -33.89
+            "fmvAsOf": "2026-07-08T15:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -16.16
+          },
+          "weight": 9
+        },
+        {
+          "card": {
+            "id": "legacy-monkeydluffy-x-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "One Piece Card Game English 2nd Anniversary Set",
+            "fmvUsd": 835.17,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-09T01:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -31.71
+          },
+          "weight": 7
+        },
+        {
+          "card": {
+            "id": "legacy-luffy-\u0026-ace",
+            "name": "Luffy \u0026 Ace",
+            "grade": "PSA 10",
+            "set": "Luffy \u0026 Ace",
+            "fmvUsd": 974.93,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T17:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -68.89
           },
           "weight": 5
         },
         {
           "card": {
-            "id": "legacy-mew-ex",
-            "name": "Mew Ex",
+            "id": "legacy-monkeydluffy-x-x-x",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
-            "fmvUsd": 853.41,
+            "set": "Two Legends",
+            "fmvUsd": 1075.12,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA122230503/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_109_en_5f8397c7ab7c4785b82702592cb906d9_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T11:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": -15.46
+            "fmvAsOf": "2026-07-05T00:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -19.35
           },
-          "weight": 3
+          "weight": 4
         },
         {
           "card": {
-            "id": "legacy-nami",
-            "name": "Nami",
+            "id": "legacy-monkeydluffy-x-x-x-x",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "One Piece Card The Best",
-            "fmvUsd": 1226.66,
+            "set": "A Fist Of Divine Speed",
+            "fmvUsd": 1496.18,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T13:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": -8.19
+            "fmvAsOf": "2026-07-08T14:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -20.04
           },
-          "weight": 1
+          "weight": 3
         },
         {
           "card": {
@@ -588,15 +764,31 @@
             "name": "Shanks",
             "grade": "PSA 10",
             "set": "Romance Dawn",
-            "fmvUsd": 2214,
+            "fmvUsd": 2156.1,
             "fmvIsAssumption": false,
             "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T14:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": 10.78
+            "fmvAsOf": "2026-07-08T10:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -1.39
           },
-          "weight": 1
+          "weight": 2
+        },
+        {
+          "card": {
+            "id": "legacy-pikachu-with-grey-felt-hat",
+            "name": "Pikachu with Grey Felt Hat",
+            "grade": "PSA 10",
+            "set": "Pokemon SVP Black Star Promos",
+            "fmvUsd": 2889.32,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T18:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -7.91
+          },
+          "weight": 2
         }
       ]
     },
@@ -614,7 +806,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 240
+          "weight": 280
         },
         {
           "card": {
@@ -627,7 +819,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 180
+          "weight": 205
         },
         {
           "card": {
@@ -640,7 +832,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 120
+          "weight": 135
         },
         {
           "card": {
@@ -653,7 +845,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 80
+          "weight": 90
         },
         {
           "card": {
@@ -661,31 +853,47 @@
             "name": "Iono's Wattrel",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Sv-P Promo",
-            "fmvUsd": 40.06,
+            "fmvUsd": 40.1,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/items/8c640637-4d42-4418-a050-1938e630dafb.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_232_ja_0db0d0455adb4bbfa6fd4b7fc65693ef_sm.webp?v=a2de27fb",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T07:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -10.22
+            "fmvAsOf": "2026-07-08T12:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -15.31
           },
           "weight": 50
         },
         {
           "card": {
-            "id": "omega-haunter",
-            "name": "Haunter",
+            "id": "omega-pikachu",
+            "name": "Pikachu",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
-            "fmvUsd": 73.96,
+            "set": "Pokemon Japanese 25th Anniversary Collection",
+            "fmvUsd": 67.34,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA131553295/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a_001_ja_61d98a61195a49c1b7d8b4477fb9c2dd_sm.webp?v=c999b1c7",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T05:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -6.61
+            "fmvAsOf": "2026-07-08T16:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -34.79
           },
-          "weight": 34
+          "weight": 40
+        },
+        {
+          "card": {
+            "id": "omega-mega-gengar-ex",
+            "name": "Mega Gengar Ex",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese M2a-Mega Dream Ex",
+            "fmvUsd": 79.24,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_230_ja_272498516ec74511b3ad34fcb6d14101_sm.webp?v=287ed839",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-09T04:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -37.78
+          },
+          "weight": 32
         },
         {
           "card": {
@@ -693,79 +901,127 @@
             "name": "Jolteon Ex",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-            "fmvUsd": 94.7,
+            "fmvUsd": 91.86,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA112865583/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_209_ja_da948f3ea51141f3a93e51ba972f5142_sm.webp?v=e402ffe9",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T03:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -13.44
+            "fmvAsOf": "2026-07-08T11:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -16.55
           },
-          "weight": 24
+          "weight": 26
         },
         {
           "card": {
-            "id": "omega-oricorio-ex",
-            "name": "Oricorio ex",
+            "id": "omega-glaceon-ex",
+            "name": "Glaceon Ex",
             "grade": "PSA 10",
-            "set": "Mega Promos",
-            "fmvUsd": 125.3,
+            "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
+            "fmvUsd": 114.04,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mep_24_en_372f3d0b56844abfb2b19498e8b12f40_sm.png?v=ff8c312d",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_206_ja_a1a9f07f3f3a4005ad748deee6a0e507_sm.webp?v=69a9092f",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T00:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -10.42
+            "fmvAsOf": "2026-07-08T11:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -11.8
+          },
+          "weight": 20
+        },
+        {
+          "card": {
+            "id": "omega-mega-charizard-x-ex",
+            "name": "Mega Charizard X Ex",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese M2a-Mega Dream Ex",
+            "fmvUsd": 132.43,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_223_ja_mega-charizard-x-ex_mega-attack-rare_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-09T04:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -31.14
           },
           "weight": 16
         },
         {
           "card": {
-            "id": "omega-charizard-vstar",
-            "name": "Charizard Vstar",
+            "id": "omega-pikachu-x",
+            "name": "Pikachu",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese Sword \u0026 Shield Vstar Universe",
-            "fmvUsd": 202.34,
+            "set": "Pokemon Japanese Sword \u0026 Shield Dark Phantasma",
+            "fmvUsd": 158.48,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA139924431/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s10a_073_ja_aa5b0536b1d0406398da3124a2d7022d_sm.webp?v=e69d452a",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T09:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -23.98
+            "fmvAsOf": "2026-07-08T05:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -18.54
           },
-          "weight": 12
+          "weight": 13
         },
         {
           "card": {
-            "id": "omega-magikarp",
-            "name": "Magikarp",
+            "id": "omega-mega-charizard-x-ex-x",
+            "name": "Mega Charizard X EX",
             "grade": "PSA 10",
-            "set": "Pokemon Japanese Sv1a-Triplet Beat",
-            "fmvUsd": 307.35,
+            "set": "Pokemon Mep EN-Me Black Star Promo",
+            "fmvUsd": 243.25,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_080_ja_magikarp_art-rare_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mep_023_en_51969e25f541467e87d9e82e44658dcf_sm.webp?v=39d67890",
             "fmvSource": "Index",
             "fmvAsOf": "2026-07-06T00:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -16.87
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -18.41
           },
-          "weight": 12
+          "weight": 10
         },
         {
           "card": {
-            "id": "omega-detective-pikachu",
-            "name": "Detective Pikachu",
+            "id": "omega-tohokus-pikachu",
+            "name": "Tohoku's Pikachu",
             "grade": "PSA 10",
             "set": "Pokemon Japanese Sv-P Promo",
-            "fmvUsd": 376.06,
+            "fmvUsd": 300.91,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA128426802/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_promo_260_ja_8e28e052285e4fd3a41299350a5f88a6_sm.webp?v=eefb7f43",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T17:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -22.86
+            "fmvAsOf": "2026-07-09T03:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -29.87
           },
           "weight": 8
+        },
+        {
+          "card": {
+            "id": "omega-pikachu-x-x",
+            "name": "Pikachu",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese S Promo",
+            "fmvUsd": 358.87,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s-p_208_ja_cb41f8980a514b8c9d66cd26c9e1da09_sm.webp?v=9064c2b4",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T15:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -16.73
+          },
+          "weight": 6
+        },
+        {
+          "card": {
+            "id": "omega-birthday-pikachu-holo",
+            "name": "Birthday Pikachu-Holo",
+            "grade": "PSA 10",
+            "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
+            "fmvUsd": 724.59,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_007_ja_680e0afba87f4ad0b6360cc56dd22853_sm.webp?v=62c3d7fe",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T15:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -16.16
+          },
+          "weight": 5
         },
         {
           "card": {
@@ -773,15 +1029,15 @@
             "name": "Pikachu with Grey Felt Hat",
             "grade": "PSA 10",
             "set": "Pokemon SVP Black Star Promos",
-            "fmvUsd": 2871.79,
+            "fmvUsd": 2889.32,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA120383833/item.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T13:00:00.000Z",
-            "fmvConfidence": "high",
-            "fmvDeltaPct": -7.18
+            "fmvAsOf": "2026-07-08T18:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -7.91
           },
-          "weight": 5
+          "weight": 4
         }
       ]
     },
@@ -799,7 +1055,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 180
+          "weight": 520
         },
         {
           "card": {
@@ -812,7 +1068,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 120
+          "weight": 340
         },
         {
           "card": {
@@ -825,7 +1081,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 70
+          "weight": 200
         },
         {
           "card": {
@@ -838,133 +1094,197 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 40
+          "weight": 110
         },
         {
           "card": {
-            "id": "rena-boa-hancock",
-            "name": "Boa Hancock",
+            "id": "rena-o-nami-parallel",
+            "name": "O-Nami (Parallel)",
             "grade": "PSA 10",
-            "set": "Emperors In The New World",
-            "fmvUsd": 111.27,
+            "set": "Asia Special Prize For August 2024 Standard Battle",
+            "fmvUsd": 129.91,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_1e60925d62034fb0a16fa29fb70bbfd7_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T03:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": -16.89
+            "fmvAsOf": "2026-07-07T00:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -40.86
           },
           "weight": 60
         },
         {
           "card": {
-            "id": "rena-o-nami",
-            "name": "O-Nami",
+            "id": "rena-zoro-juurou-parallel",
+            "name": "Zoro-Juurou (Parallel)",
             "grade": "PSA 10",
-            "set": "500 Years In The Future",
-            "fmvUsd": 135.64,
+            "set": "Asia Special Prize For August 2024 Standard Battle",
+            "fmvUsd": 147.37,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_c0496d947ce6457c87ad0b206a5cb5f0_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op05_067_ja_be9e186758944a92af1866866630722a_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T11:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": -2.12
+            "fmvAsOf": "2026-07-07T11:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -39.59
           },
-          "weight": 36
+          "weight": 44
         },
         {
           "card": {
-            "id": "rena-perona",
-            "name": "Perona",
+            "id": "rena-perona-parallel",
+            "name": "Perona (Parallel)",
             "grade": "PSA 10",
-            "set": "Prize Cards Alternate Art",
-            "fmvUsd": 183.11,
+            "set": "Best 8 Prize For Flagship Battle In January 2024",
+            "fmvUsd": 182.4,
             "fmvIsAssumption": false,
             "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_093_ja_59d0747fad504240ba0683c4bfebe63f_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T14:00:00.000Z",
+            "fmvAsOf": "2026-07-08T16:00:00.000Z",
             "fmvConfidence": "medium",
-            "fmvDeltaPct": -9.14
+            "fmvDeltaPct": -26.17
           },
-          "weight": 20
+          "weight": 32
         },
         {
           "card": {
-            "id": "rena-uta",
-            "name": "Uta",
+            "id": "rena-nami",
+            "name": "Nami",
             "grade": "PSA 10",
-            "set": "One Piece Japanese OP05-Awakening of the New Era",
-            "fmvUsd": 252.28,
+            "set": "Romance Dawn",
+            "fmvUsd": 230.78,
             "fmvIsAssumption": false,
-            "imageUrl": "https://8nothtoc5ds7a0x3.public.blob.vercel-storage.com/pokemon-cards/PSA87812672/card.jpg",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_843ce6d967a54dd49d340326d51b0919_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T05:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": -0.31
+            "fmvAsOf": "2026-07-08T15:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -33.98
           },
-          "weight": 12
+          "weight": 22
         },
         {
           "card": {
-            "id": "rena-monkeydluffy-wanted-poster-sp",
-            "name": "Monkey.D.Luffy WANTED POSTER SP",
+            "id": "rena-monkeydluffy-parallel",
+            "name": "Monkey.D.Luffy (Parallel)",
             "grade": "PSA 10",
-            "set": "One Piece Card Game Pillars of Strength Japanese",
-            "fmvUsd": 432.39,
+            "set": "Awakening of the New Era",
+            "fmvUsd": 252.71,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_3396dd3ee69e403095a47d94dd4eb939_sm.webp",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-04T05:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": 2.82
+            "fmvAsOf": "2026-07-08T14:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -36.95
           },
-          "weight": 7
-        },
-        {
-          "card": {
-            "id": "rena-gear-two",
-            "name": "Gear Two",
-            "grade": "PSA 10",
-            "set": "A Fist Of Divine Speed",
-            "fmvUsd": 677.85,
-            "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
-            "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T00:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": 23.09
-          },
-          "weight": 5
+          "weight": 15
         },
         {
           "card": {
             "id": "rena-monkey-d-luffy",
             "name": "Monkey D. Luffy",
             "grade": "PSA 10",
-            "set": "Adventure On Kami's Island",
-            "fmvUsd": 707.22,
+            "set": "One Piece Magazine Vol.20",
+            "fmvUsd": 311,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_014_ja_8c87839398b64b05a5267a377a6dd473_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T12:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": -33.89
+            "fmvAsOf": "2026-07-08T13:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -8.11
+          },
+          "weight": 11
+        },
+        {
+          "card": {
+            "id": "rena-monkeydluffy-wanted-poster-sp",
+            "name": "Monkey.D.Luffy WANTED POSTER SP",
+            "grade": "PSA 10",
+            "set": "Pillars Of Strength",
+            "fmvUsd": 441.15,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-04T05:00:00.000Z",
+            "fmvConfidence": "low",
+            "fmvDeltaPct": -15.22
+          },
+          "weight": 8
+        },
+        {
+          "card": {
+            "id": "rena-monkeydluffy",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "One Piece Card Game 2nd Anniversary Set",
+            "fmvUsd": 606.98,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_015_ja_5c93524f5c6544f9a7ff3a9499ac0250_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T13:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -35.37
+          },
+          "weight": 6
+        },
+        {
+          "card": {
+            "id": "rena-monkeydluffy-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "Promotion Pack Ex Vol.3",
+            "fmvUsd": 672.21,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_006_ja_1797bc085c834815b3408e2168caa868_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T14:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -26.64
+          },
+          "weight": 4
+        },
+        {
+          "card": {
+            "id": "rena-monkeydluffy-x-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "One Piece Card Game English 2nd Anniversary Set",
+            "fmvUsd": 835.17,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-09T01:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -31.71
           },
           "weight": 3
         },
         {
           "card": {
-            "id": "rena-shanks",
-            "name": "Shanks",
+            "id": "rena-nami-x",
+            "name": "Nami",
             "grade": "PSA 10",
-            "set": "Romance Dawn",
-            "fmvUsd": 2214,
+            "set": "One Piece Card The Best",
+            "fmvUsd": 1240.87,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T14:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": 10.78
+            "fmvAsOf": "2026-07-07T12:00:00.000Z",
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": -14.93
+          },
+          "weight": 2
+        },
+        {
+          "card": {
+            "id": "rena-monkeydluffy-x-x-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "Dodgers One Piece Night",
+            "fmvUsd": 4493.68,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-07T00:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -9.86
           },
           "weight": 2
         }
@@ -984,7 +1304,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 260
+          "weight": 460
         },
         {
           "card": {
@@ -997,7 +1317,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 150
+          "weight": 280
         },
         {
           "card": {
@@ -1010,7 +1330,7 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 80
+          "weight": 150
         },
         {
           "card": {
@@ -1023,21 +1343,21 @@
             "fmvSource": "Mock",
             "fmvConfidence": "assumed"
           },
-          "weight": 44
+          "weight": 80
         },
         {
           "card": {
-            "id": "voyaga-o-nami-parallel",
-            "name": "O-Nami (Parallel)",
+            "id": "voyaga-monkeydluffy",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "Event Pack Vol.5",
-            "fmvUsd": 126.67,
+            "set": "Gear5",
+            "fmvUsd": 142.01,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_1e60925d62034fb0a16fa29fb70bbfd7_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_001_en_90b5d9f54e98475e8363e728552a1a15_sm.png?v=d7c9d6ff",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T13:00:00.000Z",
+            "fmvAsOf": "2026-07-03T00:00:00.000Z",
             "fmvConfidence": "medium",
-            "fmvDeltaPct": -27.35
+            "fmvDeltaPct": -24.62
           },
           "weight": 44
         },
@@ -1047,63 +1367,95 @@
             "name": "Portgas.D.Ace",
             "grade": "PSA 10",
             "set": "Carrying On His Will",
-            "fmvUsd": 168.59,
+            "fmvUsd": 152,
             "fmvIsAssumption": false,
             "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op13_119_en_6efdb3c7a5fa4eaf8ea4e837ded359c6_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-04T00:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": 18.04
+            "fmvAsOf": "2026-07-06T00:00:00.000Z",
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": 2.43
           },
-          "weight": 26
+          "weight": 33
         },
         {
           "card": {
-            "id": "voyaga-yamato-sr-flagship-battle-2024-august-top-8-prize",
-            "name": "Yamato SR/(Flagship Battle 2024 August Top 8 Prize)",
+            "id": "voyaga-monkeydluffy-x",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "One Piece Card Game Promos Japanese",
-            "fmvUsd": 244.17,
+            "set": "Emperors In The New World",
+            "fmvUsd": 188.04,
             "fmvIsAssumption": false,
-            "imageUrl": "https://8nothtoc5ds7a0x3.public.blob.vercel-storage.com/pokemon-cards/BGS0017392861/card.jpg",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_6d6d94094ba14ee8b1f9c73ab00a136b_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T05:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": 19.1
+            "fmvAsOf": "2026-07-08T22:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -48.35
           },
-          "weight": 15
+          "weight": 24
         },
         {
           "card": {
-            "id": "voyaga-monkeydluffy-parallel",
-            "name": "Monkey.D.Luffy (Parallel)",
+            "id": "voyaga-monkeydluffy-x-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "Free Giveaway For Bandai Card Games Fest 25-26",
+            "fmvUsd": 226.79,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_073_ja_cee7775500c54c93918a02aff73a2960_sm.png",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-06T00:00:00.000Z",
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": -35.55
+          },
+          "weight": 17
+        },
+        {
+          "card": {
+            "id": "voyaga-monkeydluffy-x-x-x",
+            "name": "Monkey.D.Luffy",
+            "grade": "PSA 10",
+            "set": "Asia Special Prize for August 2023 Standard Battle",
+            "fmvUsd": 263.4,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_043_ja_98934e24b3f44c1c88fc4403b6880234_sm.png?v=ddec233d",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-09T03:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": -26.36
+          },
+          "weight": 12
+        },
+        {
+          "card": {
+            "id": "voyaga-monkeydluffy-x-x-x-x",
+            "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
             "set": "Awakening of the New Era",
-            "fmvUsd": 275.55,
+            "fmvUsd": 347.03,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_3396dd3ee69e403095a47d94dd4eb939_sm.webp",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_en_324c81d8a2d8474093d55ad5bbab356e_sm.webp",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T16:00:00.000Z",
+            "fmvAsOf": "2026-07-05T00:00:00.000Z",
             "fmvConfidence": "medium",
-            "fmvDeltaPct": -12.12
+            "fmvDeltaPct": 4.63
           },
           "weight": 9
         },
         {
           "card": {
-            "id": "voyaga-zoro-juurou",
-            "name": "Zoro-Juurou",
+            "id": "voyaga-monkey-d-luffy",
+            "name": "Monkey D. Luffy",
             "grade": "PSA 10",
-            "set": "Emperors In The New World",
-            "fmvUsd": 390.08,
+            "set": "Premium Card Collection -One Piece Day'25- Japanese",
+            "fmvUsd": 401.03,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/items/efb5ce37-0244-445a-aba8-fd9cad00f7c1/sm.jpg",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T00:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": 34.42
+            "fmvAsOf": "2026-07-08T17:00:00.000Z",
+            "fmvConfidence": "prime",
+            "fmvDeltaPct": 14.18
           },
-          "weight": 6
+          "weight": 7
         },
         {
           "card": {
@@ -1111,47 +1463,79 @@
             "name": "Monkey.D.Luffy L",
             "grade": "PSA 10",
             "set": "One Piece Card Game LECAFIG Promo Japanese",
-            "fmvUsd": 577.98,
+            "fmvUsd": 603.06,
             "fmvIsAssumption": false,
             "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_001_ja_c890eb09285e44a2bd41df110151eae3_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T03:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": -6.34
+            "fmvAsOf": "2026-07-08T12:00:00.000Z",
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": -34.14
+          },
+          "weight": 5
+        },
+        {
+          "card": {
+            "id": "voyaga-monkey-d-luffy-x",
+            "name": "Monkey D. Luffy",
+            "grade": "PSA 10",
+            "set": "Adventure On Kami’s Island",
+            "fmvUsd": 685.89,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T13:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -41.39
           },
           "weight": 4
         },
         {
           "card": {
-            "id": "voyaga-sabo",
-            "name": "Sabo",
+            "id": "voyaga-nami",
+            "name": "Nami",
             "grade": "PSA 10",
-            "set": "Winner Prize For Sealed Battle 2023 Vol.1",
-            "fmvUsd": 688.02,
+            "set": "Wings of the Captain",
+            "fmvUsd": 714.09,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_083_ja_5b564ccec0604bc1806872ea337c6372_sm.png",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_007_en_dd7faa724d7b492bb0eab2dd2e7dbb03_sm.webp",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-05T02:00:00.000Z",
-            "fmvConfidence": "low",
-            "fmvDeltaPct": -28.91
+            "fmvAsOf": "2026-07-06T00:00:00.000Z",
+            "fmvConfidence": "medium",
+            "fmvDeltaPct": 20.32
           },
-          "weight": 1
+          "weight": 3
         },
         {
           "card": {
-            "id": "voyaga-monkeydluffy",
+            "id": "voyaga-monkeydluffy-x-x-x-x-x",
             "name": "Monkey.D.Luffy",
             "grade": "PSA 10",
-            "set": "A Fist Of Divine Speed",
-            "fmvUsd": 1409.38,
+            "set": "Two Legends",
+            "fmvUsd": 1075.12,
             "fmvIsAssumption": false,
-            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_109_en_5f8397c7ab7c4785b82702592cb906d9_sm.png",
             "fmvSource": "Index",
-            "fmvAsOf": "2026-07-06T13:00:00.000Z",
-            "fmvConfidence": "medium",
-            "fmvDeltaPct": -17.8
+            "fmvAsOf": "2026-07-05T00:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -19.35
           },
-          "weight": 1
+          "weight": 2
+        },
+        {
+          "card": {
+            "id": "voyaga-shanks",
+            "name": "Shanks",
+            "grade": "PSA 10",
+            "set": "Romance Dawn",
+            "fmvUsd": 2156.1,
+            "fmvIsAssumption": false,
+            "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
+            "fmvSource": "Index",
+            "fmvAsOf": "2026-07-08T10:00:00.000Z",
+            "fmvConfidence": "high",
+            "fmvDeltaPct": -1.39
+          },
+          "weight": 2
         }
       ]
     }

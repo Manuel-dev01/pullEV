@@ -12,7 +12,7 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 180
+      "weight": 520
     },
     {
       "card": {
@@ -25,7 +25,7 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 120
+      "weight": 340
     },
     {
       "card": {
@@ -38,7 +38,7 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 70
+      "weight": 200
     },
     {
       "card": {
@@ -51,133 +51,197 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 40
+      "weight": 110
     },
     {
       "card": {
-        "id": "rena-boa-hancock",
-        "name": "Boa Hancock",
+        "id": "rena-o-nami-parallel",
+        "name": "O-Nami (Parallel)",
         "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 111.27,
+        "set": "Asia Special Prize For August 2024 Standard Battle",
+        "fmvUsd": 129.91,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_1e60925d62034fb0a16fa29fb70bbfd7_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T03:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -16.89
+        "fmvAsOf": "2026-07-07T00:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -40.86
       },
       "weight": 60
     },
     {
       "card": {
-        "id": "rena-o-nami",
-        "name": "O-Nami",
+        "id": "rena-zoro-juurou-parallel",
+        "name": "Zoro-Juurou (Parallel)",
         "grade": "PSA 10",
-        "set": "500 Years In The Future",
-        "fmvUsd": 135.64,
+        "set": "Asia Special Prize For August 2024 Standard Battle",
+        "fmvUsd": 147.37,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_c0496d947ce6457c87ad0b206a5cb5f0_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op05_067_ja_be9e186758944a92af1866866630722a_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T11:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -2.12
+        "fmvAsOf": "2026-07-07T11:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -39.59
       },
-      "weight": 36
+      "weight": 44
     },
     {
       "card": {
-        "id": "rena-perona",
-        "name": "Perona",
+        "id": "rena-perona-parallel",
+        "name": "Perona (Parallel)",
         "grade": "PSA 10",
-        "set": "Prize Cards Alternate Art",
-        "fmvUsd": 183.11,
+        "set": "Best 8 Prize For Flagship Battle In January 2024",
+        "fmvUsd": 182.4,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_093_ja_59d0747fad504240ba0683c4bfebe63f_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T14:00:00.000Z",
+        "fmvAsOf": "2026-07-08T16:00:00.000Z",
         "fmvConfidence": "medium",
-        "fmvDeltaPct": -9.14
+        "fmvDeltaPct": -26.17
       },
-      "weight": 20
+      "weight": 32
     },
     {
       "card": {
-        "id": "rena-uta",
-        "name": "Uta",
+        "id": "rena-nami",
+        "name": "Nami",
         "grade": "PSA 10",
-        "set": "One Piece Japanese OP05-Awakening of the New Era",
-        "fmvUsd": 252.28,
+        "set": "Romance Dawn",
+        "fmvUsd": 230.78,
         "fmvIsAssumption": false,
-        "imageUrl": "https://8nothtoc5ds7a0x3.public.blob.vercel-storage.com/pokemon-cards/PSA87812672/card.jpg",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_843ce6d967a54dd49d340326d51b0919_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T05:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -0.31
+        "fmvAsOf": "2026-07-08T15:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -33.98
       },
-      "weight": 12
+      "weight": 22
     },
     {
       "card": {
-        "id": "rena-monkeydluffy-wanted-poster-sp",
-        "name": "Monkey.D.Luffy WANTED POSTER SP",
+        "id": "rena-monkeydluffy-parallel",
+        "name": "Monkey.D.Luffy (Parallel)",
         "grade": "PSA 10",
-        "set": "One Piece Card Game Pillars of Strength Japanese",
-        "fmvUsd": 432.39,
+        "set": "Awakening of the New Era",
+        "fmvUsd": 252.71,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_3396dd3ee69e403095a47d94dd4eb939_sm.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-04T05:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": 2.82
+        "fmvAsOf": "2026-07-08T14:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -36.95
       },
-      "weight": 7
-    },
-    {
-      "card": {
-        "id": "rena-gear-two",
-        "name": "Gear Two",
-        "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 677.85,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": 23.09
-      },
-      "weight": 5
+      "weight": 15
     },
     {
       "card": {
         "id": "rena-monkey-d-luffy",
         "name": "Monkey D. Luffy",
         "grade": "PSA 10",
-        "set": "Adventure On Kami's Island",
-        "fmvUsd": 707.22,
+        "set": "One Piece Magazine Vol.20",
+        "fmvUsd": 311,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_014_ja_8c87839398b64b05a5267a377a6dd473_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T12:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -33.89
+        "fmvAsOf": "2026-07-08T13:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -8.11
+      },
+      "weight": 11
+    },
+    {
+      "card": {
+        "id": "rena-monkeydluffy-wanted-poster-sp",
+        "name": "Monkey.D.Luffy WANTED POSTER SP",
+        "grade": "PSA 10",
+        "set": "Pillars Of Strength",
+        "fmvUsd": 441.15,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-04T05:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -15.22
+      },
+      "weight": 8
+    },
+    {
+      "card": {
+        "id": "rena-monkeydluffy",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "One Piece Card Game 2nd Anniversary Set",
+        "fmvUsd": 606.98,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_015_ja_5c93524f5c6544f9a7ff3a9499ac0250_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-08T13:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -35.37
+      },
+      "weight": 6
+    },
+    {
+      "card": {
+        "id": "rena-monkeydluffy-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "Promotion Pack Ex Vol.3",
+        "fmvUsd": 672.21,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_006_ja_1797bc085c834815b3408e2168caa868_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-08T14:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -26.64
+      },
+      "weight": 4
+    },
+    {
+      "card": {
+        "id": "rena-monkeydluffy-x-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "One Piece Card Game English 2nd Anniversary Set",
+        "fmvUsd": 835.17,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-09T01:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -31.71
       },
       "weight": 3
     },
     {
       "card": {
-        "id": "rena-shanks",
-        "name": "Shanks",
+        "id": "rena-nami-x",
+        "name": "Nami",
         "grade": "PSA 10",
-        "set": "Romance Dawn",
-        "fmvUsd": 2214,
+        "set": "One Piece Card The Best",
+        "fmvUsd": 1240.87,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T14:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": 10.78
+        "fmvAsOf": "2026-07-07T12:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": -14.93
+      },
+      "weight": 2
+    },
+    {
+      "card": {
+        "id": "rena-monkeydluffy-x-x-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "Dodgers One Piece Night",
+        "fmvUsd": 4493.68,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-07T00:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -9.86
       },
       "weight": 2
     }

@@ -59,7 +59,7 @@ function verdictOf(ratio: number) {
 }
 const edgePct = (ratio: number) => (ratio - 1) * 100;
 
-type Ripped = { draw: Draw; tampered: Draw; cardName: string; value: number; image?: string };
+type Ripped = { draw: Draw; tampered: Draw; cardName: string; set?: string; value: number; image?: string };
 
 export function Filmstrip({
   packs,
@@ -162,7 +162,7 @@ export function Filmstrip({
       };
       const tamperedProof = { ...proof, proofPath: proof.proofPath.map((s, i) => (i === 0 ? { ...s, hash: corruptHexChar(s.hash) } : s)) };
       const tampered: Draw = { ...draw, proof: tamperedProof, label: "SAMPLE (tampered) · should FAIL" };
-      setRipped({ draw, tampered, cardName: `${picked.card.name} · ${picked.card.grade}`, value: picked.card.fmvUsd, image: picked.card.imageUrl });
+      setRipped({ draw, tampered, cardName: `${picked.card.name} · ${picked.card.grade}`, set: picked.card.set, value: picked.card.fmvUsd, image: picked.card.imageUrl });
       setSession((s) => s + picked.card.fmvUsd - active.pack.priceUsd);
     }
     setRipping(false);
@@ -393,7 +393,10 @@ export function Filmstrip({
                     <div style={{ flex: "none", width: 22, height: 30 }}>
                       <CardArt src={e.card.imageUrl} hue={HUES[0]} radius={5} pad={1.5} sizes="32px" />
                     </div>
-                    <span style={{ flex: 2, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{e.card.name}</span>
+                    <span style={{ flex: 2, minWidth: 0, overflow: "hidden" }}>
+                      <span style={{ display: "block", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{e.card.name}</span>
+                      {e.card.set && <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: 9, color: C.dim, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{e.card.set}</span>}
+                    </span>
                     <span style={{ flex: 1.3, textAlign: "right", fontFamily: "var(--font-mono)", color: C.ink }}>
                       {money(e.card.fmvUsd)}
                       {e.card.fmvSource === "Index" ? <LiveTag confidence={e.card.fmvConfidence} deltaPct={e.card.fmvDeltaPct} asOf={e.card.fmvAsOf} /> : e.card.fmvIsAssumption ? <AssumptionTag /> : null}
@@ -429,6 +432,7 @@ export function Filmstrip({
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "#d3cce4", marginTop: 4 }}>
                       {ripped.cardName.split(" · ")[1]} · <span style={{ color: C.teal }}>FMV {money(ripped.value, 2)}</span>
                     </div>
+                    {ripped.set && <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "#a79fbe", marginTop: 2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{ripped.set}</div>}
                   </div>
                 </>
               ) : ripped && !ripping ? (
@@ -438,6 +442,7 @@ export function Filmstrip({
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".2em", color: C.pink }}>{ripped.cardName.split(" · ")[1]}</div>
                     <div style={{ fontFamily: "var(--font-display)", fontSize: 26, lineHeight: 0.95 }}>{ripped.cardName.split(" · ")[0]}</div>
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.teal }}>FMV {money(ripped.value, 2)}</div>
+                    {ripped.set && <div style={{ fontFamily: "var(--font-mono)", fontSize: 8.5, color: "#a79fbe", padding: "0 4px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "100%" }}>{ripped.set}</div>}
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 8.5, color: C.dim, marginTop: 2 }}>artwork not on file</div>
                   </div>
                 </div>

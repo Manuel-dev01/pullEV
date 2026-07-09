@@ -114,9 +114,9 @@ func (lp *LivePoolManager) candidates() map[string][]curatedCard {
 	combined := dedupeByName(append(append([]curatedCard{}, pkm...), op...))
 	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
 	premA, premB := splitAlt(combined)
-	// Keep premium packs among the priciest cards, but leave room to rotate.
-	premA = topAsc(premA, 16)
-	premB = topAsc(premB, 16)
+	// Keep premium packs among the priciest cards, but leave room to rotate the chase set.
+	premA = topAsc(premA, chasePerPack+8)
+	premB = topAsc(premB, chasePerPack+8)
 
 	return map[string][]curatedCard{
 		"renacrypt": opA,
@@ -151,7 +151,7 @@ func (lp *LivePoolManager) Refresh(ctx context.Context) {
 		if len(cand) < 4 {
 			continue // not enough library depth; fixture/prior pool stands
 		}
-		picked := pickSpreadRotated(cand, 8, lp.cycle)
+		picked := pickSpreadRotated(cand, chasePerPack, lp.cycle)
 		entries, _ := poolEntriesFrom(livePrefixes[id], picked)
 		pool := Pool{PackID: id, Cards: rebalanceWithCommons(id, entries)}
 

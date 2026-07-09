@@ -12,7 +12,7 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 340
+      "weight": 430
     },
     {
       "card": {
@@ -25,7 +25,7 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 200
+      "weight": 260
     },
     {
       "card": {
@@ -38,7 +38,7 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 110
+      "weight": 150
     },
     {
       "card": {
@@ -51,39 +51,39 @@
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
       },
-      "weight": 55
+      "weight": 80
     },
     {
       "card": {
-        "id": "eden-monkeydluffy-wanted-poster-sp",
-        "name": "Monkey.D.Luffy WANTED POSTER SP",
+        "id": "eden-pikachu-ex",
+        "name": "Pikachu Ex",
         "grade": "PSA 10",
-        "set": "One Piece Card Game Pillars of Strength Japanese",
-        "fmvUsd": 432.39,
+        "set": "Pokemon Japanese M2a-Mega Dream Ex",
+        "fmvUsd": 511.28,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_234_ja_781f51ab14784fe9bf32b3c674c7ece0_sm.webp?v=bfcf7c96",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-04T05:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": 2.82
+        "fmvAsOf": "2026-07-09T04:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -18.98
       },
       "weight": 40
     },
     {
       "card": {
-        "id": "eden-monkeydluffy-l",
-        "name": "Monkey.D.Luffy L",
+        "id": "eden-monkeydluffy",
+        "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "One Piece Card Game LECAFIG Promo Japanese",
-        "fmvUsd": 577.98,
+        "set": "One Piece Card Game 2nd Anniversary Set",
+        "fmvUsd": 606.98,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_001_ja_c890eb09285e44a2bd41df110151eae3_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_015_ja_5c93524f5c6544f9a7ff3a9499ac0250_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T03:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -6.34
+        "fmvAsOf": "2026-07-08T13:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -35.37
       },
-      "weight": 24
+      "weight": 30
     },
     {
       "card": {
@@ -91,31 +91,47 @@
         "name": "Gear Two",
         "grade": "PSA 10",
         "set": "A Fist Of Divine Speed",
-        "fmvUsd": 677.85,
+        "fmvUsd": 654.13,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-05T00:00:00.000Z",
+        "fmvAsOf": "2026-07-07T00:00:00.000Z",
         "fmvConfidence": "medium",
-        "fmvDeltaPct": 23.09
+        "fmvDeltaPct": 6.1
       },
-      "weight": 14
+      "weight": 22
     },
     {
       "card": {
-        "id": "eden-birthday-pikachu-holo",
-        "name": "Birthday Pikachu-Holo",
+        "id": "eden-monkey-d-luffy",
+        "name": "Monkey D. Luffy",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-        "fmvUsd": 696.18,
+        "set": "Adventure On Kami’s Island",
+        "fmvUsd": 685.89,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA77457280/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvAsOf": "2026-07-08T13:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -25.3
+        "fmvDeltaPct": -41.39
       },
-      "weight": 8
+      "weight": 16
+    },
+    {
+      "card": {
+        "id": "eden-nami",
+        "name": "Nami",
+        "grade": "PSA 10",
+        "set": "Wings of the Captain",
+        "fmvUsd": 714.09,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_007_en_dd7faa724d7b492bb0eab2dd2e7dbb03_sm.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T00:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": 20.32
+      },
+      "weight": 12
     },
     {
       "card": {
@@ -123,63 +139,111 @@
         "name": "Charizard-Holo",
         "grade": "PSA 10",
         "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-        "fmvUsd": 784.91,
+        "fmvUsd": 774.01,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA69077892/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_001_ja_f3df80aa23b8463d940161109c82cc14_sm.webp?v=a40cdc01",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-08T16:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -24.7
+      },
+      "weight": 9
+    },
+    {
+      "card": {
+        "id": "eden-mew-ex",
+        "name": "Mew Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
+        "fmvUsd": 847.86,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_347_ja_3570bc6b826c4566bcc3916dd7d43f7d_sm.webp?v=db2f2d70",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-08T14:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -13.87
+      },
+      "weight": 7
+    },
+    {
+      "card": {
+        "id": "eden-monkeydluffy-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "One Piece Card Game X Psa Exclusive Promo Card",
+        "fmvUsd": 1012.11,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op05_060_en_187d60e26dff4be9ac15edb4f0838e89_sm.png",
         "fmvSource": "Index",
         "fmvAsOf": "2026-07-06T05:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -28.57
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": -26.49
       },
       "weight": 5
     },
     {
       "card": {
-        "id": "eden-luffy-\u0026-ace",
-        "name": "Luffy \u0026 Ace",
+        "id": "eden-nami-x",
+        "name": "Nami",
         "grade": "PSA 10",
-        "set": "Luffy \u0026 Ace",
-        "fmvUsd": 1066.86,
+        "set": "One Piece Card The Best",
+        "fmvUsd": 1240.87,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T10:00:00.000Z",
+        "fmvAsOf": "2026-07-07T12:00:00.000Z",
         "fmvConfidence": "medium",
-        "fmvDeltaPct": -65.35
+        "fmvDeltaPct": -14.93
+      },
+      "weight": 4
+    },
+    {
+      "card": {
+        "id": "eden-monkeydluffy-x-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "One Piece Card Game And Football Team Dortmund Collaboration Event",
+        "fmvUsd": 1573.92,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_003_en_984c453b9dee4fd2ae708bb737c583f7_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-08T13:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -32.27
       },
       "weight": 3
     },
     {
       "card": {
-        "id": "eden-monkeydluffy",
-        "name": "Monkey.D.Luffy",
+        "id": "eden-pikachu-ex-x",
+        "name": "Pikachu Ex",
         "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 1409.38,
+        "set": "Pokemon Japanese MC-Start Deck 100 Battle Collection",
+        "fmvUsd": 2262.88,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mc_764_ja_f65addd1b0f74829a74ca5f4d6d0b4b0_sm.webp?v=21481669",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T13:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -17.8
+        "fmvAsOf": "2026-07-08T16:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -34.99
       },
-      "weight": 1
+      "weight": 2
     },
     {
       "card": {
-        "id": "eden-pikachu-with-grey-felt-hat",
-        "name": "Pikachu with Grey Felt Hat",
+        "id": "eden-monkeydluffy-x-x-x",
+        "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Pokemon SVP Black Star Promos",
-        "fmvUsd": 2871.79,
+        "set": "Dodgers One Piece Night",
+        "fmvUsd": 4493.68,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/inventory/graded/PSA120383833/item.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T13:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -7.18
+        "fmvAsOf": "2026-07-07T00:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -9.86
       },
-      "weight": 1
+      "weight": 2
     }
   ]
 }

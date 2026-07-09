@@ -56,67 +56,67 @@ var commonsConfig = map[string]packCommons{
 	"omega": {
 		prefix: "omega",
 		commons: []commonCard{
-			{"Rattata", "PSA 9", "Pokemon Base Common", 7, 240},
-			{"Pidgey", "PSA 9", "Pokemon Base Common", 12, 180},
-			{"Zubat", "PSA 9", "Pokemon Base Common", 19, 120},
-			{"Caterpie", "PSA 9", "Pokemon Base Common", 30, 80},
+			{"Rattata", "PSA 9", "Pokemon Base Common", 7, 280},
+			{"Pidgey", "PSA 9", "Pokemon Base Common", 12, 205},
+			{"Zubat", "PSA 9", "Pokemon Base Common", 19, 135},
+			{"Caterpie", "PSA 9", "Pokemon Base Common", 30, 90},
 		},
-		chaseLadder: []float64{50, 34, 24, 16, 12, 12, 8, 5},
+		chaseLadder: []float64{50, 40, 32, 26, 20, 16, 13, 10, 8, 6, 5, 4},
 	},
 	// Renacrypt ($88, One Piece): commons dominate → house-edge SKIP with upside.
 	"renacrypt": {
 		prefix: "rena",
 		commons: []commonCard{
-			{"Coby", "PSA 9", "One Piece Common", 9, 180},
-			{"Buggy", "PSA 9", "One Piece Common", 16, 120},
-			{"Alvida", "PSA 9", "One Piece Common", 27, 70},
-			{"Helmeppo", "PSA 9", "One Piece Common", 44, 40},
+			{"Coby", "PSA 9", "One Piece Common", 9, 520},
+			{"Buggy", "PSA 9", "One Piece Common", 16, 340},
+			{"Alvida", "PSA 9", "One Piece Common", 27, 200},
+			{"Helmeppo", "PSA 9", "One Piece Common", 44, 110},
 		},
-		chaseLadder: []float64{60, 36, 20, 12, 7, 5, 3, 2},
+		chaseLadder: []float64{60, 44, 32, 22, 15, 11, 8, 6, 4, 3, 2, 2},
 	},
 	// Eden ($150, premium mixed): higher-value commons, deep chase tail → SKIP.
 	"eden": {
 		prefix: "eden",
 		commons: []commonCard{
-			{"Coby", "PSA 9", "One Piece Common", 22, 340},
-			{"Buggy", "PSA 9", "One Piece Common", 48, 200},
-			{"Alvida", "PSA 9", "One Piece Common", 66, 110},
-			{"Helmeppo", "PSA 9", "One Piece Common", 88, 55},
+			{"Coby", "PSA 9", "One Piece Common", 22, 430},
+			{"Buggy", "PSA 9", "One Piece Common", 48, 260},
+			{"Alvida", "PSA 9", "One Piece Common", 66, 150},
+			{"Helmeppo", "PSA 9", "One Piece Common", 88, 80},
 		},
-		chaseLadder: []float64{40, 24, 14, 8, 5, 3},
+		chaseLadder: []float64{40, 30, 22, 16, 12, 9, 7, 5, 4, 3, 2, 2},
 	},
 	// Voyaga ($120, One Piece Grand Line): premium One Piece chase → house-edge SKIP.
 	"voyaga": {
 		prefix: "voyaga",
 		commons: []commonCard{
-			{"Kaya", "PSA 9", "One Piece Common", 9, 260},
-			{"Morgan", "PSA 9", "One Piece Common", 16, 150},
-			{"Bepo", "PSA 9", "One Piece Common", 27, 80},
-			{"Kuro", "PSA 9", "One Piece Common", 44, 44},
+			{"Kaya", "PSA 9", "One Piece Common", 9, 460},
+			{"Morgan", "PSA 9", "One Piece Common", 16, 280},
+			{"Bepo", "PSA 9", "One Piece Common", 27, 150},
+			{"Kuro", "PSA 9", "One Piece Common", 44, 80},
 		},
-		chaseLadder: []float64{44, 26, 15, 9, 6, 4},
+		chaseLadder: []float64{44, 33, 24, 17, 12, 9, 7, 5, 4, 3, 2, 2},
 	},
 	// Frozen ($60, Pokemon icy lean): light commons + fat tail → thin RIP.
 	"frozen": {
 		prefix: "frozen",
 		commons: []commonCard{
-			{"Weedle", "PSA 9", "Pokemon Base Common", 7, 52},
-			{"Spearow", "PSA 9", "Pokemon Base Common", 12, 38},
-			{"Ekans", "PSA 9", "Pokemon Base Common", 19, 24},
-			{"Sandshrew", "PSA 9", "Pokemon Base Common", 30, 16},
+			{"Weedle", "PSA 9", "Pokemon Base Common", 7, 150},
+			{"Spearow", "PSA 9", "Pokemon Base Common", 12, 110},
+			{"Ekans", "PSA 9", "Pokemon Base Common", 19, 68},
+			{"Sandshrew", "PSA 9", "Pokemon Base Common", 30, 42},
 		},
-		chaseLadder: []float64{46, 30, 20, 14, 12, 12},
+		chaseLadder: []float64{46, 36, 28, 22, 17, 14, 12, 10, 8, 7, 6, 5},
 	},
 	// Legacy Pack #8 ($200, vintage premium mixed): deep chase → SKIP with big tail.
 	"legacy-8": {
 		prefix: "legacy",
 		commons: []commonCard{
-			{"Rattata", "PSA 9", "Pokemon Base Common", 22, 360},
-			{"Pidgey", "PSA 9", "Pokemon Base Common", 48, 210},
-			{"Zubat", "PSA 9", "Pokemon Base Common", 66, 120},
-			{"Caterpie", "PSA 9", "Pokemon Base Common", 88, 60},
+			{"Rattata", "PSA 9", "Pokemon Base Common", 22, 470},
+			{"Pidgey", "PSA 9", "Pokemon Base Common", 48, 280},
+			{"Zubat", "PSA 9", "Pokemon Base Common", 66, 160},
+			{"Caterpie", "PSA 9", "Pokemon Base Common", 88, 90},
 		},
-		chaseLadder: []float64{40, 24, 14, 8, 5, 3},
+		chaseLadder: []float64{40, 30, 22, 16, 12, 9, 7, 5, 4, 3, 2, 2},
 	},
 }
 

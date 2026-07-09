@@ -23,6 +23,11 @@ import (
 // weightLadder is a realistic gacha weighting (commons dominate), cheapest→priciest.
 var weightLadder = []float64{80, 22, 9, 4, 2, 1, 1, 1, 1, 1}
 
+// chasePerPack is how many real chase cards each pack draws from its candidate library.
+// Kept in sync with the per-pack chaseLadder lengths in commons.go and the live rotation
+// pick in livepool.go, so curate, commons, and the runtime manager agree.
+const chasePerPack = 12
+
 type curatedCard struct {
 	slug string
 	val  Valuation
@@ -73,6 +78,26 @@ func dedupeByName(cards []curatedCard) []curatedCard {
 	out := []curatedCard{}
 	for _, c := range cards {
 		key := strings.ToLower(strings.TrimSpace(c.val.Name))
+		if seen[key] {
+			continue
+		}
+		seen[key] = true
+		out = append(out, c)
+	}
+	return out
+}
+
+// dedupeByIdentity keeps one card per distinct real listing (name + set + grade), so a
+// character's different sets/arts survive as the genuinely distinct graded cards they are
+// (unlike dedupeByName, which collapses every Luffy to one). This grows the real library
+// depth without inventing anything; each kept card still has a unique name+set to display.
+func dedupeByIdentity(cards []curatedCard) []curatedCard {
+	seen := map[string]bool{}
+	out := []curatedCard{}
+	for _, c := range cards {
+		key := strings.ToLower(strings.TrimSpace(c.val.Name)) + "|" +
+			strings.ToLower(strings.TrimSpace(c.val.SetName)) + "|" +
+			strings.ToLower(strings.TrimSpace(c.val.GradeLabel))
 		if seen[key] {
 			continue
 		}
@@ -210,8 +235,11 @@ func runCurate() {
 	fmt.Println("[pokemon]")
 	pkmCards := priceSlugs(ctx, client, pkm, 50)
 
-	opCards = dedupeByName(opCards)
-	pkmCards = dedupeByName(pkmCards)
+	// Keep distinct real variants (name+set), not one-per-name, so the library is deep
+	// enough for wide packs. Renaiss's browseable set pages are bot-walled, so variants of
+	// the harvested chase characters are the honest way to grow depth.
+	opCards = dedupeByIdentity(opCards)
+	pkmCards = dedupeByIdentity(pkmCards)
 	sort.Slice(opCards, func(i, j int) bool { return opCards[i].val.PriceUsd < opCards[j].val.PriceUsd })
 	sort.Slice(pkmCards, func(i, j int) bool { return pkmCards[i].val.PriceUsd < pkmCards[j].val.PriceUsd })
 	fmt.Printf("distinct priced cards: %d one-piece, %d pokemon\n", len(opCards), len(pkmCards))
@@ -221,14 +249,14 @@ func runCurate() {
 	// same way from the highest-value combined band.
 	opA, opB := splitAlt(opCards)   // renacrypt, voyaga
 	pkmA, pkmB := splitAlt(pkmCards) // omega, frozen
-	combined := dedupeByName(append(append([]curatedCard{}, pkmCards...), opCards...))
+	combined := dedupeByIdentity(append(append([]curatedCard{}, pkmCards...), opCards...))
 	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
 	premA, premB := splitAlt(combined) // eden, legacy-8
-	if len(premA) > 8 {
-		premA = premA[:8]
+	if len(premA) > chasePerPack {
+		premA = premA[:chasePerPack]
 	}
-	if len(premB) > 8 {
-		premB = premB[:8]
+	if len(premB) > chasePerPack {
+		premB = premB[:chasePerPack]
 	}
 
 	vmap := map[string]string{
@@ -242,10 +270,10 @@ func runCurate() {
 	}
 
 	built := map[string]Pool{
-		"renacrypt": buildPool("renacrypt", "rena", pickSpread(opA, 8), vmap, seed),   // One Piece x Collector Crypt, $88
-		"voyaga":    buildPool("voyaga", "voyaga", pickSpread(opB, 8), vmap, seed),     // One Piece Grand Line, $120
-		"omega":     buildPool("omega", "omega", pickSpread(pkmA, 8), vmap, seed),      // Pokemon, $48
-		"frozen":    buildPool("frozen", "frozen", pickSpread(pkmB, 8), vmap, seed),    // Pokemon icy, $60
+		"renacrypt": buildPool("renacrypt", "rena", pickSpread(opA, chasePerPack), vmap, seed),   // One Piece x Collector Crypt, $88
+		"voyaga":    buildPool("voyaga", "voyaga", pickSpread(opB, chasePerPack), vmap, seed),     // One Piece Grand Line, $120
+		"omega":     buildPool("omega", "omega", pickSpread(pkmA, chasePerPack), vmap, seed),      // Pokemon, $48
+		"frozen":    buildPool("frozen", "frozen", pickSpread(pkmB, chasePerPack), vmap, seed),    // Pokemon icy, $60
 		"eden":      buildPool("eden", "eden", premA, vmap, seed),                       // premium mixed, $150
 		"legacy-8":  buildPool("legacy-8", "legacy", premB, vmap, seed),                 // vintage premium, $200
 	}
