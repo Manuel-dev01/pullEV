@@ -378,7 +378,7 @@ export function Filmstrip({
             <div style={{ flex: "0 0 320px", borderRadius: 16, padding: 20, background: C.panel, border: `1px solid ${C.border}`, alignSelf: "flex-start" }}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0", whiteSpace: "nowrap" }}>Pool · oracle-priced</div>
-                <ProvenanceBadge provenance={active.poolProvenance} fallback={active.poolFallback} />
+                <ProvenanceBadge provenance={active.poolProvenance} fallback={active.poolFallback} align="right" />
               </div>
               <div style={{ display: "flex", fontFamily: "var(--font-mono)", fontSize: 9, color: C.dim, padding: "0 2px 8px" }}>
                 <span style={{ flex: 2 }}>CARD</span>

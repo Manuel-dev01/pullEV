@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { getPacks, getEV, getPool } from "@/lib/api";
-import { ProvenanceBadge } from "@/components/ProvenanceBadge";
 import { CardArt } from "@/components/CardArt";
 import type { EVResult, Pack, Pool } from "@shared/types";
 
@@ -46,7 +45,6 @@ export default async function Landing() {
   const featuredPool = featuredPoolF?.data;
   const featuredImg = topCardImage(featuredPool);
   const mythic = featuredPool ? rarestOdds(featuredPool) : undefined;
-  const consoleProv = featuredPoolF?.provenance ?? packs.provenance;
   // When the engine is unreachable, numbers come from the bundled snapshot. Label it.
   const offline = packs.fallback || (featuredPoolF?.fallback ?? false);
 
@@ -134,11 +132,8 @@ export default async function Landing() {
                     <Stat label="MEDIAN" value={money(featured.ev.distribution.median)} />
                     <Stat label="TOP" value={money(featured.ev.distribution.p90)} color="#ff5fb4" />
                   </div>
-                  <div style={{ marginTop: 12 }}>
-                    <ProvenanceBadge provenance={consoleProv} fallback={offline} />
-                  </div>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: offline ? "#f0b23f" : "#6f6885", marginTop: 10 }}>
-                    {offline ? "bundled snapshot · live engine offline · not financial advice" : "live oracle prices · not financial advice"}
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: offline ? "#f0b23f" : "#6f6885", marginTop: 14 }}>
+                    {offline ? "bundled snapshot · live engine offline · not financial advice" : "live Renaiss Index prices · not financial advice"}
                   </div>
                 </div>
               </div>
@@ -154,9 +149,8 @@ export default async function Landing() {
 
       {/* MARQUEE — real edges, governed by a reachable provenance badge */}
       <div style={{ borderTop: "1px solid rgba(255,255,255,.08)", borderBottom: "1px solid rgba(255,255,255,.08)", background: "#0b0810", padding: "14px 0", position: "relative", marginTop: -80, display: "flex", alignItems: "center", gap: 18 }}>
-        <div style={{ flex: "none", paddingLeft: 24, display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".18em", color: "#8a83a0" }}>PACK EDGES</span>
-          <ProvenanceBadge provenance={consoleProv} fallback={offline} />
+        <div style={{ flex: "none", paddingLeft: 24, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".18em", color: "#8a83a0", whiteSpace: "nowrap" }}>
+          PACK EDGES <span style={{ color: offline ? "#f0b23f" : "#3ff0cf" }}>· {offline ? "snapshot" : "live"}</span>
         </div>
         <div style={{ flex: 1, overflow: "hidden" }}>
           <div style={{ display: "flex", width: "max-content", animation: "pv-marquee 26s linear infinite" }}>
@@ -218,9 +212,6 @@ export default async function Landing() {
               <VaultStat big={`${evs.length}`} small="packs analyzed" />
               <VaultStat big={featured ? `${edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}${edgePct(featured.ev.evToCostRatio).toFixed(0)}%` : "N/A"} small={`top edge (${featured?.pack.name ?? ""})`} color="#3ff0cf" />
               <VaultStat big={offline ? "offline" : "live"} small={offline ? "bundled snapshot" : "oracle sync"} color={offline ? "#f0b23f" : undefined} />
-            </div>
-            <div style={{ marginTop: 18 }}>
-              <ProvenanceBadge provenance={consoleProv} fallback={offline} />
             </div>
           </div>
         </div>

@@ -30,9 +30,13 @@ function fmtTime(iso: string): string {
 export function ProvenanceBadge({
   provenance,
   fallback = false,
+  align = "left",
 }: {
   provenance: Provenance;
   fallback?: boolean;
+  /** Which edge the hover note anchors to. Use "right" for right-aligned badges so the
+   * note opens leftward and never runs off-screen. */
+  align?: "left" | "right";
 }) {
   return (
     <span
@@ -44,8 +48,11 @@ export function ProvenanceBadge({
       <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-current" aria-hidden />
       {label(provenance, fallback)}
       <span className="text-current/60">· {fmtTime(provenance.fetchedAt)}</span>
-      {/* Hover surfaces the full provenance note — the "reachable provenance" rule. */}
-      <span className="pointer-events-none absolute left-0 top-full z-10 mt-1 hidden w-72 rounded-md border border-white/10 bg-neutral-900 p-2 text-xs font-normal leading-snug text-neutral-300 shadow-xl group-hover:block">
+      {/* Hover surfaces the full provenance note. Width is capped to the viewport and it
+          wraps, so the note never extends off-screen. */}
+      <span
+        className={`pointer-events-none absolute ${align === "right" ? "right-0" : "left-0"} top-full z-10 mt-1 hidden w-64 max-w-[calc(100vw-2rem)] whitespace-normal break-words rounded-md border border-white/10 bg-neutral-900 p-2 text-xs font-normal leading-snug text-neutral-300 shadow-xl group-hover:block`}
+      >
         <strong className="text-neutral-100">{label(provenance, fallback)}.</strong>{" "}
         {provenance.notes}
       </span>
