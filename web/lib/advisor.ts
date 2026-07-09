@@ -6,24 +6,37 @@ import type { EVResult, Pack, Pool } from "@shared/types";
 export const DEEPSEEK_MODEL = "deepseek-chat";
 export const DEEPSEEK_BASE = "https://api.deepseek.com";
 
-// The grounding contract. The advisor may ONLY use numbers from the provided
-// context and must cite each with a [n] source tag; it refuses anything else.
+// The grounding contract. The advisor may explain PRODUCT CONCEPTS qualitatively, but
+// every NUMBER it states must come from the CONTEXT block with a [n] source tag. It never
+// invents figures. This keeps it genuinely helpful without presenting anything as fact.
 export function systemPrompt(): string {
   return [
-    "You are PullEV's Pull Advisor. You help a user decide whether ripping a graded-card gacha pack is +EV.",
-    "STRICT RULES:",
-    "1. Use ONLY numbers present in the CONTEXT block. Never invent, estimate, or recall figures from elsewhere.",
-    "2. Every sentence that states a number MUST cite its source with a bracket tag: [1] EV engine, [2] distribution, [3] pool, [4] Renaiss Index oracle.",
-    "3. If the question cannot be answered from the CONTEXT, say so plainly and stop. Do not speculate.",
-    "4. Never present any figure as a guaranteed or verified outcome. Card values are beta oracle estimates; draw odds are a labeled model assumption.",
-    "5. Be concise (2 to 4 sentences). End with: 'Not financial advice.'",
-    "6. Do not use em dashes. Use commas, colons, or periods instead.",
-    "You are grounded, not a hype machine. Restraint is the point.",
+    "You are PullEV's Pull Advisor. You help a user understand a Renaiss Infinite Gacha pack and decide whether to rip it.",
+    "",
+    "PRODUCT KNOWLEDGE you may explain in plain words (concepts only, never invented numbers):",
+    "- Renaiss is real-world-asset infrastructure for graded collectible cards (Pokemon, One Piece) on BNB Chain. Each card is a real graded card held in a vault and mirrored on-chain.",
+    "- An Infinite Gacha pack is a sealed pool of these cards. To 'rip' a pack means to pay its cost and draw one card at random from that pool.",
+    "- PullEV helps two ways: it computes whether a pack is worth ripping (expected value versus cost) and it lets you verify a draw was fair by recomputing its Merkle proof in your own browser.",
+    "- 'What should I rip' comes down to edge: a positive edge means expected value beats cost; most packs carry a house edge (negative). Use the all-packs overview to compare.",
+    "",
+    "STRICT RULES ON NUMBERS:",
+    "1. Any figure (a price, EV, edge, odds, chance of profit, a card value) MUST come from the CONTEXT block and cite its source: [1] EV engine, [2] distribution, [3] pool, [4] Renaiss Index oracle, [5] all-packs overview. Never invent, estimate, or recall a number.",
+    "2. If a specific figure is not in CONTEXT, say you do not have that number, then answer what you can from the concepts above.",
+    "3. Never present a figure as a guaranteed or verified outcome. Card values are beta oracle estimates; draw odds are a labeled model assumption.",
+    "",
+    "VOICE:",
+    "- Speak naturally and directly to the user. Do NOT say 'based on the context' or 'the context describes'; just answer the question.",
+    "- Be genuinely helpful and concise (2 to 4 sentences). End with: 'Not financial advice.'",
+    "- Do not use em dashes. Use commas, colons, or periods instead.",
+    "You are grounded, not a hype machine, but you are here to help.",
   ].join("\n");
 }
 
+// A compact edge overview of every pack, so the advisor can answer "what should I rip".
+export type PackEdge = { name: string; edge: number; verdict: string };
+
 // buildContext serializes exactly the numbers the model is allowed to cite.
-export function buildContext(pack: Pack, ev: EVResult, pool: Pool): string {
+export function buildContext(pack: Pack, ev: EVResult, pool: Pool, allPacks: PackEdge[] = []): string {
   const edge = ((ev.evToCostRatio - 1) * 100).toFixed(1);
   const totalW = pool.cards.reduce((s, e) => s + e.weight, 0) || 1;
   const cardLines = pool.cards
@@ -52,6 +65,11 @@ export function buildContext(pack: Pack, ev: EVResult, pool: Pool): string {
     "",
     "[4] RENAISS INDEX ORACLE: card values marked 'Renaiss Index (beta, real)' are live cached valuations; others are labeled assumptions.",
     "",
+    "[5] ALL PACKS TODAY (edge overview, to compare what to rip):",
+    allPacks.length
+      ? allPacks.map((p) => `  - ${p.name}: edge ${p.edge >= 0 ? "+" : ""}${p.edge.toFixed(1)}% (${p.verdict})`).join("\n")
+      : "  (not provided)",
+    "",
     `CAVEATS: ${(ev.caveats ?? []).join(" ")}`,
   ].join("\n");
 }
@@ -61,6 +79,7 @@ const CITATION_LABELS: Record<string, string> = {
   "[2]": "[2] distribution",
   "[3]": "[3] pool",
   "[4]": "[4] Renaiss Index",
+  "[5]": "[5] all packs",
 };
 
 export function extractCitations(answer: string): string[] {

@@ -27,11 +27,31 @@ export async function POST(req: NextRequest) {
   }
   if (!packId || !question) return Response.json({ error: "Missing pack or question." }, { status: 400 });
 
-  const [packs, pool, ev] = await Promise.all([getPacks(), getPool(packId), getEV(packId)]);
+  const packs = await getPacks();
   const pack = packs.data.find((p) => p.id === packId);
-  if (!pack || !pool || !ev) return Response.json({ error: "No data available for this pack." });
+  if (!pack) return Response.json({ error: "No data available for this pack." });
 
-  const context = buildContext(pack, ev.data, pool.data);
+  // Fetch this pack's pool plus EV for EVERY pack, so the advisor can compare and answer
+  // "what should I rip". All numbers stay real; nothing is invented.
+  const [pool, evResults] = await Promise.all([
+    getPool(packId),
+    Promise.all(packs.data.map((p) => getEV(p.id).then((e) => ({ id: p.id, name: p.name, ev: e })))),
+  ]);
+  const active = evResults.find((r) => r.id === packId)?.ev;
+  if (!pool || !active) return Response.json({ error: "No data available for this pack." });
+
+  const overview = evResults
+    .filter((r) => r.ev)
+    .map((r) => {
+      const ratio = r.ev!.data.evToCostRatio;
+      return {
+        name: r.name,
+        edge: (ratio - 1) * 100,
+        verdict: ratio >= 1.05 ? "RIP" : ratio >= 0.98 ? "MARGINAL" : "SKIP",
+      };
+    });
+
+  const context = buildContext(pack, active.data, pool.data, overview);
 
   try {
     const res = await fetch(`${DEEPSEEK_BASE}/chat/completions`, {
