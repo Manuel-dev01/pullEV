@@ -2,11 +2,6 @@
 
 > Know the EV before you rip, then verify any pull's fairness yourself, client-side.
 
-**Judges start here:** [who it is for](#who-it-is-for-and-the-job-it-does) ·
-[value in the Renaiss ecosystem](#value-inside-the-renaiss-ecosystem) ·
-[data sources, assumptions, limitations](#data-sources-assumptions-and-limitations) ·
-[safety and responsible handling](docs/safety.md) · [90-second demo script](docs/demo-script.md).
-
 PullEV is a decision tool for [Renaiss](https://www.renaiss.xyz)'s **Infinite Gacha** packs. It answers
 the two questions every ripper asks, and it grounds every number in a labeled source:
 
