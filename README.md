@@ -2,6 +2,11 @@
 
 > Know the EV before you rip, then verify any pull's fairness yourself, client-side.
 
+**Judges start here:** [who it is for](#who-it-is-for-and-the-job-it-does) ·
+[value in the Renaiss ecosystem](#value-inside-the-renaiss-ecosystem) ·
+[data sources, assumptions, limitations](#data-sources-assumptions-and-limitations) ·
+[safety and responsible handling](docs/safety.md) · [90-second demo script](docs/demo-script.md).
+
 PullEV is a decision tool for [Renaiss](https://www.renaiss.xyz)'s **Infinite Gacha** packs. It answers
 the two questions every ripper asks, and it grounds every number in a labeled source:
 
@@ -20,7 +25,21 @@ Built for the **Renaiss Tech Hackathon Season 1** (Tool track, with a grounded A
 - App: https://pullev.vercel.app
 - Engine health: https://pullev-engine-production.up.railway.app/api/health
 
-A 60 to 90 second walkthrough lives in [`docs/demo-script.md`](docs/demo-script.md).
+A 90 second walkthrough lives in [`docs/demo-script.md`](docs/demo-script.md).
+
+## Who it is for and the job it does
+
+PullEV serves everyone who touches an Infinite Gacha pack, with a concrete job for each:
+
+- **Collectors and rippers.** Before paying, see a sourced answer to "should I rip this pack?" (EV versus cost,
+  the value distribution, chance of profit). After a pull, get an independent answer to "was my pull fair?" by
+  recomputing the Merkle proof in your own browser. You act on numbers with visible sources, not vibes.
+- **Builders and the Renaiss Tool Directory.** A working, reusable pattern: a client-side Merkle verifier and a
+  strictly grounded AI layer that cites or refuses. Both are directly applicable to other Renaiss tools.
+- **Operators (vaults, card shops, RenaissOS nodes).** An independent transparency layer over the packs they run:
+  FMV-grounded EV and provable, client-side fairness that anyone can check, which builds trust in the product.
+- **The Renaiss community.** Labeled, independent evidence that the flagship Infinite Gacha is fair and
+  EV-transparent, with every number traceable to a source.
 
 ## What it does
 
@@ -35,6 +54,24 @@ A 60 to 90 second walkthrough lives in [`docs/demo-script.md`](docs/demo-script.
   (price, grade, confidence, trend, freshness), with the rate limit surfaced.
 - **AI Pull Advisor (floating orb in `/app`).** Ask about a pack. The advisor answers only from that
   pack's computed context and cites every figure. Out-of-context questions are refused.
+
+## Value inside the Renaiss ecosystem
+
+PullEV targets the heart of Renaiss, not the edges. Infinite Gacha is Renaiss's core, perpetual pack mechanic,
+so making it transparent makes the flagship product itself transparent rather than building something adjacent.
+It plugs directly into Renaiss primitives:
+
+- **The FMV / CMV Index oracle** is PullEV's price source. Card values come from the real Renaiss Index API (beta),
+  the same oracle that aligns on-chain price to real market value, and are re-priced live on a schedule.
+- **The Merkle-proof and zero-knowledge fairness structure** is exactly what the verifier checks. Renaiss seals
+  each draw with blockchain-level fairness; PullEV recomputes that inclusion proof independently, client-side.
+- **Vault-backed pools** are what the EV is computed against: real graded cards held in custody, mirrored on-chain,
+  on BNB Chain.
+- **Reads only, never transacts.** No wallet, no writes. PullEV complements the on-chain layer (SBT identity,
+  RenaissOS verification nodes) instead of duplicating it, and it is safe to run against the live ecosystem.
+
+The result: a tool that audits Renaiss's own flagship for fairness and expected value, live, in a way anyone can
+independently verify. That is the case for listing it in the Renaiss Tool Directory.
 
 ## Architecture
 
@@ -150,9 +187,21 @@ Keys are read from the environment only and are never committed. `.env` files ar
 - **Web to Vercel:** set the project root to `web/`, set `ENGINE_URL` to the engine URL and
   `DEEPSEEK_API_KEY`, then deploy. The `../shared` types resolve from the monorepo clone.
 
-## Safety
+## Safety and responsible handling
 
-No secrets in the repo, no private or user data, no wallet keys. The AI advisor cites every claim and
-refuses out-of-context assertions; its output is never presented as verified fact. Card names and images
-are shown for identification only. Pokémon, One Piece, and related marks are property of their respective
-owners. Not financial advice.
+PullEV is built so its safety claims are verifiable, not just asserted. In one line each, with the full,
+file-referenced detail in [`docs/safety.md`](docs/safety.md):
+
+- **User data:** none collected. No accounts, auth, sessions, cookies, or analytics. The only input is a public
+  grading cert number on `/value`.
+- **Wallet data:** never touched. No wallet connection, keys, signing, or transactions. There are no web3
+  libraries in the project. PullEV reads and verifies only.
+- **API access and secrets:** env-only, never committed. `.env` is gitignored everywhere; the DeepSeek key is
+  server-only and never reaches the browser; the admin refresh endpoint is token-gated and off by default.
+- **AI outputs:** the advisor cites every number or refuses, never presents an estimate as verified fact, and is
+  always labeled as an AI assist. It is never blended into the app's factual displays.
+- **Provenance:** every number on screen reaches a badge (LIVE / ASSUMED / PULLEV MODEL / BUNDLED SNAPSHOT /
+  OFFICIAL); model and example data are never shown as authoritative.
+
+Card names and images are shown for identification only. Pokémon, One Piece, and related marks are property of
+their respective owners. Not financial advice.
