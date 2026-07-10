@@ -35,8 +35,8 @@ func main() {
 		case "refresh":
 			runRefresh()
 			return
-		case "commons":
-			runCommons()
+		case "tiers":
+			runTiers()
 			return
 		case "snapshot":
 			runSnapshot()

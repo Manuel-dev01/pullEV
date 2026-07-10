@@ -37,13 +37,19 @@ type Card struct {
 	FMVDeltaPct   float64    `json:"fmvDeltaPct,omitempty"`   // trend % (Index only)
 }
 
-// Pack is a purchasable Infinite Gacha pack.
+// Pack is a purchasable Renaiss gacha pack.
 type Pack struct {
 	ID                string  `json:"id"`
 	Name              string  `json:"name"`
 	PriceUsd          float64 `json:"priceUsd"`
 	PriceIsAssumption bool    `json:"priceIsAssumption"`
 	Tagline           string  `json:"tagline"`
+	// Kind is "infinite" (perpetual Infinite Gacha) or "limited" (a limited release).
+	Kind string `json:"kind,omitempty"`
+	// SoldOut marks a limited pack that can no longer be ripped (shown for reference).
+	SoldOut bool `json:"soldOut,omitempty"`
+	// TopPrizeUsd is the pack's advertised top prize (real Renaiss figure).
+	TopPrizeUsd float64 `json:"topPrizeUsd,omitempty"`
 }
 
 // PoolEntry is a card in a pool plus its relative draw weight.

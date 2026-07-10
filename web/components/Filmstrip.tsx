@@ -173,6 +173,46 @@ export function Filmstrip({
     go(2);
   }
 
+  const currentPacks = packs.filter((p) => !p.pack.soldOut);
+  const previousPacks = packs.filter((p) => p.pack.soldOut);
+
+  // One Floor tile, shared by the live shelf and the sold-out previous-packs showcase.
+  function packTile(pd: PackData, i: number) {
+    const e = edgePct(pd.ev.evToCostRatio);
+    const pos = e >= 0;
+    const kindLabel = pd.pack.soldOut ? "SOLD OUT" : pd.pack.kind === "infinite" ? "∞ INFINITE" : "LIMITED";
+    return (
+      <div
+        key={pd.pack.id}
+        className="pv-lift"
+        onClick={() => {
+          setActiveId(pd.pack.id);
+          setRipped(null);
+          go(1);
+        }}
+        style={{ flex: "none", width: 210, cursor: "pointer", borderRadius: 18, padding: 16, background: C.panel, border: `1px solid ${pd.pack.id === activeId ? "rgba(201,92,245,.55)" : C.border}`, opacity: pd.pack.soldOut ? 0.82 : 1 }}
+      >
+        <div style={{ position: "relative", height: 210, boxShadow: "0 16px 40px rgba(0,0,0,.5)" }}>
+          <CardArt src={coverImage(pd.pool)} hue={HUES[i % HUES.length]} radius={12} name={pd.pack.name.split(" ")[0].toUpperCase()} sizes="210px" />
+          <div style={{ position: "absolute", top: 8, left: 8, fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: ".08em", color: pd.pack.soldOut ? "#ff8fa0" : "#c3bad8", background: "rgba(8,7,12,.72)", border: `1px solid ${pd.pack.soldOut ? "rgba(255,143,160,.5)" : "rgba(255,255,255,.18)"}`, borderRadius: 6, padding: "3px 7px", backdropFilter: "blur(4px)" }}>{kindLabel}</div>
+          {pd.pack.topPrizeUsd ? (
+            <div style={{ position: "absolute", bottom: 8, right: 8, fontFamily: "var(--font-mono)", fontSize: 9, color: "#ffd76a", background: "rgba(8,7,12,.72)", border: "1px solid rgba(255,215,106,.4)", borderRadius: 6, padding: "3px 7px", backdropFilter: "blur(4px)" }}>top {money(pd.pack.topPrizeUsd)}</div>
+          ) : null}
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 14 }}>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 18, lineHeight: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{pd.pack.name}</div>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.muted, marginTop: 3 }}>cost {money(pd.pack.priceUsd)}</div>
+          </div>
+          <div style={{ flex: "none", fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, color: pos ? C.teal : "#ff8fa0", border: `1px solid ${pos ? "rgba(63,240,207,.35)" : "rgba(255,143,160,.35)"}`, borderRadius: 999, padding: "5px 9px" }}>
+            {pos ? "+" : ""}
+            {e.toFixed(1)}%
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (!active) {
     return (
       <div style={{ background: C.bg, color: C.ink, minHeight: "100vh", display: "grid", placeItems: "center" }}>
@@ -305,38 +345,22 @@ export function Filmstrip({
             <ProvenanceBadge provenance={packsProvenance} fallback={false} />
           </div>
           <div data-noswipe="1" className="pv-shelf" style={{ display: "flex", gap: 20, overflowX: "auto", padding: "30px 4px 24px", marginTop: 8 }}>
-            {packs.map((pd, i) => {
-              const e = edgePct(pd.ev.evToCostRatio);
-              const pos = e >= 0;
-              return (
-                <div
-                  key={pd.pack.id}
-                  className="pv-lift"
-                  onClick={() => {
-                    setActiveId(pd.pack.id);
-                    setRipped(null);
-                    go(1);
-                  }}
-                  style={{ flex: "none", width: 210, cursor: "pointer", borderRadius: 18, padding: 16, background: C.panel, border: `1px solid ${pd.pack.id === activeId ? "rgba(201,92,245,.55)" : C.border}` }}
-                >
-                  <div style={{ height: 210, boxShadow: "0 16px 40px rgba(0,0,0,.5)" }}>
-                    <CardArt src={coverImage(pd.pool)} hue={HUES[i % HUES.length]} radius={12} name={pd.pack.name.split(" ")[0].toUpperCase()} sizes="210px" />
-                  </div>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 14 }}>
-                    <div>
-                      <div style={{ fontFamily: "var(--font-display)", fontSize: 18, lineHeight: 1 }}>{pd.pack.name}</div>
-                      <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.muted, marginTop: 3 }}>cost {money(pd.pack.priceUsd)}</div>
-                    </div>
-                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, color: pos ? C.teal : "#ff8fa0", border: `1px solid ${pos ? "rgba(63,240,207,.35)" : "rgba(255,143,160,.35)"}`, borderRadius: 999, padding: "5px 9px" }}>
-                      {pos ? "+" : ""}
-                      {e.toFixed(1)}%
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            {currentPacks.map((pd, i) => packTile(pd, i))}
           </div>
-          <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.dim }}>↔ drag the shelf · tap a pack to load it into the line</div>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.dim }}>↔ drag the shelf · tap a pack to load it into the line · live Infinite Gacha packs</div>
+          {previousPacks.length > 0 && (
+            <>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0", marginTop: 30 }}>
+                Previous packs · sold out ({previousPacks.length})
+              </div>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: C.dim, marginTop: 6, maxWidth: 560 }}>
+                Real Renaiss limited packs, now retired. EV is informational (you cannot rip a sold-out pack).
+              </p>
+              <div data-noswipe="1" className="pv-shelf" style={{ display: "flex", gap: 20, overflowX: "auto", padding: "16px 4px 8px" }}>
+                {previousPacks.map((pd, i) => packTile(pd, i + 1))}
+              </div>
+            </>
+          )}
         </Station>
 
         {/* STATION 2 — X-RAY BAY */}

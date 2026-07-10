@@ -31,16 +31,9 @@ type LivePoolManager struct {
 	packs  map[string]Pack
 }
 
-// packOrder / prefixes / premiumPacks mirror the offline curate build so runtime pools
-// match what `engine curate` produces (distinct allocation per game, premium split).
-var (
-	livePackOrder = []string{"omega", "renacrypt", "eden", "voyaga", "frozen", "legacy-8"}
-	livePrefixes  = map[string]string{
-		"renacrypt": "rena", "voyaga": "voyaga", "omega": "omega",
-		"frozen": "frozen", "eden": "eden", "legacy-8": "legacy",
-	}
-	premiumPacks = map[string]bool{"eden": true, "legacy-8": true}
-)
+// livePackOrder is the set of packs the manager re-prices and rotates live: the 4 current
+// packs. The 11 previous packs are sold out and static (served from the embedded fixture).
+var livePackOrder = []string{"omega", "renacrypt", "eden", "champion"}
 
 func NewLivePoolManager(client *IndexClient, cache *ValuationCache) *LivePoolManager {
 	packs := map[string]Pack{}
@@ -77,9 +70,8 @@ func (lp *LivePoolManager) LastRefresh() (time.Time, bool) {
 	return lp.lastRefresh, true
 }
 
-// candidates builds each pack's disjoint candidate card list from the (freshly-priced)
-// library, mirroring curate's split: one-piece → renacrypt/voyaga, pokemon → omega/
-// frozen, premium (priciest combined) → eden/legacy. Lists are price-sorted ascending.
+// candidates builds each pack's candidate card list from the (freshly-priced) library via
+// the shared allocatePacks, so runtime rotation matches the offline `engine curate` build.
 func (lp *LivePoolManager) candidates() map[string][]curatedCard {
 	lib := lp.cache.SeedSnapshot()
 	var op, pkm []curatedCard
@@ -102,42 +94,8 @@ func (lp *LivePoolManager) candidates() map[string][]curatedCard {
 			pkm = append(pkm, cc)
 		}
 	}
-	byPrice := func(cs []curatedCard) { sort.Slice(cs, func(i, j int) bool { return cs[i].val.PriceUsd < cs[j].val.PriceUsd }) }
-	byPrice(op)
-	byPrice(pkm)
-	// Keep distinct real variants (name+set), matching curate — so the runtime rotation
-	// has the same deep candidate pool and wide packs stay full (especially One Piece).
-	op = dedupeByIdentity(op)
-	pkm = dedupeByIdentity(pkm)
-
-	opA, opB := splitAlt(op)
-	pkmA, pkmB := splitAlt(pkm)
-
-	combined := dedupeByIdentity(append(append([]curatedCard{}, pkm...), op...))
-	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
-	premA, premB := splitAlt(combined)
-	// Keep premium packs among the priciest cards, but leave room to rotate the chase set.
-	premA = topAsc(premA, chasePerPack+8)
-	premB = topAsc(premB, chasePerPack+8)
-
-	return map[string][]curatedCard{
-		"renacrypt": opA,
-		"voyaga":    opB,
-		"omega":     pkmA,
-		"frozen":    pkmB,
-		"eden":      premA,
-		"legacy-8":  premB,
-	}
-}
-
-// topAsc keeps the n highest-priced cards then returns them ascending (for pickSpread).
-func topAsc(cards []curatedCard, n int) []curatedCard {
-	sort.Slice(cards, func(i, j int) bool { return cards[i].val.PriceUsd > cards[j].val.PriceUsd })
-	if len(cards) > n {
-		cards = cards[:n]
-	}
-	sort.Slice(cards, func(i, j int) bool { return cards[i].val.PriceUsd < cards[j].val.PriceUsd })
-	return cards
+	// Same shared allocation curate uses, so runtime rotation matches the offline build.
+	return allocatePacks(op, pkm)
 }
 
 // Refresh re-prices the library and rebuilds every pack pool with this cycle's rotation.
@@ -154,8 +112,8 @@ func (lp *LivePoolManager) Refresh(ctx context.Context) {
 			continue // not enough library depth; fixture/prior pool stands
 		}
 		picked := pickSpreadRotated(cand, chasePerPack, lp.cycle)
-		entries, _ := poolEntriesFrom(livePrefixes[id], picked)
-		pool := Pool{PackID: id, Cards: rebalanceWithCommons(id, entries)}
+		entries, _ := poolEntriesFrom(idPrefix(id), picked)
+		pool := Pool{PackID: id, Cards: applyTiers(id, entries)}
 
 		if !lp.plausible(id, pool) {
 			log.Printf("livepool: rotated %s rejected (implausible EV) — keeping prior/fixture", id)

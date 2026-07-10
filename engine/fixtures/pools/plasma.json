@@ -1,185 +1,9 @@
 {
-  "packId": "eden",
+  "packId": "plasma",
   "cards": [
     {
       "card": {
-        "id": "eden-monkey-d-luffy",
-        "name": "Monkey D. Luffy",
-        "grade": "PSA 10",
-        "set": "Adventure On Kami’s Island",
-        "fmvUsd": 651,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T05:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -44.33
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-monkeydluffy-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Promotion Pack Ex Vol.3",
-        "fmvUsd": 671.41,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_006_ja_1797bc085c834815b3408e2168caa868_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T14:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -27.44
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-birthday-pikachu-holo",
-        "name": "Birthday Pikachu-Holo",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-        "fmvUsd": 735.01,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_007_ja_680e0afba87f4ad0b6360cc56dd22853_sm.webp?v=62c3d7fe",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -12.11
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-monkeydluffy-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "One Piece Card Game X Psa Exclusive Promo Card",
-        "fmvUsd": 951.47,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op05_060_en_187d60e26dff4be9ac15edb4f0838e89_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -34.81
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-monkeydluffy-x-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Two Legends",
-        "fmvUsd": 1132.89,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_109_en_5f8397c7ab7c4785b82702592cb906d9_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T00:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -25.25
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-monkeydluffy-x-x-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "One Piece Card Game And Football Team Dortmund Collaboration Event",
-        "fmvUsd": 1508.46,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_003_en_984c453b9dee4fd2ae708bb737c583f7_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T04:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -37.06
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-pikachu-with-grey-felt-hat",
-        "name": "Pikachu with Grey Felt Hat",
-        "grade": "PSA 10",
-        "set": "Pokemon SVP Black Star Promos",
-        "fmvUsd": 2860.05,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T01:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.7
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-zoro-juurou",
-        "name": "Zoro-Juurou",
-        "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 377.75,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": 6.12
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-detective-pikachu",
-        "name": "Detective Pikachu",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv-P Promo",
-        "fmvUsd": 432.88,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_098_ja_b8bc9b382c8c4fda91e563aceeb4d63b_sm.webp?v=f22e163d",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T14:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.96
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-o-nami",
-        "name": "O-Nami",
-        "grade": "PSA 10",
-        "set": "500 Years In The Future",
-        "fmvUsd": 474.48,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_c0496d947ce6457c87ad0b206a5cb5f0_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T14:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -27.62
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-pikachu-ex",
-        "name": "Pikachu Ex",
-        "grade": "PSA 10",
-        "set": "Mega Dream ex",
-        "fmvUsd": 520.99,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_234_ja_781f51ab14784fe9bf32b3c674c7ece0_sm.webp?v=bfcf7c96",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T15:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -14.55
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "eden-monkeydluffy",
+        "id": "plasma-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
         "set": "One Piece Card Game 2nd Anniversary Set",
@@ -195,11 +19,187 @@
     },
     {
       "card": {
-        "id": "eden-filler-zubat",
+        "id": "plasma-gear-two",
+        "name": "Gear Two",
+        "grade": "PSA 10",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 653.49,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-09T00:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": 1.52
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-monkeydluffy-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "Misc. Promos",
+        "fmvUsd": 684.69,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_055_en_48959d2235ee4a11bd92031c2894209c_sm.webp?v=37f641d4",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T10:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -31.03
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-monkeydluffy-x-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "One Piece Card Game English 2nd Anniversary Set",
+        "fmvUsd": 844.44,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T04:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -31.85
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-luffy-\u0026-ace",
+        "name": "Luffy \u0026 Ace",
+        "grade": "PSA 10",
+        "set": "Luffy \u0026 Ace",
+        "fmvUsd": 985.84,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T03:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -68.56
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-nami",
+        "name": "Nami",
+        "grade": "PSA 10",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 1285.18,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T03:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": -16.25
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-shanks",
+        "name": "Shanks",
+        "grade": "PSA 10",
+        "set": "Romance Dawn",
+        "fmvUsd": 2182.31,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T04:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -3.35
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-monkeydluffy-x-x-x",
+        "name": "Monkey.D.Luffy",
+        "grade": "PSA 10",
+        "set": "Dodgers One Piece Night",
+        "fmvUsd": 4545.75,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-09T02:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -10.34
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-zoro-juurou",
+        "name": "Zoro-Juurou",
+        "grade": "PSA 10",
+        "set": "Emperors In The New World",
+        "fmvUsd": 377.75,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-09T00:00:00.000Z",
+        "fmvConfidence": "medium",
+        "fmvDeltaPct": 6.12
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-detective-pikachu",
+        "name": "Detective Pikachu",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Sv-P Promo",
+        "fmvUsd": 432.88,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_098_ja_b8bc9b382c8c4fda91e563aceeb4d63b_sm.webp?v=f22e163d",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T14:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -8.96
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-boa-hancock",
+        "name": "Boa Hancock",
+        "grade": "PSA 10",
+        "set": "Emperors In The New World",
+        "fmvUsd": 499.57,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-09T10:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -34.42
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-mega-gengar-ex",
+        "name": "Mega Gengar Ex",
+        "grade": "PSA 10",
+        "set": "Mega Dream ex",
+        "fmvUsd": 582.25,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_240_ja_094085d7f46b458bbb09e296cede0093_sm.webp?v=7b1d2306",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T10:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -20.15
+      },
+      "weight": 0.0008333333333333334
+    },
+    {
+      "card": {
+        "id": "plasma-filler-zubat",
         "name": "Zubat",
         "grade": "PSA 9",
         "set": "Pokemon Base Common",
-        "fmvUsd": 175,
+        "fmvUsd": 118,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
@@ -208,11 +208,11 @@
     },
     {
       "card": {
-        "id": "eden-filler-alvida",
+        "id": "plasma-filler-alvida",
         "name": "Alvida",
         "grade": "PSA 9",
         "set": "One Piece Common",
-        "fmvUsd": 220,
+        "fmvUsd": 152,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
@@ -221,11 +221,11 @@
     },
     {
       "card": {
-        "id": "eden-filler-caterpie",
+        "id": "plasma-filler-caterpie",
         "name": "Caterpie",
         "grade": "PSA 9",
         "set": "Pokemon Base Common",
-        "fmvUsd": 260,
+        "fmvUsd": 182,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
@@ -234,11 +234,11 @@
     },
     {
       "card": {
-        "id": "eden-filler-rattata",
+        "id": "plasma-filler-rattata",
         "name": "Rattata",
         "grade": "PSA 9",
         "set": "Pokemon Base Common",
-        "fmvUsd": 28,
+        "fmvUsd": 18,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
@@ -247,11 +247,11 @@
     },
     {
       "card": {
-        "id": "eden-filler-coby",
+        "id": "plasma-filler-coby",
         "name": "Coby",
         "grade": "PSA 9",
         "set": "One Piece Common",
-        "fmvUsd": 50,
+        "fmvUsd": 32,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
@@ -260,11 +260,11 @@
     },
     {
       "card": {
-        "id": "eden-filler-pidgey",
+        "id": "plasma-filler-pidgey",
         "name": "Pidgey",
         "grade": "PSA 9",
         "set": "Pokemon Base Common",
-        "fmvUsd": 82,
+        "fmvUsd": 52,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"
@@ -273,11 +273,11 @@
     },
     {
       "card": {
-        "id": "eden-filler-buggy",
+        "id": "plasma-filler-buggy",
         "name": "Buggy",
         "grade": "PSA 9",
         "set": "One Piece Common",
-        "fmvUsd": 120,
+        "fmvUsd": 78,
         "fmvIsAssumption": true,
         "fmvSource": "Mock",
         "fmvConfidence": "assumed"

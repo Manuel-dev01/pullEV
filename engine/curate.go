@@ -215,6 +215,72 @@ func writeJSONFile(path string, v any) error {
 	return os.WriteFile(path, append(b, '\n'), 0o644)
 }
 
+// previousPackIDs are the 11 sold-out limited packs (all $100). Each draws the premium
+// band with a per-pack rotation offset so they are not identical.
+var previousPackIDs = []string{
+	"world-cup", "aura", "ribbon", "plasma", "magma",
+	"legacy-7", "legacy-8", "legacy-9", "costume", "bowtie", "starry",
+}
+
+// allocatePacks assigns real cards to each of the 15 real packs. Shared by `engine curate`
+// (offline build) and the live pool manager (runtime) so the two never drift. Current
+// packs: OMEGA = Pokemon mid-tier, RenaCrypt = One Piece mid-tier, Eden + Champion = the
+// premium band split; previous packs = the premium band rotated per pack. Cheap packs
+// exclude the premium band so they hold their game's mid-tier (distinct from the premium
+// packs). All lists are price-ascending.
+func allocatePacks(op, pkm []curatedCard) map[string][]curatedCard {
+	combined := dedupeByIdentity(append(append([]curatedCard{}, pkm...), op...))
+	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
+	premBand := combined
+	if len(premBand) > 30 {
+		premBand = premBand[:30]
+	}
+	premSet := map[string]bool{}
+	for _, c := range premBand {
+		premSet[c.slug] = true
+	}
+	champCands, edenCands := splitAlt(premBand) // premBand desc, so champion skews to the very top
+
+	out := map[string][]curatedCard{
+		"omega":     sortAsc(filterOut(pkm, premSet)),
+		"renacrypt": sortAsc(filterOut(op, premSet)),
+		"eden":      sortAsc(edenCands),
+		"champion":  sortAsc(champCands),
+	}
+	for i, id := range previousPackIDs {
+		off := 0
+		if len(premBand) > 0 {
+			off = (i * 5) % len(premBand)
+		}
+		out[id] = sortAsc(rotateCards(premBand, off))
+	}
+	return out
+}
+
+func filterOut(cards []curatedCard, exclude map[string]bool) []curatedCard {
+	out := []curatedCard{}
+	for _, c := range cards {
+		if !exclude[c.slug] {
+			out = append(out, c)
+		}
+	}
+	return out
+}
+
+func sortAsc(cards []curatedCard) []curatedCard {
+	out := append([]curatedCard{}, cards...)
+	sort.Slice(out, func(i, j int) bool { return out[i].val.PriceUsd < out[j].val.PriceUsd })
+	return out
+}
+
+func rotateCards(cards []curatedCard, off int) []curatedCard {
+	if len(cards) == 0 {
+		return cards
+	}
+	off = off % len(cards)
+	return append(append([]curatedCard{}, cards[off:]...), cards[:off]...)
+}
+
 // runCurate rebuilds pools from real cards. Reads harvested slug lists from
 // cache/slugs_op.txt and cache/slugs_pkm.txt.
 func runCurate() {
@@ -244,24 +310,13 @@ func runCurate() {
 	sort.Slice(pkmCards, func(i, j int) bool { return pkmCards[i].val.PriceUsd < pkmCards[j].val.PriceUsd })
 	fmt.Printf("distinct priced cards: %d one-piece, %d pokemon\n", len(opCards), len(pkmCards))
 
-	// Split each game's cards into two DISTINCT halves (alternating by price rank) so the
-	// two packs drawing on that game don't share cards. Premium (eden/legacy) is split the
-	// same way from the highest-value combined band.
-	opA, opB := splitAlt(opCards)   // renacrypt, voyaga
-	pkmA, pkmB := splitAlt(pkmCards) // omega, frozen
-	combined := dedupeByIdentity(append(append([]curatedCard{}, pkmCards...), opCards...))
-	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
-	premA, premB := splitAlt(combined) // eden, legacy-8
-	if len(premA) > chasePerPack {
-		premA = premA[:chasePerPack]
-	}
-	if len(premB) > chasePerPack {
-		premB = premB[:chasePerPack]
-	}
+	// Allocate real cards to the 15 real packs (shared with the live rotation manager so
+	// curate and runtime never drift).
+	alloc := allocatePacks(opCards, pkmCards)
 
 	vmap := map[string]string{
 		"_note": "cardId -> Renaiss structured card path (game/set/slug). Real live valuations; " +
-			"pool membership + weights are labeled assumptions. Rebuild with `engine curate`, refresh with `engine refresh`.",
+			"pool membership + tier weights are labeled assumptions. Rebuild with `engine curate`, refresh with `engine refresh`.",
 	}
 	seed := map[string]Valuation{}
 	// Seed the WHOLE priced library (not just selected cards) so offline rebuilds have depth.
@@ -269,13 +324,9 @@ func runCurate() {
 		seed[c.slug] = c.val
 	}
 
-	built := map[string]Pool{
-		"renacrypt": buildPool("renacrypt", "rena", pickSpread(opA, chasePerPack), vmap, seed),   // One Piece x Collector Crypt, $88
-		"voyaga":    buildPool("voyaga", "voyaga", pickSpread(opB, chasePerPack), vmap, seed),     // One Piece Grand Line, $120
-		"omega":     buildPool("omega", "omega", pickSpread(pkmA, chasePerPack), vmap, seed),      // Pokemon, $48
-		"frozen":    buildPool("frozen", "frozen", pickSpread(pkmB, chasePerPack), vmap, seed),    // Pokemon icy, $60
-		"eden":      buildPool("eden", "eden", premA, vmap, seed),                       // premium mixed, $150
-		"legacy-8":  buildPool("legacy-8", "legacy", premB, vmap, seed),                 // vintage premium, $200
+	built := map[string]Pool{}
+	for id, cards := range alloc {
+		built[id] = buildPool(id, idPrefix(id), pickSpread(cards, chasePerPack), vmap, seed)
 	}
 
 	// Guard: never clobber good fixtures with a throttled/empty run.

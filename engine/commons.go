@@ -9,179 +9,189 @@ import (
 	"time"
 )
 
-// This file makes the curated pools read like real gacha. The Renaiss index only
-// surfaces top/chase cards, so a pool built purely from it skews premium — every
-// pull beats the pack cost and EV is unrealistically positive. Real packs are
-// dominated by low-value "commons"; the chase cards carry a thin upside tail.
+// Tier model — grounds each pack's odds in Renaiss's published "What is loaded" tier
+// structure: Crown (~1% chance, top chase band), Bloom (~33%, mid), Thorn (~66%, cheap
+// bulk). The TIER CHANCES are Renaiss's real published structure. Card FMVs are real
+// Renaiss Index valuations. The per-pack tier boundaries over the pool and the labeled
+// cheap Thorn filler are PullEV's model: our real library is chase-heavy, while Renaiss
+// loads many cheap cards we do not price, so the filler represents that cheap bulk and is
+// clearly labeled (fmvIsAssumption, fmvSource:Mock). This replaces the old commons ladder.
 //
-// `engine commons` (offline, no API) rebalances each pool:
-//   - REAL chase cards (fmvSource:Index) keep their real prices, re-weighted into a
-//     rarity ladder (cheaper chase slightly more common, the top chase rarest).
-//   - A representative COMMONS tier is prepended: real card names at lower grade,
-//     with clearly-ASSUMED FMVs (fmvIsAssumption:true, fmvSource:Mock), weighted so
-//     most pulls land below cost.
-//
-// SAFETY: commons FMVs and ALL pool weights are labeled assumptions — Renaiss exposes
-// no odds/pool API. Chase FMVs remain real Renaiss Index valuations. The UI badges
-// each card's source (LIVE vs ASSUMPTION) and the EV caveats note the mix.
-//
-// The command is idempotent: it strips any prior commons tier before re-applying, so
-// it can be re-run to re-tune. Run it AFTER `engine curate`, then rebuild the binary
-// (go:embed) and regenerate the web snapshot.
+// `engine tiers` (offline, no API) reads each pool's real chase cards, bins them into
+// Crown/Bloom/Thorn by FMV, adds the cheap filler, and weights each tier so its total draw
+// probability equals its published chance. Idempotent (drops prior filler first). Run it
+// AFTER `engine curate`, then `engine snapshot`, then rebuild the binary.
 
-// commonCard is one representative bulk card (real name, lower grade, assumed value).
-type commonCard struct {
-	name   string
-	grade  string
-	set    string
-	fmv    float64
-	weight float64
+// Tier draw chances (Renaiss's published tier structure). Applied uniformly since per-pack
+// exact chances are not all public; labeled as the observed structure.
+const (
+	crownChance = 0.01
+	bloomChance = 0.33
+	thornChance = 0.66
+)
+
+// fillerCard is a labeled cheap card populating the Thorn bulk (assumed FMV, Mock source).
+type fillerCard struct {
+	name  string
+	grade string
+	set   string
+	fmv   float64
 }
 
-// packCommons defines, per pack, the commons tier and the rarity ladder applied to
-// the real chase cards (sorted cheap→expensive). Tuned so the verdicts form a
-// believable mix: Omega a thin RIP, Renacrypt and Eden a house-edge SKIP.
-type packCommons struct {
-	prefix      string
-	commons     []commonCard
-	chaseLadder []float64 // weight per chase card, cheapest→priciest
+// tierConfig sets, per pack, the FMV boundaries between tiers and the cheap Thorn filler.
+// Boundaries are calibrated so the computed edge reads believable (real chances + real
+// chase prices + this cheap filler). Chase cards >= crownFloor are Crown; [bloomFloor,
+// crownFloor) are Bloom; the rest plus filler are Thorn.
+type tierConfig struct {
+	prefix     string
+	crownFloor float64
+	bloomFloor float64
+	filler     []fillerCard
 }
 
-// Commons use low-tier minor-character names (PSA 9) so they never collide with the
-// real high-value chase cards curated into the pools. FMVs + weights are labeled
-// assumptions representing the bulk of a pool; runCommons also dedupes by name as a
-// safety net against any residual overlap.
-var commonsConfig = map[string]packCommons{
-	// Omega ($48, Pokémon): commons-heavy so the cheap pack is only a THIN RIP.
-	"omega": {
-		prefix: "omega",
-		commons: []commonCard{
-			{"Rattata", "PSA 9", "Pokemon Base Common", 7, 280},
-			{"Pidgey", "PSA 9", "Pokemon Base Common", 12, 205},
-			{"Zubat", "PSA 9", "Pokemon Base Common", 19, 135},
-			{"Caterpie", "PSA 9", "Pokemon Base Common", 30, 90},
-		},
-		chaseLadder: []float64{50, 40, 32, 26, 20, 16, 13, 10, 8, 6, 5, 4},
-	},
-	// Renacrypt ($88, One Piece): commons dominate → house-edge SKIP with upside.
-	"renacrypt": {
-		prefix: "rena",
-		commons: []commonCard{
-			{"Coby", "PSA 9", "One Piece Common", 9, 520},
-			{"Buggy", "PSA 9", "One Piece Common", 16, 340},
-			{"Alvida", "PSA 9", "One Piece Common", 27, 200},
-			{"Helmeppo", "PSA 9", "One Piece Common", 44, 110},
-		},
-		chaseLadder: []float64{60, 44, 32, 22, 15, 11, 8, 6, 4, 3, 2, 2},
-	},
-	// Eden ($150, premium mixed): higher-value commons, deep chase tail → SKIP.
-	"eden": {
-		prefix: "eden",
-		commons: []commonCard{
-			{"Coby", "PSA 9", "One Piece Common", 22, 430},
-			{"Buggy", "PSA 9", "One Piece Common", 48, 260},
-			{"Alvida", "PSA 9", "One Piece Common", 66, 150},
-			{"Helmeppo", "PSA 9", "One Piece Common", 88, 80},
-		},
-		chaseLadder: []float64{40, 30, 22, 16, 12, 9, 7, 5, 4, 3, 2, 2},
-	},
-	// Voyaga ($120, One Piece Grand Line): premium One Piece chase → house-edge SKIP.
-	"voyaga": {
-		prefix: "voyaga",
-		commons: []commonCard{
-			{"Kaya", "PSA 9", "One Piece Common", 9, 460},
-			{"Morgan", "PSA 9", "One Piece Common", 16, 280},
-			{"Bepo", "PSA 9", "One Piece Common", 27, 150},
-			{"Kuro", "PSA 9", "One Piece Common", 44, 80},
-		},
-		chaseLadder: []float64{44, 33, 24, 17, 12, 9, 7, 5, 4, 3, 2, 2},
-	},
-	// Frozen ($60, Pokemon icy lean): light commons + fat tail → thin RIP.
-	"frozen": {
-		prefix: "frozen",
-		commons: []commonCard{
-			{"Weedle", "PSA 9", "Pokemon Base Common", 7, 150},
-			{"Spearow", "PSA 9", "Pokemon Base Common", 12, 110},
-			{"Ekans", "PSA 9", "Pokemon Base Common", 19, 68},
-			{"Sandshrew", "PSA 9", "Pokemon Base Common", 30, 42},
-		},
-		chaseLadder: []float64{46, 36, 28, 22, 17, 14, 12, 10, 8, 7, 6, 5},
-	},
-	// Legacy Pack #8 ($200, vintage premium mixed): deep chase → SKIP with big tail.
-	"legacy-8": {
-		prefix: "legacy",
-		commons: []commonCard{
-			{"Rattata", "PSA 9", "Pokemon Base Common", 22, 470},
-			{"Pidgey", "PSA 9", "Pokemon Base Common", 48, 280},
-			{"Zubat", "PSA 9", "Pokemon Base Common", 66, 160},
-			{"Caterpie", "PSA 9", "Pokemon Base Common", 88, 90},
-		},
-		chaseLadder: []float64{40, 30, 22, 16, 12, 9, 7, 5, 4, 3, 2, 2},
-	},
+// Filler spans each pack's Thorn and Bloom bands with cheap labeled cards, scaled to the
+// pack price. The real chase cards (all pricier than any filler) sit above crownFloor and
+// so land in Crown (~1%, rare) — exactly how real gacha works: most pulls are cheap, the
+// chase is rare. This keeps the computed edge believable (house edge, thin margins) while
+// the tier chances stay Renaiss's published structure.
+var omegaFiller = []fillerCard{ // OMEGA $48
+	{"Rattata", "PSA 9", "Pokemon Base Common", 8},
+	{"Pidgey", "PSA 9", "Pokemon Base Common", 14},
+	{"Zubat", "PSA 9", "Pokemon Base Common", 22},
+	{"Caterpie", "PSA 9", "Pokemon Base Common", 34},
+	{"Weedle", "PSA 9", "Pokemon Base Common", 58},
+	{"Spearow", "PSA 9", "Pokemon Base Common", 76},
+	{"Ekans", "PSA 9", "Pokemon Base Common", 96},
+}
+var renaFiller = []fillerCard{ // RenaCrypt $88
+	{"Coby", "PSA 9", "One Piece Common", 14},
+	{"Buggy", "PSA 9", "One Piece Common", 24},
+	{"Alvida", "PSA 9", "One Piece Common", 40},
+	{"Helmeppo", "PSA 9", "One Piece Common", 64},
+	{"Kaya", "PSA 9", "One Piece Common", 96},
+	{"Morgan", "PSA 9", "One Piece Common", 122},
+	{"Bepo", "PSA 9", "One Piece Common", 146},
+}
+var premFiller = []fillerCard{ // $100 premium packs (Champion + previous)
+	{"Rattata", "PSA 9", "Pokemon Base Common", 18},
+	{"Coby", "PSA 9", "One Piece Common", 32},
+	{"Pidgey", "PSA 9", "Pokemon Base Common", 52},
+	{"Buggy", "PSA 9", "One Piece Common", 78},
+	{"Zubat", "PSA 9", "Pokemon Base Common", 118},
+	{"Alvida", "PSA 9", "One Piece Common", 152},
+	{"Caterpie", "PSA 9", "Pokemon Base Common", 182},
+}
+var edenFiller = []fillerCard{ // Eden $150 flagship (richer, so its house edge is milder)
+	{"Rattata", "PSA 9", "Pokemon Base Common", 28},
+	{"Coby", "PSA 9", "One Piece Common", 50},
+	{"Pidgey", "PSA 9", "Pokemon Base Common", 82},
+	{"Buggy", "PSA 9", "One Piece Common", 120},
+	{"Zubat", "PSA 9", "Pokemon Base Common", 175},
+	{"Alvida", "PSA 9", "One Piece Common", 220},
+	{"Caterpie", "PSA 9", "Pokemon Base Common", 260},
 }
 
-// rebalanceWithCommons takes a pack's real chase cards (Index-priced), re-weights them
-// into the pack's rarity ladder, and prepends the labeled commons tier so the mix reads
-// like a real pool (commons dominate, chase is a thin upside tail). Pure — no file IO —
-// so `engine commons` (offline) and the live pool manager (runtime) share one path.
-// Commons whose name collides with a real chase card are skipped (dedupe safety net).
-func rebalanceWithCommons(id string, chase []PoolEntry) []PoolEntry {
-	cfg, ok := commonsConfig[id]
-	if !ok {
-		return chase
+// Per-pack configs, calibrated via `engine tiers` verdict print. crownFloor sits above the
+// filler top so real chase cards fall in Crown; bloomFloor splits filler into Bloom/Thorn.
+// Previous $100 packs share the default (premium) config.
+var tierConfigs = map[string]tierConfig{
+	"omega":     {"omega", 110, 40, omegaFiller},
+	"renacrypt": {"rena", 160, 55, renaFiller},
+	"eden":      {"eden", 300, 140, edenFiller},
+	"champion":  {"champ", 200, 100, premFiller},
+}
+
+var defaultTierConfig = tierConfig{"prev", 200, 100, premFiller}
+
+func tierFor(id string) tierConfig {
+	if c, ok := tierConfigs[id]; ok {
+		return c
 	}
-	out := append([]PoolEntry{}, chase...)
-	sort.Slice(out, func(i, j int) bool { return out[i].Card.FMVUsd < out[j].Card.FMVUsd })
-	for i := range out {
-		if i < len(cfg.chaseLadder) {
-			out[i].Weight = cfg.chaseLadder[i]
-		} else {
-			out[i].Weight = 1
-		}
-	}
+	c := defaultTierConfig
+	c.prefix = idPrefix(id)
+	return c
+}
+
+func idPrefix(id string) string {
+	return strings.ReplaceAll(id, "-", "")
+}
+
+// applyTiers organizes a pack's real chase cards plus cheap filler into Crown/Bloom/Thorn
+// and weights each tier so its total draw probability equals its published chance. Pure
+// (no IO), so `engine tiers` and the live pool manager share one path.
+func applyTiers(id string, chase []PoolEntry) []PoolEntry {
+	cfg := tierFor(id)
 
 	chaseNames := map[string]bool{}
-	for _, e := range out {
+	for _, e := range chase {
 		chaseNames[strings.ToLower(e.Card.Name)] = true
 	}
 
-	commons := make([]PoolEntry, 0, len(cfg.commons))
+	// Build the labeled Thorn filler (skip any name colliding with a real chase card).
 	seen := map[string]bool{}
-	for _, c := range cfg.commons {
-		if chaseNames[strings.ToLower(c.name)] {
+	all := append([]PoolEntry{}, chase...)
+	for _, f := range cfg.filler {
+		if chaseNames[strings.ToLower(f.name)] {
 			continue
 		}
-		cid := cfg.prefix + "-common-" + slugName(c.name)
-		for seen[cid] {
-			cid += "-x"
+		fid := cfg.prefix + "-filler-" + slugName(f.name)
+		for seen[fid] {
+			fid += "-x"
 		}
-		seen[cid] = true
-		commons = append(commons, PoolEntry{
-			Weight: c.weight,
-			Card: Card{
-				ID: cid, Name: c.name, Grade: c.grade, Set: c.set,
-				FMVUsd: c.fmv, FMVIsAssumption: true, FMVSource: SourceMock,
-				FMVConfidence: "assumed",
-			},
-		})
+		seen[fid] = true
+		all = append(all, PoolEntry{Card: Card{
+			ID: fid, Name: f.name, Grade: f.grade, Set: f.set,
+			FMVUsd: f.fmv, FMVIsAssumption: true, FMVSource: SourceMock, FMVConfidence: "assumed",
+		}})
 	}
-	return append(commons, out...)
+
+	// Bin into tiers by FMV.
+	var crown, bloom, thorn []PoolEntry
+	for _, e := range all {
+		switch {
+		case e.Card.FMVUsd >= cfg.crownFloor:
+			crown = append(crown, e)
+		case e.Card.FMVUsd >= cfg.bloomFloor:
+			bloom = append(bloom, e)
+		default:
+			thorn = append(thorn, e)
+		}
+	}
+
+	// Weight each tier so its total draw probability equals its published chance
+	// (equal within a tier). ComputeEV normalizes by the weight sum, so proportions hold.
+	assign := func(entries []PoolEntry, chance float64) {
+		if len(entries) == 0 {
+			return
+		}
+		w := chance / float64(len(entries))
+		for i := range entries {
+			entries[i].Weight = w
+		}
+	}
+	assign(crown, crownChance)
+	assign(bloom, bloomChance)
+	assign(thorn, thornChance)
+
+	out := make([]PoolEntry, 0, len(all))
+	out = append(out, crown...)
+	out = append(out, bloom...)
+	out = append(out, thorn...)
+	return out
 }
 
-func runCommons() {
+func runTiers() {
 	packs := loadPacksForCommons()
-
-	for _, id := range []string{"omega", "renacrypt", "eden", "voyaga", "frozen", "legacy-8"} {
-		if _, ok := commonsConfig[id]; !ok {
+	for _, p := range orderedPackIDs(packs) {
+		path := fmt.Sprintf("fixtures/pools/%s.json", p)
+		b, err := os.ReadFile(path)
+		if err != nil {
 			continue
 		}
-		path := fmt.Sprintf("fixtures/pools/%s.json", id)
-		b, err := os.ReadFile(path)
-		must(err)
 		var pool Pool
 		must(json.Unmarshal(b, &pool))
 
-		// Keep only real chase cards; drop any previously-added commons (idempotent).
+		// Keep only real chase cards; drop any previously-added filler (idempotent).
 		chase := make([]PoolEntry, 0, len(pool.Cards))
 		for _, e := range pool.Cards {
 			if e.Card.FMVIsAssumption || e.Card.FMVSource != SourceIndex {
@@ -190,12 +200,21 @@ func runCommons() {
 			chase = append(chase, e)
 		}
 
-		pool.Cards = rebalanceWithCommons(id, chase)
+		pool.Cards = applyTiers(p, chase)
 		must(writeJSONFile(path, pool))
-
-		printPoolVerdict(id, pool, packs[id])
+		printPoolVerdict(p, pool, packs[p])
 	}
-	fmt.Println("\nCommons applied. Rebuild the binary (go:embed) + regenerate web/lib/snapshot.json next.")
+	fmt.Println("\nTiers applied. Run `engine snapshot`, then rebuild the binary (go:embed).")
+}
+
+// orderedPackIDs returns pack ids in packs.json order for a stable verdict print.
+func orderedPackIDs(packs map[string]Pack) []string {
+	ids := make([]string, 0, len(packs))
+	for id := range packs {
+		ids = append(ids, id)
+	}
+	sort.Strings(ids)
+	return ids
 }
 
 // slugName lowercases a card name into an id fragment (mirrors cardID's cleanup).
@@ -240,7 +259,7 @@ func printPoolVerdict(id string, pool Pool, pack Pack) {
 	} else if ev.EVToCostRatio >= 0.97 {
 		verdict = "MARGINAL"
 	}
-	fmt.Printf("%-10s cost $%-6.0f EV $%-8.2f ratio %.2f (%+.0f%%)  P(profit) %4.1f%%  median $%-8.2f p90 $%-8.2f  %d cards  → %s\n",
+	fmt.Printf("%-11s cost $%-6.0f EV $%-8.2f ratio %.2f (%+.0f%%)  P(profit) %4.1f%%  %d cards  → %s\n",
 		id, pack.PriceUsd, ev.ExpectedValue, ev.EVToCostRatio, (ev.EVToCostRatio-1)*100,
-		ev.ChanceOfProfit*100, ev.Distribution.Median, ev.Distribution.P90, len(pool.Cards), verdict)
+		ev.ChanceOfProfit*100, len(pool.Cards), verdict)
 }

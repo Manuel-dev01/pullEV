@@ -4,41 +4,146 @@
     "name": "Eden Pack",
     "priceUsd": 150,
     "priceIsAssumption": false,
-    "tagline": "Premium chase pool, verified $150"
+    "tagline": "Premium chase pool, live on Infinite Gacha",
+    "kind": "infinite",
+    "topPrizeUsd": 4434
   },
   {
-    "id": "voyaga",
-    "name": "Voyaga Pack",
-    "priceUsd": 120,
-    "priceIsAssumption": true,
-    "tagline": "One Piece Grand Line chase, price pending confirmation"
+    "id": "omega",
+    "name": "OMEGA Pack",
+    "priceUsd": 48,
+    "priceIsAssumption": false,
+    "tagline": "Mid-tier graded chase, live on Infinite Gacha",
+    "kind": "infinite",
+    "topPrizeUsd": 1532
   },
   {
-    "id": "frozen",
-    "name": "Frozen Pack",
-    "priceUsd": 60,
-    "priceIsAssumption": true,
-    "tagline": "Pokemon icy pull, price pending confirmation"
+    "id": "renacrypt",
+    "name": "RenaCrypt Pack",
+    "priceUsd": 88,
+    "priceIsAssumption": false,
+    "tagline": "Renaiss x Collector Crypt collab, live on Infinite Gacha",
+    "kind": "infinite",
+    "topPrizeUsd": 2415
+  },
+  {
+    "id": "champion",
+    "name": "Champion Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Limited release, currently sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 3750
+  },
+  {
+    "id": "world-cup",
+    "name": "World Cup Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 3800
+  },
+  {
+    "id": "aura",
+    "name": "Aura Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 3888
+  },
+  {
+    "id": "ribbon",
+    "name": "Ribbon Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 3000
+  },
+  {
+    "id": "plasma",
+    "name": "Plasma Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2900
+  },
+  {
+    "id": "magma",
+    "name": "Magma Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2900
+  },
+  {
+    "id": "legacy-7",
+    "name": "Legacy Pack #7",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2900
   },
   {
     "id": "legacy-8",
     "name": "Legacy Pack #8",
-    "priceUsd": 200,
-    "priceIsAssumption": true,
-    "tagline": "Vintage premium mixed chase, price pending confirmation"
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2850
   },
   {
-    "id": "omega",
-    "name": "Omega Pack",
-    "priceUsd": 48,
+    "id": "legacy-9",
+    "name": "Legacy Pack #9",
+    "priceUsd": 100,
     "priceIsAssumption": false,
-    "tagline": "Mid-tier graded chase, verified $48"
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2850
   },
   {
-    "id": "renacrypt",
-    "name": "Renacrypt Pack",
-    "priceUsd": 88,
+    "id": "costume",
+    "name": "Costume Pack",
+    "priceUsd": 100,
     "priceIsAssumption": false,
-    "tagline": "Renaiss x Collector Crypt collab, verified $88"
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2700
+  },
+  {
+    "id": "bowtie",
+    "name": "Bowtie Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2600
+  },
+  {
+    "id": "starry",
+    "name": "Starry Pack",
+    "priceUsd": 100,
+    "priceIsAssumption": false,
+    "tagline": "Previous limited release, sold out",
+    "kind": "limited",
+    "soldOut": true,
+    "topPrizeUsd": 2126
   }
 ]

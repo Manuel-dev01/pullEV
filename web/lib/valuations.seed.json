@@ -6,13 +6,13 @@
     "setName": "500 Years In The Future",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 468.51,
-    "confidence": "medium",
-    "deltaPct": -22.99,
+    "priceUsd": 474.48,
+    "confidence": "high",
+    "deltaPct": -27.62,
     "spark": null,
-    "lastSaleAt": "2026-07-07T01:00:00.000Z",
+    "lastSaleAt": "2026-07-09T14:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_c0496d947ce6457c87ad0b206a5cb5f0_sm.png",
-    "rateRemaining": 8757
+    "rateRemaining": 7524
   },
   "one-piece/a-fist-of-divine-speed/080-gear-two-psa-10-941da00d": {
     "cert": "one-piece/a-fist-of-divine-speed/080-gear-two-psa-10-941da00d",
@@ -21,13 +21,13 @@
     "setName": "A Fist Of Divine Speed",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 654.13,
-    "confidence": "medium",
-    "deltaPct": 6.1,
+    "priceUsd": 653.49,
+    "confidence": "high",
+    "deltaPct": 1.52,
     "spark": null,
-    "lastSaleAt": "2026-07-07T00:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
-    "rateRemaining": 8755
+    "rateRemaining": 7522
   },
   "one-piece/a-fist-of-divine-speed/118-monkey-d-luffy-psa-10-japanese-6dfff8cd": {
     "cert": "one-piece/a-fist-of-divine-speed/118-monkey-d-luffy-psa-10-japanese-6dfff8cd",
@@ -36,13 +36,13 @@
     "setName": "A Fist Of Divine Speed",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 1496.18,
-    "confidence": "prime",
-    "deltaPct": -20.04,
+    "priceUsd": 1555.01,
+    "confidence": "high",
+    "deltaPct": -17.99,
     "spark": null,
-    "lastSaleAt": "2026-07-08T14:00:00.000Z",
+    "lastSaleAt": "2026-07-10T10:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
-    "rateRemaining": 8754
+    "rateRemaining": 7521
   },
   "one-piece/adventure-on-kami-s-island/005-monkey-d-luffy-psa-10-japanese-5b8f1756": {
     "cert": "one-piece/adventure-on-kami-s-island/005-monkey-d-luffy-psa-10-japanese-5b8f1756",
@@ -51,43 +51,28 @@
     "setName": "Adventure On Kami’s Island",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 685.89,
+    "priceUsd": 651,
     "confidence": "high",
-    "deltaPct": -41.39,
+    "deltaPct": -44.33,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-10T05:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st26_005_ja_sm.webp",
-    "rateRemaining": 8756
+    "rateRemaining": 7523
   },
   "one-piece/awakening-of-the-new-era/012-monkey-d-luffy-parallel-psa-10-japanese-3396dd3e": {
     "cert": "one-piece/awakening-of-the-new-era/012-monkey-d-luffy-parallel-psa-10-japanese-3396dd3e",
-    "found": true,
-    "name": "Monkey.D.Luffy (Parallel)",
-    "setName": "Awakening of the New Era",
-    "gradeLabel": "PSA 10",
-    "game": "one-piece",
-    "priceUsd": 252.71,
-    "confidence": "high",
-    "deltaPct": -36.95,
-    "spark": null,
-    "lastSaleAt": "2026-07-08T14:00:00.000Z",
-    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_3396dd3ee69e403095a47d94dd4eb939_sm.webp",
-    "rateRemaining": 8753
-  },
-  "one-piece/awakening-of-the-new-era/012-monkey-d-luffy-psa-10-324c81d8": {
-    "cert": "one-piece/awakening-of-the-new-era/012-monkey-d-luffy-psa-10-324c81d8",
     "found": true,
     "name": "Monkey.D.Luffy",
     "setName": "Awakening of the New Era",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 347.03,
-    "confidence": "medium",
-    "deltaPct": 4.63,
+    "priceUsd": 251.56,
+    "confidence": "prime",
+    "deltaPct": -41.94,
     "spark": null,
-    "lastSaleAt": "2026-07-05T00:00:00.000Z",
-    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_en_324c81d8a2d8474093d55ad5bbab356e_sm.webp",
-    "rateRemaining": 8752
+    "lastSaleAt": "2026-07-09T04:00:00.000Z",
+    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_3396dd3ee69e403095a47d94dd4eb939_sm.webp",
+    "rateRemaining": 7520
   },
   "one-piece/bandai-card-games-fest-25-26/073-monkey-d-luffy-psa-10-japanese-cee77755": {
     "cert": "one-piece/bandai-card-games-fest-25-26/073-monkey-d-luffy-psa-10-japanese-cee77755",
@@ -96,13 +81,13 @@
     "setName": "Free Giveaway For Bandai Card Games Fest 25-26",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 226.79,
-    "confidence": "medium",
-    "deltaPct": -35.55,
+    "priceUsd": 222.3,
+    "confidence": "high",
+    "deltaPct": -36.93,
     "spark": null,
-    "lastSaleAt": "2026-07-06T00:00:00.000Z",
+    "lastSaleAt": "2026-07-10T05:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_073_ja_cee7775500c54c93918a02aff73a2960_sm.png",
-    "rateRemaining": 8749
+    "rateRemaining": 7516
   },
   "one-piece/carrying-on-his-will/058-monkey-d-luffy-psa-10-5cb62c69": {
     "cert": "one-piece/carrying-on-his-will/058-monkey-d-luffy-psa-10-5cb62c69",
@@ -111,13 +96,13 @@
     "setName": "Carrying On His Will",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 286.54,
+    "priceUsd": 285.75,
     "confidence": "high",
-    "deltaPct": -30.74,
+    "deltaPct": -31.98,
     "spark": null,
-    "lastSaleAt": "2026-07-05T00:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_058_en_5cb62c69efed4f8896aae3139f760be5_sm.png",
-    "rateRemaining": 8748
+    "rateRemaining": 7515
   },
   "one-piece/carrying-on-his-will/119-portgas-d-ace-psa-10-6efdb3c7": {
     "cert": "one-piece/carrying-on-his-will/119-portgas-d-ace-psa-10-6efdb3c7",
@@ -126,13 +111,13 @@
     "setName": "Carrying On His Will",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 152,
+    "priceUsd": 152.43,
     "confidence": "medium",
-    "deltaPct": 2.43,
+    "deltaPct": 1.84,
     "spark": null,
-    "lastSaleAt": "2026-07-06T00:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op13_119_en_6efdb3c7a5fa4eaf8ea4e837ded359c6_sm.png",
-    "rateRemaining": 8744
+    "rateRemaining": 7511
   },
   "one-piece/dodgers-one-piece-night/010-monkey-d-luffy-psa-10-5f8ebb3c": {
     "cert": "one-piece/dodgers-one-piece-night/010-monkey-d-luffy-psa-10-5f8ebb3c",
@@ -141,13 +126,13 @@
     "setName": "Dodgers One Piece Night",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 4493.68,
-    "confidence": "prime",
-    "deltaPct": -9.86,
+    "priceUsd": 4545.75,
+    "confidence": "high",
+    "deltaPct": -10.34,
     "spark": null,
-    "lastSaleAt": "2026-07-07T00:00:00.000Z",
+    "lastSaleAt": "2026-07-09T02:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
-    "rateRemaining": 8743
+    "rateRemaining": 7510
   },
   "one-piece/emperors-in-the-new-world/004-zoro-juurou-psa-10-b4e13749": {
     "cert": "one-piece/emperors-in-the-new-world/004-zoro-juurou-psa-10-b4e13749",
@@ -156,13 +141,13 @@
     "setName": "Emperors In The New World",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 390.5,
+    "priceUsd": 377.75,
     "confidence": "medium",
-    "deltaPct": 14.73,
+    "deltaPct": 6.12,
     "spark": null,
-    "lastSaleAt": "2026-07-08T00:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
-    "rateRemaining": 8742
+    "rateRemaining": 7509
   },
   "one-piece/emperors-in-the-new-world/051-boa-hancock-psa-10-japanese-50e35ee3": {
     "cert": "one-piece/emperors-in-the-new-world/051-boa-hancock-psa-10-japanese-50e35ee3",
@@ -171,13 +156,13 @@
     "setName": "Emperors In The New World",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 508.71,
+    "priceUsd": 499.57,
     "confidence": "high",
-    "deltaPct": -30.59,
+    "deltaPct": -34.42,
     "spark": null,
-    "lastSaleAt": "2026-07-08T15:00:00.000Z",
+    "lastSaleAt": "2026-07-09T10:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
-    "rateRemaining": 8741
+    "rateRemaining": 7508
   },
   "one-piece/emperors-in-the-new-world/061-monkey-d-luffy-psa-10-japanese-6d6d9409": {
     "cert": "one-piece/emperors-in-the-new-world/061-monkey-d-luffy-psa-10-japanese-6d6d9409",
@@ -186,13 +171,13 @@
     "setName": "Emperors In The New World",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 188.04,
+    "priceUsd": 188.92,
     "confidence": "prime",
-    "deltaPct": -48.35,
+    "deltaPct": -50.16,
     "spark": null,
-    "lastSaleAt": "2026-07-08T22:00:00.000Z",
+    "lastSaleAt": "2026-07-10T03:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_6d6d94094ba14ee8b1f9c73ab00a136b_sm.png",
-    "rateRemaining": 8740
+    "rateRemaining": 7507
   },
   "one-piece/english-version-2nd-anniversary-set-alternate-art/061-monkey-d-luffy-psa-10-japanese-49c376fa": {
     "cert": "one-piece/english-version-2nd-anniversary-set-alternate-art/061-monkey-d-luffy-psa-10-japanese-49c376fa",
@@ -201,43 +186,43 @@
     "setName": "One Piece Card Game English 2nd Anniversary Set",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 835.17,
-    "confidence": "high",
-    "deltaPct": -31.71,
+    "priceUsd": 844.44,
+    "confidence": "prime",
+    "deltaPct": -31.85,
     "spark": null,
-    "lastSaleAt": "2026-07-09T01:00:00.000Z",
+    "lastSaleAt": "2026-07-10T04:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
-    "rateRemaining": 8738
+    "rateRemaining": 7505
   },
   "one-piece/event-pack-vol-5/067-zoro-juurou-parallel-psa-10-japanese-be9e1867": {
     "cert": "one-piece/event-pack-vol-5/067-zoro-juurou-parallel-psa-10-japanese-be9e1867",
     "found": true,
-    "name": "Zoro-Juurou (Parallel)",
+    "name": "Zoro-Juurou",
     "setName": "Asia Special Prize For August 2024 Standard Battle",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 147.37,
-    "confidence": "high",
-    "deltaPct": -39.59,
+    "priceUsd": 157.69,
+    "confidence": "prime",
+    "deltaPct": -40.93,
     "spark": null,
-    "lastSaleAt": "2026-07-07T11:00:00.000Z",
+    "lastSaleAt": "2026-07-09T21:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op05_067_ja_be9e186758944a92af1866866630722a_sm.png",
-    "rateRemaining": 8737
+    "rateRemaining": 7504
   },
   "one-piece/event-pack-vol-5/101-o-nami-parallel-psa-10-japanese-1e60925d": {
     "cert": "one-piece/event-pack-vol-5/101-o-nami-parallel-psa-10-japanese-1e60925d",
     "found": true,
-    "name": "O-Nami (Parallel)",
+    "name": "O-Nami",
     "setName": "Asia Special Prize For August 2024 Standard Battle",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 129.91,
+    "priceUsd": 130.84,
     "confidence": "high",
-    "deltaPct": -40.86,
+    "deltaPct": -45.18,
     "spark": null,
-    "lastSaleAt": "2026-07-07T00:00:00.000Z",
+    "lastSaleAt": "2026-07-10T01:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_1e60925d62034fb0a16fa29fb70bbfd7_sm.png",
-    "rateRemaining": 8736
+    "rateRemaining": 7503
   },
   "one-piece/gear5/001-monkey-d-luffy-psa-10-90b5d9f5": {
     "cert": "one-piece/gear5/001-monkey-d-luffy-psa-10-90b5d9f5",
@@ -246,13 +231,13 @@
     "setName": "Gear5",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 142.01,
+    "priceUsd": 137.75,
     "confidence": "medium",
-    "deltaPct": -24.62,
+    "deltaPct": -10.14,
     "spark": null,
-    "lastSaleAt": "2026-07-03T00:00:00.000Z",
+    "lastSaleAt": "2026-07-10T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_001_en_90b5d9f54e98475e8363e728552a1a15_sm.png?v=d7c9d6ff",
-    "rateRemaining": 8735
+    "rateRemaining": 7502
   },
   "one-piece/japanese-2nd-anniversary-set/015-monkey-d-luffy-psa-10-japanese-5c93524f": {
     "cert": "one-piece/japanese-2nd-anniversary-set/015-monkey-d-luffy-psa-10-japanese-5c93524f",
@@ -261,13 +246,13 @@
     "setName": "One Piece Card Game 2nd Anniversary Set",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 606.98,
+    "priceUsd": 615.47,
     "confidence": "prime",
-    "deltaPct": -35.37,
+    "deltaPct": -34.56,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-10T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_015_ja_5c93524f5c6544f9a7ff3a9499ac0250_sm.png",
-    "rateRemaining": 8733
+    "rateRemaining": 7500
   },
   "one-piece/luffy-ace/001-luffy-ace-psa-10-japanese-fe0bffcc": {
     "cert": "one-piece/luffy-ace/001-luffy-ace-psa-10-japanese-fe0bffcc",
@@ -276,13 +261,13 @@
     "setName": "Luffy \u0026 Ace",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 974.93,
+    "priceUsd": 985.84,
     "confidence": "prime",
-    "deltaPct": -68.89,
+    "deltaPct": -68.56,
     "spark": null,
-    "lastSaleAt": "2026-07-08T17:00:00.000Z",
+    "lastSaleAt": "2026-07-10T03:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
-    "rateRemaining": 8732
+    "rateRemaining": 7499
   },
   "one-piece/misc-promos/006-monkey-d-luffy-psa-10-japanese-1797bc08": {
     "cert": "one-piece/misc-promos/006-monkey-d-luffy-psa-10-japanese-1797bc08",
@@ -291,13 +276,13 @@
     "setName": "Promotion Pack Ex Vol.3",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 672.21,
+    "priceUsd": 671.41,
     "confidence": "high",
-    "deltaPct": -26.64,
+    "deltaPct": -27.44,
     "spark": null,
-    "lastSaleAt": "2026-07-08T14:00:00.000Z",
+    "lastSaleAt": "2026-07-10T14:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_006_ja_1797bc085c834815b3408e2168caa868_sm.png",
-    "rateRemaining": 8731
+    "rateRemaining": 7498
   },
   "one-piece/misc-promos/055-monkey-d-luffy-psa-10-48959d22": {
     "cert": "one-piece/misc-promos/055-monkey-d-luffy-psa-10-48959d22",
@@ -306,13 +291,13 @@
     "setName": "Misc. Promos",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 689.23,
+    "priceUsd": 684.69,
     "confidence": "prime",
-    "deltaPct": -28.98,
+    "deltaPct": -31.03,
     "spark": null,
-    "lastSaleAt": "2026-07-08T17:00:00.000Z",
+    "lastSaleAt": "2026-07-10T10:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_055_en_48959d2235ee4a11bd92031c2894209c_sm.webp?v=37f641d4",
-    "rateRemaining": 8730
+    "rateRemaining": 7497
   },
   "one-piece/one-piece-card-game-and-football-team-dortmund-collaboration-event/003-monkey-d-luffy-psa-10-984c453b": {
     "cert": "one-piece/one-piece-card-game-and-football-team-dortmund-collaboration-event/003-monkey-d-luffy-psa-10-984c453b",
@@ -321,13 +306,13 @@
     "setName": "One Piece Card Game And Football Team Dortmund Collaboration Event",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 1573.92,
+    "priceUsd": 1508.46,
     "confidence": "prime",
-    "deltaPct": -32.27,
+    "deltaPct": -37.06,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-10T04:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_003_en_984c453b9dee4fd2ae708bb737c583f7_sm.png",
-    "rateRemaining": 8729
+    "rateRemaining": 7496
   },
   "one-piece/one-piece-card-game-lecafig-promo-japanese/001-monkey-d-luffy-l-psa-10-japanese-c890eb09": {
     "cert": "one-piece/one-piece-card-game-lecafig-promo-japanese/001-monkey-d-luffy-l-psa-10-japanese-c890eb09",
@@ -336,13 +321,13 @@
     "setName": "One Piece Card Game LECAFIG Promo Japanese",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 603.06,
+    "priceUsd": 605.76,
     "confidence": "medium",
-    "deltaPct": -34.14,
+    "deltaPct": -37.93,
     "spark": null,
-    "lastSaleAt": "2026-07-08T12:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_001_ja_c890eb09285e44a2bd41df110151eae3_sm.png",
-    "rateRemaining": 8728
+    "rateRemaining": 7495
   },
   "one-piece/one-piece-card-game-pillars-of-strength-japanese/012-monkey-d-luffy-wanted-poster-sp-psa-10-japanese-337d58ca": {
     "cert": "one-piece/one-piece-card-game-pillars-of-strength-japanese/012-monkey-d-luffy-wanted-poster-sp-psa-10-japanese-337d58ca",
@@ -351,28 +336,28 @@
     "setName": "Pillars Of Strength",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 441.15,
-    "confidence": "low",
-    "deltaPct": -15.22,
+    "priceUsd": 472.39,
+    "confidence": "medium",
+    "deltaPct": -11.36,
     "spark": null,
-    "lastSaleAt": "2026-07-04T05:00:00.000Z",
+    "lastSaleAt": "2026-07-10T04:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
-    "rateRemaining": 8727
+    "rateRemaining": 7494
   },
   "one-piece/one-piece-card-game-promos-japanese/112-yamato-sr-flagship-battle-2024-august-top-8-prize-psa-10-japanese-1700376c": {
     "cert": "one-piece/one-piece-card-game-promos-japanese/112-yamato-sr-flagship-battle-2024-august-top-8-prize-psa-10-japanese-1700376c",
     "found": true,
-    "name": "Yamato (Parallel)",
+    "name": "Yamato",
     "setName": "Best 8 Prize For Flagship Battle In July 2024",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
     "priceUsd": 244.11,
     "confidence": "low",
-    "deltaPct": -14.77,
+    "deltaPct": -18.28,
     "spark": null,
     "lastSaleAt": "2026-07-09T05:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_112_ja_1700376c16744d20aa3904fc22e1b65c_sm.png?v=b36e9371",
-    "rateRemaining": 8726
+    "rateRemaining": 7494
   },
   "one-piece/one-piece-card-game-x-psa-exclusive-promo-card/060-monkey-d-luffy-psa-10-187d60e2": {
     "cert": "one-piece/one-piece-card-game-x-psa-exclusive-promo-card/060-monkey-d-luffy-psa-10-187d60e2",
@@ -381,13 +366,13 @@
     "setName": "One Piece Card Game X Psa Exclusive Promo Card",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 1012.11,
-    "confidence": "medium",
-    "deltaPct": -26.49,
+    "priceUsd": 951.47,
+    "confidence": "high",
+    "deltaPct": -34.81,
     "spark": null,
-    "lastSaleAt": "2026-07-06T05:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op05_060_en_187d60e26dff4be9ac15edb4f0838e89_sm.png",
-    "rateRemaining": 8725
+    "rateRemaining": 7493
   },
   "one-piece/one-piece-card-the-best/016-nami-psa-10-japanese-7840453a": {
     "cert": "one-piece/one-piece-card-the-best/016-nami-psa-10-japanese-7840453a",
@@ -396,28 +381,28 @@
     "setName": "One Piece Card The Best",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 1240.87,
+    "priceUsd": 1285.18,
     "confidence": "medium",
-    "deltaPct": -14.93,
+    "deltaPct": -16.25,
     "spark": null,
-    "lastSaleAt": "2026-07-07T12:00:00.000Z",
+    "lastSaleAt": "2026-07-10T03:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
-    "rateRemaining": 8724
+    "rateRemaining": 7492
   },
   "one-piece/one-piece-japanese-promos/001-monkey-d-luffy-psa-10-japanese-31c32e1f": {
     "cert": "one-piece/one-piece-japanese-promos/001-monkey-d-luffy-psa-10-japanese-31c32e1f",
     "found": true,
-    "name": "Monkey.D.Luffy (Parallel)",
+    "name": "Monkey.D.Luffy",
     "setName": "Championship Set 2022",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 269.03,
+    "priceUsd": 269.83,
     "confidence": "medium",
-    "deltaPct": -40.75,
+    "deltaPct": -42.56,
     "spark": null,
-    "lastSaleAt": "2026-07-08T12:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_001_ja_31c32e1f8d35440e82ccdb991a8020d2_sm.png?v=7a9aec5c",
-    "rateRemaining": 8720
+    "rateRemaining": 7488
   },
   "one-piece/one-piece-magazine-vol-20/014-monkey-d-luffy-psa-10-japanese-8c878393": {
     "cert": "one-piece/one-piece-magazine-vol-20/014-monkey-d-luffy-psa-10-japanese-8c878393",
@@ -426,13 +411,13 @@
     "setName": "One Piece Magazine Vol.20",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 311,
+    "priceUsd": 310.67,
     "confidence": "prime",
-    "deltaPct": -8.11,
+    "deltaPct": -12.33,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-10T11:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_014_ja_8c87839398b64b05a5267a377a6dd473_sm.png",
-    "rateRemaining": 8719
+    "rateRemaining": 7487
   },
   "one-piece/premium-card-collection-one-piece-day-24/109-monkey-d-luffy-psa-10-japanese-402644e3": {
     "cert": "one-piece/premium-card-collection-one-piece-day-24/109-monkey-d-luffy-psa-10-japanese-402644e3",
@@ -441,13 +426,13 @@
     "setName": "Premium Card Collection -one Piece Day’24",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 160.63,
+    "priceUsd": 160.59,
     "confidence": "high",
-    "deltaPct": -37.42,
+    "deltaPct": -39.66,
     "spark": null,
-    "lastSaleAt": "2026-07-08T10:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_109_ja_402644e347a343df87a8fc4dbc8d07f3_sm.png",
-    "rateRemaining": 8718
+    "rateRemaining": 7486
   },
   "one-piece/premium-card-collection-one-piece-day-25-japanese/110-monkey-d-luffy-psa-10-japanese-efb5ce37": {
     "cert": "one-piece/premium-card-collection-one-piece-day-25-japanese/110-monkey-d-luffy-psa-10-japanese-efb5ce37",
@@ -456,28 +441,28 @@
     "setName": "Premium Card Collection -One Piece Day'25- Japanese",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 401.03,
+    "priceUsd": 407.21,
     "confidence": "prime",
-    "deltaPct": 14.18,
+    "deltaPct": 10.25,
     "spark": null,
-    "lastSaleAt": "2026-07-08T17:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/items/efb5ce37-0244-445a-aba8-fd9cad00f7c1/sm.jpg",
-    "rateRemaining": 8717
+    "rateRemaining": 7485
   },
   "one-piece/prize-cards-alternate-art/093-perona-psa-10-japanese-59d0747f": {
     "cert": "one-piece/prize-cards-alternate-art/093-perona-psa-10-japanese-59d0747f",
     "found": true,
-    "name": "Perona (Parallel)",
+    "name": "Perona",
     "setName": "Best 8 Prize For Flagship Battle In January 2024",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 182.4,
-    "confidence": "medium",
-    "deltaPct": -26.17,
+    "priceUsd": 176.33,
+    "confidence": "high",
+    "deltaPct": -31.05,
     "spark": null,
-    "lastSaleAt": "2026-07-08T16:00:00.000Z",
+    "lastSaleAt": "2026-07-09T13:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_093_ja_59d0747fad504240ba0683c4bfebe63f_sm.png",
-    "rateRemaining": 8716
+    "rateRemaining": 7484
   },
   "one-piece/promos/043-monkey-d-luffy-psa-10-japanese-98934e24": {
     "cert": "one-piece/promos/043-monkey-d-luffy-psa-10-japanese-98934e24",
@@ -486,13 +471,13 @@
     "setName": "Asia Special Prize for August 2023 Standard Battle",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 263.4,
+    "priceUsd": 259.71,
     "confidence": "prime",
-    "deltaPct": -26.36,
+    "deltaPct": -29.62,
     "spark": null,
-    "lastSaleAt": "2026-07-09T03:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_043_ja_98934e24b3f44c1c88fc4403b6880234_sm.png?v=ddec233d",
-    "rateRemaining": 8715
+    "rateRemaining": 7483
   },
   "one-piece/romance-dawn/016-nami-psa-10-japanese-843ce6d9": {
     "cert": "one-piece/romance-dawn/016-nami-psa-10-japanese-843ce6d9",
@@ -501,13 +486,13 @@
     "setName": "Romance Dawn",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 230.78,
+    "priceUsd": 228.82,
     "confidence": "high",
-    "deltaPct": -33.98,
+    "deltaPct": -35.29,
     "spark": null,
-    "lastSaleAt": "2026-07-08T15:00:00.000Z",
+    "lastSaleAt": "2026-07-09T17:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_843ce6d967a54dd49d340326d51b0919_sm.png",
-    "rateRemaining": 8714
+    "rateRemaining": 7482
   },
   "one-piece/romance-dawn/120-shanks-psa-10-japanese-2a553a37": {
     "cert": "one-piece/romance-dawn/120-shanks-psa-10-japanese-2a553a37",
@@ -516,13 +501,13 @@
     "setName": "Romance Dawn",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 2156.1,
+    "priceUsd": 2182.31,
     "confidence": "high",
-    "deltaPct": -1.39,
+    "deltaPct": -3.35,
     "spark": null,
-    "lastSaleAt": "2026-07-08T10:00:00.000Z",
+    "lastSaleAt": "2026-07-10T04:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
-    "rateRemaining": 8713
+    "rateRemaining": 7481
   },
   "one-piece/two-legends/109-monkey-d-luffy-psa-10-5f8397c7": {
     "cert": "one-piece/two-legends/109-monkey-d-luffy-psa-10-5f8397c7",
@@ -531,13 +516,13 @@
     "setName": "Two Legends",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 1075.12,
-    "confidence": "high",
-    "deltaPct": -19.35,
+    "priceUsd": 1132.89,
+    "confidence": "prime",
+    "deltaPct": -25.25,
     "spark": null,
-    "lastSaleAt": "2026-07-05T00:00:00.000Z",
+    "lastSaleAt": "2026-07-10T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_109_en_5f8397c7ab7c4785b82702592cb906d9_sm.png",
-    "rateRemaining": 8712
+    "rateRemaining": 7480
   },
   "one-piece/wings-of-the-captain/007-nami-psa-10-dd7faa72": {
     "cert": "one-piece/wings-of-the-captain/007-nami-psa-10-dd7faa72",
@@ -546,13 +531,13 @@
     "setName": "Wings of the Captain",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 714.09,
+    "priceUsd": 619.58,
     "confidence": "medium",
-    "deltaPct": 20.32,
+    "deltaPct": -0.07,
     "spark": null,
-    "lastSaleAt": "2026-07-06T00:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_007_en_dd7faa724d7b492bb0eab2dd2e7dbb03_sm.webp",
-    "rateRemaining": 8711
+    "rateRemaining": 7479
   },
   "one-piece/winner-prize-for-december-2022-standard-battle/007-nami-psa-10-japanese-7615a149": {
     "cert": "one-piece/winner-prize-for-december-2022-standard-battle/007-nami-psa-10-japanese-7615a149",
@@ -561,28 +546,28 @@
     "setName": "Winner Prize For December 2022 Standard Battle",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 180.51,
+    "priceUsd": 179.56,
     "confidence": "low",
-    "deltaPct": -35.65,
+    "deltaPct": -39.15,
     "spark": null,
     "lastSaleAt": "2026-07-08T04:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_007_ja_7615a14964f7482a8e49079255987ca9_sm.png?v=582bc523",
-    "rateRemaining": 8710
+    "rateRemaining": 7478
   },
   "one-piece/winner-prize-for-sealed-battle-2023-vol-1/083-sabo-psa-10-japanese-5b564cce": {
     "cert": "one-piece/winner-prize-for-sealed-battle-2023-vol-1/083-sabo-psa-10-japanese-5b564cce",
     "found": true,
-    "name": "Sabo (Parallel)",
+    "name": "Sabo",
     "setName": "Winner Prize For 8 Packs Battle",
     "gradeLabel": "PSA 10",
     "game": "one-piece",
-    "priceUsd": 189.36,
-    "confidence": "medium",
-    "deltaPct": -44.62,
+    "priceUsd": 194.29,
+    "confidence": "low",
+    "deltaPct": -44.36,
     "spark": null,
     "lastSaleAt": "2026-07-08T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_083_ja_5b564ccec0604bc1806872ea337c6372_sm.png",
-    "rateRemaining": 8709
+    "rateRemaining": 7477
   },
   "pokemon/mcdonald-s-japanese-m-p-promo/020-pikachu-psa-10-japanese-2fabc70d": {
     "cert": "pokemon/mcdonald-s-japanese-m-p-promo/020-pikachu-psa-10-japanese-2fabc70d",
@@ -591,13 +576,13 @@
     "setName": "McDONALD'S Japanese M-P Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 87.26,
+    "priceUsd": 87.86,
     "confidence": "prime",
-    "deltaPct": -13.67,
+    "deltaPct": -13.34,
     "spark": null,
-    "lastSaleAt": "2026-07-09T02:00:00.000Z",
+    "lastSaleAt": "2026-07-10T11:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_promo_020_ja_2fabc70d9e024bfca1d554a27157ba9f_sm.webp?v=f4beba21",
-    "rateRemaining": 8708
+    "rateRemaining": 7476
   },
   "pokemon/mega-promos/24-oricorio-ex-psa-10-372f3d0b": {
     "cert": "pokemon/mega-promos/24-oricorio-ex-psa-10-372f3d0b",
@@ -606,13 +591,13 @@
     "setName": "Mega Promos",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 127.2,
+    "priceUsd": 122.8,
     "confidence": "prime",
-    "deltaPct": -9.3,
+    "deltaPct": -11.96,
     "spark": null,
-    "lastSaleAt": "2026-07-08T00:00:00.000Z",
+    "lastSaleAt": "2026-07-10T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mep_24_en_372f3d0b56844abfb2b19498e8b12f40_sm.png?v=ff8c312d",
-    "rateRemaining": 8707
+    "rateRemaining": 7475
   },
   "pokemon/nullifying-zero/114-meowth-ex-psa-10-japanese-9955ab69": {
     "cert": "pokemon/nullifying-zero/114-meowth-ex-psa-10-japanese-9955ab69",
@@ -621,13 +606,13 @@
     "setName": "Nullifying Zero",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 163.2,
+    "priceUsd": 162.08,
     "confidence": "prime",
-    "deltaPct": -32.55,
+    "deltaPct": -32.4,
     "spark": null,
-    "lastSaleAt": "2026-07-08T20:00:00.000Z",
+    "lastSaleAt": "2026-07-10T14:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_114_ja_meowth-ex_special-art-rare_sm.png",
-    "rateRemaining": 8706
+    "rateRemaining": 7474
   },
   "pokemon/pokemon-japanese-25th-anniversary-collection/001-pikachu-psa-10-japanese-61d98a61": {
     "cert": "pokemon/pokemon-japanese-25th-anniversary-collection/001-pikachu-psa-10-japanese-61d98a61",
@@ -636,13 +621,13 @@
     "setName": "Pokemon Japanese 25th Anniversary Collection",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 67.34,
+    "priceUsd": 69.11,
     "confidence": "prime",
-    "deltaPct": -34.79,
+    "deltaPct": -32.88,
     "spark": null,
-    "lastSaleAt": "2026-07-08T16:00:00.000Z",
+    "lastSaleAt": "2026-07-10T11:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a_001_ja_61d98a61195a49c1b7d8b4477fb9c2dd_sm.webp?v=c999b1c7",
-    "rateRemaining": 8705
+    "rateRemaining": 7473
   },
   "pokemon/pokemon-japanese-cll-trading-card-game-classic-charizard-ho-oh-ex-deck/008-pikachu-psa-10-japanese-79d9305f": {
     "cert": "pokemon/pokemon-japanese-cll-trading-card-game-classic-charizard-ho-oh-ex-deck/008-pikachu-psa-10-japanese-79d9305f",
@@ -651,13 +636,13 @@
     "setName": "Pokemon Japanese Cll-Trading Card Game Classic Charizard \u0026 Ho-Oh Ex Deck",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 244.96,
+    "priceUsd": 242.67,
     "confidence": "prime",
-    "deltaPct": -43.28,
+    "deltaPct": -42.14,
     "spark": null,
-    "lastSaleAt": "2026-07-07T10:00:00.000Z",
+    "lastSaleAt": "2026-07-10T08:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_cll_008_ja_79d9305facf049ceaee5b22313b7d22a_sm.webp?v=2e69701d",
-    "rateRemaining": 8704
+    "rateRemaining": 7472
   },
   "pokemon/pokemon-japanese-m2-inferno-x/094-mega-charizard-x-ex-psa-10-japanese-ee1dde36": {
     "cert": "pokemon/pokemon-japanese-m2-inferno-x/094-mega-charizard-x-ex-psa-10-japanese-ee1dde36",
@@ -666,13 +651,13 @@
     "setName": "Pokemon Japanese M2-Inferno X",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 93.71,
+    "priceUsd": 95.17,
     "confidence": "prime",
-    "deltaPct": -21.96,
+    "deltaPct": -21.21,
     "spark": null,
-    "lastSaleAt": "2026-07-08T12:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2_094_ja_ee1dde3615764eb9a212b85be9bb1436_sm.webp?v=d78cebf5",
-    "rateRemaining": 8693
+    "rateRemaining": 7461
   },
   "pokemon/pokemon-japanese-m2-inferno-x/111-oricorio-ex-psa-10-japanese-d8aaaad2": {
     "cert": "pokemon/pokemon-japanese-m2-inferno-x/111-oricorio-ex-psa-10-japanese-d8aaaad2",
@@ -681,133 +666,103 @@
     "setName": "Pokemon Japanese M2-Inferno X",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 86.99,
+    "priceUsd": 86.97,
     "confidence": "prime",
-    "deltaPct": -27.43,
+    "deltaPct": -25.38,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-10T03:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2_111_ja_d8aaaad2899a43a7a62862ef3148baad_sm.webp?v=b3e76527",
-    "rateRemaining": 8691
+    "rateRemaining": 7459
   },
   "pokemon/pokemon-japanese-m2a-mega-dream-ex/199-psyduck-psa-10-japanese-b22a95f6": {
     "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/199-psyduck-psa-10-japanese-b22a95f6",
     "found": true,
     "name": "Psyduck",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
+    "setName": "Mega Dream ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 100.64,
+    "priceUsd": 100.63,
     "confidence": "prime",
-    "deltaPct": -33.95,
+    "deltaPct": -33.89,
     "spark": null,
-    "lastSaleAt": "2026-07-08T17:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_199_ja_psyduck_art-rare_sm.png",
-    "rateRemaining": 8703
+    "rateRemaining": 7471
   },
   "pokemon/pokemon-japanese-m2a-mega-dream-ex/205-team-rocket-s-mimikyu-psa-10-japanese-537f8812": {
     "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/205-team-rocket-s-mimikyu-psa-10-japanese-537f8812",
     "found": true,
     "name": "Team Rocket's Mimikyu",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
+    "setName": "Mega Dream ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 47.74,
+    "priceUsd": 47.83,
     "confidence": "prime",
-    "deltaPct": -17.65,
+    "deltaPct": -11.48,
     "spark": null,
-    "lastSaleAt": "2026-07-08T16:00:00.000Z",
+    "lastSaleAt": "2026-07-10T08:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_205_ja_537f8812501c4db5b345b78c8c77f0d1_sm.webp?v=c60caf78",
-    "rateRemaining": 8703
-  },
-  "pokemon/pokemon-japanese-m2a-mega-dream-ex/223-mega-charizard-x-ex-psa-10-japanese-ea02529a": {
-    "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/223-mega-charizard-x-ex-psa-10-japanese-ea02529a",
-    "found": true,
-    "name": "Mega Charizard X Ex",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
-    "gradeLabel": "PSA 10",
-    "game": "pokemon",
-    "priceUsd": 132.43,
-    "confidence": "prime",
-    "deltaPct": -31.14,
-    "spark": null,
-    "lastSaleAt": "2026-07-09T04:00:00.000Z",
-    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_223_ja_mega-charizard-x-ex_mega-attack-rare_sm.png",
-    "rateRemaining": 8702
-  },
-  "pokemon/pokemon-japanese-m2a-mega-dream-ex/228-mega-lucario-ex-psa-10-japanese-329d23a3": {
-    "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/228-mega-lucario-ex-psa-10-japanese-329d23a3",
-    "found": true,
-    "name": "Mega Lucario Ex",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
-    "gradeLabel": "PSA 10",
-    "game": "pokemon",
-    "priceUsd": 72.01,
-    "confidence": "prime",
-    "deltaPct": -15.64,
-    "spark": null,
-    "lastSaleAt": "2026-07-08T14:00:00.000Z",
-    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_228_ja_329d23a34ce04118930c326b5c2babe4_sm.webp?v=8e1c90f2",
-    "rateRemaining": 8701
-  },
-  "pokemon/pokemon-japanese-m2a-mega-dream-ex/230-mega-gengar-ex-psa-10-japanese-27249851": {
-    "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/230-mega-gengar-ex-psa-10-japanese-27249851",
-    "found": true,
-    "name": "Mega Gengar Ex",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
-    "gradeLabel": "PSA 10",
-    "game": "pokemon",
-    "priceUsd": 79.24,
-    "confidence": "prime",
-    "deltaPct": -37.78,
-    "spark": null,
-    "lastSaleAt": "2026-07-09T04:00:00.000Z",
-    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_230_ja_272498516ec74511b3ad34fcb6d14101_sm.webp?v=287ed839",
-    "rateRemaining": 8700
-  },
-  "pokemon/pokemon-japanese-m2a-mega-dream-ex/232-mega-dragonite-ex-psa-10-japanese-0055bfdf": {
-    "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/232-mega-dragonite-ex-psa-10-japanese-0055bfdf",
-    "found": true,
-    "name": "Mega Dragonite Ex",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
-    "gradeLabel": "PSA 10",
-    "game": "pokemon",
-    "priceUsd": 56.05,
-    "confidence": "prime",
-    "deltaPct": -35.74,
-    "spark": null,
-    "lastSaleAt": "2026-07-08T16:00:00.000Z",
-    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_232_ja_mega-dragonite-ex_secret-rare_sm.png",
-    "rateRemaining": 8699
+    "rateRemaining": 7471
   },
   "pokemon/pokemon-japanese-m2a-mega-dream-ex/234-pikachu-ex-psa-10-japanese-781f51ab": {
     "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/234-pikachu-ex-psa-10-japanese-781f51ab",
     "found": true,
     "name": "Pikachu Ex",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
+    "setName": "Mega Dream ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 511.28,
+    "priceUsd": 520.99,
     "confidence": "prime",
-    "deltaPct": -18.98,
+    "deltaPct": -14.55,
     "spark": null,
-    "lastSaleAt": "2026-07-09T04:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_234_ja_781f51ab14784fe9bf32b3c674c7ece0_sm.webp?v=bfcf7c96",
-    "rateRemaining": 8698
+    "rateRemaining": 7466
   },
   "pokemon/pokemon-japanese-m2a-mega-dream-ex/237-rocket-s-mewtwo-ex-psa-10-japanese-6ea1bf48": {
     "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/237-rocket-s-mewtwo-ex-psa-10-japanese-6ea1bf48",
     "found": true,
     "name": "Rocket's Mewtwo Ex",
-    "setName": "Pokemon Japanese M2a-Mega Dream Ex",
+    "setName": "Mega Dream ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 259.16,
+    "priceUsd": 260.51,
     "confidence": "prime",
-    "deltaPct": -30.66,
+    "deltaPct": -28.63,
     "spark": null,
-    "lastSaleAt": "2026-07-09T05:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_237_ja_rocket-s-mewtwo-ex_special-art-rare_sm.png",
-    "rateRemaining": 8697
+    "rateRemaining": 7465
+  },
+  "pokemon/pokemon-japanese-m2a-mega-dream-ex/240-mega-gengar-ex-psa-10-japanese-094085d7": {
+    "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/240-mega-gengar-ex-psa-10-japanese-094085d7",
+    "found": true,
+    "name": "Mega Gengar Ex",
+    "setName": "Mega Dream ex",
+    "gradeLabel": "PSA 10",
+    "game": "pokemon",
+    "priceUsd": 582.25,
+    "confidence": "prime",
+    "deltaPct": -20.15,
+    "spark": null,
+    "lastSaleAt": "2026-07-10T10:00:00.000Z",
+    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_240_ja_094085d7f46b458bbb09e296cede0093_sm.webp?v=7b1d2306",
+    "rateRemaining": 7464
+  },
+  "pokemon/pokemon-japanese-m2a-mega-dream-ex/246-mega-dragonite-ex-psa-10-japanese-7bd898e0": {
+    "cert": "pokemon/pokemon-japanese-m2a-mega-dream-ex/246-mega-dragonite-ex-psa-10-japanese-7bd898e0",
+    "found": true,
+    "name": "Mega Dragonite Ex",
+    "setName": "Mega Dream ex",
+    "gradeLabel": "PSA 10",
+    "game": "pokemon",
+    "priceUsd": 336.93,
+    "confidence": "prime",
+    "deltaPct": -24.8,
+    "spark": null,
+    "lastSaleAt": "2026-07-10T10:00:00.000Z",
+    "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_246_ja_7bd898e0e4ef4193890cecfdcf9ae102_sm.webp?v=5538051d",
+    "rateRemaining": 7463
   },
   "pokemon/pokemon-japanese-mbg-mega-starter-set-mega-gengar-ex/003-mega-gengar-ex-psa-10-japanese-de0d46db": {
     "cert": "pokemon/pokemon-japanese-mbg-mega-starter-set-mega-gengar-ex/003-mega-gengar-ex-psa-10-japanese-de0d46db",
@@ -816,13 +771,13 @@
     "setName": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 42.01,
+    "priceUsd": 37.46,
     "confidence": "prime",
-    "deltaPct": -11.59,
+    "deltaPct": -20.57,
     "spark": null,
-    "lastSaleAt": "2026-07-07T06:00:00.000Z",
+    "lastSaleAt": "2026-07-10T16:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_003_ja_de0d46db148a4f6ba0d64f1195c73e6e_sm.webp?v=5c4e345e",
-    "rateRemaining": 8690
+    "rateRemaining": 7458
   },
   "pokemon/pokemon-japanese-mbg-mega-starter-set-mega-gengar-ex/022-haunter-psa-10-japanese-a8099684": {
     "cert": "pokemon/pokemon-japanese-mbg-mega-starter-set-mega-gengar-ex/022-haunter-psa-10-japanese-a8099684",
@@ -831,13 +786,13 @@
     "setName": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 71.65,
+    "priceUsd": 72.72,
     "confidence": "prime",
-    "deltaPct": -5.76,
+    "deltaPct": -3.86,
     "spark": null,
-    "lastSaleAt": "2026-07-08T05:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_022_ja_a80996848da5439aa464c13748759271_sm.webp?v=f453be07",
-    "rateRemaining": 8689
+    "rateRemaining": 7457
   },
   "pokemon/pokemon-japanese-mc-start-deck-100-battle-collection/764-pikachu-ex-psa-10-japanese-f65addd1": {
     "cert": "pokemon/pokemon-japanese-mc-start-deck-100-battle-collection/764-pikachu-ex-psa-10-japanese-f65addd1",
@@ -846,13 +801,13 @@
     "setName": "Pokemon Japanese MC-Start Deck 100 Battle Collection",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 2262.88,
+    "priceUsd": 2231.33,
     "confidence": "prime",
-    "deltaPct": -34.99,
+    "deltaPct": -35.99,
     "spark": null,
-    "lastSaleAt": "2026-07-08T16:00:00.000Z",
+    "lastSaleAt": "2026-07-09T22:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mc_764_ja_f65addd1b0f74829a74ca5f4d6d0b4b0_sm.webp?v=21481669",
-    "rateRemaining": 8688
+    "rateRemaining": 7456
   },
   "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/001-charizard-holo-psa-10-japanese-f3df80aa": {
     "cert": "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/001-charizard-holo-psa-10-japanese-f3df80aa",
@@ -861,13 +816,13 @@
     "setName": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 774.01,
+    "priceUsd": 782.48,
     "confidence": "prime",
-    "deltaPct": -24.7,
+    "deltaPct": -21.97,
     "spark": null,
-    "lastSaleAt": "2026-07-08T16:00:00.000Z",
+    "lastSaleAt": "2026-07-10T16:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_001_ja_f3df80aa23b8463d940161109c82cc14_sm.webp?v=a40cdc01",
-    "rateRemaining": 8687
+    "rateRemaining": 7455
   },
   "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/007-birthday-pikachu-holo-psa-10-japanese-680e0afb": {
     "cert": "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/007-birthday-pikachu-holo-psa-10-japanese-680e0afb",
@@ -876,13 +831,13 @@
     "setName": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 724.59,
+    "priceUsd": 735.01,
     "confidence": "prime",
-    "deltaPct": -16.16,
+    "deltaPct": -12.11,
     "spark": null,
-    "lastSaleAt": "2026-07-08T15:00:00.000Z",
+    "lastSaleAt": "2026-07-10T03:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_007_ja_680e0afba87f4ad0b6360cc56dd22853_sm.webp?v=62c3d7fe",
-    "rateRemaining": 8686
+    "rateRemaining": 7454
   },
   "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/012-umbreon-gold-star-psa-10-japanese-17c2c539": {
     "cert": "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/012-umbreon-gold-star-psa-10-japanese-17c2c539",
@@ -891,13 +846,13 @@
     "setName": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 358.82,
+    "priceUsd": 363.17,
     "confidence": "prime",
-    "deltaPct": -21.02,
+    "deltaPct": -19.13,
     "spark": null,
-    "lastSaleAt": "2026-07-08T11:00:00.000Z",
+    "lastSaleAt": "2026-07-10T13:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_012_ja_17c2c539ef644bc0bbb626abb852dcf0_sm.webp?v=e1da8a13",
-    "rateRemaining": 8685
+    "rateRemaining": 7453
   },
   "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/024-m-rayquaza-ex-psa-10-japanese-2c6dc527": {
     "cert": "pokemon/pokemon-japanese-promo-card-pack-25th-anniversary-edition/024-m-rayquaza-ex-psa-10-japanese-2c6dc527",
@@ -906,13 +861,13 @@
     "setName": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 350.12,
+    "priceUsd": 364.51,
     "confidence": "prime",
-    "deltaPct": -27.5,
+    "deltaPct": -23.13,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-09T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_024_ja_2c6dc5276f7043f08fcbe4ba25716faf_sm.webp?v=96829478",
-    "rateRemaining": 8684
+    "rateRemaining": 7452
   },
   "pokemon/pokemon-japanese-s-promo/208-pikachu-psa-10-japanese-cb41f898": {
     "cert": "pokemon/pokemon-japanese-s-promo/208-pikachu-psa-10-japanese-cb41f898",
@@ -921,13 +876,13 @@
     "setName": "Pokemon Japanese S Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 358.87,
+    "priceUsd": 349.77,
     "confidence": "prime",
-    "deltaPct": -16.73,
+    "deltaPct": -16.76,
     "spark": null,
-    "lastSaleAt": "2026-07-08T15:00:00.000Z",
+    "lastSaleAt": "2026-07-10T16:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s-p_208_ja_cb41f8980a514b8c9d66cd26c9e1da09_sm.webp?v=9064c2b4",
-    "rateRemaining": 8683
+    "rateRemaining": 7451
   },
   "pokemon/pokemon-japanese-sv-p-promo/098-detective-pikachu-psa-10-japanese-b8bc9b38": {
     "cert": "pokemon/pokemon-japanese-sv-p-promo/098-detective-pikachu-psa-10-japanese-b8bc9b38",
@@ -936,13 +891,13 @@
     "setName": "Pokemon Japanese Sv-P Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 393.52,
+    "priceUsd": 432.88,
     "confidence": "prime",
-    "deltaPct": -17.86,
+    "deltaPct": -8.96,
     "spark": null,
-    "lastSaleAt": "2026-07-08T19:00:00.000Z",
+    "lastSaleAt": "2026-07-10T14:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_098_ja_b8bc9b382c8c4fda91e563aceeb4d63b_sm.webp?v=f22e163d",
-    "rateRemaining": 8672
+    "rateRemaining": 7441
   },
   "pokemon/pokemon-japanese-sv-p-promo/120-pikachu-psa-10-japanese-f9e8e4ac": {
     "cert": "pokemon/pokemon-japanese-sv-p-promo/120-pikachu-psa-10-japanese-f9e8e4ac",
@@ -951,13 +906,13 @@
     "setName": "Pokemon Japanese Sv-P Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 73.11,
+    "priceUsd": 74.31,
     "confidence": "prime",
-    "deltaPct": -24.76,
+    "deltaPct": -24.6,
     "spark": null,
-    "lastSaleAt": "2026-07-08T10:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_120_ja_f9e8e4ac07884ee1b31c3d9fbec31139_sm.webp?v=f30637f0",
-    "rateRemaining": 8671
+    "rateRemaining": 7440
   },
   "pokemon/pokemon-japanese-sv-p-promo/232-iono-s-wattrel-psa-10-japanese-0db0d045": {
     "cert": "pokemon/pokemon-japanese-sv-p-promo/232-iono-s-wattrel-psa-10-japanese-0db0d045",
@@ -966,13 +921,13 @@
     "setName": "Pokemon Japanese Sv-P Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 40.1,
+    "priceUsd": 39.7,
     "confidence": "prime",
-    "deltaPct": -15.31,
+    "deltaPct": -14.57,
     "spark": null,
-    "lastSaleAt": "2026-07-08T12:00:00.000Z",
+    "lastSaleAt": "2026-07-10T10:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_232_ja_0db0d0455adb4bbfa6fd4b7fc65693ef_sm.webp?v=a2de27fb",
-    "rateRemaining": 8670
+    "rateRemaining": 7439
   },
   "pokemon/pokemon-japanese-sv-p-promo/260-tohoku-s-pikachu-psa-10-japanese-8e28e052": {
     "cert": "pokemon/pokemon-japanese-sv-p-promo/260-tohoku-s-pikachu-psa-10-japanese-8e28e052",
@@ -981,13 +936,13 @@
     "setName": "Pokemon Japanese Sv-P Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 300.91,
+    "priceUsd": 303.03,
     "confidence": "prime",
-    "deltaPct": -29.87,
+    "deltaPct": -27.07,
     "spark": null,
-    "lastSaleAt": "2026-07-09T03:00:00.000Z",
+    "lastSaleAt": "2026-07-10T14:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_promo_260_ja_8e28e052285e4fd3a41299350a5f88a6_sm.webp?v=eefb7f43",
-    "rateRemaining": 8669
+    "rateRemaining": 7437
   },
   "pokemon/pokemon-japanese-sv-p-promo/289-fukuoka-s-pikachu-psa-10-japanese-c8157b31": {
     "cert": "pokemon/pokemon-japanese-sv-p-promo/289-fukuoka-s-pikachu-psa-10-japanese-c8157b31",
@@ -996,13 +951,13 @@
     "setName": "Pokemon Japanese Sv-P Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 267.25,
+    "priceUsd": 266.41,
     "confidence": "prime",
-    "deltaPct": -31.02,
+    "deltaPct": -28.8,
     "spark": null,
-    "lastSaleAt": "2026-07-08T22:00:00.000Z",
+    "lastSaleAt": "2026-07-10T14:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_289_ja_c8157b311e484ef394094399f9e394f8_sm.webp?v=0b5e82df",
-    "rateRemaining": 8668
+    "rateRemaining": 7436
   },
   "pokemon/pokemon-japanese-sv-promo/001-pikachu-psa-10-japanese-3755455e": {
     "cert": "pokemon/pokemon-japanese-sv-promo/001-pikachu-psa-10-japanese-3755455e",
@@ -1011,13 +966,13 @@
     "setName": "Pokemon Japanese Sv Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 109.23,
+    "priceUsd": 107.41,
     "confidence": "prime",
-    "deltaPct": -15.51,
+    "deltaPct": -16.94,
     "spark": null,
-    "lastSaleAt": "2026-07-09T04:00:00.000Z",
+    "lastSaleAt": "2026-07-10T11:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_001_ja_3755455e10164953846a97c9ad3aa1cb_sm.webp?v=47815b52",
-    "rateRemaining": 8667
+    "rateRemaining": 7435
   },
   "pokemon/pokemon-japanese-sv1a-triplet-beat/080-magikarp-psa-10-japanese-c9809b63": {
     "cert": "pokemon/pokemon-japanese-sv1a-triplet-beat/080-magikarp-psa-10-japanese-c9809b63",
@@ -1026,13 +981,13 @@
     "setName": "Pokemon Japanese Sv1a-Triplet Beat",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 310.97,
+    "priceUsd": 315.16,
     "confidence": "prime",
-    "deltaPct": -16.11,
+    "deltaPct": -14.91,
     "spark": null,
-    "lastSaleAt": "2026-07-09T02:00:00.000Z",
+    "lastSaleAt": "2026-07-10T15:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_080_ja_magikarp_art-rare_sm.png",
-    "rateRemaining": 8682
+    "rateRemaining": 7451
   },
   "pokemon/pokemon-japanese-sv2a-pokemon-151/173-pikachu-psa-10-japanese-a7ab2852": {
     "cert": "pokemon/pokemon-japanese-sv2a-pokemon-151/173-pikachu-psa-10-japanese-a7ab2852",
@@ -1041,13 +996,13 @@
     "setName": "Pokemon Japanese Sv2a-Pokemon 151",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 132.19,
+    "priceUsd": 132.31,
     "confidence": "prime",
-    "deltaPct": -18.23,
+    "deltaPct": -16.19,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-10T12:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv2a_173_ja_a7ab285232ff462c8d986c36184d4dff_sm.webp?v=aebf695f",
-    "rateRemaining": 8681
+    "rateRemaining": 7450
   },
   "pokemon/pokemon-japanese-sv4a-shiny-treasure-ex/347-mew-ex-psa-10-japanese-3570bc6b": {
     "cert": "pokemon/pokemon-japanese-sv4a-shiny-treasure-ex/347-mew-ex-psa-10-japanese-3570bc6b",
@@ -1056,13 +1011,13 @@
     "setName": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 847.86,
+    "priceUsd": 849.4,
     "confidence": "prime",
-    "deltaPct": -13.87,
+    "deltaPct": -12.83,
     "spark": null,
-    "lastSaleAt": "2026-07-08T14:00:00.000Z",
+    "lastSaleAt": "2026-07-10T14:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_347_ja_3570bc6b826c4566bcc3916dd7d43f7d_sm.webp?v=db2f2d70",
-    "rateRemaining": 8680
+    "rateRemaining": 7449
   },
   "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/200-leafeon-ex-psa-10-japanese-e43da7a5": {
     "cert": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/200-leafeon-ex-psa-10-japanese-e43da7a5",
@@ -1071,13 +1026,13 @@
     "setName": "Pokemon Japanese Sv8a-Terastal Fest Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 115.84,
+    "priceUsd": 118.79,
     "confidence": "prime",
-    "deltaPct": -16.9,
+    "deltaPct": -14.6,
     "spark": null,
-    "lastSaleAt": "2026-07-08T13:00:00.000Z",
+    "lastSaleAt": "2026-07-10T01:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_200_ja_e43da7a5c385442381a40888cd170544_sm.webp?v=c1b6f5ed",
-    "rateRemaining": 8679
+    "rateRemaining": 7448
   },
   "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/206-glaceon-ex-psa-10-japanese-a1a9f07f": {
     "cert": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/206-glaceon-ex-psa-10-japanese-a1a9f07f",
@@ -1086,13 +1041,13 @@
     "setName": "Pokemon Japanese Sv8a-Terastal Fest Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 114.04,
+    "priceUsd": 116.98,
     "confidence": "prime",
-    "deltaPct": -11.8,
+    "deltaPct": -9.88,
     "spark": null,
-    "lastSaleAt": "2026-07-08T11:00:00.000Z",
+    "lastSaleAt": "2026-07-10T12:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_206_ja_a1a9f07f3f3a4005ad748deee6a0e507_sm.webp?v=69a9092f",
-    "rateRemaining": 8678
+    "rateRemaining": 7447
   },
   "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/209-jolteon-ex-psa-10-japanese-da948f3e": {
     "cert": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/209-jolteon-ex-psa-10-japanese-da948f3e",
@@ -1101,13 +1056,13 @@
     "setName": "Pokemon Japanese Sv8a-Terastal Fest Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 91.86,
+    "priceUsd": 92.12,
     "confidence": "prime",
-    "deltaPct": -16.55,
+    "deltaPct": -15.53,
     "spark": null,
-    "lastSaleAt": "2026-07-08T11:00:00.000Z",
+    "lastSaleAt": "2026-07-09T18:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_209_ja_da948f3ea51141f3a93e51ba972f5142_sm.webp?v=e402ffe9",
-    "rateRemaining": 8677
+    "rateRemaining": 7446
   },
   "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/211-espeon-ex-psa-10-japanese-06482595": {
     "cert": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/211-espeon-ex-psa-10-japanese-06482595",
@@ -1116,13 +1071,13 @@
     "setName": "Pokemon Japanese Sv8a-Terastal Fest Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 133.29,
+    "priceUsd": 134.46,
     "confidence": "prime",
-    "deltaPct": -15,
+    "deltaPct": -13.35,
     "spark": null,
-    "lastSaleAt": "2026-07-09T05:00:00.000Z",
+    "lastSaleAt": "2026-07-10T06:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_211_ja_064825957f854edd8b3fadd89de61abb_sm.webp?v=b959015a",
-    "rateRemaining": 8676
+    "rateRemaining": 7445
   },
   "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/212-sylveon-ex-psa-10-japanese-694bdec2": {
     "cert": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/212-sylveon-ex-psa-10-japanese-694bdec2",
@@ -1131,13 +1086,13 @@
     "setName": "Pokemon Japanese Sv8a-Terastal Fest Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 205.81,
+    "priceUsd": 207.37,
     "confidence": "prime",
-    "deltaPct": -14.77,
+    "deltaPct": -14.14,
     "spark": null,
-    "lastSaleAt": "2026-07-09T02:00:00.000Z",
+    "lastSaleAt": "2026-07-10T16:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_212_ja_694bdec2ec414a2a89c10949369b2514_sm.webp?v=ef030cf1",
-    "rateRemaining": 8675
+    "rateRemaining": 7444
   },
   "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/217-umbreon-ex-psa-10-japanese-6665a22b": {
     "cert": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/217-umbreon-ex-psa-10-japanese-6665a22b",
@@ -1146,13 +1101,13 @@
     "setName": "Pokemon Japanese Sv8a-Terastal Fest Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 614.06,
+    "priceUsd": 615.18,
     "confidence": "prime",
-    "deltaPct": -14.12,
+    "deltaPct": -12.48,
     "spark": null,
-    "lastSaleAt": "2026-07-09T04:00:00.000Z",
+    "lastSaleAt": "2026-07-10T06:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_217_ja_pokemon-japanese-sv8a-terastal-fest-ex_umbreon-ex_special-art-rare_sm.png",
-    "rateRemaining": 8674
+    "rateRemaining": 7443
   },
   "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/224-eevee-ex-psa-10-japanese-4e771234": {
     "cert": "pokemon/pokemon-japanese-sv8a-terastal-fest-ex/224-eevee-ex-psa-10-japanese-4e771234",
@@ -1161,13 +1116,13 @@
     "setName": "Pokemon Japanese Sv8a-Terastal Fest Ex",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 87.73,
+    "priceUsd": 89.13,
     "confidence": "prime",
-    "deltaPct": -19.89,
+    "deltaPct": -18.85,
     "spark": null,
-    "lastSaleAt": "2026-07-09T05:00:00.000Z",
+    "lastSaleAt": "2026-07-10T13:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_224_ja_4e7712347aa8465a91d2d11a992552e1_sm.webp?v=3e3a1cb7",
-    "rateRemaining": 8673
+    "rateRemaining": 7442
   },
   "pokemon/pokemon-japanese-sword-shield-dark-phantasma/073-pikachu-psa-10-japanese-aa5b0536": {
     "cert": "pokemon/pokemon-japanese-sword-shield-dark-phantasma/073-pikachu-psa-10-japanese-aa5b0536",
@@ -1176,13 +1131,13 @@
     "setName": "Pokemon Japanese Sword \u0026 Shield Dark Phantasma",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 158.48,
+    "priceUsd": 160.64,
     "confidence": "prime",
-    "deltaPct": -18.54,
+    "deltaPct": -16.57,
     "spark": null,
-    "lastSaleAt": "2026-07-08T05:00:00.000Z",
+    "lastSaleAt": "2026-07-10T10:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s10a_073_ja_aa5b0536b1d0406398da3124a2d7022d_sm.webp?v=e69d452a",
-    "rateRemaining": 8666
+    "rateRemaining": 7435
   },
   "pokemon/pokemon-japanese-sword-shield-vstar-universe/183-mew-psa-10-japanese-999b7b24": {
     "cert": "pokemon/pokemon-japanese-sword-shield-vstar-universe/183-mew-psa-10-japanese-999b7b24",
@@ -1191,13 +1146,13 @@
     "setName": "Pokemon Japanese Sword \u0026 Shield Vstar Universe",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 149.19,
+    "priceUsd": 149.92,
     "confidence": "prime",
-    "deltaPct": -20.27,
+    "deltaPct": -18.41,
     "spark": null,
-    "lastSaleAt": "2026-07-09T03:00:00.000Z",
+    "lastSaleAt": "2026-07-10T06:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s12a_183_ja_999b7b24fc314f0a835aa540c220e54b_sm.webp?v=22bdd7ec",
-    "rateRemaining": 8665
+    "rateRemaining": 7434
   },
   "pokemon/pokemon-japanese-sword-shield-vstar-universe/212-charizard-vstar-psa-10-japanese-71a7404a": {
     "cert": "pokemon/pokemon-japanese-sword-shield-vstar-universe/212-charizard-vstar-psa-10-japanese-71a7404a",
@@ -1206,13 +1161,13 @@
     "setName": "Pokemon Japanese Sword \u0026 Shield Vstar Universe",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 199.38,
+    "priceUsd": 197.48,
     "confidence": "prime",
-    "deltaPct": -19.23,
+    "deltaPct": -19.86,
     "spark": null,
     "lastSaleAt": "2026-07-09T05:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s12a_212_ja_71a7404ae43545548cd3b5ac3ee0f7b8_sm.webp?v=74e4b1cb",
-    "rateRemaining": 8664
+    "rateRemaining": 7433
   },
   "pokemon/pokemon-mep-en-me-black-star-promo/023-mega-charizard-x-ex-psa-10-51969e25": {
     "cert": "pokemon/pokemon-mep-en-me-black-star-promo/023-mega-charizard-x-ex-psa-10-51969e25",
@@ -1221,13 +1176,13 @@
     "setName": "Pokemon Mep EN-Me Black Star Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 243.25,
+    "priceUsd": 233.89,
     "confidence": "prime",
-    "deltaPct": -18.41,
+    "deltaPct": -20.62,
     "spark": null,
-    "lastSaleAt": "2026-07-06T00:00:00.000Z",
+    "lastSaleAt": "2026-07-10T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mep_023_en_51969e25f541467e87d9e82e44658dcf_sm.webp?v=39d67890",
-    "rateRemaining": 8663
+    "rateRemaining": 7432
   },
   "pokemon/pokemon-svp-black-star-promos/085-pikachu-with-grey-felt-hat-psa-10-1ac559f4": {
     "cert": "pokemon/pokemon-svp-black-star-promos/085-pikachu-with-grey-felt-hat-psa-10-1ac559f4",
@@ -1236,13 +1191,13 @@
     "setName": "Pokemon SVP Black Star Promos",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 2889.32,
+    "priceUsd": 2860.05,
     "confidence": "prime",
-    "deltaPct": -7.91,
+    "deltaPct": -8.7,
     "spark": null,
-    "lastSaleAt": "2026-07-08T18:00:00.000Z",
+    "lastSaleAt": "2026-07-10T01:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
-    "rateRemaining": 8662
+    "rateRemaining": 7431
   },
   "pokemon/pokemon-swsh-black-star-promo/291-lucario-vstar-psa-10-95b7788d": {
     "cert": "pokemon/pokemon-swsh-black-star-promo/291-lucario-vstar-psa-10-95b7788d",
@@ -1251,12 +1206,12 @@
     "setName": "Pokemon Swsh Black Star Promo",
     "gradeLabel": "PSA 10",
     "game": "pokemon",
-    "priceUsd": 157.43,
+    "priceUsd": 154.9,
     "confidence": "prime",
-    "deltaPct": 4.7,
+    "deltaPct": 1.66,
     "spark": null,
-    "lastSaleAt": "2026-07-08T00:00:00.000Z",
+    "lastSaleAt": "2026-07-09T00:00:00.000Z",
     "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_swsh_291_en_95b7788de7b74c2c8e86fa9c9c7b4009_sm.webp?v=76a6e692",
-    "rateRemaining": 8661
+    "rateRemaining": 7430
   }
 }

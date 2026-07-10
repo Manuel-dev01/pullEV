@@ -38,7 +38,9 @@ export default async function Landing() {
     if (e) evs.push({ pack: p, ev: e.data });
   }
   evs.sort((a, b) => b.ev.evToCostRatio - a.ev.evToCostRatio);
-  const featured = evs[0];
+  // Feature a live (rippable) pack, never a sold-out previous pack.
+  const featured = evs.find((e) => !e.pack.soldOut) ?? evs[0];
+  const liveEvs = evs.filter((e) => !e.pack.soldOut);
   // Fetch the featured pool for the console art, the rarest-card odds (MYTHIC chip), and
   // its provenance, so every number on this page routes through a reachable badge.
   const featuredPoolF = featured ? await getPool(featured.pack.id) : null;
@@ -158,7 +160,7 @@ export default async function Landing() {
           <div style={{ display: "flex", width: "max-content", animation: "pv-marquee 26s linear infinite" }}>
             {[0, 1].map((rep) => (
               <div key={rep} style={{ display: "flex", gap: 40, paddingRight: 40, fontFamily: "var(--font-mono)", fontSize: 15 }}>
-                {evs.map(({ pack, ev }) => {
+                {liveEvs.map(({ pack, ev }) => {
                   const e = edgePct(ev.evToCostRatio);
                   return (
                     <span key={pack.id + rep} style={{ color: "#f6f2fb" }}>

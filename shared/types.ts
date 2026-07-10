@@ -46,7 +46,7 @@ export interface Card {
   fmvDeltaPct?: number;
 }
 
-/** A purchasable Infinite Gacha pack. */
+/** A purchasable Renaiss gacha pack. */
 export interface Pack {
   id: string;
   name: string;
@@ -56,6 +56,12 @@ export interface Pack {
   priceIsAssumption: boolean;
   /** One-line description. */
   tagline: string;
+  /** "infinite" (perpetual Infinite Gacha) or "limited" (a limited release). */
+  kind?: "infinite" | "limited";
+  /** True for a limited pack that can no longer be ripped (shown for reference). */
+  soldOut?: boolean;
+  /** The pack's advertised top prize in USD (real Renaiss figure). */
+  topPrizeUsd?: number;
 }
 
 /** The set of cards currently in a pack's pool, each with a draw weight. */
