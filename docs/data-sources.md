@@ -42,7 +42,7 @@ current packs (the 3 Infinite + Champion) re-price and rotate live; the 11 previ
 | Draw weights and odds | PullEV three-band model | Assumption (no Renaiss odds API) |
 | Cheap filler band (low-value cards) | PullEV, real card names at labeled assumed FMVs | Assumption |
 | Merkle example proofs | PullEV, computed over the labeled pool | Example, not a real draw |
-| On-chain Merkle root (sealed packs, e.g. Champion) | Renaiss gacha contract on BNB Chain, `getMerkleRoot(packId)`, read via public RPC | Real, on-chain, independently auditable on BscScan |
+| On-chain Merkle root (12 sealed packs) | Renaiss gacha contract on BNB Chain, `getMerkleRoot(packId)`, read via public RPC | Real, on-chain, independently auditable on BscScan |
 | EV, distribution, chance of profit | PullEV EV engine, computed from the above | Derived, deterministic |
 
 ## The odds model (labeled — not Renaiss's tiers)

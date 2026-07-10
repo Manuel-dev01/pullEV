@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T19:19:20.320Z",
+  "generatedAt": "2026-07-10T21:16:13.358Z",
   "packs": [
     {
       "id": "eden",
@@ -54,7 +54,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 3800
+      "topPrizeUsd": 3800,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0xa8de4cf14c21a325d4eebb540b60a92ff93e43fd347c7fc8b56eead2d3707de8",
+        "merkleRoot": "0xd648a0f0f422916bf6181143e2bb767e5cf37ed74743bf4bdab6659a996d82d4",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "aura",
@@ -64,7 +72,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 3888
+      "topPrizeUsd": 3888,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0x5a87dc15d007460fc829b1282889c792b0bf05c7e14bb096e65d2ec320346513",
+        "merkleRoot": "0xdb4da1387382ed211e740a5fa2de89996b558457abfef7323ca2789d1cde54cf",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "ribbon",
@@ -74,7 +90,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 3000
+      "topPrizeUsd": 3000,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0x734684b02bf4655ab871fd66c195c0e266653d4e7b1d7b9df8f822eabff1bac4",
+        "merkleRoot": "0x5720dbe6ce3a9b1cea2d30a16260fb43ef9261ced5841689180ef8b6b6c94ab1",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "plasma",
@@ -84,7 +108,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2900
+      "topPrizeUsd": 2900,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0xb67b65d4067ed41cbfc2c8c8456ade7bd0ccb1f527524f21f8726385f7a934ab",
+        "merkleRoot": "0x93fc0a8491a1b2717d4041e73561b35424769f4639b3a91cf9ec6840479db3e0",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "magma",
@@ -94,7 +126,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2900
+      "topPrizeUsd": 2900,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0x26a4c27796a0e13e0188178750ef4d8d1d3828eb1d7bfe02692bdbeeda1e677c",
+        "merkleRoot": "0xaa6ce72e68ef986b645633309f73d9c3102446695975daedec625a8ab477e4e6",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "legacy-7",
@@ -104,7 +144,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2900
+      "topPrizeUsd": 2900,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0xcf08919d619183ddfbd991281c2f0427499fcbeddd4f6a3ed1bbb9c4819ddee1",
+        "merkleRoot": "0x0b27db43e1e08ba6dbebec8983c9cf86ffb1e5721edce438f5c5cc53fb2027ff",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "legacy-8",
@@ -114,7 +162,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2850
+      "topPrizeUsd": 2850,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0x25a4e9a139433ce747bd72883f8cef2d77074335f515bb0c138e5378681fd67a",
+        "merkleRoot": "0x957ab6b54e2c7b8245d90a3640c2faa5524abcedbd78d59e37f70562ce8f9589",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "legacy-9",
@@ -124,7 +180,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2850
+      "topPrizeUsd": 2850,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0x8835df0c0257c2652701c186cdadf4f2c15ca1616166d50abe2adc4c3144ea79",
+        "merkleRoot": "0xce2cc6c186f77f52769041d08c26aeafd1e30cd88c1e7f4a8d2b4b3d3a3c2f0d",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "costume",
@@ -134,7 +198,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2700
+      "topPrizeUsd": 2700,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0x6ab417f10cac2e525f9beb854e47a9672bbe06470014432b2cf271157c183332",
+        "merkleRoot": "0xa7471939304be64d7454fa4f94f3e9bcb6a4cd0a01bfe8aa3747c4f8e139563c",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "bowtie",
@@ -144,7 +216,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2600
+      "topPrizeUsd": 2600,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0xefc3e5ad1b42ed2cf4aab951eaed172ee2903738b865a29cc03b0900ac0f7562",
+        "merkleRoot": "0xa14ccd203e5ed799b62c96e41a9c18390ecab8072ce7def3462197128378ab31",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "starry",
@@ -154,7 +234,15 @@
       "tagline": "Previous limited release, sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 2126
+      "topPrizeUsd": 2126,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0x4e06640364ce4c2b6793e700b6b8066a11c90503eb92945da232a3106f36b9b9",
+        "merkleRoot": "0x4f929ae7177a24aaadf56c955d070b7d6d0b8743bfbad74c2d8f007683339e0f",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     }
   ],
   "pools": {

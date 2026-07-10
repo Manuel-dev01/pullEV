@@ -47,9 +47,9 @@ PullEV serves everyone who touches an Infinite Gacha pack, with a concrete job f
 - **Fairness verifier (`/verify`, and Station 04 in `/app`).** Paste your own `{leafPreimage, proofPath,
   publishedRoot}`, or load a labeled EXAMPLE, and watch the Merkle root recompute in your browser via Web
   Crypto. Green VERIFIED on a match, red MISMATCH on a tampered proof. PullEV's server is not involved.
-  For sealed packs (e.g. Champion), the page also shows Renaiss's **real on-chain Merkle root**, read live
-  from the Renaiss gacha contract on BNB Chain via `getMerkleRoot(packId)`, with a BscScan link so anyone
-  can reproduce the lookup and trust the chain, not us.
+  For each sealed pack (12 of them), the page also shows Renaiss's **real on-chain Merkle root**, read from
+  the Renaiss gacha contract on BNB Chain via `getMerkleRoot(packId)`, with a BscScan link so anyone can
+  reproduce the lookup and trust the chain, not us.
 - **Oracle lookup (`/value`).** Enter a PSA/CGC/BGS cert number to pull its real Renaiss Index valuation
   (price, grade, confidence, trend, freshness), with the rate limit surfaced.
 - **AI Pull Advisor (floating orb in `/app`).** Ask about a pack. The advisor answers only from that
