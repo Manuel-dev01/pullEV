@@ -27,8 +27,15 @@ export default async function VerifyPage({
   return (
     <main style={{ background: "#08070c", flex: 1 }} className="w-full">
       <div className="mx-auto w-full max-w-4xl px-6 py-10">
+        <Link
+          href="/"
+          style={{ fontFamily: "var(--font-mono)", color: "#8a83a0" }}
+          className="mb-6 inline-block text-xs hover:text-neutral-300"
+        >
+          ← back to home
+        </Link>
         {/* Header */}
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
           <div>
             <div
               style={{ fontFamily: "var(--font-mono)", color: "#8a83a0" }}
@@ -45,16 +52,7 @@ export default async function VerifyPage({
               PullEV or Renaiss.
             </p>
           </div>
-          <div className="flex flex-col items-end gap-2">
-            {valid && <ProvenanceBadge provenance={valid.provenance} fallback={valid.fallback} />}
-            <Link
-              href="/"
-              style={{ fontFamily: "var(--font-mono)", color: "#8a83a0" }}
-              className="text-xs hover:text-neutral-300"
-            >
-              ← back to home
-            </Link>
-          </div>
+          {valid && <ProvenanceBadge provenance={valid.provenance} fallback={valid.fallback} align="right" />}
         </div>
 
         {/* Pack switcher */}

@@ -148,6 +148,7 @@ export function ProofVault({
         <div
           style={{
             flex: "1 1 300px",
+            minWidth: 0,
             borderRadius: 16,
             padding: 20,
             background: C.panel,
@@ -223,6 +224,7 @@ export function ProofVault({
         <div
           style={{
             flex: "1.4 1 320px",
+            minWidth: 0,
             borderRadius: 16,
             padding: 20,
             background: C.panel,
@@ -395,9 +397,8 @@ function LadderRow({
             fontFamily: "var(--font-mono)",
             fontSize: 11.5,
             color: "#e6e0f2",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
+            overflowWrap: "anywhere",
+            wordBreak: "break-word",
           }}
         >
           {label}
@@ -407,9 +408,8 @@ function LadderRow({
             fontFamily: "var(--font-mono)",
             fontSize: 11,
             color: shown ? (ok ? C.teal : C.pink) : C.dim,
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
+            overflowWrap: "anywhere",
+            wordBreak: "break-word",
           }}
         >
           {short(hash, 14)}
