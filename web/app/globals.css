@@ -105,3 +105,15 @@ body {
   border-color: rgba(201, 92, 245, .55) !important;
   box-shadow: 0 22px 48px rgba(201, 92, 245, .28);
 }
+
+/* Landing responsiveness (inline styles can't do media queries). */
+@media (max-width: 860px) {
+  /* Collapse the secondary nav links on small screens; keep the logo + Launch app. */
+  .pv-nav-links { display: none !important; }
+  .pv-nav { padding-left: 20px !important; padding-right: 20px !important; }
+}
+@media (max-width: 1024px) {
+  /* The SCROLL cue is anchored to the wide side-by-side hero; hide it once the hero
+     stacks, so it never overlaps the EV console. */
+  .pv-hide-sm { display: none !important; }
+}

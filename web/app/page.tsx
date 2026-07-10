@@ -51,16 +51,18 @@ export default async function Landing() {
   return (
     <div style={{ fontFamily: "var(--font-sans)", color: "#f6f2fb", background: "#08070c", overflowX: "hidden" }}>
       {/* NAV */}
-      <div style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 40px", backdropFilter: "blur(14px)", background: "linear-gradient(180deg,rgba(8,7,12,.86),rgba(8,7,12,.45))", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
+      <div className="pv-nav" style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "18px 40px", backdropFilter: "blur(14px)", background: "linear-gradient(180deg,rgba(8,7,12,.86),rgba(8,7,12,.45))", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <div style={{ width: 30, height: 30, transform: "rotate(45deg)", borderRadius: 8, background: GRAD, boxShadow: "0 0 20px rgba(201,92,245,.6)" }} />
+          <div style={{ width: 30, height: 30, flex: "none", transform: "rotate(45deg)", borderRadius: 8, background: GRAD, boxShadow: "0 0 20px rgba(201,92,245,.6)" }} />
           <span style={{ fontFamily: "var(--font-display)", fontSize: 24 }}>PULL<span style={{ background: GRAD, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>EV</span></span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 26, fontSize: 14, color: "#b6afc8" }}>
-          <Link href="#how" style={navLink}>How it works</Link>
-          <Link href="#fair" style={navLink}>Provably fair</Link>
-          <Link href="/value" style={navLink}>Oracle</Link>
-          <Link href="/app" style={{ border: "none", fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 14, color: "#08070c", padding: "11px 20px", borderRadius: 10, background: GRAD, boxShadow: "0 6px 22px rgba(201,92,245,.45)", textDecoration: "none" }}>Launch app</Link>
+          <div className="pv-nav-links" style={{ display: "flex", alignItems: "center", gap: 26 }}>
+            <Link href="#how" style={navLink}>How it works</Link>
+            <Link href="#fair" style={navLink}>Provably fair</Link>
+            <Link href="/value" style={navLink}>Oracle</Link>
+          </div>
+          <Link href="/app" style={{ border: "none", fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 14, whiteSpace: "nowrap", color: "#08070c", padding: "11px 20px", borderRadius: 10, background: GRAD, boxShadow: "0 6px 22px rgba(201,92,245,.45)", textDecoration: "none" }}>Launch app</Link>
         </div>
       </div>
 
@@ -140,8 +142,8 @@ export default async function Landing() {
             )}
           </div>
         </div>
-        {/* scroll cue */}
-        <div style={{ position: "absolute", bottom: 150, left: "50%", transform: "translateX(-50%)", zIndex: 5, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".3em", color: "#8a83a0", textAlign: "center" }}>
+        {/* scroll cue (hidden once the hero stacks, so it never overlaps the console) */}
+        <div className="pv-hide-sm" style={{ position: "absolute", bottom: 150, left: "50%", transform: "translateX(-50%)", zIndex: 5, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".3em", color: "#8a83a0", textAlign: "center" }}>
           SCROLL
           <div style={{ width: 1, height: 34, margin: "10px auto 0", background: "linear-gradient(#8a83a0,transparent)" }} />
         </div>
@@ -307,7 +309,7 @@ export default async function Landing() {
   );
 }
 
-const navLink: React.CSSProperties = { cursor: "pointer", color: "#b6afc8", textDecoration: "none" };
+const navLink: React.CSSProperties = { cursor: "pointer", color: "#b6afc8", textDecoration: "none", whiteSpace: "nowrap" };
 const heroBtn: React.CSSProperties = { border: "none", cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 19, letterSpacing: ".03em", padding: "16px 28px", borderRadius: 13, textDecoration: "none", boxShadow: "0 10px 34px rgba(201,92,245,.4)" };
 
 function Stat({ label, value, color }: { label: string; value: string; color?: string }) {
