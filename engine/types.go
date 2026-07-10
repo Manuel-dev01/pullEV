@@ -26,6 +26,7 @@ type Card struct {
 	Name            string  `json:"name"`  // identification only; IP belongs to owner
 	Grade           string  `json:"grade"` // e.g. "PSA 10", "BGS Black Label 10"
 	Set             string  `json:"set"`
+	Game            string  `json:"game,omitempty"` // "pokemon" | "one-piece" (identification/filtering)
 	FMVUsd          float64 `json:"fmvUsd"`
 	FMVIsAssumption bool    `json:"fmvIsAssumption"`
 	ImageURL        string  `json:"imageUrl,omitempty"`
@@ -50,6 +51,22 @@ type Pack struct {
 	SoldOut bool `json:"soldOut,omitempty"`
 	// TopPrizeUsd is the pack's advertised top prize (real Renaiss figure).
 	TopPrizeUsd float64 `json:"topPrizeUsd,omitempty"`
+	// OnChain carries Renaiss's REAL on-chain pool commitment for a sealed pack (the
+	// merkle root published on BNB Chain). Present only for packs Renaiss has committed.
+	OnChain *OnChainCommit `json:"onChain,omitempty"`
+}
+
+// OnChainCommit is Renaiss's real, verifiable on-chain commitment to a sealed pack's card
+// pool: the merkle root published by the Renaiss gacha contract on BNB Chain, readable by
+// anyone via getMerkleRoot(packId). This is the genuine artifact PullEV's verifier targets;
+// every field is real and independently checkable on BscScan (no PullEV trust required).
+type OnChainCommit struct {
+	Chain       string `json:"chain"`       // e.g. "BNB Chain"
+	Contract    string `json:"contract"`    // Renaiss gacha contract address (0x...)
+	PackID      string `json:"packId"`      // bytes32 pack id passed to getMerkleRoot
+	MerkleRoot  string `json:"merkleRoot"`  // the committed root read from chain (0x...)
+	ExplorerURL string `json:"explorerUrl"` // BscScan readContract link to reproduce it
+	ReadAt      string `json:"readAt"`      // RFC3339 when PullEV last read it from chain
 }
 
 // PoolEntry is a card in a pool plus its relative draw weight.

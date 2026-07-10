@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T17:42:37.293Z",
+  "generatedAt": "2026-07-10T19:19:20.320Z",
   "packs": [
     {
       "id": "eden",
@@ -36,7 +36,15 @@
       "tagline": "Limited release, currently sold out",
       "kind": "limited",
       "soldOut": true,
-      "topPrizeUsd": 3750
+      "topPrizeUsd": 3750,
+      "onChain": {
+        "chain": "BNB Chain",
+        "contract": "0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A",
+        "packId": "0xd8129cd1c2ac8629cc96b5c3dcc96cc7ebe74f341807697323950797cf030eec",
+        "merkleRoot": "0xea22b6422a29b03842f2e6f1d2a846ed7393c49784f06da4ca523cca47fab444",
+        "explorerUrl": "https://bscscan.com/address/0xAAb5F5FA75437a6e9E7004c12C9c56CdA4b4885A#readContract",
+        "readAt": "2026-07-10T00:00:00Z"
+      }
     },
     {
       "id": "world-cup",

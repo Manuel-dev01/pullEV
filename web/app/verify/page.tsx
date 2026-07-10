@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getPacks, getPool, getExampleProof } from "@/lib/api";
 import { ProvenanceBadge } from "@/components/ProvenanceBadge";
 import { ProofVault } from "@/components/ProofVault";
+import { OnChainRoot } from "@/components/OnChainRoot";
 
 export default async function VerifyPage({
   searchParams,
@@ -72,12 +73,17 @@ export default async function VerifyPage({
                   border: active ? "none" : "1px solid rgba(255,255,255,.12)",
                 }}
                 className="rounded-full px-4 py-1.5 text-xs"
+                title={p.onChain ? "Has a real on-chain Merkle root you can audit" : undefined}
               >
                 {p.name}
+                {p.onChain && <span style={{ color: active ? "#08070c" : "#3ff0cf" }}> ⛓</span>}
               </Link>
             );
           })}
         </div>
+
+        {/* Renaiss's REAL on-chain commitment for this pack, when it has one (sealed packs). */}
+        {activePack?.onChain && <OnChainRoot commit={activePack.onChain} />}
 
         {activePack ? (
           <ProofVault
@@ -94,10 +100,12 @@ export default async function VerifyPage({
         {/* Honesty footer */}
         <p style={{ color: "#6f6885" }} className="mt-8 text-xs leading-relaxed">
           The example proofs are labeled <strong style={{ color: "#9c94b6" }}>EXAMPLE</strong>: they are
-          not real Renaiss draws. The published root is computed by PullEV over a labeled pool
-          (PullEV assumption data), not Renaiss&apos;s on-chain root. Renaiss&apos;s current builder tooling
-          exposes card valuations but not draw proofs; when it does, this same verifier checks them
-          unmodified. The verification math is genuine and runs entirely client-side.
+          not real Renaiss draws. Their published root is computed by PullEV over a labeled pool
+          (PullEV assumption data), separate from Renaiss&apos;s on-chain root shown above. Renaiss commits
+          each sealed pack&apos;s pool as a Merkle root on BNB Chain (auditable on BscScan) but does not
+          publish the pool contents or leaf scheme, so PullEV cannot yet recompute that exact root; when it
+          can, this same verifier checks it unmodified. The verification math is genuine and runs entirely
+          client-side.
         </p>
         <p style={{ color: "#4f495e" }} className="mt-3 text-[11px] leading-relaxed">
           Independent, unofficial tooling for Renaiss · not financial advice. Card names shown for

@@ -9,21 +9,23 @@ import (
 	"time"
 )
 
-// Tier model — grounds each pack's odds in Renaiss's published "What is loaded" tier
-// structure: Crown (~1% chance, top chase band), Bloom (~33%, mid), Thorn (~66%, cheap
-// bulk). The TIER CHANCES are Renaiss's real published structure. Card FMVs are real
-// Renaiss Index valuations. The per-pack tier boundaries over the pool and the labeled
-// cheap Thorn filler are PullEV's model: our real library is chase-heavy, while Renaiss
-// loads many cheap cards we do not price, so the filler represents that cheap bulk and is
-// clearly labeled (fmvIsAssumption, fmvSource:Mock). This replaces the old commons ladder.
+// Odds model — PullEV's three labeled draw bands over the real card prices: Crown (~1%,
+// rare chase), Bloom (~33%, mid), Thorn (~66%, cheap bulk). These are OUR model, not a
+// verbatim Renaiss scheme: Renaiss publishes a PER-PACK tiered "what is loaded" whose names
+// and counts vary (e.g. OMEGA = Tier S/A/B/C, Eden = Crown/Bloom/Thorn) and whose exact
+// per-tier chances aren't all public. The one public anchor we ground on: Renaiss's rarest
+// tier is <1% (e.g. OMEGA Tier S), which our ~1% Crown band mirrors. Card FMVs are real
+// Renaiss Index valuations; the per-pack band boundaries and the cheap Thorn filler are the
+// labeled assumption (fmvIsAssumption, fmvSource:Mock) — our library is chase-heavy while
+// Renaiss loads many cheap cards we don't price, so the filler stands in for that bulk.
 //
-// `engine tiers` (offline, no API) reads each pool's real chase cards, bins them into
-// Crown/Bloom/Thorn by FMV, adds the cheap filler, and weights each tier so its total draw
-// probability equals its published chance. Idempotent (drops prior filler first). Run it
-// AFTER `engine curate`, then `engine snapshot`, then rebuild the binary.
+// `engine tiers` (offline, no API) reads each pool's real chase cards, bins them into the
+// three bands by FMV, adds the cheap filler, and weights each band so its total draw
+// probability equals its model chance. Idempotent (drops prior filler first). Run it AFTER
+// `engine curate`, then `engine snapshot`, then rebuild the binary.
 
-// Tier draw chances (Renaiss's published tier structure). Applied uniformly since per-pack
-// exact chances are not all public; labeled as the observed structure.
+// Band draw chances (PullEV's model). The rarest-band ~1% is anchored to Renaiss's public
+// <1% rarest tier; the mid/common split is our model since per-pack chances aren't public.
 const (
 	crownChance = 0.01
 	bloomChance = 0.33

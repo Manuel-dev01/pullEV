@@ -38,13 +38,18 @@ PullEV serves everyone who touches an Infinite Gacha pack, with a concrete job f
 
 ## What it does
 
-- **EV verdict (`/app`, `/`).** Pick one of six packs, see EV vs cost, the edge, chance of profit, and a
-  value histogram, computed from prices re-priced live off the Renaiss Index. Every card shows whether its
-  price is a live Renaiss Index valuation (LIVE) or a labeled assumption (ASSUMED), and the pool badge
-  shows its real last-refresh time.
+- **EV verdict (`/app`, `/`).** Pick from Renaiss's real pack lineup, see EV vs cost, the edge, chance of
+  profit, a value histogram, and a "what is loaded" breakdown of PullEV's three draw bands, computed from
+  prices re-priced live off the Renaiss Index. Every card shows whether its price is a live Renaiss Index
+  valuation (LIVE) or a labeled assumption (ASSUMED), and the pool badge shows its real last-refresh time.
+- **Vault Index (`/vault`).** The full real graded-card library the packs draw from, each a real Renaiss
+  Index valuation, sorted by value, so every EV number traces back to a card you can see.
 - **Fairness verifier (`/verify`, and Station 04 in `/app`).** Paste your own `{leafPreimage, proofPath,
   publishedRoot}`, or load a labeled EXAMPLE, and watch the Merkle root recompute in your browser via Web
   Crypto. Green VERIFIED on a match, red MISMATCH on a tampered proof. PullEV's server is not involved.
+  For sealed packs (e.g. Champion), the page also shows Renaiss's **real on-chain Merkle root**, read live
+  from the Renaiss gacha contract on BNB Chain via `getMerkleRoot(packId)`, with a BscScan link so anyone
+  can reproduce the lookup and trust the chain, not us.
 - **Oracle lookup (`/value`).** Enter a PSA/CGC/BGS cert number to pull its real Renaiss Index valuation
   (price, grade, confidence, trend, freshness), with the rate limit surfaced.
 - **AI Pull Advisor (floating orb in `/app`).** Ask about a pack. The advisor answers only from that
@@ -82,15 +87,17 @@ serves a bundled offline snapshot, clearly badged BUNDLED SNAPSHOT, so a demo ne
 
 ### The data adapter layer
 
-Renaiss ships a real Index API for card valuations, but no pack, pool, odds, or draw/proof API. So pool
-membership and draw weights are a **PullEV model** (labeled assumptions), while card prices are **real**
-Renaiss Index valuations wherever a card resolves. Everything routes through one `PackDataAdapter`
+Renaiss ships a real Index API for card valuations, and commits each pack's card pool as an on-chain Merkle
+root on BNB Chain (auditable via BscScan with the pack ID), but exposes no REST API for pool contents, odds,
+or the individual draw proofs. So pool membership and draw weights are a **PullEV model** (labeled
+assumptions), while card prices are **real** Renaiss Index valuations wherever a card resolves. Everything routes through one `PackDataAdapter`
 interface, and every number reaches a provenance badge in the UI. See
 [`docs/data-sources.md`](docs/data-sources.md) for the per-datapoint breakdown.
 
-The pools cover six real packs (Eden $150, Omega $48, Renacrypt $88, Voyaga $120, Frozen $60, Legacy
-Pack #8 $200) built from a library of 84 distinct real graded cards (One Piece and Pokémon) curated off
-the Renaiss Index.
+The pools cover Renaiss's real 15-pack lineup: three live Infinite packs (Eden $150, OMEGA $48, RenaCrypt
+$88), the limited Champion Pack ($100, sold out), and 11 real previous packs ($100, limited, sold out,
+shown as a retired showcase). All prices are verified from the live site. Every pool is built from a
+library of ~84 distinct real graded cards (One Piece and Pokémon) priced off the Renaiss Index.
 
 ### Autonomous live pools
 
@@ -161,16 +168,22 @@ Keys are read from the environment only and are never committed. `.env` files ar
 ## Data sources, assumptions, and limitations
 
 - **Real (Renaiss Index API, beta):** card valuations (price, grade, confidence, trend, freshness) for a
-  library of 84 distinct graded cards, re-priced autonomously on a schedule. Badged LIVE per card and
-  OFFICIAL on the oracle page. Verified pack prices: Eden $150, Omega $48, Renacrypt $88.
-- **PullEV model (labeled assumptions):** pack pool membership, draw weights, and the representative
-  commons tier, across six packs. Renaiss exposes no pool or odds API, so these are our construction,
-  badged PULLEV MODEL and ASSUMED, and the membership rotates each refresh cycle. The three newer pack
-  prices (Voyaga $120, Frozen $60, Legacy Pack #8 $200) are assumptions pending live re-confirmation.
-- **EXAMPLE (labeled):** the demo Merkle proofs. Renaiss exposes no draw or proof API, so PullEV generates
-  example proofs (one valid, one tampered) over the labeled pool. They are never presented as real Renaiss
-  draws, and the published root is labeled "computed by PullEV over the labeled pool, not Renaiss's on-chain
-  root." The verification math is genuine; when Renaiss ships real proofs, the same verifier checks them.
+  library of ~84 distinct graded cards, re-priced autonomously on a schedule. Badged LIVE per card and
+  OFFICIAL on the oracle and vault pages. All 15 pack prices and top prizes are verified from the live
+  Renaiss site (3 live Infinite + Champion + 11 previous, all sold-out $100 limiteds).
+- **PullEV model (labeled assumptions):** pack pool membership, draw weights, and a labeled cheap filler
+  band. Renaiss exposes no pool or odds API, so these are our construction, badged PULLEV MODEL and
+  ASSUMED, and current-pack membership rotates each refresh cycle. Odds use PullEV's own three-band model
+  (Chase ~1% / Mid ~33% / Common ~66%) over real prices; Renaiss publishes a *per-pack* tiered "what is
+  loaded" (e.g. Tier S/A/B/C on OMEGA, Crown/Bloom/Thorn on Eden) whose exact chances aren't all public, so
+  we do not claim any specific Renaiss scheme. The one public anchor we ground on: Renaiss's rarest tier is
+  `<1%`, which our ~1% Chase band mirrors.
+- **EXAMPLE (labeled):** the demo Merkle proofs. Renaiss commits each pack's pool as an on-chain Merkle root
+  (auditable on BscScan with the pack ID) but does not expose the pool's full contents, so PullEV cannot yet
+  rebuild that exact tree. It demonstrates the same verification math with example proofs (one valid, one
+  tampered) over the labeled pool. They are never presented as real Renaiss draws, and the example's root is
+  labeled "computed by PullEV over the labeled pool, not Renaiss's on-chain root." The recompute is genuine
+  and client-side; once the pool contents and leaf scheme are available, the same verifier checks the real root.
 - **Limitations:** PullEV reads and verifies. It never transacts. No wallet connection, no auth, no
   on-chain writes. Model and example data are always labeled and never presented as authoritative.
 

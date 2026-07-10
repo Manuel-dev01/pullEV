@@ -62,6 +62,7 @@ export default async function Landing() {
           <div className="pv-nav-links" style={{ display: "flex", alignItems: "center", gap: 26 }}>
             <Link href="#how" style={navLink}>How it works</Link>
             <Link href="#fair" style={navLink}>Provably fair</Link>
+            <Link href="/vault" style={navLink}>Vault</Link>
             <Link href="/value" style={navLink}>Oracle</Link>
           </div>
           <Link href="/app" style={{ border: "none", fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 14, whiteSpace: "nowrap", color: "#08070c", padding: "11px 20px", borderRadius: 10, background: GRAD, boxShadow: "0 6px 22px rgba(201,92,245,.45)", textDecoration: "none" }}>Launch app</Link>

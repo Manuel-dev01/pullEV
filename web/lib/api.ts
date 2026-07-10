@@ -1,4 +1,4 @@
-import type { Draw, EVResult, Pack, Pool, Provenance, Sourced, Valuation } from "@shared/types";
+import type { Card, Draw, EVResult, Pack, Pool, Provenance, Sourced, Valuation } from "@shared/types";
 import snapshot from "./snapshot.json";
 import valuationsSeed from "./valuations.seed.json";
 import { computeEVFallback } from "./ev";
@@ -125,6 +125,47 @@ export async function lookupCert(cert: string): Promise<Fetched<Valuation> | nul
       fetchedAt: new Date().toISOString(),
       isOfficial: false,
       notes: "Renaiss Index API (beta): engine unreachable and no cached value.",
+    },
+    fallback: true,
+  };
+}
+
+/**
+ * Fetch the full real graded-card library ("Vault Index") the packs draw from, each a
+ * real Renaiss Index (beta) valuation, sorted by value. Engine down -> derive the same
+ * list from the bundled valuation seed so the gallery still renders labeled real data.
+ */
+export async function getCards(): Promise<Fetched<Card[]>> {
+  const r = await getSourced<Card[]>("/api/cards");
+  if (r) return { data: r.data, provenance: r.provenance, fallback: false };
+
+  const seed = valuationsSeed as Record<string, Valuation>;
+  const cards: Card[] = Object.entries(seed)
+    .filter(([, v]) => v.found && v.priceUsd > 0)
+    .map(([key, v]) => ({
+      id: key,
+      name: v.name,
+      grade: v.gradeLabel,
+      set: v.setName,
+      game: v.game,
+      fmvUsd: v.priceUsd,
+      fmvIsAssumption: false,
+      imageUrl: v.imageUrl,
+      fmvSource: "Index" as const,
+      fmvAsOf: v.lastSaleAt,
+      fmvConfidence: v.confidence,
+      fmvDeltaPct: v.deltaPct,
+    }))
+    .sort((a, b) => b.fmvUsd - a.fmvUsd);
+  return {
+    data: cards,
+    provenance: {
+      source: "Index",
+      fetchedAt: snapshot.generatedAt,
+      isOfficial: true,
+      notes:
+        "Real graded-card library priced by the Renaiss Index API (beta), bundled seed " +
+        "(engine unreachable). The packs draw from these cards.",
     },
     fallback: true,
   };

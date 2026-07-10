@@ -29,6 +29,8 @@ export interface Card {
   grade: string;
   /** Set / series, e.g. "Base Set", "Scarlet & Violet 151". */
   set: string;
+  /** Game the card belongs to: "pokemon" | "one-piece" (identification/filtering). */
+  game?: string;
   /** Fair market value in USD from the FMV/CMV oracle (or assumed — see provenance). */
   fmvUsd: number;
   /** True when fmvUsd is a placeholder assumption, not a sourced oracle value. */
@@ -62,6 +64,29 @@ export interface Pack {
   soldOut?: boolean;
   /** The pack's advertised top prize in USD (real Renaiss figure). */
   topPrizeUsd?: number;
+  /** Renaiss's REAL on-chain pool commitment (present only for sealed/committed packs). */
+  onChain?: OnChainCommit;
+}
+
+/**
+ * Renaiss's real, verifiable on-chain commitment to a sealed pack's card pool: the merkle
+ * root published by the Renaiss gacha contract on BNB Chain, readable by anyone via
+ * getMerkleRoot(packId). The genuine artifact PullEV's fairness verifier targets; every
+ * field is independently checkable on BscScan, no PullEV trust required.
+ */
+export interface OnChainCommit {
+  /** e.g. "BNB Chain". */
+  chain: string;
+  /** Renaiss gacha contract address (0x...). */
+  contract: string;
+  /** bytes32 pack id passed to getMerkleRoot. */
+  packId: string;
+  /** The committed root read from chain (0x...). */
+  merkleRoot: string;
+  /** BscScan readContract link to reproduce the lookup. */
+  explorerUrl: string;
+  /** RFC3339 time PullEV last read it from chain. */
+  readAt: string;
 }
 
 /** The set of cards currently in a pack's pool, each with a draw weight. */

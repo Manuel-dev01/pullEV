@@ -9,9 +9,11 @@ import { Distribution } from "./Distribution";
 import { ProofVault } from "./ProofVault";
 import { Advisor } from "./Advisor";
 import { CardArt } from "./CardArt";
+import { tierBreakdown } from "@/lib/tiers";
 
 // Honest label for the client-side sample rip: a genuine weighted draw over the live
-// pool, but not Renaiss's official on-chain sealed draw (Renaiss exposes no draw API).
+// pool, but not Renaiss's official on-chain sealed draw. Renaiss commits sealed pools as
+// on-chain merkle roots (see OnChainRoot) but exposes no per-draw proof or pool-contents API.
 const SAMPLE_LABEL = "SAMPLE PULL · real odds, client-side";
 const SAMPLE_TOOLTIP = "A real weighted draw over the live pool. Not Renaiss's official on-chain sealed draw.";
 
@@ -228,6 +230,7 @@ export function Filmstrip({
     prob: e.weight / active.pool.cards.reduce((s, x) => s + x.weight, 0),
   }));
   const totalW = active.pool.cards.reduce((s, e) => s + e.weight, 0);
+  const tiers = tierBreakdown(active.pool);
 
   return (
     <div
@@ -259,6 +262,14 @@ export function Filmstrip({
             <span style={{ fontFamily: "var(--font-display)", fontSize: 18 }}>
               PULL<span style={{ background: HUES[0], WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>EV</span>
             </span>
+          </Link>
+          <Link
+            href="/vault"
+            className="pv-hide-sm"
+            style={{ flex: "none", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: C.dim, textDecoration: "none" }}
+            title="The full real graded-card library the packs draw from"
+          >
+            Vault
           </Link>
           <div style={{ flex: 1, position: "relative", height: 44, display: "flex", alignItems: "center" }}>
             <div style={{ position: "absolute", left: 8, right: 8, top: "50%", height: 2, background: "rgba(255,255,255,.1)", borderRadius: 2 }} />
@@ -430,6 +441,74 @@ export function Filmstrip({
                 ))}
             </div>
           </div>
+
+          {/* REAL ON-CHAIN ROOT — Renaiss's committed merkle root for a sealed pack (BNB Chain) */}
+          {active.pack.onChain && (
+            <div style={{ marginTop: 24, borderRadius: 16, padding: "16px 18px", background: "linear-gradient(160deg,rgba(63,240,207,.07),rgba(123,123,255,.04))", border: "1px solid rgba(63,240,207,.35)" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center", justifyContent: "space-between" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".14em", textTransform: "uppercase", color: C.teal }}>⛓ Real on-chain root · {active.pack.onChain.chain}</span>
+                </div>
+                <a href={active.pack.onChain.explorerUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "#8a83a0", textDecoration: "underline", textDecorationStyle: "dotted" }}>
+                  audit on BscScan →
+                </a>
+              </div>
+              <div title={active.pack.onChain.merkleRoot} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: C.teal, marginTop: 8, wordBreak: "break-all" }}>
+                {active.pack.onChain.merkleRoot}
+              </div>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.dim, margin: "8px 0 0", lineHeight: 1.5 }}>
+                Renaiss&apos;s genuine committed root for this sealed pool, read from chain via
+                getMerkleRoot(packId). Reproduce it yourself on BscScan. Full inclusion recompute lives in the{" "}
+                <Link href={`/verify?pack=${active.pack.id}`} style={{ color: C.teal }}>Proof Vault</Link>.
+              </p>
+            </div>
+          )}
+
+          {/* WHAT IS LOADED — PullEV's own 3-band odds model (labeled; not Renaiss's exact tiers) */}
+          {tiers.length > 0 && (
+            <div style={{ marginTop: 24, borderRadius: 16, padding: 20, background: C.panel, border: `1px solid ${C.border}` }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0" }}>What is loaded · PullEV odds model</div>
+                {active.pack.topPrizeUsd ? (
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.muted }}>top prize {money(active.pack.topPrizeUsd)}</div>
+                ) : null}
+              </div>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, margin: "0 0 16px", maxWidth: 660, lineHeight: 1.5 }}>
+                PullEV models three draw bands over real card prices. Renaiss publishes a per-pack tiered
+                &quot;what is loaded&quot; (e.g. Tier S/A/B/C on OMEGA, Crown/Bloom/Thorn on Eden) whose exact
+                chances aren&apos;t all public, so these bands are our labeled model. The one public anchor:
+                Renaiss&apos;s rarest tier is &lt;1%, which our ~1% Chase band mirrors. Chances shown are this
+                pool&apos;s computed draw probabilities; the Common bulk includes labeled filler.
+              </p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 14 }}>
+                {tiers.map((t) => (
+                  <div key={t.name} style={{ borderRadius: 12, padding: "14px 14px 12px", background: "rgba(255,255,255,.02)", border: `1px solid ${t.hue}44` }}>
+                    <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 8 }}>
+                      <span style={{ fontFamily: "var(--font-display)", fontSize: 20, color: t.hue }}>{t.name}</span>
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 15, color: C.ink }}>{(t.chance * 100).toFixed(t.chance < 0.1 ? 1 : 0)}%</span>
+                    </div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.dim, marginTop: 2 }}>{t.blurb}</div>
+                    {/* proportional chance bar */}
+                    <div style={{ height: 5, borderRadius: 3, background: "rgba(255,255,255,.07)", margin: "10px 0 10px", overflow: "hidden" }}>
+                      <div style={{ height: "100%", width: `${Math.max(2, t.chance * 100)}%`, background: t.hue, borderRadius: 3 }} />
+                    </div>
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.muted }}>
+                      {money(t.min)}–{money(t.max)} · {t.count} card{t.count === 1 ? "" : "s"}
+                    </div>
+                    <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 3 }}>
+                      {t.examples.slice(0, 3).map((c, i) => (
+                        <div key={c.id + i} style={{ display: "flex", justifyContent: "space-between", gap: 8, fontFamily: "var(--font-mono)", fontSize: 9.5, color: "#b6afc8" }}>
+                          <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.name}</span>
+                          <span style={{ flex: "none", color: C.dim }}>{money(c.fmvUsd)}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 26 }}>
             <div onClick={() => go(0)} style={{ cursor: "pointer", fontFamily: "var(--font-mono)", fontSize: 12, color: "#8a83a0" }}>← back to floor</div>
             <button onClick={pickAndAdvance} style={btnPrimary}>

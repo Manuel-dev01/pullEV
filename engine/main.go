@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"sort"
 	"strings"
 	"time"
 )
@@ -65,6 +66,7 @@ func main() {
 	mux.HandleFunc("GET /api/packs/{id}/pool", handlePool)
 	mux.HandleFunc("GET /api/packs/{id}/ev", handleEV)
 	mux.HandleFunc("GET /api/packs/{id}/example-proof", handleExampleProof)
+	mux.HandleFunc("GET /api/cards", handleCards)
 	mux.HandleFunc("GET /api/value/cert/{cert}", handleValueCert)
 	mux.HandleFunc("POST /api/admin/refresh", handleRefresh)
 
@@ -214,6 +216,44 @@ func handleExampleProof(w http.ResponseWriter, r *http.Request) {
 		Notes:      "EXAMPLE proof built by PullEV over the " + string(activeAdapter.Source()) + " pool. " + note,
 	}
 	writeJSON(w, http.StatusOK, Sourced[Draw]{Data: draw, Provenance: prov})
+}
+
+// handleCards returns the full real graded-card library PullEV prices, sorted by value.
+// This is the "Vault Index": every card the packs draw from, each a real Renaiss Index
+// (beta) valuation. Stamped with the live last-refresh time when the manager has run.
+func handleCards(w http.ResponseWriter, _ *http.Request) {
+	snap := valuationCache.SeedSnapshot()
+	cards := make([]Card, 0, len(snap))
+	for key, v := range snap {
+		if !v.Found || v.PriceUsd <= 0 {
+			continue
+		}
+		cards = append(cards, Card{
+			ID:            key,
+			Name:          v.Name,
+			Grade:         v.GradeLabel,
+			Set:           v.SetName,
+			Game:          v.Game,
+			FMVUsd:        v.PriceUsd,
+			ImageURL:      v.ImageURL,
+			FMVSource:     SourceIndex,
+			FMVAsOf:       v.LastSaleAt,
+			FMVConfidence: v.Confidence,
+			FMVDeltaPct:   v.DeltaPct,
+		})
+	}
+	sort.Slice(cards, func(i, j int) bool { return cards[i].FMVUsd > cards[j].FMVUsd })
+
+	fetchedAt := nowRFC3339()
+	notes := "Real graded-card library priced by the Renaiss Index API (beta). The packs draw from these cards."
+	if livePools != nil {
+		if t, ok := livePools.LastRefresh(); ok {
+			fetchedAt = t.Format(time.RFC3339)
+			notes = "Live-refreshed real graded-card library (Renaiss Index beta). The packs draw from these cards."
+		}
+	}
+	prov := Provenance{Source: SourceIndex, FetchedAt: fetchedAt, IsOfficial: true, Notes: notes}
+	writeJSON(w, http.StatusOK, Sourced[[]Card]{Data: cards, Provenance: prov})
 }
 
 // handleValueCert returns a real Renaiss Index valuation for a cert number, with
