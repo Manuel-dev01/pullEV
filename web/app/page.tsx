@@ -56,7 +56,7 @@ export default async function Landing() {
   return (
     <div style={{ fontFamily: "var(--font-sans)", color: "#f6f2fb", background: "#08070c", overflowX: "hidden" }}>
       {/* NAV */}
-      <div className="pv-nav" style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "18px 40px", backdropFilter: "blur(14px)", background: "linear-gradient(180deg,rgba(8,7,12,.86),rgba(8,7,12,.45))", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
+      <div className="pv-nav" style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "16px clamp(16px,4vw,40px)", backdropFilter: "blur(14px)", background: "linear-gradient(180deg,rgba(8,7,12,.86),rgba(8,7,12,.45))", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <div style={{ width: 30, height: 30, flex: "none", transform: "rotate(45deg)", borderRadius: 8, background: GRAD, boxShadow: "0 0 20px rgba(201,92,245,.6)" }} />
           <span style={{ fontFamily: "var(--font-display)", fontSize: 24 }}>PULL<span style={{ background: GRAD, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>EV</span></span>
@@ -88,7 +88,7 @@ export default async function Landing() {
         <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 4, "--r": "6deg", animation: "pv-floaty-r 9s ease-in-out .6s infinite" } as CSSProperties}>
           <div title={mythic ? `Rarest card in the featured pool: ${mythic.name}, ${mythic.pct.toFixed(1)}% draw chance in PullEV's model odds (labeled, not real Renaiss odds)` : "Illustrative rarity (PullEV model)"} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap", cursor: "help" }}>MYTHIC · {mythic ? mythic.pct.toFixed(1) : "1.2"}%</div>
         </div>
-        <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px 40px 0" }}>
+        <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px clamp(18px,5vw,40px) 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 720, marginTop: 24 }}>
               <div>
@@ -180,14 +180,14 @@ export default async function Landing() {
       </div>
 
       {/* REAL RENAISS MARKET INDEX — the ecosystem's own price index (grounded market context) */}
-      <MarketIndex tiles={indices.data} provenance={indices.provenance} fallback={indices.fallback} />
+      <MarketIndex tiles={indices.data} />
 
       {/* TWO QUESTIONS */}
-      <div id="how" style={{ maxWidth: 1300, margin: "0 auto", padding: "120px 40px 80px" }}>
+      <div id="how" style={{ maxWidth: 1300, margin: "0 auto", padding: "clamp(56px,9vw,120px) clamp(18px,5vw,40px) 80px" }}>
         <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 48 }}>Two questions every ripper asks</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 30, alignItems: "flex-start" }}>
           <QCard n="01" title={<>SHOULD I RIP<br />THIS PACK?</>} body="Live EV from real Renaiss Index card prices under a labeled model pool, with the whole value distribution, not just an average. See your edge, your odds of profit, and the fat tail before you spend a cent. A model estimate, not a claim about Renaiss's own pack." tags={["EV vs cost", "Full distribution", "Oracle prices"]} border="rgba(255,255,255,.09)" glow="rgba(201,92,245,.35)" />
-          <div style={{ marginTop: 70, flex: 1, minWidth: 340 }}>
+          <div style={{ marginTop: 70, flex: 1, minWidth: "min(340px, 100%)" }}>
             <QCard n="02" title={<>WAS MY<br />PULL FAIR?</>} body="An independent Merkle-proof verifier recomputes your draw's inclusion proof entirely in your browser. If the root matches Renaiss's published commitment, it's provably fair. No server, no trust required." tags={["Client-side", "Merkle proof", "Zero trust"]} border="rgba(63,240,207,.18)" glow="rgba(63,240,207,.28)" />
           </div>
         </div>
@@ -197,7 +197,7 @@ export default async function Landing() {
       <div style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/image_2.webp')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,#08070c 2%,rgba(8,7,12,.6) 40%,rgba(8,7,12,.15) 70%,rgba(8,7,12,.7) 100%)" }} />
-        <div style={{ position: "relative", zIndex: 5, maxWidth: 1300, margin: "0 auto", padding: "0 40px", width: "100%" }}>
+        <div style={{ position: "relative", zIndex: 5, maxWidth: 1300, margin: "0 auto", padding: "0 clamp(18px,5vw,40px)", width: "100%" }}>
           <div style={{ maxWidth: 640 }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#3ff0cf", marginBottom: 20 }}>The whole point</div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(48px,7vw,96px)", lineHeight: 0.9, margin: 0, textShadow: "0 6px 40px rgba(0,0,0,.7)" }}>TRUST MATH,<br />NOT A CLAIM.</h2>
@@ -207,15 +207,15 @@ export default async function Landing() {
       </div>
 
       {/* VAULT section */}
-      <div style={{ maxWidth: 1300, margin: "0 auto", padding: "110px 40px" }}>
+      <div style={{ maxWidth: 1300, margin: "0 auto", padding: "clamp(64px,9vw,110px) clamp(18px,5vw,40px)" }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 60, alignItems: "center" }}>
-          <div style={{ flex: 1, minWidth: 300, position: "relative", display: "flex", justifyContent: "center" }}>
+          <div style={{ flex: 1, minWidth: "min(300px, 100%)", position: "relative", display: "flex", justifyContent: "center" }}>
             <div style={{ position: "absolute", width: 320, height: 320, borderRadius: "50%", background: "radial-gradient(circle,rgba(123,123,255,.4),transparent 68%)", filter: "blur(6px)" }} />
             <div style={{ position: "absolute", width: 300, height: 300, border: "1px solid rgba(255,255,255,.1)", borderRadius: "50%", animation: "pv-spin 40s linear infinite" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/image_3.png" alt="Renaiss vault case" style={{ position: "relative", maxWidth: 400, width: "100%", filter: "drop-shadow(0 30px 60px rgba(0,0,0,.6))", animation: "pv-floaty 9s ease-in-out infinite" }} />
           </div>
-          <div style={{ flex: 1, minWidth: 300 }}>
+          <div style={{ flex: 1, minWidth: "min(300px, 100%)" }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 18 }}>Vault-backed pool</div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,5vw,64px)", lineHeight: 0.94, margin: "0 0 22px" }}>EVERY PULL IS<br />BACKED BY REAL<br />INVENTORY.</h2>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: "#c3bad8", maxWidth: 480 }}>The EV isn&apos;t a vibe. It&apos;s computed against real graded cards, each priced by the Renaiss Index oracle (beta). PullEV reads the same valuations, so the number you see is grounded in real market data.</p>
@@ -229,14 +229,14 @@ export default async function Landing() {
       </div>
 
       {/* MERKLE explainer — HOW A PROOF CHECKS OUT */}
-      <div id="fair" style={{ background: "linear-gradient(180deg,#08070c,#0b0912 50%,#08070c)", borderTop: "1px solid rgba(255,255,255,.06)", borderBottom: "1px solid rgba(255,255,255,.06)", padding: "110px 40px" }}>
+      <div id="fair" style={{ background: "linear-gradient(180deg,#08070c,#0b0912 50%,#08070c)", borderTop: "1px solid rgba(255,255,255,.06)", borderBottom: "1px solid rgba(255,255,255,.06)", padding: "clamp(64px,9vw,110px) clamp(18px,5vw,40px)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 16 }}>Provably fair · client-side</div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,5vw,68px)", lineHeight: 0.94, margin: 0 }}>HOW A PROOF CHECKS OUT</h2>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 40, alignItems: "center", justifyContent: "center" }}>
-            <svg viewBox="0 0 420 260" style={{ flex: 1, minWidth: 340, maxWidth: 460 }}>
+            <svg viewBox="0 0 420 260" style={{ flex: 1, minWidth: "min(340px, 100%)", maxWidth: 460 }}>
               <defs>
                 <linearGradient id="rootg" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0" stopColor="#ff5fb4" />
@@ -259,7 +259,7 @@ export default async function Landing() {
               <text x="60" y="224" fontFamily="var(--font-mono)" fontSize="10" fill="#ff5fb4" textAnchor="middle">your leaf</text>
               <text x="210" y="18" fontFamily="var(--font-mono)" fontSize="10" fill="#3ff0cf" textAnchor="middle">root</text>
             </svg>
-            <div style={{ flex: 1, minWidth: 320, maxWidth: 480, display: "flex", flexDirection: "column", gap: 14 }}>
+            <div style={{ flex: 1, minWidth: "min(320px, 100%)", maxWidth: 480, display: "flex", flexDirection: "column", gap: 14 }}>
               <ProofStep n="01" color="#ff5fb4" title="Hash your draw into a leaf" body="Your card, its serial and value become one leaf hash: deterministic and yours alone." />
               <ProofStep n="02" color="#c95cf5" title="Walk the sibling path" body="Combine with each sibling hash up the tree, the proof PullEV recomputes in your browser." />
               <ProofStep n="03" color="#3ff0cf" title="Match the committed root" body="If your recomputed root equals the published one, the pull was fair. Full stop." />
@@ -269,15 +269,15 @@ export default async function Landing() {
       </div>
 
       {/* ADVISOR teaser */}
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "90px 40px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "clamp(56px,9vw,90px) clamp(18px,5vw,40px)" }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 48, alignItems: "center" }}>
-          <div style={{ flex: 1, minWidth: 300 }}>
+          <div style={{ flex: 1, minWidth: "min(300px, 100%)" }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 18 }}>AI Pull Advisor</div>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(40px,5vw,64px)", lineHeight: 0.94, margin: "0 0 22px" }}>EVERY VERDICT,<br />IN PLAIN WORDS.</h2>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: "#c3bad8", maxWidth: 460 }}>Ask whether a pack is worth it and the advisor answers with the math: grounded, and citing every number back to the pool, the oracle, or the proof. It refuses anything it can&apos;t source. No hype it can&apos;t back up.</p>
             <Link href="/app" style={{ ...heroBtn, display: "inline-block", marginTop: 24, background: GRAD, color: "#08070c" }}>Ask the advisor →</Link>
           </div>
-          <div style={{ flex: 1, minWidth: 300, borderRadius: 22, padding: 22, background: "linear-gradient(180deg,#12101a,#0b0912)", border: "1px solid rgba(255,255,255,.1)" }}>
+          <div style={{ flex: 1, minWidth: "min(300px, 100%)", borderRadius: 22, padding: 22, background: "linear-gradient(180deg,#12101a,#0b0912)", border: "1px solid rgba(255,255,255,.1)" }}>
             <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 16 }}>
               <div style={{ background: "rgba(255,95,180,.14)", border: "1px solid rgba(255,95,180,.3)", borderRadius: "14px 14px 4px 14px", padding: "12px 15px", fontSize: 14, maxWidth: "78%" }}>Should I rip {featured?.pack.name ?? "this pack"} right now?</div>
             </div>
@@ -301,7 +301,7 @@ export default async function Landing() {
       </div>
 
       {/* CTA + FOOTER */}
-      <div style={{ position: "relative", overflow: "hidden", background: "linear-gradient(140deg,#1a1226,#0b0912 60%)", borderTop: "1px solid rgba(255,255,255,.08)", padding: "110px 40px 50px" }}>
+      <div style={{ position: "relative", overflow: "hidden", background: "linear-gradient(140deg,#1a1226,#0b0912 60%)", borderTop: "1px solid rgba(255,255,255,.08)", padding: "clamp(64px,9vw,110px) clamp(18px,5vw,40px) 50px" }}>
         <div style={{ position: "absolute", top: -120, left: "50%", transform: "translateX(-50%)", width: 700, height: 400, background: "radial-gradient(circle,rgba(201,92,245,.3),transparent 65%)" }} />
         <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(48px,8vw,110px)", lineHeight: 0.86, margin: 0 }}>RIP WITH THE<br /><span style={{ background: GRAD, WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>RECEIPTS.</span></h2>
@@ -353,7 +353,7 @@ function VaultStat({ big, small, color }: { big: string; small: string; color?: 
 
 function QCard({ n, title, body, tags, border, glow }: { n: string; title: React.ReactNode; body: string; tags: string[]; border: string; glow: string }) {
   return (
-    <div style={{ flex: 1, minWidth: 340, position: "relative", borderRadius: 24, padding: "40px 36px", background: "linear-gradient(160deg,#171020,#0d0912)", border: `1px solid ${border}`, overflow: "hidden" }}>
+    <div style={{ flex: 1, minWidth: "min(340px, 100%)", position: "relative", borderRadius: 24, padding: "clamp(24px,5vw,40px) clamp(20px,4vw,36px)", background: "linear-gradient(160deg,#171020,#0d0912)", border: `1px solid ${border}`, overflow: "hidden" }}>
       <div style={{ position: "absolute", top: -60, right: -60, width: 240, height: 240, borderRadius: "50%", background: `radial-gradient(circle,${glow},transparent 70%)` }} />
       <div style={{ fontFamily: "var(--font-display)", fontSize: 120, lineHeight: 0.8, color: "transparent", WebkitTextStroke: "1.5px rgba(255,255,255,.14)" }}>{n}</div>
       <h3 style={{ fontFamily: "var(--font-display)", fontSize: 38, lineHeight: 1, margin: "18px 0 14px" }}>{title}</h3>
