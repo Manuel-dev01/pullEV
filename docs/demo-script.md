@@ -30,10 +30,10 @@ two parenthetical lines in the hook.
 > Now the money question: should you rip? Here is Renaiss's real lineup, three live Infinite packs plus twelve
 > sold-out limiteds, each showing a live edge, and the timestamp is real because prices are re-priced off the
 > Renaiss Index oracle on a schedule. Open one: expected value against cost, the distribution, chance of profit.
-> And we are honest about the model: only the rare Chase band is real Index-priced cards; the Mid and Common
-> bulk is cheap labeled filler at assumed prices, so most of the draw sits on assumptions, and every card and
-> band says so with a LIVE or ASSUMED tag. The odds are our labeled model, not Renaiss's, and the spread is an
-> honest house edge. The Vault page lists the whole real card library the packs price from.
+> And every card is a real Renaiss Index valuation, from cheap commons like a $6 Buggy to the rare chase, all
+> tagged LIVE. There is no fabricated filler. What is our labeled model is only the odds and which cards make
+> up each pack, so this is an EV for a modeled pool, not a measurement of Renaiss's own pack. The spread is an
+> honest house edge from real prices. The Vault page lists the whole real card library the packs price from.
 >
 > Want it in plain words? The advisor explains the verdict, and it must cite every number or it refuses. Ask it
 > something off-topic and it declines, by design. It ends with "not financial advice." Restraint is the feature.

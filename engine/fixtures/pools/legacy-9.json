@@ -3,286 +3,187 @@
   "cards": [
     {
       "card": {
+        "id": "legacy9-pikachu-with-grey-felt-hat",
+        "name": "Pikachu with Grey Felt Hat",
+        "grade": "PSA 10",
+        "set": "Pokemon SVP Black Star Promos",
+        "fmvUsd": 2858.37,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T23:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -8.97
+      },
+      "weight": 0.004
+    },
+    {
+      "card": {
         "id": "legacy9-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "One Piece Card Game 2nd Anniversary Set",
-        "fmvUsd": 615.47,
+        "set": "Dodgers One Piece Night",
+        "fmvUsd": 4534.91,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_015_ja_5c93524f5c6544f9a7ff3a9499ac0250_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T00:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -34.56
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-gear-two",
-        "name": "Gear Two",
-        "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 653.49,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
+        "fmvAsOf": "2026-07-09T02:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": 1.52
+        "fmvDeltaPct": -11.8
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.004
     },
     {
       "card": {
-        "id": "legacy9-monkeydluffy-x",
-        "name": "Monkey.D.Luffy",
+        "id": "legacy9-lt-surges-rattata",
+        "name": "Lt. Surge's Rattata",
         "grade": "PSA 10",
-        "set": "Misc. Promos",
-        "fmvUsd": 684.69,
+        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
+        "fmvUsd": 39.22,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_055_en_48959d2235ee4a11bd92031c2894209c_sm.webp?v=37f641d4",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -31.03
+        "fmvAsOf": "2026-05-01T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "legacy9-monkeydluffy-x-x",
-        "name": "Monkey.D.Luffy",
+        "id": "legacy9-lt-surges-spearow",
+        "name": "Lt. Surge's Spearow",
         "grade": "PSA 10",
-        "set": "One Piece Card Game English 2nd Anniversary Set",
-        "fmvUsd": 844.44,
+        "set": "Gym Heroes",
+        "fmvUsd": 41.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_g1_52_en_3fcbfd51967c454a9646febd10bfce93_sm.png?v=fd83a063",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T04:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -31.85
+        "fmvAsOf": "2025-09-29T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-luffy-\u0026-ace",
-        "name": "Luffy \u0026 Ace",
-        "grade": "PSA 10",
-        "set": "Luffy \u0026 Ace",
-        "fmvUsd": 985.84,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -68.56
-      },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
         "id": "legacy9-nami",
         "name": "Nami",
         "grade": "PSA 10",
-        "set": "One Piece Card The Best",
-        "fmvUsd": 1285.18,
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 50.38,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_054_en_166d855141c04b2f99ad54c1a1e25a43_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -16.25
+        "fmvAsOf": "2026-06-25T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -6.72
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "legacy9-shanks",
-        "name": "Shanks",
-        "grade": "PSA 10",
-        "set": "Romance Dawn",
-        "fmvUsd": 2182.31,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T04:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -3.35
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-monkeydluffy-x-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4545.75,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -10.34
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-zoro-juurou",
-        "name": "Zoro-Juurou",
-        "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 377.75,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": 6.12
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-detective-pikachu",
-        "name": "Detective Pikachu",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv-P Promo",
-        "fmvUsd": 432.88,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_098_ja_b8bc9b382c8c4fda91e563aceeb4d63b_sm.webp?v=f22e163d",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T14:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.96
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-boa-hancock",
-        "name": "Boa Hancock",
-        "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 499.57,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T10:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -34.42
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-mega-gengar-ex",
-        "name": "Mega Gengar Ex",
-        "grade": "PSA 10",
-        "set": "Mega Dream ex",
-        "fmvUsd": 582.25,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_240_ja_094085d7f46b458bbb09e296cede0093_sm.webp?v=7b1d2306",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -20.15
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "legacy9-filler-zubat",
-        "name": "Zubat",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 118,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.11
-    },
-    {
-      "card": {
-        "id": "legacy9-filler-alvida",
+        "id": "legacy9-alvida",
         "name": "Alvida",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 152,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "grade": "Raw A",
+        "set": "Adventure On Kami’s Island",
+        "fmvUsd": 6.21,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T18:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.11
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "legacy9-filler-caterpie",
-        "name": "Caterpie",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 182,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "id": "legacy9-spearow",
+        "name": "Spearow",
+        "grade": "CGC 9.5",
+        "set": "Roaring Skies",
+        "fmvUsd": 7.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_ros_65_en_3f844d81015046379904eb2fb2966243_sm.png?v=d54ce76c",
+        "fmvSource": "Index",
+        "fmvAsOf": "2024-06-10T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.11
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "legacy9-filler-rattata",
+        "id": "legacy9-rattata",
         "name": "Rattata",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 18,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "grade": "CGC 9",
+        "set": "Secret Wonders",
+        "fmvUsd": 15,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sw_103_en_940cc13e505b48fb9d6416051c3ecb6f_sm.png?v=44c26a00",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-12-10T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.165
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "legacy9-filler-coby",
-        "name": "Coby",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 32,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "id": "legacy9-franky",
+        "name": "Franky",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 18.55,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_664a27075733415391a7c5d84e8ee3af_sm.png?v=a2948f02",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-03-22T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.165
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "legacy9-filler-pidgey",
-        "name": "Pidgey",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 52,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "id": "legacy9-zubat",
+        "name": "Zubat",
+        "grade": "CGC 10 Perfect",
+        "set": "Delta Species",
+        "fmvUsd": 27,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_ds_88_en_32f7b0cf58464f49abf828c40c59d255_sm.png?v=30854628",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-10T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.165
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "legacy9-filler-buggy",
-        "name": "Buggy",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 78,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "id": "legacy9-pidgeot-ex",
+        "name": "Pidgeot ex",
+        "grade": "PSA 10",
+        "set": "Ruler of the Black Flame",
+        "fmvUsd": 29.99,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-01T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -24.93
       },
-      "weight": 0.165
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy9-alvida-x",
+        "name": "Alvida",
+        "grade": "BGS 10 Pristine",
+        "set": "Romance Dawn",
+        "fmvUsd": 34.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
     }
   ]
 }

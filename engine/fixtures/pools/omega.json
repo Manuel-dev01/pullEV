@@ -3,286 +3,186 @@
   "cards": [
     {
       "card": {
-        "id": "omega-mega-dragonite-ex",
-        "name": "Mega Dragonite Ex",
+        "id": "omega-pikachu-ex",
+        "name": "Pikachu Ex",
         "grade": "PSA 10",
-        "set": "Mega Dream ex",
-        "fmvUsd": 336.93,
+        "set": "Pokemon Japanese MC-Start Deck 100 Battle Collection",
+        "fmvUsd": 2275.37,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_246_ja_7bd898e0e4ef4193890cecfdcf9ae102_sm.webp?v=5538051d",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mc_764_ja_f65addd1b0f74829a74ca5f4d6d0b4b0_sm.webp?v=21481669",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
+        "fmvAsOf": "2026-07-11T06:00:00.000Z",
         "fmvConfidence": "prime",
-        "fmvDeltaPct": -24.8
+        "fmvDeltaPct": -34.91
       },
-      "weight": 0.0014285714285714286
+      "weight": 0.004
     },
     {
       "card": {
-        "id": "omega-m-rayquaza-ex",
-        "name": "M Rayquaza Ex",
+        "id": "omega-pikachu-with-grey-felt-hat",
+        "name": "Pikachu with Grey Felt Hat",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-        "fmvUsd": 364.51,
+        "set": "Pokemon SVP Black Star Promos",
+        "fmvUsd": 2858.37,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_024_ja_2c6dc5276f7043f08fcbe4ba25716faf_sm.webp?v=96829478",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T15:00:00.000Z",
+        "fmvAsOf": "2026-07-10T23:00:00.000Z",
         "fmvConfidence": "prime",
-        "fmvDeltaPct": -23.13
+        "fmvDeltaPct": -8.97
       },
-      "weight": 0.0014285714285714286
+      "weight": 0.004
     },
     {
       "card": {
-        "id": "omega-oricorio-ex-x",
-        "name": "Oricorio ex",
-        "grade": "PSA 10",
-        "set": "Mega Promos",
-        "fmvUsd": 122.8,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mep_24_en_372f3d0b56844abfb2b19498e8b12f40_sm.png?v=ff8c312d",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T00:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -11.96
-      },
-      "weight": 0.0014285714285714286
-    },
-    {
-      "card": {
-        "id": "omega-mew",
-        "name": "Mew",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Sword \u0026 Shield Vstar Universe",
-        "fmvUsd": 149.92,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s12a_183_ja_999b7b24fc314f0a835aa540c220e54b_sm.webp?v=22bdd7ec",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T06:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -18.41
-      },
-      "weight": 0.0014285714285714286
-    },
-    {
-      "card": {
-        "id": "omega-meowth-ex",
-        "name": "Meowth ex",
-        "grade": "PSA 10",
-        "set": "Nullifying Zero",
-        "fmvUsd": 162.08,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/ondemand_pokemon_114_ja_meowth-ex_special-art-rare_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T14:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -32.4
-      },
-      "weight": 0.0014285714285714286
-    },
-    {
-      "card": {
-        "id": "omega-mega-charizard-x-ex",
-        "name": "Mega Charizard X EX",
-        "grade": "PSA 10",
-        "set": "Pokemon Mep EN-Me Black Star Promo",
-        "fmvUsd": 233.89,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mep_023_en_51969e25f541467e87d9e82e44658dcf_sm.webp?v=39d67890",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T00:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -20.62
-      },
-      "weight": 0.0014285714285714286
-    },
-    {
-      "card": {
-        "id": "omega-fukuokas-pikachu",
-        "name": "Fukuoka's Pikachu",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv-P Promo",
-        "fmvUsd": 266.41,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_289_ja_c8157b311e484ef394094399f9e394f8_sm.webp?v=0b5e82df",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T14:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -28.8
-      },
-      "weight": 0.0014285714285714286
-    },
-    {
-      "card": {
-        "id": "omega-oricorio-ex",
-        "name": "Oricorio Ex",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese M2-Inferno X",
-        "fmvUsd": 86.97,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2_111_ja_d8aaaad2899a43a7a62862ef3148baad_sm.webp?v=b3e76527",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -25.38
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "omega-jolteon-ex",
-        "name": "Jolteon Ex",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv8a-Terastal Fest Ex",
-        "fmvUsd": 92.12,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv8a_209_ja_da948f3ea51141f3a93e51ba972f5142_sm.webp?v=e402ffe9",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T18:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -15.53
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "omega-pikachu-x",
-        "name": "Pikachu",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv Promo",
-        "fmvUsd": 107.41,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_001_ja_3755455e10164953846a97c9ad3aa1cb_sm.webp?v=47815b52",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T11:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -16.94
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "omega-pikachu",
-        "name": "Pikachu",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese 25th Anniversary Collection",
-        "fmvUsd": 69.11,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a_001_ja_61d98a61195a49c1b7d8b4477fb9c2dd_sm.webp?v=c999b1c7",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T11:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -32.88
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "omega-filler-weedle",
-        "name": "Weedle",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 58,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "omega-filler-spearow",
-        "name": "Spearow",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 76,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "omega-filler-ekans",
-        "name": "Ekans",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 96,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "omega-mega-gengar-ex",
-        "name": "Mega Gengar Ex",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
-        "fmvUsd": 37.46,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_003_ja_de0d46db148a4f6ba0d64f1195c73e6e_sm.webp?v=5c4e345e",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T16:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -20.57
-      },
-      "weight": 0.132
-    },
-    {
-      "card": {
-        "id": "omega-filler-rattata",
-        "name": "Rattata",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 8,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.132
-    },
-    {
-      "card": {
-        "id": "omega-filler-pidgey",
-        "name": "Pidgey",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 14,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.132
-    },
-    {
-      "card": {
-        "id": "omega-filler-zubat",
+        "id": "omega-zubat-x",
         "name": "Zubat",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 22,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "grade": "CGC 10 Pristine",
+        "set": "Hidden Legends",
+        "fmvUsd": 17.7,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hl_83_en_5f0e6982e8b4425b844d77b459ea9ccc_sm.png?v=31e8944d",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-11T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 18.08
       },
-      "weight": 0.132
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "omega-filler-caterpie",
-        "name": "Caterpie",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 34,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "id": "omega-zubat-x-x",
+        "name": "Zubat",
+        "grade": "PSA 10",
+        "set": "Paradox Rift",
+        "fmvUsd": 21.23,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_par_110_en_322699f772934aa2a80005dc5802bfe4_sm.png?v=51015c14",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-08-06T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.132
+      "weight": 0.09733333333333333
+    },
+    {
+      "card": {
+        "id": "omega-ekans",
+        "name": "Ekans",
+        "grade": "CGC 10 Pristine",
+        "set": "Dragon Frontiers",
+        "fmvUsd": 24,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_df_47_en_587422bd5f0c4cce856d26b493c0741c_sm.png?v=dba1927b",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-01-04T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09733333333333333
+    },
+    {
+      "card": {
+        "id": "omega-zubat",
+        "name": "Zubat",
+        "grade": "CGC 9.5",
+        "set": "Shrouded Fable",
+        "fmvUsd": 6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sfa_27_en_c31916a7881a45c0b8f262806aaebf92_sm.png?v=8a5d91dc",
+        "fmvSource": "Index",
+        "fmvAsOf": "2024-11-25T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-pidgey",
+        "name": "Pidgey",
+        "grade": "Raw A",
+        "set": "Shiny Treasure ex",
+        "fmvUsd": 6.81,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_304_ja_a083451da4cf4015b9ec55ad3dde586d_sm.png?v=e0e1b96f",
+        "fmvSource": "Index",
+        "fmvAsOf": "2024-08-09T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-weedle",
+        "name": "Weedle",
+        "grade": "CGC 9.5",
+        "set": "Evolutions",
+        "fmvUsd": 13.9,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_evo_5_en_34ebefa1deae45398535d479f914c6b8_sm.png?v=188429f1",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-04-12T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-team-rockets-ekans",
+        "name": "Team Rocket's Ekans",
+        "grade": "PSA 9",
+        "set": "Destined Rivals",
+        "fmvUsd": 14.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_dri_112_en_22219d8970da4d90b65d63c9c1266919_sm.png?v=7ef755e3",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-03-03T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-raticate",
+        "name": "Raticate",
+        "grade": "CGC 10 Pristine",
+        "set": "Evolutions",
+        "fmvUsd": 15,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_evo_67_en_3c1e00e3929d44dda8adfe74854fdce6_sm.png?v=b1e3ed36",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-09T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-fearow",
+        "name": "Fearow",
+        "grade": "PSA 9",
+        "set": "Sun \u0026 Moon",
+        "fmvUsd": 15.39,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
+        "fmvSource": "Index",
+        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-pidgey-x",
+        "name": "Pidgey",
+        "grade": "CGC 10 Pristine",
+        "set": "Legendary Collection",
+        "fmvUsd": 17.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_85_en_4e99c2a1745b4104ba88207378b70d8f_sm.png?v=75302244",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
     }
   ]
 }

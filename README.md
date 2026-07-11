@@ -171,15 +171,15 @@ Keys are read from the environment only and are never committed. `.env` files ar
   library of ~84 distinct graded cards, re-priced autonomously on a schedule. Badged LIVE per card and
   OFFICIAL on the oracle and vault pages. All 15 pack prices and top prizes are verified from the live
   Renaiss site (3 live Infinite + Champion + 11 previous, all sold-out $100 limiteds).
-- **PullEV model (labeled assumptions):** pack pool membership, draw weights, and cheap labeled filler.
-  Renaiss exposes no pool or odds API, so these are our construction, badged PULLEV MODEL and ASSUMED, and
-  current-pack membership rotates each refresh cycle. Odds use PullEV's own three-band model (Chase ~1% /
-  Mid ~33% / Common ~66%); **only the rare Chase band holds real Index-priced cards**. The Mid and Common
-  bands are cheap labeled filler at assumed prices, so for most packs the bulk of the draw sits on
-  assumptions (every card and band is tagged LIVE or ASSUMED). Renaiss publishes a *per-pack* tiered "what
-  is loaded" (e.g. Tier S/A/B/C on OMEGA, Crown/Bloom/Thorn on Eden) whose exact chances aren't public, so we
-  claim no Renaiss scheme. We set the rare band near ~1% as an assumption, consistent with Renaiss surfacing
-  a sub-1% top tier; it is not a sourced Renaiss odds figure.
+- **PullEV model (labeled assumptions):** pack pool membership and draw odds. **Every card price is real**
+  (live Renaiss Index), from the cheap commons to the rare chase; there is no fabricated filler. What is
+  modeled is only (a) which real cards make up each pack and (b) the band draw chances, because Renaiss
+  exposes no pool or odds API. Odds use PullEV's own three-band model (Chase <1% / Mid ~29% / Common ~70%),
+  weighted heavily to cheap commons like real gacha, so the EV reads as an honest house edge computed from
+  real prices. Renaiss publishes a *per-pack* tiered "what is loaded" (e.g. Tier S/A/B/C on OMEGA,
+  Crown/Bloom/Thorn on Eden) whose exact chances aren't public, so we claim no Renaiss scheme and set the
+  rare band <1% as a labeled assumption. The EV is therefore **real prices under a modeled pool, not a
+  measurement of Renaiss's own pack** (whose true contents and odds are not public).
 - **EXAMPLE (labeled):** the demo Merkle proofs. Renaiss commits each pack's pool as an on-chain Merkle root
   (auditable on BscScan with the pack ID) but does not expose the pool's full contents, so PullEV cannot yet
   rebuild that exact tree. It demonstrates the same verification math with example proofs (one valid, one

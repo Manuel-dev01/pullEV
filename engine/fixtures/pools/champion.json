@@ -3,286 +3,188 @@
   "cards": [
     {
       "card": {
-        "id": "champion-nami",
-        "name": "Nami",
+        "id": "champion-pikachu-with-grey-felt-hat",
+        "name": "Pikachu with Grey Felt Hat",
         "grade": "PSA 10",
-        "set": "Wings of the Captain",
-        "fmvUsd": 619.58,
+        "set": "Pokemon SVP Black Star Promos",
+        "fmvUsd": 2858.37,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_007_en_dd7faa724d7b492bb0eab2dd2e7dbb03_sm.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -0.07
+        "fmvAsOf": "2026-07-10T23:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -8.97
       },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "champion-gear-two",
-        "name": "Gear Two",
-        "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 653.49,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": 1.52
-      },
-      "weight": 0.0008333333333333334
+      "weight": 0.004
     },
     {
       "card": {
         "id": "champion-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Misc. Promos",
-        "fmvUsd": 684.69,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_055_en_48959d2235ee4a11bd92031c2894209c_sm.webp?v=37f641d4",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -31.03
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "champion-charizard-holo",
-        "name": "Charizard-Holo",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
-        "fmvUsd": 782.48,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_001_ja_f3df80aa23b8463d940161109c82cc14_sm.webp?v=a40cdc01",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T16:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -21.97
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "champion-luffy-\u0026-ace",
-        "name": "Luffy \u0026 Ace",
-        "grade": "PSA 10",
-        "set": "Luffy \u0026 Ace",
-        "fmvUsd": 985.84,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -68.56
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "champion-nami-x",
-        "name": "Nami",
-        "grade": "PSA 10",
-        "set": "One Piece Card The Best",
-        "fmvUsd": 1285.18,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -16.25
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "champion-monkeydluffy-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 1555.01,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -17.99
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "champion-monkeydluffy-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
         "set": "Dodgers One Piece Night",
-        "fmvUsd": 4545.75,
+        "fmvUsd": 4534.91,
         "fmvIsAssumption": false,
         "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
         "fmvSource": "Index",
         "fmvAsOf": "2026-07-09T02:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -10.34
+        "fmvDeltaPct": -11.8
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.004
     },
     {
       "card": {
-        "id": "champion-monkey-d-luffy",
-        "name": "Monkey D. Luffy",
-        "grade": "PSA 10",
-        "set": "Premium Card Collection -One Piece Day'25- Japanese",
-        "fmvUsd": 407.21,
+        "id": "champion-pidgeot-ex",
+        "name": "Pidgeot Ex",
+        "grade": "CGC 10 Perfect",
+        "set": "Pokemon Japanese Sv3-Ruler Of The Black Flame",
+        "fmvUsd": 37.87,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/items/efb5ce37-0244-445a-aba8-fd9cad00f7c1/sm.jpg",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_128_ja_b773f65d593c4a50bb7e6965110798b3_sm.webp?v=cf200031",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T15:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": 10.25
+        "fmvAsOf": "2026-06-08T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 45.65
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "champion-monkeydluffy-wanted-poster-sp",
-        "name": "Monkey.D.Luffy WANTED POSTER SP",
+        "id": "champion-brook",
+        "name": "Brook",
         "grade": "PSA 10",
-        "set": "Pillars Of Strength",
-        "fmvUsd": 472.39,
+        "set": "Memorial Collection",
+        "fmvUsd": 41.17,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_012_ja_337d58ca8d0444538c15baec85636c68_sm.png?v=2cc9ae05",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb01_046_en_0aa805f453ff46dfabde524739ab47d8_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T04:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -11.36
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "champion-boa-hancock",
-        "name": "Boa Hancock",
+        "id": "champion-franky",
+        "name": "Franky",
         "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 499.57,
+        "set": "500 Years In The Future",
+        "fmvUsd": 45.73,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_107_ja_9bb660a11f214d3a8706db0970f62a00_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T10:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -34.42
+        "fmvAsOf": "2026-06-28T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -33.38
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "champion-mega-gengar-ex",
-        "name": "Mega Gengar Ex",
-        "grade": "PSA 10",
-        "set": "Mega Dream ex",
-        "fmvUsd": 582.25,
+        "id": "champion-helmeppo",
+        "name": "Helmeppo",
+        "grade": "CGC 9.5",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 6,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_240_ja_094085d7f46b458bbb09e296cede0093_sm.webp?v=7b1d2306",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_ja_ce3af4ca05fd40fe831c9d89fc0d283b_sm.png?v=4c05e60c",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -20.15
+        "fmvAsOf": "2024-11-21T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "champ-filler-zubat",
-        "name": "Zubat",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 118,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.11
-    },
-    {
-      "card": {
-        "id": "champ-filler-alvida",
-        "name": "Alvida",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 152,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.11
-    },
-    {
-      "card": {
-        "id": "champ-filler-caterpie",
-        "name": "Caterpie",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 182,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.11
-    },
-    {
-      "card": {
-        "id": "champ-filler-rattata",
-        "name": "Rattata",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 18,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.165
-    },
-    {
-      "card": {
-        "id": "champ-filler-coby",
-        "name": "Coby",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 32,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.165
-    },
-    {
-      "card": {
-        "id": "champ-filler-pidgey",
+        "id": "champion-pidgey",
         "name": "Pidgey",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 52,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "grade": "Raw A",
+        "set": "Shiny Treasure ex",
+        "fmvUsd": 6.81,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_304_ja_a083451da4cf4015b9ec55ad3dde586d_sm.png?v=e0e1b96f",
+        "fmvSource": "Index",
+        "fmvAsOf": "2024-08-09T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.165
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "champ-filler-buggy",
-        "name": "Buggy",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 78,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "id": "champion-helmeppo-x",
+        "name": "Helmeppo",
+        "grade": "CGC 9.5",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 7.2,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_092_ja_5bdaf2a7565d4c12b950f4819d0ea83c_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-08-31T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.165
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-team-rockets-ekans",
+        "name": "Team Rocket's Ekans",
+        "grade": "PSA 9",
+        "set": "Destined Rivals",
+        "fmvUsd": 14.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_dri_112_en_22219d8970da4d90b65d63c9c1266919_sm.png?v=7ef755e3",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-03-03T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-weedle",
+        "name": "Weedle",
+        "grade": "Raw A",
+        "set": "Tag Bolt",
+        "fmvUsd": 18.54,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sm9_2_ja_982723d742784f49beab240851467b55_sm.png?v=200e5ee4",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-spearow",
+        "name": "Spearow",
+        "grade": "CGC 10 Pristine",
+        "set": "Majestic Dawn",
+        "fmvUsd": 21.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_md_74_en_1e55a19256ff4b5eb1459984147ba840_sm.png?v=e2f5ac3b",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-10T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-zubat",
+        "name": "Zubat",
+        "grade": "CGC 10 Pristine",
+        "set": "Skyridge",
+        "fmvUsd": 31.48,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_e3_117_en_def466f6afcf4fec916c529fb5092dde_sm.png?v=d9af87b3",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-07T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -6.31
+      },
+      "weight": 0.09999999999999999
     }
   ]
 }

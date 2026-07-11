@@ -158,7 +158,7 @@ func deriveCaveats(in EVInput) []string {
 		caveats = append(caveats, "Pack price is unconfirmed and pending live verification.")
 	}
 	caveats = append(caveats,
-		"Pull odds (weights) and the commons tier are PullEV assumptions. Renaiss exposes no pool/odds API.")
+		"Card prices are real (Renaiss Index); the pool membership and draw odds are a PullEV model, so this is an EV for a modeled pool, not Renaiss's actual pack. Renaiss exposes no pool/odds API.")
 	caveats = append(caveats, "Model assumes one card drawn per pack. Informational only. Not financial advice.")
 	return caveats
 }

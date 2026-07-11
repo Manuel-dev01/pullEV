@@ -474,15 +474,14 @@ export function Filmstrip({
                 ) : null}
               </div>
               <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, margin: "0 0 16px", maxWidth: 680, lineHeight: 1.5 }}>
-                PullEV models three draw bands. Only the rare <span style={{ color: C.teal }}>Chase</span> band
-                holds real Index-priced cards; the <span style={{ color: "#c95cf5" }}>Mid</span> and{" "}
-                <span style={{ color: C.teal }}>Common</span> bands are cheap labeled filler at{" "}
-                <span style={{ color: "#ffd76a" }}>assumed</span> prices (Renaiss loads many cheap cards we
-                do not price), so for most packs the bulk of the draw sits on assumed filler. Renaiss
-                publishes a per-pack tiered &quot;what is loaded&quot; (e.g. Tier S/A/B/C on OMEGA,
-                Crown/Bloom/Thorn on Eden) whose exact chances aren&apos;t public, so these bands and their
-                weights are our labeled model. We set the rare band near ~1%, consistent with Renaiss
-                surfacing a sub-1% top tier. Chances shown are this pool&apos;s computed draw probabilities.
+                Every card here is a <span style={{ color: C.teal }}>real</span> Renaiss Index valuation, from
+                the cheap <span style={{ color: C.teal }}>Common</span> commons to the rare{" "}
+                <span style={{ color: "#ff5fb4" }}>Chase</span> jackpot. What is our labeled model is only the
+                odds: Renaiss publishes a per-pack tiered &quot;what is loaded&quot; (e.g. Tier S/A/B/C on
+                OMEGA, Crown/Bloom/Thorn on Eden) whose exact chances aren&apos;t public, so the band
+                probabilities are ours (rare band &lt;1%, consistent with Renaiss&apos;s sub-1% top tier). So
+                the EV is real prices under a modeled pool, not a measurement of Renaiss&apos;s own pack.
+                Chances shown are this pool&apos;s computed draw probabilities.
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 14 }}>
                 {tiers.map((t) => (

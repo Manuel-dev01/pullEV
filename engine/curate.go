@@ -153,6 +153,35 @@ func pickSpreadRotated(cards []curatedCard, n, offset int) []curatedCard {
 	return out
 }
 
+// pickLowPlusChase selects a realistic gacha pool from real cards: mostly cheap commons
+// (which fill the high-probability Common + Mid bands) plus a few rare, valuable chase cards.
+// This concentrates draw probability on cheap cards like real gacha, so the EV reads as an
+// honest house edge computed from 100% real prices (an even price spread would put mid-priced
+// cards in the common bands and make every pack look absurdly +EV). Rotates for variety.
+func pickLowPlusChase(cards []curatedCard, nLow, nChase, offset int, cheapCap float64) []curatedCard {
+	if len(cards) <= nLow+nChase {
+		return cards
+	}
+	sorted := sortAsc(cards)
+	n := len(sorted)
+	chase := sorted[n-nChase:] // the most valuable cards = the rare chase
+	// Draw the commons from real cards under a price cap RELATIVE to the pack price, so the
+	// high-probability Common/Mid bands stay cheaper than the ticket (an even spread, or a
+	// flat cap above the ticket, would make the pack look absurdly +EV). Fall back to the
+	// cheapest cards if too few qualify.
+	cheap := make([]curatedCard, 0, n)
+	for _, c := range sorted[:n-nChase] {
+		if c.val.PriceUsd <= cheapCap {
+			cheap = append(cheap, c)
+		}
+	}
+	if len(cheap) < nLow {
+		cheap = sorted[:min(nLow, n-nChase)]
+	}
+	low := pickSpreadRotated(cheap, nLow, offset)
+	return append(low, chase...)
+}
+
 func cardID(prefix string, v Valuation) string {
 	name := strings.ToLower(v.Name)
 	repl := strings.NewReplacer(" ", "-", ".", "", "'", "", "’", "", "/", "-", "(", "", ")", "")
@@ -223,38 +252,46 @@ var previousPackIDs = []string{
 }
 
 // allocatePacks assigns real cards to each of the 15 real packs. Shared by `engine curate`
-// (offline build) and the live pool manager (runtime) so the two never drift. Current
-// packs: OMEGA = Pokemon mid-tier, RenaCrypt = One Piece mid-tier, Eden + Champion = the
-// premium band split; previous packs = the premium band rotated per pack. Cheap packs
-// exclude the premium band so they hold their game's mid-tier (distinct from the premium
-// packs). All lists are price-ascending.
+// (offline build) and the live pool manager (runtime) so the two never drift. Each pack draws
+// a FULL price-range spread of real cards from its game(s): OMEGA = all Pokemon, RenaCrypt =
+// all One Piece, Eden + Champion + the previous packs = the full mixed library. The
+// per-pack subset (and its cheap->pricey spread) is then chosen by pickSpread(Rotated) so the
+// three bands all fill with REAL cards. All lists are price-ascending. No fabricated filler.
 func allocatePacks(op, pkm []curatedCard) map[string][]curatedCard {
 	combined := dedupeByIdentity(append(append([]curatedCard{}, pkm...), op...))
-	sort.Slice(combined, func(i, j int) bool { return combined[i].val.PriceUsd > combined[j].val.PriceUsd })
-	premBand := combined
-	if len(premBand) > 30 {
-		premBand = premBand[:30]
-	}
-	premSet := map[string]bool{}
-	for _, c := range premBand {
-		premSet[c.slug] = true
-	}
-	champCands, edenCands := splitAlt(premBand) // premBand desc, so champion skews to the very top
-
 	out := map[string][]curatedCard{
-		"omega":     sortAsc(filterOut(pkm, premSet)),
-		"renacrypt": sortAsc(filterOut(op, premSet)),
-		"eden":      sortAsc(edenCands),
-		"champion":  sortAsc(champCands),
+		"omega":     sortAsc(pkm),
+		"renacrypt": sortAsc(op),
+		"eden":      sortAsc(combined),
+		"champion":  sortAsc(combined),
 	}
-	for i, id := range previousPackIDs {
-		off := 0
-		if len(premBand) > 0 {
-			off = (i * 5) % len(premBand)
-		}
-		out[id] = sortAsc(rotateCards(premBand, off))
+	for _, id := range previousPackIDs {
+		out[id] = sortAsc(combined)
 	}
 	return out
+}
+
+// cheapCapFor returns the price ceiling for a pack's common cards: a fraction of the ticket
+// price, so the high-probability bands are cheaper than the ticket and the pack reads as a
+// believable house edge. Falls back to a flat cap when the price is unknown.
+func cheapCapFor(price float64) float64 {
+	if price <= 0 {
+		return 60
+	}
+	return price * 0.55
+}
+
+// curateOffset gives each pack a stable spread offset so the committed (offline) fixtures are
+// not identical even when they draw from the same combined library. The live manager rotates
+// separately per cycle; this only differentiates the cold-start/offline baseline.
+func curateOffset(id string) int {
+	order := append([]string{"omega", "renacrypt", "eden", "champion"}, previousPackIDs...)
+	for i, p := range order {
+		if p == id {
+			return i * 3
+		}
+	}
+	return 0
 }
 
 func filterOut(cards []curatedCard, exclude map[string]bool) []curatedCard {
@@ -297,9 +334,9 @@ func runCurate() {
 	fmt.Printf("Pricing %d one-piece + %d pokemon slugs (live)…\n", len(op), len(pkm))
 
 	fmt.Println("[one-piece]")
-	opCards := priceSlugs(ctx, client, op, 50)
+	opCards := priceSlugs(ctx, client, op, len(op))
 	fmt.Println("[pokemon]")
-	pkmCards := priceSlugs(ctx, client, pkm, 50)
+	pkmCards := priceSlugs(ctx, client, pkm, len(pkm))
 
 	// Keep distinct real variants (name+set), not one-per-name, so the library is deep
 	// enough for wide packs. Renaiss's browseable set pages are bot-walled, so variants of
@@ -324,9 +361,11 @@ func runCurate() {
 		seed[c.slug] = c.val
 	}
 
+	packs := loadPacksForCommons()
 	built := map[string]Pool{}
 	for id, cards := range alloc {
-		built[id] = buildPool(id, idPrefix(id), pickSpread(cards, chasePerPack), vmap, seed)
+		cap := cheapCapFor(packs[id].PriceUsd)
+		built[id] = buildPool(id, idPrefix(id), pickLowPlusChase(cards, chasePerPack-2, 2, curateOffset(id), cap), vmap, seed)
 	}
 
 	// Guard: never clobber good fixtures with a throttled/empty run.

@@ -3,286 +3,185 @@
   "cards": [
     {
       "card": {
-        "id": "renacrypt-monkeydluffy-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Premium Card Collection -one Piece Day’24",
-        "fmvUsd": 160.59,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_109_ja_402644e347a343df87a8fc4dbc8d07f3_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -39.66
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-perona",
-        "name": "Perona",
-        "grade": "PSA 10",
-        "set": "Best 8 Prize For Flagship Battle In January 2024",
-        "fmvUsd": 176.33,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_093_ja_59d0747fad504240ba0683c4bfebe63f_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T13:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -31.05
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-monkeydluffy-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 188.92,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_6d6d94094ba14ee8b1f9c73ab00a136b_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -50.16
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-sabo",
-        "name": "Sabo",
-        "grade": "PSA 10",
-        "set": "Winner Prize For 8 Packs Battle",
-        "fmvUsd": 194.29,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_083_ja_5b564ccec0604bc1806872ea337c6372_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-08T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -44.36
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-nami",
-        "name": "Nami",
+        "id": "renacrypt-shanks",
+        "name": "Shanks",
         "grade": "PSA 10",
         "set": "Romance Dawn",
-        "fmvUsd": 228.82,
+        "fmvUsd": 2169.46,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_843ce6d967a54dd49d340326d51b0919_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T17:00:00.000Z",
+        "fmvAsOf": "2026-07-10T08:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -35.29
+        "fmvDeltaPct": -4.18
       },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-yamato",
-        "name": "Yamato",
-        "grade": "PSA 10",
-        "set": "Best 8 Prize For Flagship Battle In July 2024",
-        "fmvUsd": 244.11,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_112_ja_1700376c16744d20aa3904fc22e1b65c_sm.png?v=b36e9371",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T05:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -18.28
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-monkeydluffy-x-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Asia Special Prize for August 2023 Standard Battle",
-        "fmvUsd": 259.71,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_043_ja_98934e24b3f44c1c88fc4403b6880234_sm.png?v=ddec233d",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T15:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -29.62
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-monkeydluffy-x-x-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Championship Set 2022",
-        "fmvUsd": 269.83,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_001_ja_31c32e1f8d35440e82ccdb991a8020d2_sm.png?v=7a9aec5c",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -42.56
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-monkey-d-luffy",
-        "name": "Monkey D. Luffy",
-        "grade": "PSA 10",
-        "set": "One Piece Magazine Vol.20",
-        "fmvUsd": 310.67,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_014_ja_8c87839398b64b05a5267a377a6dd473_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T11:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -12.33
-      },
-      "weight": 0.0011111111111111111
-    },
-    {
-      "card": {
-        "id": "renacrypt-o-nami",
-        "name": "O-Nami",
-        "grade": "PSA 10",
-        "set": "Asia Special Prize For August 2024 Standard Battle",
-        "fmvUsd": 130.84,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op06_101_ja_1e60925d62034fb0a16fa29fb70bbfd7_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T01:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -45.18
-      },
-      "weight": 0.047142857142857146
+      "weight": 0.004
     },
     {
       "card": {
         "id": "renacrypt-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Gear5",
-        "fmvUsd": 137.75,
+        "set": "Dodgers One Piece Night",
+        "fmvUsd": 4534.91,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_001_en_90b5d9f54e98475e8363e728552a1a15_sm.png?v=d7c9d6ff",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -10.14
+        "fmvAsOf": "2026-07-09T02:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -11.8
       },
-      "weight": 0.047142857142857146
+      "weight": 0.004
     },
     {
       "card": {
-        "id": "renacrypt-portgasdace",
-        "name": "Portgas.D.Ace",
-        "grade": "PSA 10",
-        "set": "Carrying On His Will",
-        "fmvUsd": 152.43,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op13_119_en_6efdb3c7a5fa4eaf8ea4e837ded359c6_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": 1.84
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "rena-filler-helmeppo",
-        "name": "Helmeppo",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 64,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "rena-filler-kaya",
-        "name": "Kaya",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 96,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "rena-filler-morgan",
-        "name": "Morgan",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 122,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "rena-filler-bepo",
-        "name": "Bepo",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 146,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.047142857142857146
-    },
-    {
-      "card": {
-        "id": "rena-filler-coby",
-        "name": "Coby",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 14,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.22
-    },
-    {
-      "card": {
-        "id": "rena-filler-buggy",
-        "name": "Buggy",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 24,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.22
-    },
-    {
-      "card": {
-        "id": "rena-filler-alvida",
+        "id": "renacrypt-alvida-x",
         "name": "Alvida",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 40,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
+        "grade": "PSA 10",
+        "set": "Romance Dawn",
+        "fmvUsd": 36.76,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-23T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.22
+      "weight": 0.09733333333333333
+    },
+    {
+      "card": {
+        "id": "renacrypt-brook-x",
+        "name": "Brook",
+        "grade": "PSA 10",
+        "set": "Memorial Collection",
+        "fmvUsd": 41.17,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb01_046_en_0aa805f453ff46dfabde524739ab47d8_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09733333333333333
+    },
+    {
+      "card": {
+        "id": "renacrypt-usopp",
+        "name": "Usopp",
+        "grade": "PSA 10",
+        "set": "Anime 25th Collection",
+        "fmvUsd": 45.26,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_022_ja_73e1a71da51b4aa6bb70f080991a70b8_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-10T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09733333333333333
+    },
+    {
+      "card": {
+        "id": "renacrypt-alvida",
+        "name": "Alvida",
+        "grade": "Raw A",
+        "set": "Adventure On Kami’s Island",
+        "fmvUsd": 6.21,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-06T18:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-brook",
+        "name": "Brook",
+        "grade": "Raw A",
+        "set": "Egghead",
+        "fmvUsd": 6.29,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_011_ja_83766717b34b46e488470be39e6256ca_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-helmeppo",
+        "name": "Helmeppo",
+        "grade": "Raw A",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 6.61,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_092_ja_14df6a9ca78e45f3b0bebf0aea274e94_sm.png?v=f4aec072",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-02-02T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-helmeppo-x",
+        "name": "Helmeppo",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 9.6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-franky",
+        "name": "Franky",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 18.55,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_664a27075733415391a7c5d84e8ee3af_sm.png?v=a2948f02",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-03-22T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-franky-x",
+        "name": "Franky",
+        "grade": "CGC 10 Perfect",
+        "set": "Egghead",
+        "fmvUsd": 20.66,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_010_en_064599dde4c347e8ae90bcec83de40b1_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-franky-x-x",
+        "name": "Franky",
+        "grade": "CGC 10 Pristine",
+        "set": "Tournament Pack Vol.2",
+        "fmvUsd": 33.4,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_021_en_c519175aa0334bf4bf3328d06096ea35_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-23T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
     }
   ]
 }

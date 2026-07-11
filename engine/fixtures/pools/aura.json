@@ -3,286 +3,188 @@
   "cards": [
     {
       "card": {
+        "id": "aura-pikachu-with-grey-felt-hat",
+        "name": "Pikachu with Grey Felt Hat",
+        "grade": "PSA 10",
+        "set": "Pokemon SVP Black Star Promos",
+        "fmvUsd": 2858.37,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T23:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -8.97
+      },
+      "weight": 0.004
+    },
+    {
+      "card": {
         "id": "aura-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "One Piece Card Game 2nd Anniversary Set",
-        "fmvUsd": 615.47,
+        "set": "Dodgers One Piece Night",
+        "fmvUsd": 4534.91,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st13_015_ja_5c93524f5c6544f9a7ff3a9499ac0250_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T00:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -34.56
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "aura-gear-two",
-        "name": "Gear Two",
-        "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 653.49,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_080_en_941da00dee1a4fc89d66ecb15913bc17_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
+        "fmvAsOf": "2026-07-09T02:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": 1.52
+        "fmvDeltaPct": -11.8
       },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "aura-monkeydluffy-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Misc. Promos",
-        "fmvUsd": 684.69,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_055_en_48959d2235ee4a11bd92031c2894209c_sm.webp?v=37f641d4",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -31.03
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "aura-monkeydluffy-x-x",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "One Piece Card Game English 2nd Anniversary Set",
-        "fmvUsd": 844.44,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T04:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -31.85
-      },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "aura-luffy-\u0026-ace",
-        "name": "Luffy \u0026 Ace",
-        "grade": "PSA 10",
-        "set": "Luffy \u0026 Ace",
-        "fmvUsd": 985.84,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -68.56
-      },
-      "weight": 0.0008333333333333334
+      "weight": 0.004
     },
     {
       "card": {
         "id": "aura-nami",
         "name": "Nami",
         "grade": "PSA 10",
-        "set": "One Piece Card The Best",
-        "fmvUsd": 1285.18,
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 40.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_016_ja_810e867a590e4e378706dd6941fb1fda_sm.png?v=f2ab8489",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_prb02_012_ja_21a82a7497314b53ad1210bc00496dd1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T03:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": -16.25
+        "fmvAsOf": "2026-02-13T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "aura-shanks",
-        "name": "Shanks",
+        "id": "aura-usopp",
+        "name": "Usopp",
         "grade": "PSA 10",
-        "set": "Romance Dawn",
-        "fmvUsd": 2182.31,
+        "set": "Anime 25th Collection",
+        "fmvUsd": 45.26,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_022_ja_73e1a71da51b4aa6bb70f080991a70b8_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T04:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -3.35
+        "fmvAsOf": "2026-05-10T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "aura-monkeydluffy-x-x-x",
-        "name": "Monkey.D.Luffy",
+        "id": "aura-nami-x",
+        "name": "Nami",
         "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4545.75,
+        "set": "Paramount War",
+        "fmvUsd": 52.48,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op02_036_ja_161674c488f34803939c5d73f79640b8_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -10.34
+        "fmvAsOf": "2026-06-12T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "aura-zoro-juurou",
-        "name": "Zoro-Juurou",
-        "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 377.75,
+        "id": "aura-koby",
+        "name": "Koby",
+        "grade": "Raw A",
+        "set": "Egghead Crisis",
+        "fmvUsd": 6.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st18_004_en_b4e13749339b4c6d8eef0f7f91920318_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb04_044_ja_edc99c002c5a429a938ecc025848573d_sm.png?v=8014a515",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T00:00:00.000Z",
-        "fmvConfidence": "medium",
-        "fmvDeltaPct": 6.12
+        "fmvAsOf": "2026-02-09T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "aura-detective-pikachu",
-        "name": "Detective Pikachu",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Sv-P Promo",
-        "fmvUsd": 432.88,
+        "id": "aura-weedle",
+        "name": "Weedle",
+        "grade": "CGC 9.5",
+        "set": "Evolutions",
+        "fmvUsd": 13.9,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_098_ja_b8bc9b382c8c4fda91e563aceeb4d63b_sm.webp?v=f22e163d",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_evo_5_en_34ebefa1deae45398535d479f914c6b8_sm.png?v=188429f1",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T14:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.96
+        "fmvAsOf": "2026-04-12T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "aura-boa-hancock",
-        "name": "Boa Hancock",
-        "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 499.57,
+        "id": "aura-buggy",
+        "name": "Buggy",
+        "grade": "Raw A",
+        "set": "The Time Of Battle",
+        "fmvUsd": 14.28,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_051_ja_50e35ee306694ad5a1cd2648a6613fcc_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op16_041_ja_c7e5ce58217e4cdfa41698807fcafdf6_sm.png?v=a025fc59",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T10:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -34.42
+        "fmvAsOf": "2026-07-10T16:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -19.78
       },
-      "weight": 0.0008333333333333334
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-zubat",
+        "name": "Zubat",
+        "grade": "CGC 10 Pristine",
+        "set": "Hidden Legends",
+        "fmvUsd": 17.7,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hl_83_en_5f0e6982e8b4425b844d77b459ea9ccc_sm.png?v=31e8944d",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-11T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 18.08
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-brook",
+        "name": "Brook",
+        "grade": "CGC 10 Perfect",
+        "set": "Egghead",
+        "fmvUsd": 21.36,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_011_en_d85d76a4f1f74b3bbcb99ed8cc2e5a95_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-17T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-counter-catcher",
+        "name": "Counter Catcher",
+        "grade": "Raw A",
+        "set": "Future Flash",
+        "fmvUsd": 30.51,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4m_94_ja_c468646992a24a31bd6bdf8cfdcbf0a6_sm.png?v=503fac06",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
     },
     {
       "card": {
         "id": "aura-mega-gengar-ex",
         "name": "Mega Gengar Ex",
         "grade": "PSA 10",
-        "set": "Mega Dream ex",
-        "fmvUsd": 582.25,
+        "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
+        "fmvUsd": 37.09,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_240_ja_094085d7f46b458bbb09e296cede0093_sm.webp?v=7b1d2306",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_003_ja_de0d46db148a4f6ba0d64f1195c73e6e_sm.webp?v=5c4e345e",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T10:00:00.000Z",
+        "fmvAsOf": "2026-07-10T16:00:00.000Z",
         "fmvConfidence": "prime",
-        "fmvDeltaPct": -20.15
+        "fmvDeltaPct": -22.78
       },
-      "weight": 0.0008333333333333334
-    },
-    {
-      "card": {
-        "id": "aura-filler-zubat",
-        "name": "Zubat",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 118,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.11
-    },
-    {
-      "card": {
-        "id": "aura-filler-alvida",
-        "name": "Alvida",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 152,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.11
-    },
-    {
-      "card": {
-        "id": "aura-filler-caterpie",
-        "name": "Caterpie",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 182,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.11
-    },
-    {
-      "card": {
-        "id": "aura-filler-rattata",
-        "name": "Rattata",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 18,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.165
-    },
-    {
-      "card": {
-        "id": "aura-filler-coby",
-        "name": "Coby",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 32,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.165
-    },
-    {
-      "card": {
-        "id": "aura-filler-pidgey",
-        "name": "Pidgey",
-        "grade": "PSA 9",
-        "set": "Pokemon Base Common",
-        "fmvUsd": 52,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.165
-    },
-    {
-      "card": {
-        "id": "aura-filler-buggy",
-        "name": "Buggy",
-        "grade": "PSA 9",
-        "set": "One Piece Common",
-        "fmvUsd": 78,
-        "fmvIsAssumption": true,
-        "fmvSource": "Mock",
-        "fmvConfidence": "assumed"
-      },
-      "weight": 0.165
+      "weight": 0.09999999999999999
     }
   ]
 }

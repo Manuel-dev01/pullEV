@@ -56,7 +56,7 @@ example is ever shown as authoritative. Badges come from
 [`web/components/ProvenanceBadge.tsx`](../web/components/ProvenanceBadge.tsx):
 
 - `OFFICIAL` / `LIVE` for real Renaiss Index (beta) valuations.
-- `ASSUMED` for a labeled PullEV assumption (for example the cheap filler band in the odds model).
+- `ASSUMED` for a labeled PullEV assumption (rare unresolved cards; pools are otherwise 100% real Index prices).
 - `PULLEV MODEL` for pool membership and draw weights (Renaiss exposes no pool or odds API, so these are our
   construction, and they rotate each refresh cycle).
 - `BUNDLED SNAPSHOT` when the engine is unreachable and the app serves offline fallback data.

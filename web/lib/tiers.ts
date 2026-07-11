@@ -6,8 +6,8 @@ import type { Card, Pool } from "@shared/types";
 // scheme or real odds. Instead we model three labeled draw bands over the card prices — a
 // rare Chase band (~1%), a Mid band (~33%), and a Common band (~66%) — as OUR model. We set
 // the rare band near ~1% as an assumption, consistent with Renaiss surfacing a sub-1% top
-// tier; it is not a sourced Renaiss odds figure. Only the Chase band holds real Index-priced
-// cards; the Mid and Common bands are cheap labeled filler at assumed prices.
+// tier; it is not a sourced Renaiss odds figure. EVERY card is a real Index valuation, from
+// the cheap Common commons to the rare Chase; only the odds and pool membership are modeled.
 //
 // Each card's draw weight encodes its band (every card in a band shares a weight, and a
 // band's weights sum to its chance), so we recover the bands straight from the pool the UI

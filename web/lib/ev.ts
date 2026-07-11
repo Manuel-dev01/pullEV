@@ -22,7 +22,7 @@ export function computeEVFallback(
     caveats.push(`${assumed} of ${cards.length} card FMVs are assumptions, not live oracle reads.`);
   }
   if (priceIsAssumption) caveats.push("Pack price is unconfirmed and pending live verification.");
-  caveats.push("Pull odds (weights) and the commons tier are PullEV assumptions. Renaiss exposes no pool/odds API.");
+  caveats.push("Card prices are real (Renaiss Index); the pool membership and draw odds are a PullEV model, so this is an EV for a modeled pool, not Renaiss's actual pack. Renaiss exposes no pool/odds API.");
   caveats.push("Model assumes one card drawn per pack. Informational only. Not financial advice.");
   caveats.push("Computed offline from the bundled snapshot (engine unreachable).");
 
