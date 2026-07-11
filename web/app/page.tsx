@@ -110,7 +110,7 @@ export default async function Landing() {
             {/* 3D verdict console — REAL featured pack */}
             {featured && (
               <div style={{ perspective: 1600, marginTop: 40 }}>
-                <div style={{ position: "relative", width: 420, maxWidth: "88vw", transform: "rotateY(-16deg) rotateX(6deg) rotate(1deg)", borderRadius: 22, padding: 24, background: "linear-gradient(180deg,rgba(20,16,25,.9),rgba(10,8,15,.92))", border: "1px solid rgba(255,255,255,.12)", boxShadow: "0 40px 90px rgba(0,0,0,.6),0 0 60px rgba(123,123,255,.2)", backdropFilter: "blur(10px)", overflow: "hidden", animation: "pv-floaty 8s ease-in-out infinite" }}>
+                <div style={{ position: "relative", width: 420, maxWidth: "88vw", transform: "rotateY(-16deg) rotateX(6deg) rotate(-4deg)", borderRadius: 22, padding: 24, background: "linear-gradient(180deg,rgba(20,16,25,.9),rgba(10,8,15,.92))", border: "1px solid rgba(255,255,255,.12)", boxShadow: "0 40px 90px rgba(0,0,0,.6),0 0 60px rgba(123,123,255,.2)", backdropFilter: "blur(10px)", overflow: "hidden", animation: "pv-floaty 8s ease-in-out infinite" }}>
                   <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 38, background: "linear-gradient(90deg,rgba(255,95,180,.16),rgba(63,240,207,.12))", mixBlendMode: "screen", filter: "blur(8px)", animation: "pv-scan 4s linear infinite", pointerEvents: "none" }} />
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
