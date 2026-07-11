@@ -35,49 +35,65 @@
     },
     {
       "card": {
-        "id": "costume-lt-surges-rattata",
-        "name": "Lt. Surge's Rattata",
+        "id": "costume-ionos-wattrel",
+        "name": "Iono's Wattrel",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
-        "fmvUsd": 39.22,
+        "set": "Pokemon Japanese Sv-P Promo",
+        "fmvUsd": 39.62,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_232_ja_0db0d0455adb4bbfa6fd4b7fc65693ef_sm.webp?v=a2de27fb",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-01T00:00:00.000Z",
-        "fmvConfidence": "low"
+        "fmvAsOf": "2026-07-10T10:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -14.94
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "costume-lt-surges-spearow",
-        "name": "Lt. Surge's Spearow",
+        "id": "costume-caterpie",
+        "name": "Caterpie",
         "grade": "PSA 10",
-        "set": "Gym Heroes",
-        "fmvUsd": 41.5,
+        "set": "Hidden Fates",
+        "fmvUsd": 41.33,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_g1_52_en_3fcbfd51967c454a9646febd10bfce93_sm.png?v=fd83a063",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hif_1_en_3e0dbf6fcc9e43d28485517d98cc5c42_sm.png?v=1c065a23",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-04-21T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "costume-nami",
-        "name": "Nami",
+        "id": "costume-franky-x",
+        "name": "Franky",
         "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 50.38,
+        "set": "500 Years In The Future",
+        "fmvUsd": 45.73,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_054_en_166d855141c04b2f99ad54c1a1e25a43_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_107_ja_9bb660a11f214d3a8706db0970f62a00_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-25T00:00:00.000Z",
+        "fmvAsOf": "2026-06-28T00:00:00.000Z",
         "fmvConfidence": "low",
-        "fmvDeltaPct": -6.72
+        "fmvDeltaPct": -33.38
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "costume-franky-x-x",
+        "name": "Franky",
+        "grade": "PSA 10",
+        "set": "Emperors In The New World",
+        "fmvUsd": 52.4,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-04T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
     },
     {
       "card": {
@@ -92,22 +108,37 @@
         "fmvAsOf": "2026-07-06T18:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "costume-spearow",
-        "name": "Spearow",
-        "grade": "CGC 9.5",
-        "set": "Roaring Skies",
-        "fmvUsd": 7.5,
+        "id": "costume-pidgey",
+        "name": "Pidgey",
+        "grade": "Raw A",
+        "set": "Shiny Treasure ex",
+        "fmvUsd": 6.81,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_ros_65_en_3f844d81015046379904eb2fb2966243_sm.png?v=d54ce76c",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_304_ja_a083451da4cf4015b9ec55ad3dde586d_sm.png?v=e0e1b96f",
         "fmvSource": "Index",
-        "fmvAsOf": "2024-06-10T00:00:00.000Z",
+        "fmvAsOf": "2024-08-09T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "costume-franky",
+        "name": "Franky",
+        "grade": "CGC 9",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 10,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_ja_6914656b52964308b0ada2eecdee818f_sm.png?v=07192cdd",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-01T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -122,7 +153,7 @@
         "fmvAsOf": "2025-11-09T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -137,22 +168,37 @@
         "fmvAsOf": "2021-09-29T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "costume-sanji",
-        "name": "Sanji",
-        "grade": "CGC 10 Perfect",
-        "set": "The Three Captains",
-        "fmvUsd": 20.4,
+        "id": "costume-weedle",
+        "name": "Weedle",
+        "grade": "Raw A",
+        "set": "Tag Bolt",
+        "fmvUsd": 18.54,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_004_en_fe01b46ae64b469c82ff114e26532a63_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sm9_2_ja_982723d742784f49beab240851467b55_sm.png?v=200e5ee4",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-04-13T00:00:00.000Z",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "costume-zubat",
+        "name": "Zubat",
+        "grade": "PSA 10",
+        "set": "Paradox Rift",
+        "fmvUsd": 21.23,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_par_110_en_322699f772934aa2a80005dc5802bfe4_sm.png?v=51015c14",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-08-06T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -168,22 +214,39 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": -24.93
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "costume-alvida-x",
-        "name": "Alvida",
-        "grade": "BGS 10 Pristine",
-        "set": "Romance Dawn",
-        "fmvUsd": 34.5,
+        "id": "costume-spearow",
+        "name": "Spearow",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese M1l-Mega Brave",
+        "fmvUsd": 33,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m1l_074_ja_9c84541975fe4ac3bbd699e911c82f30_sm.webp?v=c87637db",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-11-01T00:00:00.000Z",
-        "fmvConfidence": "low"
+        "fmvAsOf": "2026-07-09T17:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -18.86
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "costume-mega-gengar-ex",
+        "name": "Mega Gengar Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
+        "fmvUsd": 37.09,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_003_ja_de0d46db148a4f6ba0d64f1195c73e6e_sm.webp?v=5c4e345e",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T16:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -22.78
+      },
+      "weight": 0.06999999999999999
     }
   ]
 }

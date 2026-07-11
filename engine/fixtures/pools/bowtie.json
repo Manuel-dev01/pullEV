@@ -35,64 +35,93 @@
     },
     {
       "card": {
-        "id": "bowtie-lt-surges-rattata",
-        "name": "Lt. Surge's Rattata",
+        "id": "bowtie-rattata",
+        "name": "Rattata",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
-        "fmvUsd": 39.22,
+        "set": "Expedition",
+        "fmvUsd": 38.08,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_e1_128_en_2bbd48a3ce8c433e96e3034dd8b545b4_sm.png?v=99e96114",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-01T00:00:00.000Z",
+        "fmvAsOf": "2025-09-07T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
-    },
-    {
-      "card": {
-        "id": "bowtie-lt-surges-spearow",
-        "name": "Lt. Surge's Spearow",
-        "grade": "PSA 10",
-        "set": "Gym Heroes",
-        "fmvUsd": 41.5,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_g1_52_en_3fcbfd51967c454a9646febd10bfce93_sm.png?v=fd83a063",
-        "fmvSource": "Index",
-        "fmvAsOf": "2025-09-29T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
         "id": "bowtie-nami",
         "name": "Nami",
         "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 50.38,
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 40.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_054_en_166d855141c04b2f99ad54c1a1e25a43_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_prb02_012_ja_21a82a7497314b53ad1210bc00496dd1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-25T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -6.72
+        "fmvAsOf": "2026-02-13T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "bowtie-alvida",
-        "name": "Alvida",
-        "grade": "Raw A",
-        "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.21,
+        "id": "bowtie-sanji-x",
+        "name": "Sanji",
+        "grade": "PSA 10",
+        "set": "Kingdoms Of Intrigue",
+        "fmvUsd": 43.02,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_104_ja_c8ed0892fe9a4ca88d3e747c8365b529_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T18:00:00.000Z",
+        "fmvAsOf": "2026-06-25T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "bowtie-brook-x",
+        "name": "Brook",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 50,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb01_046_ja_0f9135ea448741b59ebee994c5250a9c_sm.png?v=47315c69",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-04-11T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "bowtie-zubat",
+        "name": "Zubat",
+        "grade": "CGC 9.5",
+        "set": "Shrouded Fable",
+        "fmvUsd": 6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sfa_27_en_c31916a7881a45c0b8f262806aaebf92_sm.png?v=8a5d91dc",
+        "fmvSource": "Index",
+        "fmvAsOf": "2024-11-25T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "bowtie-brook",
+        "name": "Brook",
+        "grade": "Raw A",
+        "set": "Adventure On Kami’s Island",
+        "fmvUsd": 6.31,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-16T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -107,22 +136,38 @@
         "fmvAsOf": "2024-06-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "bowtie-rattata",
-        "name": "Rattata",
-        "grade": "CGC 9",
-        "set": "Secret Wonders",
-        "fmvUsd": 15,
+        "id": "bowtie-buggy",
+        "name": "Buggy",
+        "grade": "Raw A",
+        "set": "The Time Of Battle",
+        "fmvUsd": 14.28,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sw_103_en_940cc13e505b48fb9d6416051c3ecb6f_sm.png?v=44c26a00",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op16_041_ja_c7e5ce58217e4cdfa41698807fcafdf6_sm.png?v=a025fc59",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-12-10T00:00:00.000Z",
+        "fmvAsOf": "2026-07-10T16:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -19.78
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "bowtie-fearow",
+        "name": "Fearow",
+        "grade": "CGC 9.5",
+        "set": "Crystal Guardians",
+        "fmvUsd": 17.49,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_cg_18_en_32f5b30a569c46c0b2f04fa08f1fd74d_sm.png?v=0aaf6421",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -137,7 +182,7 @@
         "fmvAsOf": "2026-06-22T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -152,27 +197,41 @@
         "fmvAsOf": "2025-04-13T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "bowtie-pidgeot-ex",
-        "name": "Pidgeot ex",
-        "grade": "PSA 10",
-        "set": "Ruler of the Black Flame",
-        "fmvUsd": 29.99,
+        "id": "bowtie-spearow-x",
+        "name": "Spearow",
+        "grade": "CGC 10 Pristine",
+        "set": "Majestic Dawn",
+        "fmvUsd": 21.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_md_74_en_1e55a19256ff4b5eb1459984147ba840_sm.png?v=e2f5ac3b",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-01T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -24.93
+        "fmvAsOf": "2025-02-10T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "bowtie-alvida-x",
+        "id": "bowtie-usopp",
+        "name": "Usopp",
+        "grade": "CGC 10 Perfect",
+        "set": "Straw Hat Crew",
+        "fmvUsd": 30.48,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_002_en_d68b5c2706064321a741c91f7f548d91_sm.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "bowtie-alvida",
         "name": "Alvida",
         "grade": "BGS 10 Pristine",
         "set": "Romance Dawn",
@@ -183,7 +242,7 @@
         "fmvAsOf": "2025-11-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

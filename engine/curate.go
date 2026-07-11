@@ -23,10 +23,14 @@ import (
 // weightLadder is a realistic gacha weighting (commons dominate), cheapest→priciest.
 var weightLadder = []float64{80, 22, 9, 4, 2, 1, 1, 1, 1, 1}
 
-// poolSize is the total number of real cards in each pack's pool (10 cheap commons + 2 chase,
-// selected by pickLowPlusChase). Curate and the live rotation manager (livepool.go) use the
-// same value so the offline build and runtime rotation agree.
-const poolSize = 12
+// poolSize is the total number of real cards in each pack's pool (14 cheap commons + 2 chase,
+// selected by pickLowPlusChase). Sized to the real cheap-card depth of the thinnest game
+// (Pokemon has ~15 cards under OMEGA's price cap), so every card stays a real Index valuation
+// and the pool never has to reach for cards above the cap. `applyTiers` then bins these into
+// the three bands (roughly 2 Chase / 4 Mid / 10 Common), so the 70%-Common bulk reads as a
+// real sample rather than a token few. Curate and the live rotation manager (livepool.go) use
+// the same value so the offline build and runtime rotation agree.
+const poolSize = 16
 
 type curatedCard struct {
 	slug string

@@ -46,26 +46,42 @@
         "fmvAsOf": "2025-05-18T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
         "id": "plasma-caterpie-x",
         "name": "Caterpie",
         "grade": "PSA 10",
-        "set": "Legendary Collection",
-        "fmvUsd": 43.19,
+        "set": "Hidden Fates",
+        "fmvUsd": 41.33,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hif_1_en_3e0dbf6fcc9e43d28485517d98cc5c42_sm.png?v=1c065a23",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-04-08T00:00:00.000Z",
+        "fmvAsOf": "2026-04-21T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "plasma-franky",
+        "id": "plasma-franky-x",
+        "name": "Franky",
+        "grade": "PSA 10",
+        "set": "500 Years In The Future",
+        "fmvUsd": 45.73,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_107_ja_9bb660a11f214d3a8706db0970f62a00_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-28T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -33.38
+      },
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "plasma-franky-x-x",
         "name": "Franky",
         "grade": "PSA 10",
         "set": "Emperors In The New World",
@@ -76,67 +92,97 @@
         "fmvAsOf": "2026-06-04T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "plasma-brook",
-        "name": "Brook",
+        "id": "plasma-alvida",
+        "name": "Alvida",
         "grade": "Raw A",
         "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.31,
+        "fmvUsd": 6.21,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-16T00:00:00.000Z",
+        "fmvAsOf": "2026-07-06T18:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "plasma-helmeppo",
-        "name": "Helmeppo",
-        "grade": "CGC 10 Perfect",
-        "set": "One Piece Card The Best",
-        "fmvUsd": 9.6,
+        "id": "plasma-pidgey",
+        "name": "Pidgey",
+        "grade": "Raw A",
+        "set": "Shiny Treasure ex",
+        "fmvUsd": 6.81,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_304_ja_a083451da4cf4015b9ec55ad3dde586d_sm.png?v=e0e1b96f",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvAsOf": "2024-08-09T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "plasma-fearow",
-        "name": "Fearow",
-        "grade": "PSA 9",
-        "set": "Sun \u0026 Moon",
-        "fmvUsd": 15.39,
+        "id": "plasma-franky",
+        "name": "Franky",
+        "grade": "CGC 9",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 10,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_ja_6914656b52964308b0ada2eecdee818f_sm.png?v=07192cdd",
         "fmvSource": "Index",
-        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-07-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "plasma-sanji",
-        "name": "Sanji",
-        "grade": "CGC 10 Perfect",
-        "set": "The Three Captains",
-        "fmvUsd": 20.4,
+        "id": "plasma-raticate",
+        "name": "Raticate",
+        "grade": "CGC 10 Pristine",
+        "set": "Evolutions",
+        "fmvUsd": 15,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_004_en_fe01b46ae64b469c82ff114e26532a63_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_evo_67_en_3c1e00e3929d44dda8adfe74854fdce6_sm.png?v=b1e3ed36",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-04-13T00:00:00.000Z",
+        "fmvAsOf": "2025-11-09T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "plasma-weedle",
+        "name": "Weedle",
+        "grade": "Raw A",
+        "set": "Tag Bolt",
+        "fmvUsd": 18.54,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sm9_2_ja_982723d742784f49beab240851467b55_sm.png?v=200e5ee4",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "plasma-zubat",
+        "name": "Zubat",
+        "grade": "PSA 10",
+        "set": "Paradox Rift",
+        "fmvUsd": 21.23,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_par_110_en_322699f772934aa2a80005dc5802bfe4_sm.png?v=51015c14",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-08-06T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -152,22 +198,39 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": -24.93
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "plasma-alvida",
-        "name": "Alvida",
-        "grade": "BGS 10 Pristine",
-        "set": "Romance Dawn",
-        "fmvUsd": 34.5,
+        "id": "plasma-spearow",
+        "name": "Spearow",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese M1l-Mega Brave",
+        "fmvUsd": 33,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m1l_074_ja_9c84541975fe4ac3bbd699e911c82f30_sm.webp?v=c87637db",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-11-01T00:00:00.000Z",
-        "fmvConfidence": "low"
+        "fmvAsOf": "2026-07-09T17:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -18.86
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "plasma-mega-gengar-ex",
+        "name": "Mega Gengar Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
+        "fmvUsd": 37.09,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_003_ja_de0d46db148a4f6ba0d64f1195c73e6e_sm.webp?v=5c4e345e",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T16:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -22.78
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -183,7 +246,7 @@
         "fmvConfidence": "prime",
         "fmvDeltaPct": -14.94
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

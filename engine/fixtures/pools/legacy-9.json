@@ -35,33 +35,48 @@
     },
     {
       "card": {
-        "id": "legacy9-lt-surges-rattata",
-        "name": "Lt. Surge's Rattata",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
-        "fmvUsd": 39.22,
+        "id": "legacy9-usopp-x-x",
+        "name": "Usopp",
+        "grade": "CGC 10 Perfect",
+        "set": "The Azure Sea’s Seven",
+        "fmvUsd": 39,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op14_022_en_cee9e032da764fad8945e1f23176f25b_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-01T00:00:00.000Z",
+        "fmvAsOf": "2026-06-27T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "legacy9-lt-surges-spearow",
-        "name": "Lt. Surge's Spearow",
+        "id": "legacy9-brook",
+        "name": "Brook",
         "grade": "PSA 10",
-        "set": "Gym Heroes",
-        "fmvUsd": 41.5,
+        "set": "Memorial Collection",
+        "fmvUsd": 41.17,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_g1_52_en_3fcbfd51967c454a9646febd10bfce93_sm.png?v=fd83a063",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb01_046_en_0aa805f453ff46dfabde524739ab47d8_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "legacy9-caterpie",
+        "name": "Caterpie",
+        "grade": "PSA 10",
+        "set": "Legendary Collection",
+        "fmvUsd": 43.19,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-04-08T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
     },
     {
       "card": {
@@ -77,22 +92,37 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": -6.72
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "legacy9-alvida",
-        "name": "Alvida",
-        "grade": "Raw A",
-        "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.21,
+        "id": "legacy9-helmeppo",
+        "name": "Helmeppo",
+        "grade": "CGC 9.5",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 6,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_ja_ce3af4ca05fd40fe831c9d89fc0d283b_sm.png?v=4c05e60c",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T18:00:00.000Z",
+        "fmvAsOf": "2024-11-21T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy9-koby",
+        "name": "Koby",
+        "grade": "Raw A",
+        "set": "Egghead Crisis",
+        "fmvUsd": 6.4,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb04_044_ja_edc99c002c5a429a938ecc025848573d_sm.png?v=8014a515",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-02-09T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -107,11 +137,11 @@
         "fmvAsOf": "2023-02-11T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "legacy9-helmeppo",
+        "id": "legacy9-helmeppo-x",
         "name": "Helmeppo",
         "grade": "CGC 10 Perfect",
         "set": "One Piece Card The Best",
@@ -122,22 +152,37 @@
         "fmvAsOf": "2025-01-19T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "legacy9-fearow",
-        "name": "Fearow",
+        "id": "legacy9-team-rockets-ekans",
+        "name": "Team Rocket's Ekans",
         "grade": "PSA 9",
-        "set": "Sun \u0026 Moon",
-        "fmvUsd": 15.39,
+        "set": "Destined Rivals",
+        "fmvUsd": 14.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_dri_112_en_22219d8970da4d90b65d63c9c1266919_sm.png?v=7ef755e3",
         "fmvSource": "Index",
-        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-03-03T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy9-pidgey",
+        "name": "Pidgey",
+        "grade": "CGC 10 Pristine",
+        "set": "Legendary Collection",
+        "fmvUsd": 17.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_85_en_4e99c2a1745b4104ba88207378b70d8f_sm.png?v=75302244",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -152,38 +197,53 @@
         "fmvAsOf": "2025-04-13T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "legacy9-pidgeot-ex",
-        "name": "Pidgeot ex",
-        "grade": "PSA 10",
-        "set": "Ruler of the Black Flame",
-        "fmvUsd": 29.99,
+        "id": "legacy9-ekans",
+        "name": "Ekans",
+        "grade": "CGC 10 Pristine",
+        "set": "Dragon Frontiers",
+        "fmvUsd": 24,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_df_47_en_587422bd5f0c4cce856d26b493c0741c_sm.png?v=dba1927b",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-01T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -24.93
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "legacy9-alvida-x",
-        "name": "Alvida",
-        "grade": "BGS 10 Pristine",
-        "set": "Romance Dawn",
-        "fmvUsd": 34.5,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvAsOf": "2026-01-04T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy9-counter-catcher",
+        "name": "Counter Catcher",
+        "grade": "Raw A",
+        "set": "Future Flash",
+        "fmvUsd": 30.51,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4m_94_ja_c468646992a24a31bd6bdf8cfdcbf0a6_sm.png?v=503fac06",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy9-usopp-x",
+        "name": "Usopp",
+        "grade": "CGC 10 Perfect",
+        "set": "Egghead",
+        "fmvUsd": 35.66,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_002_en_2d76eef467444ba1b4016a9cd1b14770_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-11T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -52.45
+      },
+      "weight": 0.06999999999999999
     }
   ]
 }

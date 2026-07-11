@@ -3,7 +3,7 @@
   "cards": [
     {
       "card": {
-        "id": "ribbon-nami",
+        "id": "ribbon-nami-x",
         "name": "Nami",
         "grade": "PSA 10",
         "set": "One Piece Card The Best",
@@ -35,22 +35,37 @@
     },
     {
       "card": {
-        "id": "ribbon-caterpie",
-        "name": "Caterpie",
+        "id": "ribbon-usopp-x-x",
+        "name": "Usopp",
         "grade": "CGC 10 Perfect",
-        "set": "FireRed \u0026 LeafGreen",
-        "fmvUsd": 39.9,
+        "set": "The Azure Sea’s Seven",
+        "fmvUsd": 39,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_rg_56_en_1bd6088c58a240ebbb688a024c218386_sm.png?v=8e5c57e6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op14_022_en_cee9e032da764fad8945e1f23176f25b_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-05-18T00:00:00.000Z",
+        "fmvAsOf": "2026-06-27T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "ribbon-caterpie-x",
+        "id": "ribbon-brook",
+        "name": "Brook",
+        "grade": "PSA 10",
+        "set": "Memorial Collection",
+        "fmvUsd": 41.17,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb01_046_en_0aa805f453ff46dfabde524739ab47d8_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "ribbon-caterpie",
         "name": "Caterpie",
         "grade": "PSA 10",
         "set": "Legendary Collection",
@@ -61,67 +76,98 @@
         "fmvAsOf": "2026-04-08T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "ribbon-franky",
-        "name": "Franky",
+        "id": "ribbon-nami",
+        "name": "Nami",
         "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 52.4,
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 50.38,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_054_en_166d855141c04b2f99ad54c1a1e25a43_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-04T00:00:00.000Z",
-        "fmvConfidence": "low"
+        "fmvAsOf": "2026-06-25T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -6.72
       },
-      "weight": 0.09733333333333333
-    },
-    {
-      "card": {
-        "id": "ribbon-brook",
-        "name": "Brook",
-        "grade": "Raw A",
-        "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.31,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-05-16T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
+      "weight": 0.073
     },
     {
       "card": {
         "id": "ribbon-helmeppo",
         "name": "Helmeppo",
-        "grade": "CGC 10 Perfect",
+        "grade": "CGC 9.5",
         "set": "One Piece Card The Best",
-        "fmvUsd": 9.6,
+        "fmvUsd": 6,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_ja_ce3af4ca05fd40fe831c9d89fc0d283b_sm.png?v=4c05e60c",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvAsOf": "2024-11-21T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "ribbon-fearow",
-        "name": "Fearow",
-        "grade": "PSA 9",
-        "set": "Sun \u0026 Moon",
-        "fmvUsd": 15.39,
+        "id": "ribbon-koby",
+        "name": "Koby",
+        "grade": "Raw A",
+        "set": "Egghead Crisis",
+        "fmvUsd": 6.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb04_044_ja_edc99c002c5a429a938ecc025848573d_sm.png?v=8014a515",
         "fmvSource": "Index",
-        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-02-09T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "ribbon-usopp",
+        "name": "Usopp",
+        "grade": "Raw A",
+        "set": "Pillars Of Strength",
+        "fmvUsd": 7.64,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op03_041_ja_10023bca85c24cf191e287528089d9ce_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2023-02-11T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "ribbon-team-rockets-ekans",
+        "name": "Team Rocket's Ekans",
+        "grade": "PSA 9",
+        "set": "Destined Rivals",
+        "fmvUsd": 14.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_dri_112_en_22219d8970da4d90b65d63c9c1266919_sm.png?v=7ef755e3",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-03-03T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "ribbon-pidgey",
+        "name": "Pidgey",
+        "grade": "CGC 10 Pristine",
+        "set": "Legendary Collection",
+        "fmvUsd": 17.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_85_en_4e99c2a1745b4104ba88207378b70d8f_sm.png?v=75302244",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -136,27 +182,41 @@
         "fmvAsOf": "2025-04-13T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "ribbon-pidgeot-ex",
-        "name": "Pidgeot ex",
-        "grade": "PSA 10",
-        "set": "Ruler of the Black Flame",
-        "fmvUsd": 29.99,
+        "id": "ribbon-ekans",
+        "name": "Ekans",
+        "grade": "CGC 10 Pristine",
+        "set": "Dragon Frontiers",
+        "fmvUsd": 24,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_df_47_en_587422bd5f0c4cce856d26b493c0741c_sm.png?v=dba1927b",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-01T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -24.93
+        "fmvAsOf": "2026-01-04T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "ribbon-usopp",
+        "id": "ribbon-counter-catcher",
+        "name": "Counter Catcher",
+        "grade": "Raw A",
+        "set": "Future Flash",
+        "fmvUsd": 30.51,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4m_94_ja_c468646992a24a31bd6bdf8cfdcbf0a6_sm.png?v=503fac06",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "ribbon-usopp-x",
         "name": "Usopp",
         "grade": "CGC 10 Perfect",
         "set": "Egghead",
@@ -168,7 +228,7 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": -52.45
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -183,7 +243,7 @@
         "fmvAsOf": "2025-02-23T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

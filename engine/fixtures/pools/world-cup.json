@@ -35,67 +35,97 @@
     },
     {
       "card": {
-        "id": "worldcup-caterpie",
-        "name": "Caterpie",
-        "grade": "CGC 10 Perfect",
-        "set": "FireRed \u0026 LeafGreen",
-        "fmvUsd": 39.9,
+        "id": "worldcup-lt-surges-rattata",
+        "name": "Lt. Surge's Rattata",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
+        "fmvUsd": 39.22,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_rg_56_en_1bd6088c58a240ebbb688a024c218386_sm.png?v=8e5c57e6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-05-18T00:00:00.000Z",
+        "fmvAsOf": "2026-05-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "worldcup-caterpie-x",
-        "name": "Caterpie",
+        "id": "worldcup-sanji",
+        "name": "Sanji",
         "grade": "PSA 10",
-        "set": "Legendary Collection",
-        "fmvUsd": 43.19,
+        "set": "Royal Blood",
+        "fmvUsd": 41.3,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op10_005_en_0aa1101bc8f945cf9106597e5cf115e1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-04-08T00:00:00.000Z",
+        "fmvAsOf": "2026-06-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "worldcup-franky-x",
-        "name": "Franky",
+        "id": "worldcup-usopp",
+        "name": "Usopp",
         "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 52.4,
+        "set": "Anime 25th Collection",
+        "fmvUsd": 45.26,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_022_ja_73e1a71da51b4aa6bb70f080991a70b8_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-04T00:00:00.000Z",
+        "fmvAsOf": "2026-05-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
         "id": "worldcup-brook",
         "name": "Brook",
-        "grade": "Raw A",
+        "grade": "CGC 10 Perfect",
         "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.31,
+        "fmvUsd": 52,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_33fcc11e232e4e87885452a4e792c1bd_sm.png?v=862dfad5",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-16T00:00:00.000Z",
+        "fmvAsOf": "2026-06-28T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "worldcup-buggy",
+        "name": "Buggy",
+        "grade": "Raw A",
+        "set": "BLUE Buggy",
+        "fmvUsd": 6.2,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_042_ja_21ae9ee7376440bd8a0a2256af8dd668_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-24T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
         "id": "worldcup-helmeppo",
+        "name": "Helmeppo",
+        "grade": "Raw A",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 6.61,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_092_ja_14df6a9ca78e45f3b0bebf0aea274e94_sm.png?v=f4aec072",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-02-02T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "worldcup-helmeppo-x",
         "name": "Helmeppo",
         "grade": "CGC 10 Perfect",
         "set": "One Piece Card The Best",
@@ -106,22 +136,38 @@
         "fmvAsOf": "2025-01-19T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "worldcup-fearow",
-        "name": "Fearow",
-        "grade": "PSA 9",
-        "set": "Sun \u0026 Moon",
-        "fmvUsd": 15.39,
+        "id": "worldcup-rattata",
+        "name": "Rattata",
+        "grade": "CGC 9",
+        "set": "Secret Wonders",
+        "fmvUsd": 15,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sw_103_en_940cc13e505b48fb9d6416051c3ecb6f_sm.png?v=44c26a00",
         "fmvSource": "Index",
-        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvAsOf": "2025-12-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "worldcup-zubat",
+        "name": "Zubat",
+        "grade": "CGC 10 Pristine",
+        "set": "Hidden Legends",
+        "fmvUsd": 17.7,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hl_83_en_5f0e6982e8b4425b844d77b459ea9ccc_sm.png?v=31e8944d",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-11T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 18.08
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -136,11 +182,11 @@
         "fmvAsOf": "2026-04-26T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "worldcup-zubat",
+        "id": "worldcup-zubat-x",
         "name": "Zubat",
         "grade": "PSA 10",
         "set": "Paradox Rift",
@@ -151,22 +197,38 @@
         "fmvAsOf": "2025-08-06T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "worldcup-usopp",
-        "name": "Usopp",
+        "id": "worldcup-zubat-x-x",
+        "name": "Zubat",
         "grade": "CGC 10 Perfect",
-        "set": "Straw Hat Crew",
-        "fmvUsd": 30.48,
+        "set": "Delta Species",
+        "fmvUsd": 27,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_002_en_d68b5c2706064321a741c91f7f548d91_sm.webp",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_ds_88_en_32f7b0cf58464f49abf828c40c59d255_sm.png?v=30854628",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-04-26T00:00:00.000Z",
+        "fmvAsOf": "2025-11-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "worldcup-zubat-x-x-x",
+        "name": "Zubat",
+        "grade": "CGC 10 Pristine",
+        "set": "Skyridge",
+        "fmvUsd": 31.48,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_e3_117_en_def466f6afcf4fec916c529fb5092dde_sm.png?v=d9af87b3",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-07T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -6.31
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -181,7 +243,7 @@
         "fmvAsOf": "2025-02-23T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

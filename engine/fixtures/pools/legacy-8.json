@@ -35,18 +35,18 @@
     },
     {
       "card": {
-        "id": "legacy8-lt-surges-rattata",
-        "name": "Lt. Surge's Rattata",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
-        "fmvUsd": 39.22,
+        "id": "legacy8-caterpie",
+        "name": "Caterpie",
+        "grade": "CGC 10 Perfect",
+        "set": "FireRed \u0026 LeafGreen",
+        "fmvUsd": 39.9,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_rg_56_en_1bd6088c58a240ebbb688a024c218386_sm.png?v=8e5c57e6",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-01T00:00:00.000Z",
+        "fmvAsOf": "2025-05-18T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
@@ -61,23 +61,38 @@
         "fmvAsOf": "2025-09-29T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "legacy8-team-rockets-mimikyu",
+        "name": "Team Rocket's Mimikyu",
+        "grade": "PSA 10",
+        "set": "Mega Dream ex",
+        "fmvUsd": 47.34,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_205_ja_537f8812501c4db5b345b78c8c77f0d1_sm.webp?v=c60caf78",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T08:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -12.07
+      },
+      "weight": 0.073
     },
     {
       "card": {
         "id": "legacy8-nami",
         "name": "Nami",
         "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 50.38,
+        "set": "Paramount War",
+        "fmvUsd": 52.48,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_054_en_166d855141c04b2f99ad54c1a1e25a43_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op02_036_ja_161674c488f34803939c5d73f79640b8_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-25T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -6.72
+        "fmvAsOf": "2026-06-12T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
@@ -92,7 +107,7 @@
         "fmvAsOf": "2026-06-19T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -107,22 +122,37 @@
         "fmvAsOf": "2026-05-16T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
         "id": "legacy8-helmeppo",
         "name": "Helmeppo",
-        "grade": "CGC 10 Perfect",
-        "set": "One Piece Card The Best",
-        "fmvUsd": 9.6,
+        "grade": "CGC 9.5",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 7.2,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_092_ja_5bdaf2a7565d4c12b950f4819d0ea83c_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvAsOf": "2025-08-31T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy8-weedle",
+        "name": "Weedle",
+        "grade": "CGC 9.5",
+        "set": "Evolutions",
+        "fmvUsd": 13.9,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_evo_5_en_34ebefa1deae45398535d479f914c6b8_sm.png?v=188429f1",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-04-12T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -137,53 +167,83 @@
         "fmvAsOf": "2021-09-29T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "legacy8-sanji",
-        "name": "Sanji",
+        "id": "legacy8-franky",
+        "name": "Franky",
         "grade": "CGC 10 Perfect",
-        "set": "The Three Captains",
-        "fmvUsd": 20.4,
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 18.55,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_004_en_fe01b46ae64b469c82ff114e26532a63_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_664a27075733415391a7c5d84e8ee3af_sm.png?v=a2948f02",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-04-13T00:00:00.000Z",
+        "fmvAsOf": "2026-03-22T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy8-brook-x-x",
+        "name": "Brook",
+        "grade": "CGC 10 Perfect",
+        "set": "Egghead",
+        "fmvUsd": 21.36,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_011_en_d85d76a4f1f74b3bbcb99ed8cc2e5a95_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-17T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy8-franky-x",
+        "name": "Franky",
+        "grade": "PSA 10",
+        "set": "Royal Blood",
+        "fmvUsd": 30.2,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op10_090_ja_256c131148c742a2875e78da0488ae39_sm.png?v=5812b589",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "legacy8-franky-x-x",
+        "name": "Franky",
+        "grade": "CGC 10 Pristine",
+        "set": "Tournament Pack Vol.2",
+        "fmvUsd": 33.4,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_021_en_c519175aa0334bf4bf3328d06096ea35_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-23T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
         "id": "legacy8-pidgeot-ex",
-        "name": "Pidgeot ex",
-        "grade": "PSA 10",
-        "set": "Ruler of the Black Flame",
-        "fmvUsd": 29.99,
+        "name": "Pidgeot Ex",
+        "grade": "CGC 10 Perfect",
+        "set": "Pokemon Japanese Sv3-Ruler Of The Black Flame",
+        "fmvUsd": 37.87,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_128_ja_b773f65d593c4a50bb7e6965110798b3_sm.webp?v=cf200031",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-01T00:00:00.000Z",
+        "fmvAsOf": "2026-06-08T00:00:00.000Z",
         "fmvConfidence": "low",
-        "fmvDeltaPct": -24.93
+        "fmvDeltaPct": 45.65
       },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "legacy8-alvida",
-        "name": "Alvida",
-        "grade": "BGS 10 Pristine",
-        "set": "Romance Dawn",
-        "fmvUsd": 34.5,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2025-11-01T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

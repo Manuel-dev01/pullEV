@@ -46,68 +46,97 @@
         "fmvAsOf": "2026-05-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "starry-lt-surges-spearow",
-        "name": "Lt. Surge's Spearow",
+        "id": "starry-sanji",
+        "name": "Sanji",
         "grade": "PSA 10",
-        "set": "Gym Heroes",
-        "fmvUsd": 41.5,
+        "set": "Royal Blood",
+        "fmvUsd": 41.3,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_g1_52_en_3fcbfd51967c454a9646febd10bfce93_sm.png?v=fd83a063",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op10_005_en_0aa1101bc8f945cf9106597e5cf115e1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-06-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "starry-nami",
-        "name": "Nami",
+        "id": "starry-usopp",
+        "name": "Usopp",
         "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 50.38,
+        "set": "Anime 25th Collection",
+        "fmvUsd": 45.26,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_054_en_166d855141c04b2f99ad54c1a1e25a43_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_022_ja_73e1a71da51b4aa6bb70f080991a70b8_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-25T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -6.72
+        "fmvAsOf": "2026-05-10T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "starry-alvida",
-        "name": "Alvida",
-        "grade": "Raw A",
+        "id": "starry-brook",
+        "name": "Brook",
+        "grade": "CGC 10 Perfect",
         "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.21,
+        "fmvUsd": 52,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_33fcc11e232e4e87885452a4e792c1bd_sm.png?v=862dfad5",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T18:00:00.000Z",
+        "fmvAsOf": "2026-06-28T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "starry-spearow",
-        "name": "Spearow",
-        "grade": "CGC 9.5",
-        "set": "Roaring Skies",
-        "fmvUsd": 7.5,
+        "id": "starry-buggy",
+        "name": "Buggy",
+        "grade": "Raw A",
+        "set": "BLUE Buggy",
+        "fmvUsd": 6.2,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_ros_65_en_3f844d81015046379904eb2fb2966243_sm.png?v=d54ce76c",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_042_ja_21ae9ee7376440bd8a0a2256af8dd668_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2024-06-10T00:00:00.000Z",
+        "fmvAsOf": "2026-06-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "starry-helmeppo",
+        "name": "Helmeppo",
+        "grade": "Raw A",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 6.61,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_092_ja_14df6a9ca78e45f3b0bebf0aea274e94_sm.png?v=f4aec072",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-02-02T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "starry-helmeppo-x",
+        "name": "Helmeppo",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 9.6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -122,26 +151,42 @@
         "fmvAsOf": "2025-12-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "starry-zubat",
+        "name": "Zubat",
+        "grade": "CGC 10 Pristine",
+        "set": "Hidden Legends",
+        "fmvUsd": 17.7,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hl_83_en_5f0e6982e8b4425b844d77b459ea9ccc_sm.png?v=31e8944d",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-11T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": 18.08
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
         "id": "starry-franky",
         "name": "Franky",
         "grade": "CGC 10 Perfect",
-        "set": "One Piece Card The Best Vol.2",
-        "fmvUsd": 18.55,
+        "set": "Egghead",
+        "fmvUsd": 20.66,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_664a27075733415391a7c5d84e8ee3af_sm.png?v=a2948f02",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_010_en_064599dde4c347e8ae90bcec83de40b1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-03-22T00:00:00.000Z",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "starry-zubat",
+        "id": "starry-zubat-x",
         "name": "Zubat",
         "grade": "CGC 10 Perfect",
         "set": "Delta Species",
@@ -152,7 +197,7 @@
         "fmvAsOf": "2025-11-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -168,22 +213,38 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": -24.93
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "starry-alvida-x",
-        "name": "Alvida",
-        "grade": "BGS 10 Pristine",
-        "set": "Romance Dawn",
-        "fmvUsd": 34.5,
+        "id": "starry-zubat-x-x",
+        "name": "Zubat",
+        "grade": "CGC 10 Pristine",
+        "set": "Skyridge",
+        "fmvUsd": 31.48,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_e3_117_en_def466f6afcf4fec916c529fb5092dde_sm.png?v=d9af87b3",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvAsOf": "2026-06-07T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -6.31
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "starry-alvida",
+        "name": "Alvida",
+        "grade": "PSA 10",
+        "set": "Romance Dawn",
+        "fmvUsd": 36.76,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-23T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

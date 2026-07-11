@@ -47,7 +47,22 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": 18.08
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "omega-weedle-x",
+        "name": "Weedle",
+        "grade": "Raw A",
+        "set": "Tag Bolt",
+        "fmvUsd": 18.54,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sm9_2_ja_982723d742784f49beab240851467b55_sm.png?v=200e5ee4",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
     },
     {
       "card": {
@@ -62,7 +77,7 @@
         "fmvAsOf": "2025-08-06T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
@@ -77,7 +92,7 @@
         "fmvAsOf": "2026-01-04T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
@@ -92,7 +107,7 @@
         "fmvAsOf": "2024-11-25T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -107,7 +122,22 @@
         "fmvAsOf": "2024-08-09T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-spearow",
+        "name": "Spearow",
+        "grade": "CGC 9.5",
+        "set": "Roaring Skies",
+        "fmvUsd": 7.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_ros_65_en_3f844d81015046379904eb2fb2966243_sm.png?v=d54ce76c",
+        "fmvSource": "Index",
+        "fmvAsOf": "2024-06-10T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -122,7 +152,7 @@
         "fmvAsOf": "2026-04-12T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -137,7 +167,22 @@
         "fmvAsOf": "2026-03-03T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-rattata",
+        "name": "Rattata",
+        "grade": "CGC 9",
+        "set": "Secret Wonders",
+        "fmvUsd": 15,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sw_103_en_940cc13e505b48fb9d6416051c3ecb6f_sm.png?v=44c26a00",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-12-10T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -152,7 +197,7 @@
         "fmvAsOf": "2025-11-09T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -167,7 +212,22 @@
         "fmvAsOf": "2021-09-29T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "omega-fearow-x",
+        "name": "Fearow",
+        "grade": "CGC 9.5",
+        "set": "Crystal Guardians",
+        "fmvUsd": 17.49,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_cg_18_en_32f5b30a569c46c0b2f04fa08f1fd74d_sm.png?v=0aaf6421",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -182,7 +242,7 @@
         "fmvAsOf": "2025-11-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

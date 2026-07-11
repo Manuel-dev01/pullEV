@@ -78,6 +78,7 @@ export function Filmstrip({
   const [ripping, setRipping] = useState(false);
   const [session, setSession] = useState(0); // running P/L across sample rips: Σ(FMV − cost)
   const [advisorOpen, setAdvisorOpen] = useState(false);
+  const [engineOpen, setEngineOpen] = useState(false); // "under the hood" math: opt-in, collapsed by default
   const lockRef = useRef(0);
   const tsRef = useRef<{ x: number; y: number } | null>(null);
   const moveT = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -529,10 +530,23 @@ export function Filmstrip({
               This is the EV twin of the client-side Merkle verifier: don't trust the verdict, read
               the computation that made it. */}
           <div style={{ marginTop: 24, borderRadius: 16, padding: 20, background: "linear-gradient(160deg,rgba(123,123,255,.06),rgba(201,92,245,.03))", border: "1px solid rgba(123,123,255,.3)" }}>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0" }}>Under the hood · the EV engine</div>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.teal, border: "1px solid rgba(63,240,207,.35)", borderRadius: 999, padding: "2px 9px" }}>deterministic · reproducible</div>
+            {/* collapsed by default: casual rippers see a one-line affordance, not a wall of math.
+                Judges (or anyone skeptical) click to expand the full glass-box computation. */}
+            <div
+              onClick={() => setEngineOpen((o) => !o)}
+              title={engineOpen ? "Hide the EV computation" : "Show exactly how the engine computed this EV"}
+              style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "space-between", alignItems: "center", cursor: "pointer" }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
+                <span aria-hidden style={{ display: "inline-block", transition: "transform .2s", transform: engineOpen ? "rotate(90deg)" : "none", color: C.teal, fontSize: 11 }}>▸</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0" }}>Under the hood · the EV engine</span>
+              </div>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, whiteSpace: "nowrap", color: engineOpen ? "#8a83a0" : C.teal, border: `1px solid ${engineOpen ? "rgba(255,255,255,.14)" : "rgba(63,240,207,.35)"}`, borderRadius: 999, padding: "3px 10px" }}>
+                {engineOpen ? "hide the math" : "see the math"}
+              </span>
             </div>
+            {engineOpen && (
+              <div style={{ marginTop: 16 }}>
             <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, margin: "0 0 16px", maxWidth: 700, lineHeight: 1.5 }}>
               No black box. PullEV&apos;s own Go engine computes this verdict as a pure function of the pool
               above: one card is drawn, each card&apos;s probability = its weight ÷ the total weight. The same
@@ -579,6 +593,8 @@ export function Filmstrip({
                 <span style={{ color: C.teal }}>{liveCount}/{active.pool.cards.length}</span> prices LIVE Renaiss Index · pool membership + band odds = PullEV model
               </span>
             </div>
+              </div>
+            )}
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 26 }}>

@@ -35,48 +35,78 @@
     },
     {
       "card": {
-        "id": "champion-caterpie",
-        "name": "Caterpie",
+        "id": "champion-rattata",
+        "name": "Rattata",
+        "grade": "PSA 10",
+        "set": "Expedition",
+        "fmvUsd": 38.08,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_e1_128_en_2bbd48a3ce8c433e96e3034dd8b545b4_sm.png?v=99e96114",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-09-07T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "champion-nami",
+        "name": "Nami",
+        "grade": "PSA 10",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 40.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_prb02_012_ja_21a82a7497314b53ad1210bc00496dd1_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-02-13T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "champion-sanji",
+        "name": "Sanji",
+        "grade": "PSA 10",
+        "set": "Kingdoms Of Intrigue",
+        "fmvUsd": 43.02,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_104_ja_c8ed0892fe9a4ca88d3e747c8365b529_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-25T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "champion-brook-x",
+        "name": "Brook",
         "grade": "CGC 10 Perfect",
-        "set": "FireRed \u0026 LeafGreen",
-        "fmvUsd": 39.9,
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 50,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_rg_56_en_1bd6088c58a240ebbb688a024c218386_sm.png?v=8e5c57e6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb01_046_ja_0f9135ea448741b59ebee994c5250a9c_sm.png?v=47315c69",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-05-18T00:00:00.000Z",
+        "fmvAsOf": "2025-04-11T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "champion-caterpie-x",
-        "name": "Caterpie",
-        "grade": "PSA 10",
-        "set": "Legendary Collection",
-        "fmvUsd": 43.19,
+        "id": "champion-zubat",
+        "name": "Zubat",
+        "grade": "CGC 9.5",
+        "set": "Shrouded Fable",
+        "fmvUsd": 6,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sfa_27_en_c31916a7881a45c0b8f262806aaebf92_sm.png?v=8a5d91dc",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-04-08T00:00:00.000Z",
+        "fmvAsOf": "2024-11-25T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
-    },
-    {
-      "card": {
-        "id": "champion-franky",
-        "name": "Franky",
-        "grade": "PSA 10",
-        "set": "Emperors In The New World",
-        "fmvUsd": 52.4,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-06-04T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09733333333333333
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -91,22 +121,38 @@
         "fmvAsOf": "2026-05-16T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "champion-helmeppo",
-        "name": "Helmeppo",
-        "grade": "CGC 10 Perfect",
-        "set": "One Piece Card The Best",
-        "fmvUsd": 9.6,
+        "id": "champion-spearow",
+        "name": "Spearow",
+        "grade": "CGC 9.5",
+        "set": "Roaring Skies",
+        "fmvUsd": 7.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_ros_65_en_3f844d81015046379904eb2fb2966243_sm.png?v=d54ce76c",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvAsOf": "2024-06-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-buggy",
+        "name": "Buggy",
+        "grade": "Raw A",
+        "set": "The Time Of Battle",
+        "fmvUsd": 14.28,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op16_041_ja_c7e5ce58217e4cdfa41698807fcafdf6_sm.png?v=a025fc59",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T16:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -19.78
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -121,7 +167,7 @@
         "fmvAsOf": "2026-05-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -136,22 +182,37 @@
         "fmvAsOf": "2025-11-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "champion-zubat",
-        "name": "Zubat",
-        "grade": "PSA 10",
-        "set": "Paradox Rift",
-        "fmvUsd": 21.23,
+        "id": "champion-franky",
+        "name": "Franky",
+        "grade": "CGC 10 Perfect",
+        "set": "Gear5",
+        "fmvUsd": 19.04,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_par_110_en_322699f772934aa2a80005dc5802bfe4_sm.png?v=51015c14",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_011_en_5aab3b6efc634802a02aa57efcdc1d50_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-08-06T00:00:00.000Z",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-spearow-x",
+        "name": "Spearow",
+        "grade": "CGC 10 Pristine",
+        "set": "Majestic Dawn",
+        "fmvUsd": 21.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_md_74_en_1e55a19256ff4b5eb1459984147ba840_sm.png?v=e2f5ac3b",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-10T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -166,22 +227,22 @@
         "fmvAsOf": "2026-04-26T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
         "id": "champion-alvida",
         "name": "Alvida",
-        "grade": "PSA 10",
+        "grade": "BGS 10 Pristine",
         "set": "Romance Dawn",
-        "fmvUsd": 36.76,
+        "fmvUsd": 34.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-02-23T00:00:00.000Z",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

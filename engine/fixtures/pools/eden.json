@@ -35,64 +35,94 @@
     },
     {
       "card": {
-        "id": "eden-lt-surges-spearow",
-        "name": "Lt. Surge's Spearow",
+        "id": "eden-sanji",
+        "name": "Sanji",
         "grade": "PSA 10",
-        "set": "Gym Heroes",
-        "fmvUsd": 41.5,
+        "set": "Royal Blood",
+        "fmvUsd": 41.3,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_g1_52_en_3fcbfd51967c454a9646febd10bfce93_sm.png?v=fd83a063",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op10_005_en_0aa1101bc8f945cf9106597e5cf115e1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-06-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "eden-brook-x",
-        "name": "Brook",
-        "grade": "CGC 10 Perfect",
-        "set": "Adventure On Kami’s Island",
-        "fmvUsd": 52,
+        "id": "eden-franky-x-x",
+        "name": "Franky",
+        "grade": "PSA 10",
+        "set": "500 Years In The Future",
+        "fmvUsd": 45.73,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_33fcc11e232e4e87885452a4e792c1bd_sm.png?v=862dfad5",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_107_ja_9bb660a11f214d3a8706db0970f62a00_sm.png",
         "fmvSource": "Index",
         "fmvAsOf": "2026-06-28T00:00:00.000Z",
-        "fmvConfidence": "low"
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -33.38
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "eden-pikachu",
-        "name": "Pikachu",
+        "id": "eden-franky-x-x-x",
+        "name": "Franky",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese 25th Anniversary Collection",
-        "fmvUsd": 69.49,
+        "set": "Emperors In The New World",
+        "fmvUsd": 52.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a_001_ja_61d98a61195a49c1b7d8b4477fb9c2dd_sm.webp?v=c999b1c7",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-11T05:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -30.56
+        "fmvAsOf": "2026-06-04T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
         "id": "eden-brook",
         "name": "Brook",
-        "grade": "Raw A",
-        "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.31,
+        "grade": "PSA 10",
+        "set": "Paramount War",
+        "fmvUsd": 67.71,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op02_040_en_0aec6eb1afd1447ba2bd2b75f2d5d1e1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-16T00:00:00.000Z",
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "eden-helmeppo",
+        "name": "Helmeppo",
+        "grade": "CGC 9.5",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_ja_ce3af4ca05fd40fe831c9d89fc0d283b_sm.png?v=4c05e60c",
+        "fmvSource": "Index",
+        "fmvAsOf": "2024-11-21T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "eden-helmeppo-x",
+        "name": "Helmeppo",
+        "grade": "Raw A",
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 6.61,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_092_ja_14df6a9ca78e45f3b0bebf0aea274e94_sm.png?v=f4aec072",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-02-02T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -107,7 +137,7 @@
         "fmvAsOf": "2026-07-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -122,23 +152,37 @@
         "fmvAsOf": "2026-04-12T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "eden-zubat",
-        "name": "Zubat",
-        "grade": "CGC 10 Pristine",
-        "set": "Hidden Legends",
-        "fmvUsd": 17.7,
+        "id": "eden-fearow",
+        "name": "Fearow",
+        "grade": "PSA 9",
+        "set": "Sun \u0026 Moon",
+        "fmvUsd": 15.39,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hl_83_en_5f0e6982e8b4425b844d77b459ea9ccc_sm.png?v=31e8944d",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-11T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": 18.08
+        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "eden-franky-x",
+        "name": "Franky",
+        "grade": "CGC 10 Perfect",
+        "set": "Gear5",
+        "fmvUsd": 19.04,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st21_011_en_5aab3b6efc634802a02aa57efcdc1d50_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -153,38 +197,53 @@
         "fmvAsOf": "2025-02-10T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "eden-spearow-x",
-        "name": "Spearow",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese M1l-Mega Brave",
-        "fmvUsd": 33,
+        "id": "eden-counter-catcher",
+        "name": "Counter Catcher",
+        "grade": "Raw A",
+        "set": "Future Flash",
+        "fmvUsd": 30.51,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m1l_074_ja_9c84541975fe4ac3bbd699e911c82f30_sm.webp?v=c87637db",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4m_94_ja_c468646992a24a31bd6bdf8cfdcbf0a6_sm.png?v=503fac06",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T17:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -18.86
+        "fmvAsOf": "2025-02-19T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
         "id": "eden-usopp",
         "name": "Usopp",
         "grade": "CGC 10 Perfect",
-        "set": "The Azure Sea’s Seven",
-        "fmvUsd": 39,
+        "set": "Egghead",
+        "fmvUsd": 35.66,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op14_022_en_cee9e032da764fad8945e1f23176f25b_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_002_en_2d76eef467444ba1b4016a9cd1b14770_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-27T00:00:00.000Z",
+        "fmvAsOf": "2026-06-11T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -52.45
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "eden-lt-surges-rattata",
+        "name": "Lt. Surge's Rattata",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
+        "fmvUsd": 39.22,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     }
   ]
 }

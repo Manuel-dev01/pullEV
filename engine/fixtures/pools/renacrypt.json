@@ -35,37 +35,52 @@
     },
     {
       "card": {
-        "id": "renacrypt-usopp",
-        "name": "Usopp",
-        "grade": "CGC 10 Perfect",
-        "set": "The Azure Sea’s Seven",
-        "fmvUsd": 39,
+        "id": "renacrypt-alvida-x",
+        "name": "Alvida",
+        "grade": "PSA 10",
+        "set": "Romance Dawn",
+        "fmvUsd": 36.76,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op14_022_en_cee9e032da764fad8945e1f23176f25b_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-27T00:00:00.000Z",
+        "fmvAsOf": "2025-02-23T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
+    },
+    {
+      "card": {
+        "id": "renacrypt-nami",
+        "name": "Nami",
+        "grade": "PSA 10",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 40.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_prb02_012_ja_21a82a7497314b53ad1210bc00496dd1_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-02-13T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.073
     },
     {
       "card": {
         "id": "renacrypt-sanji",
         "name": "Sanji",
         "grade": "PSA 10",
-        "set": "Royal Blood",
-        "fmvUsd": 41.3,
+        "set": "Kingdoms Of Intrigue",
+        "fmvUsd": 43.02,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op10_005_en_0aa1101bc8f945cf9106597e5cf115e1_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_104_ja_c8ed0892fe9a4ca88d3e747c8365b529_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-24T00:00:00.000Z",
+        "fmvAsOf": "2026-06-25T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "renacrypt-franky-x-x-x",
+        "id": "renacrypt-franky-x-x",
         "name": "Franky",
         "grade": "PSA 10",
         "set": "500 Years In The Future",
@@ -77,22 +92,37 @@
         "fmvConfidence": "low",
         "fmvDeltaPct": -33.38
       },
-      "weight": 0.09733333333333333
+      "weight": 0.073
     },
     {
       "card": {
-        "id": "renacrypt-alvida",
-        "name": "Alvida",
+        "id": "renacrypt-buggy",
+        "name": "Buggy",
         "grade": "Raw A",
-        "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.21,
+        "set": "BLUE Buggy",
+        "fmvUsd": 6.2,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_042_ja_21ae9ee7376440bd8a0a2256af8dd668_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T18:00:00.000Z",
+        "fmvAsOf": "2026-06-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-brook",
+        "name": "Brook",
+        "grade": "Raw A",
+        "set": "Egghead",
+        "fmvUsd": 6.29,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_011_ja_83766717b34b46e488470be39e6256ca_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -107,7 +137,7 @@
         "fmvAsOf": "2026-02-02T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
@@ -122,26 +152,42 @@
         "fmvAsOf": "2025-08-31T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-helmeppo-x-x",
+        "name": "Helmeppo",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 9.6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-buggy-x",
+        "name": "Buggy",
+        "grade": "Raw A",
+        "set": "The Time Of Battle",
+        "fmvUsd": 14.28,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op16_041_ja_c7e5ce58217e4cdfa41698807fcafdf6_sm.png?v=a025fc59",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-10T16:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -19.78
+      },
+      "weight": 0.06999999999999999
     },
     {
       "card": {
         "id": "renacrypt-franky",
-        "name": "Franky",
-        "grade": "CGC 9",
-        "set": "One Piece Card The Best Vol.2",
-        "fmvUsd": 10,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_ja_6914656b52964308b0ada2eecdee818f_sm.png?v=07192cdd",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-01T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "renacrypt-franky-x",
         "name": "Franky",
         "grade": "CGC 10 Perfect",
         "set": "Gear5",
@@ -152,37 +198,52 @@
         "fmvAsOf": "2026-06-22T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "renacrypt-brook",
-        "name": "Brook",
+        "id": "renacrypt-franky-x",
+        "name": "Franky",
         "grade": "CGC 10 Perfect",
         "set": "Egghead",
-        "fmvUsd": 21.36,
+        "fmvUsd": 20.66,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_011_en_d85d76a4f1f74b3bbcb99ed8cc2e5a95_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_010_en_064599dde4c347e8ae90bcec83de40b1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-17T00:00:00.000Z",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
     },
     {
       "card": {
-        "id": "renacrypt-franky-x-x",
-        "name": "Franky",
-        "grade": "CGC 10 Pristine",
-        "set": "Tournament Pack Vol.2",
-        "fmvUsd": 33.4,
+        "id": "renacrypt-usopp",
+        "name": "Usopp",
+        "grade": "CGC 10 Perfect",
+        "set": "Straw Hat Crew",
+        "fmvUsd": 30.48,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_021_en_c519175aa0334bf4bf3328d06096ea35_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_002_en_d68b5c2706064321a741c91f7f548d91_sm.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-23T00:00:00.000Z",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
         "fmvConfidence": "low"
       },
-      "weight": 0.09999999999999999
+      "weight": 0.06999999999999999
+    },
+    {
+      "card": {
+        "id": "renacrypt-alvida",
+        "name": "Alvida",
+        "grade": "BGS 10 Pristine",
+        "set": "Romance Dawn",
+        "fmvUsd": 34.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.06999999999999999
     }
   ]
 }
