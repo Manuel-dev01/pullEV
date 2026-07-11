@@ -97,7 +97,7 @@ interface, and every number reaches a provenance badge in the UI. See
 The pools cover Renaiss's real 15-pack lineup: three live Infinite packs (Eden $150, OMEGA $48, RenaCrypt
 $88), the limited Champion Pack ($100, sold out), and 11 real previous packs ($100, limited, sold out,
 shown as a retired showcase). All prices are verified from the live site. Every pool is built from a
-library of ~84 distinct real graded cards (One Piece and Pokémon) priced off the Renaiss Index.
+library of ~148 distinct real graded cards (One Piece and Pokémon) priced off the Renaiss Index.
 
 ### Autonomous live pools
 
@@ -168,7 +168,7 @@ Keys are read from the environment only and are never committed. `.env` files ar
 ## Data sources, assumptions, and limitations
 
 - **Real (Renaiss Index API, beta):** card valuations (price, grade, confidence, trend, freshness) for a
-  library of ~84 distinct graded cards, re-priced autonomously on a schedule. Badged LIVE per card and
+  library of ~148 distinct graded cards, re-priced autonomously on a schedule. Badged LIVE per card and
   OFFICIAL on the oracle and vault pages. All 15 pack prices and top prizes are verified from the live
   Renaiss site (3 live Infinite + Champion + 11 previous, all sold-out $100 limiteds).
 - **PullEV model (labeled assumptions):** pack pool membership and draw odds. **Every card price is real**

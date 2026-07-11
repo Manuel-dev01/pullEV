@@ -23,10 +23,10 @@ import (
 // weightLadder is a realistic gacha weighting (commons dominate), cheapest→priciest.
 var weightLadder = []float64{80, 22, 9, 4, 2, 1, 1, 1, 1, 1}
 
-// chasePerPack is how many real chase cards each pack draws from its candidate library.
-// Kept in sync with the per-pack chaseLadder lengths in commons.go and the live rotation
-// pick in livepool.go, so curate, commons, and the runtime manager agree.
-const chasePerPack = 12
+// poolSize is the total number of real cards in each pack's pool (10 cheap commons + 2 chase,
+// selected by pickLowPlusChase). Curate and the live rotation manager (livepool.go) use the
+// same value so the offline build and runtime rotation agree.
+const poolSize = 12
 
 type curatedCard struct {
 	slug string
@@ -71,22 +71,6 @@ func chooseReason(err error, v Valuation) string {
 	return fmt.Sprintf("price $%.2f out of band", v.PriceUsd)
 }
 
-// dedupeByName keeps one card per distinct name (the first seen) for visual variety,
-// since real index pages are dominated by a few chase characters (e.g. Luffy).
-func dedupeByName(cards []curatedCard) []curatedCard {
-	seen := map[string]bool{}
-	out := []curatedCard{}
-	for _, c := range cards {
-		key := strings.ToLower(strings.TrimSpace(c.val.Name))
-		if seen[key] {
-			continue
-		}
-		seen[key] = true
-		out = append(out, c)
-	}
-	return out
-}
-
 // dedupeByIdentity keeps one card per distinct real listing (name + set + grade), so a
 // character's different sets/arts survive as the genuinely distinct graded cards they are
 // (unlike dedupeByName, which collapses every Luffy to one). This grows the real library
@@ -103,32 +87,6 @@ func dedupeByIdentity(cards []curatedCard) []curatedCard {
 		}
 		seen[key] = true
 		out = append(out, c)
-	}
-	return out
-}
-
-// splitAlt splits a slice into two disjoint halves by alternating index, so two packs
-// drawing on the same card list end up with distinct (non-overlapping) cards.
-func splitAlt(cards []curatedCard) ([]curatedCard, []curatedCard) {
-	var a, b []curatedCard
-	for i, c := range cards {
-		if i%2 == 0 {
-			a = append(a, c)
-		} else {
-			b = append(b, c)
-		}
-	}
-	return a, b
-}
-
-// pickSpread returns n cards spanning cheap→expensive from a price-sorted slice.
-func pickSpread(cards []curatedCard, n int) []curatedCard {
-	if len(cards) <= n {
-		return cards
-	}
-	out := make([]curatedCard, 0, n)
-	for i := 0; i < n; i++ {
-		out = append(out, cards[i*(len(cards)-1)/(n-1)])
 	}
 	return out
 }
@@ -255,8 +213,8 @@ var previousPackIDs = []string{
 // (offline build) and the live pool manager (runtime) so the two never drift. Each pack draws
 // a FULL price-range spread of real cards from its game(s): OMEGA = all Pokemon, RenaCrypt =
 // all One Piece, Eden + Champion + the previous packs = the full mixed library. The
-// per-pack subset (and its cheap->pricey spread) is then chosen by pickSpread(Rotated) so the
-// three bands all fill with REAL cards. All lists are price-ascending. No fabricated filler.
+// per-pack subset (mostly cheap commons + a rare chase) is then chosen by pickLowPlusChase so
+// the three bands all fill with REAL cards. All lists are price-ascending. No fabricated filler.
 func allocatePacks(op, pkm []curatedCard) map[string][]curatedCard {
 	combined := dedupeByIdentity(append(append([]curatedCard{}, pkm...), op...))
 	out := map[string][]curatedCard{
@@ -294,28 +252,10 @@ func curateOffset(id string) int {
 	return 0
 }
 
-func filterOut(cards []curatedCard, exclude map[string]bool) []curatedCard {
-	out := []curatedCard{}
-	for _, c := range cards {
-		if !exclude[c.slug] {
-			out = append(out, c)
-		}
-	}
-	return out
-}
-
 func sortAsc(cards []curatedCard) []curatedCard {
 	out := append([]curatedCard{}, cards...)
 	sort.Slice(out, func(i, j int) bool { return out[i].val.PriceUsd < out[j].val.PriceUsd })
 	return out
-}
-
-func rotateCards(cards []curatedCard, off int) []curatedCard {
-	if len(cards) == 0 {
-		return cards
-	}
-	off = off % len(cards)
-	return append(append([]curatedCard{}, cards[off:]...), cards[:off]...)
 }
 
 // runCurate rebuilds pools from real cards. Reads harvested slug lists from
@@ -365,7 +305,7 @@ func runCurate() {
 	built := map[string]Pool{}
 	for id, cards := range alloc {
 		cap := cheapCapFor(packs[id].PriceUsd)
-		built[id] = buildPool(id, idPrefix(id), pickLowPlusChase(cards, chasePerPack-2, 2, curateOffset(id), cap), vmap, seed)
+		built[id] = buildPool(id, idPrefix(id), pickLowPlusChase(cards, poolSize-2, 2, curateOffset(id), cap), vmap, seed)
 	}
 
 	// Guard: never clobber good fixtures with a throttled/empty run.

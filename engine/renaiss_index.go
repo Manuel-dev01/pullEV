@@ -206,6 +206,109 @@ func normalizeCard(key string, cd cardDetailResponse, rate int) Valuation {
 	}
 }
 
+// seriesResponse mirrors GET /v1/cards/{game}/{set}/{card}/fmv-series (the subset we use).
+type seriesResponse struct {
+	Points []struct {
+		UsdCents int `json:"usdCents"`
+	} `json:"points"`
+}
+
+// LookupSeries fetches a card's real FMV price history (for a sparkline) by its structured
+// path. Soft-fails (nil, err) so callers can skip a card without aborting.
+func (c *IndexClient) LookupSeries(ctx context.Context, path string) ([]float64, error) {
+	path = strings.Trim(strings.TrimSpace(path), "/")
+	path = strings.TrimPrefix(path, "card/")
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, c.base+"/v1/cards/"+path+"/fmv-series?window=90d", nil)
+	if err != nil {
+		return nil, err
+	}
+	if c.authed() {
+		req.Header.Set("X-Api-Key", c.key)
+		req.Header.Set("X-Api-Secret", c.secret)
+	}
+	resp, err := c.http.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode == http.StatusTooManyRequests {
+		return nil, ErrRateLimited
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, errors.New("series: bad status")
+	}
+	var sr seriesResponse
+	if err := json.NewDecoder(resp.Body).Decode(&sr); err != nil {
+		return nil, err
+	}
+	out := make([]float64, 0, len(sr.Points))
+	for _, p := range sr.Points {
+		out = append(out, float64(p.UsdCents)/100)
+	}
+	return out, nil
+}
+
+// indicesResponse mirrors GET /v1/indices (the subset we use).
+type indicesResponse struct {
+	Indices []struct {
+		Game   string  `json:"game"`
+		Label  string  `json:"label"`
+		Value  float64 `json:"value"`
+		Base   float64 `json:"base"`
+		Deltas struct {
+			D7   float64 `json:"d7"`
+			D30  float64 `json:"d30"`
+			D365 float64 `json:"d365"`
+		} `json:"deltas"`
+		ConstituentCount int    `json:"constituentCount"`
+		Rebalance        string `json:"rebalance"`
+		Sparkline        []struct {
+			UsdCents int `json:"usdCents"`
+		} `json:"sparkline"`
+	} `json:"indices"`
+}
+
+// LookupIndices fetches the real Renaiss market indices (per game). Soft-fails (nil, err) on
+// any miss so the caller can fall back to the committed seed.
+func (c *IndexClient) LookupIndices(ctx context.Context) ([]IndexTile, error) {
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, c.base+"/v1/indices", nil)
+	if err != nil {
+		return nil, err
+	}
+	if c.authed() {
+		req.Header.Set("X-Api-Key", c.key)
+		req.Header.Set("X-Api-Secret", c.secret)
+	}
+	resp, err := c.http.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode == http.StatusTooManyRequests {
+		return nil, ErrRateLimited
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, errors.New("indices: bad status")
+	}
+	var ir indicesResponse
+	if err := json.NewDecoder(resp.Body).Decode(&ir); err != nil {
+		return nil, err
+	}
+	out := make([]IndexTile, 0, len(ir.Indices))
+	for _, t := range ir.Indices {
+		spark := make([]float64, 0, len(t.Sparkline))
+		for _, p := range t.Sparkline {
+			spark = append(spark, float64(p.UsdCents)/100)
+		}
+		out = append(out, IndexTile{
+			Game: t.Game, Label: t.Label, Value: t.Value, Base: t.Base,
+			DeltaD7: t.Deltas.D7, DeltaD30: t.Deltas.D30, DeltaD365: t.Deltas.D365,
+			Constituents: t.ConstituentCount, Rebalance: t.Rebalance, Spark: spark,
+		})
+	}
+	return out, nil
+}
+
 // LookupKey dispatches by key format: a structured "game/set/card" path uses the
 // card endpoint; anything else is treated as a cert. Lets the cache key be either.
 func (c *IndexClient) LookupKey(ctx context.Context, key string) (Valuation, error) {

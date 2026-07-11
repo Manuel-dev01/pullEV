@@ -1,6 +1,7 @@
-import type { Card, Draw, EVResult, Pack, Pool, Provenance, Sourced, Valuation } from "@shared/types";
+import type { Card, Draw, EVResult, IndexTile, Pack, Pool, Provenance, Sourced, Valuation } from "@shared/types";
 import snapshot from "./snapshot.json";
 import valuationsSeed from "./valuations.seed.json";
+import indicesSeed from "./indices.seed.json";
 import { computeEVFallback } from "./ev";
 import { buildCommitment, corruptHexChar } from "./merkle";
 
@@ -155,6 +156,7 @@ export async function getCards(): Promise<Fetched<Card[]>> {
       fmvAsOf: v.lastSaleAt,
       fmvConfidence: v.confidence,
       fmvDeltaPct: v.deltaPct,
+      spark: v.spark ?? undefined,
     }))
     .sort((a, b) => b.fmvUsd - a.fmvUsd);
   return {
@@ -166,6 +168,25 @@ export async function getCards(): Promise<Fetched<Card[]>> {
       notes:
         "Real graded-card library priced by the Renaiss Index API (beta), bundled seed " +
         "(engine unreachable). The packs draw from these cards.",
+    },
+    fallback: true,
+  };
+}
+
+/**
+ * Fetch the real Renaiss market indices (per game). Engine down -> bundled seed so the
+ * market strip still renders real (cached) data, clearly labeled.
+ */
+export async function getIndices(): Promise<Fetched<IndexTile[]>> {
+  const r = await getSourced<IndexTile[]>("/api/indices");
+  if (r) return { data: r.data, provenance: r.provenance, fallback: false };
+  return {
+    data: indicesSeed as IndexTile[],
+    provenance: {
+      source: "Index",
+      fetchedAt: snapshot.generatedAt,
+      isOfficial: true,
+      notes: "Real Renaiss market indices (beta), bundled seed (engine unreachable).",
     },
     fallback: true,
   };

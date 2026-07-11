@@ -21,6 +21,7 @@ var activeAdapter PackDataAdapter = NewMockAdapter()
 // initializes package-level vars before any init(), so this can't be a var initializer).
 var indexClient *IndexClient
 var valuationCache *ValuationCache
+var indexService *IndexService
 
 // livePools autonomously re-prices + rotates pack pools from the real Index (beta).
 // Nil until started; GetPool falls back to embedded fixtures whenever it has no pool.
@@ -39,6 +40,9 @@ func main() {
 		case "tiers":
 			runTiers()
 			return
+		case "sparks":
+			runSparks()
+			return
 		case "snapshot":
 			runSnapshot()
 			return
@@ -48,6 +52,7 @@ func main() {
 	loadDotEnv(".env")
 	indexClient = NewIndexClient()
 	valuationCache = NewValuationCache(indexClient)
+	indexService = NewIndexService(indexClient)
 	livePools = NewLivePoolManager(indexClient, valuationCache)
 
 	// Autonomous refresh runs where we can actually reach the Index (partner keys), or
@@ -67,6 +72,7 @@ func main() {
 	mux.HandleFunc("GET /api/packs/{id}/ev", handleEV)
 	mux.HandleFunc("GET /api/packs/{id}/example-proof", handleExampleProof)
 	mux.HandleFunc("GET /api/cards", handleCards)
+	mux.HandleFunc("GET /api/indices", handleIndices)
 	mux.HandleFunc("GET /api/value/cert/{cert}", handleValueCert)
 	mux.HandleFunc("POST /api/admin/refresh", handleRefresh)
 
@@ -242,6 +248,7 @@ func handleCards(w http.ResponseWriter, _ *http.Request) {
 			FMVAsOf:       v.LastSaleAt,
 			FMVConfidence: v.Confidence,
 			FMVDeltaPct:   v.DeltaPct,
+			Spark:         v.Spark,
 		})
 	}
 	sort.Slice(cards, func(i, j int) bool { return cards[i].FMVUsd > cards[j].FMVUsd })

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { getPacks, getEV, getPool } from "@/lib/api";
+import { getPacks, getEV, getPool, getIndices } from "@/lib/api";
 import { CardArt } from "@/components/CardArt";
+import { MarketIndex } from "@/components/MarketIndex";
 import type { EVResult, Pack, Pool } from "@shared/types";
 
 // FOIL marketing landing. Server-rendered with REAL featured-pack EV + marquee.
@@ -49,6 +50,8 @@ export default async function Landing() {
   const mythic = featuredPool ? rarestOdds(featuredPool) : undefined;
   // When the engine is unreachable, numbers come from the bundled snapshot. Label it.
   const offline = packs.fallback || (featuredPoolF?.fallback ?? false);
+  // Real Renaiss market indices (the ecosystem's own price index) for market context.
+  const indices = await getIndices();
 
   return (
     <div style={{ fontFamily: "var(--font-sans)", color: "#f6f2fb", background: "#08070c", overflowX: "hidden" }}>
@@ -176,11 +179,14 @@ export default async function Landing() {
         </div>
       </div>
 
+      {/* REAL RENAISS MARKET INDEX — the ecosystem's own price index (grounded market context) */}
+      <MarketIndex tiles={indices.data} provenance={indices.provenance} fallback={indices.fallback} />
+
       {/* TWO QUESTIONS */}
       <div id="how" style={{ maxWidth: 1300, margin: "0 auto", padding: "120px 40px 80px" }}>
         <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 48 }}>Two questions every ripper asks</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 30, alignItems: "flex-start" }}>
-          <QCard n="01" title={<>SHOULD I RIP<br />THIS PACK?</>} body="Live EV from the pack's vault-backed pool and Renaiss's FMV/CMV oracle, with the whole value distribution, not just an average. See your edge, your odds of profit, and the fat tail before you spend a cent." tags={["EV vs cost", "Full distribution", "Oracle prices"]} border="rgba(255,255,255,.09)" glow="rgba(201,92,245,.35)" />
+          <QCard n="01" title={<>SHOULD I RIP<br />THIS PACK?</>} body="Live EV from real Renaiss Index card prices under a labeled model pool, with the whole value distribution, not just an average. See your edge, your odds of profit, and the fat tail before you spend a cent. A model estimate, not a claim about Renaiss's own pack." tags={["EV vs cost", "Full distribution", "Oracle prices"]} border="rgba(255,255,255,.09)" glow="rgba(201,92,245,.35)" />
           <div style={{ marginTop: 70, flex: 1, minWidth: 340 }}>
             <QCard n="02" title={<>WAS MY<br />PULL FAIR?</>} body="An independent Merkle-proof verifier recomputes your draw's inclusion proof entirely in your browser. If the root matches Renaiss's published commitment, it's provably fair. No server, no trust required." tags={["Client-side", "Merkle proof", "Zero trust"]} border="rgba(63,240,207,.18)" glow="rgba(63,240,207,.28)" />
           </div>
@@ -304,7 +310,7 @@ export default async function Landing() {
         <div style={{ position: "relative", maxWidth: 1200, margin: "80px auto 0", paddingTop: 30, borderTop: "1px solid rgba(255,255,255,.08)", display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "space-between", alignItems: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}><div style={{ width: 22, height: 22, transform: "rotate(45deg)", borderRadius: 6, background: GRAD }} /><span style={{ fontFamily: "var(--font-display)", fontSize: 18 }}>PULLEV</span></div>
           <div style={{ fontFamily: "var(--font-mono)", fontSize: 11.5, color: "#8a83a0", maxWidth: 620, textAlign: "right" }}>
-            Independent, unofficial tooling for Renaiss · Infinite Gacha · not financial advice. Card names shown for identification only; Pokémon / One Piece marks © their respective owners. Prices are Renaiss Index (beta) estimates or labeled assumptions.
+            Independent, unofficial tooling for Renaiss · Infinite Gacha · not financial advice. Card names shown for identification only; Pokémon / One Piece marks © their respective owners. Card prices are real Renaiss Index (beta) estimates; the pool membership and draw odds are a labeled PullEV model.
           </div>
         </div>
       </div>

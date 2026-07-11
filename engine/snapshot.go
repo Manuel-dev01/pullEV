@@ -57,6 +57,11 @@ func runSnapshot() {
 	must(err)
 	must(os.WriteFile("../web/lib/valuations.seed.json", seed, 0o644))
 
+	// Sync the market-indices seed too (offline fallback for the market strip).
+	if idx, err := os.ReadFile("fixtures/indices.seed.json"); err == nil {
+		must(os.WriteFile("../web/lib/indices.seed.json", idx, 0o644))
+	}
+
 	fmt.Printf("Snapshot written: %d packs, %d pools -> web/lib/snapshot.json; seed synced -> web/lib/valuations.seed.json\n",
 		len(packs), len(pools))
 }

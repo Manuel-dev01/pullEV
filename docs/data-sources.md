@@ -35,7 +35,7 @@ current packs (the 3 Infinite + Champion) re-price and rotate live; the 11 previ
 | --- | --- | --- |
 | Card price (FMV) | Renaiss Index API (`/v1/graded/{cert}`, `/v1/cards/{game}/{set}/{card}`) | Real, beta, cached |
 | Card grade, confidence, trend, freshness | Renaiss Index API | Real, beta |
-| Card library (~84 distinct real graded cards) | Renaiss Index, re-priced on a schedule | Real, beta, cached |
+| Card library (~148 distinct real graded cards) | Renaiss Index (incl. `/v1/search`-sourced cheap cards), re-priced on a schedule | Real, beta, cached |
 | Vault Index (`/vault`, `/api/cards`) | The same priced library, listed in full | Real, beta, cached |
 | All 15 pack prices and top prizes | Renaiss public listings (live site) | Verified |
 | Pool membership (which cards are in a pack) | PullEV curation, rotated each refresh cycle (current packs) | Assumption (no Renaiss pool API) |

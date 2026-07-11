@@ -46,6 +46,8 @@ export interface Card {
   fmvConfidence?: string;
   /** Trend % of a real valuation (Index only). */
   fmvDeltaPct?: number;
+  /** Real price-history points for a sparkline (Index only). */
+  spark?: number[];
 }
 
 /** A purchasable Renaiss gacha pack. */
@@ -174,6 +176,22 @@ export interface Valuation {
   imageUrl?: string;
   /** X-RateLimit-Remaining, -1 if unknown */
   rateRemaining: number;
+}
+
+/** One real Renaiss market index (per game), from GET /v1/indices. The ecosystem's own
+ * price index, the same data the FMV oracle is built on. Real, official, live. */
+export interface IndexTile {
+  game: string;
+  label: string;
+  value: number;
+  base: number;
+  deltaD7: number;
+  deltaD30: number;
+  deltaD365: number;
+  constituents: number;
+  rebalance: string;
+  /** Index value points for a sparkline (USD-scaled). */
+  spark: number[];
 }
 
 /** Standard envelope: a payload plus the provenance that governs it. */

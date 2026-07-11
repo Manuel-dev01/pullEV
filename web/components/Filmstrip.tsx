@@ -497,7 +497,6 @@ export function Filmstrip({
                     </div>
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.muted }}>
                       {money(t.min)}–{money(t.max)} · {t.count} card{t.count === 1 ? "" : "s"}
-                      {t.examples.every((c) => c.fmvIsAssumption) ? <AssumptionTag note="Cheap filler at assumed prices" /> : null}
                     </div>
                     <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 3 }}>
                       {t.examples.slice(0, 3).map((c, i) => (

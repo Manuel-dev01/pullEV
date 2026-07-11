@@ -111,7 +111,7 @@ func (lp *LivePoolManager) Refresh(ctx context.Context) {
 		if len(cand) < 4 {
 			continue // not enough library depth; fixture/prior pool stands
 		}
-		picked := pickLowPlusChase(cand, chasePerPack-2, 2, lp.cycle, cheapCapFor(lp.packs[id].PriceUsd))
+		picked := pickLowPlusChase(cand, poolSize-2, 2, lp.cycle, cheapCapFor(lp.packs[id].PriceUsd))
 		entries, _ := poolEntriesFrom(idPrefix(id), picked)
 		pool := Pool{PackID: id, Cards: applyTiers(id, entries)}
 

@@ -9,8 +9,8 @@ import (
 	"time"
 )
 
-// Odds model — PullEV's three labeled draw bands over the pack's real cards: Chase (~1%,
-// rare), Mid (~33%), Common (~66%, the cheapest cards). EVERY card is a real Renaiss Index
+// Odds model — PullEV's three labeled draw bands over the pack's real cards: Chase (~0.8%,
+// rare), Mid (~29%), Common (~70%, the cheapest cards). EVERY card is a real Renaiss Index
 // valuation; there is no fabricated filler. What is labeled-as-model is only (a) the band
 // draw chances (Renaiss publishes no odds API; its per-pack tiers vary and aren't public)
 // and (b) which real cards sit in each pack (Renaiss publishes no pool API). Prices: 100% real.
@@ -40,7 +40,7 @@ func idPrefix(id string) string {
 // applyTiers organizes a pack's real, Index-priced cards into three labeled draw bands by
 // price RANK — Common (the cheapest cards), Mid (the middle third), Chase (the top card or
 // two) — and weights each band so its total draw probability equals its model chance
-// (Chase ~1%, Mid ~33%, Common ~66%). Every card is a real valuation: no fabricated filler.
+// (Chase ~0.8%, Mid ~29%, Common ~70%). Every card is a real valuation: no fabricated filler.
 // The band split and the chances are PullEV's labeled model; the prices are all real. Pure
 // (no IO), so `engine tiers` and the live pool manager share one path.
 func applyTiers(id string, cards []PoolEntry) []PoolEntry {

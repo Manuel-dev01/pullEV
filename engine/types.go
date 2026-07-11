@@ -36,6 +36,7 @@ type Card struct {
 	FMVAsOf       string     `json:"fmvAsOf,omitempty"`       // RFC3339 freshness of a real valuation
 	FMVConfidence string     `json:"fmvConfidence,omitempty"` // high | medium | low (Index only)
 	FMVDeltaPct   float64    `json:"fmvDeltaPct,omitempty"`   // trend % (Index only)
+	Spark         []float64  `json:"spark,omitempty"`         // real price-history points (Index only)
 }
 
 // Pack is a purchasable Renaiss gacha pack.
@@ -151,6 +152,21 @@ type Valuation struct {
 	LastSaleAt    string    `json:"lastSaleAt"`
 	ImageURL      string    `json:"imageUrl,omitempty"`
 	RateRemaining int       `json:"rateRemaining"` // X-RateLimit-Remaining, -1 if unknown
+}
+
+// IndexTile is one real Renaiss market index (per game): the ecosystem's own price index,
+// the same data the FMV oracle is built on. Real, official, live from GET /v1/indices.
+type IndexTile struct {
+	Game         string    `json:"game"`
+	Label        string    `json:"label"`
+	Value        float64   `json:"value"`
+	Base         float64   `json:"base"`
+	DeltaD7      float64   `json:"deltaD7"`
+	DeltaD30     float64   `json:"deltaD30"`
+	DeltaD365    float64   `json:"deltaD365"`
+	Constituents int       `json:"constituents"`
+	Rebalance    string    `json:"rebalance"`
+	Spark        []float64 `json:"spark"` // index value points (USD-scaled)
 }
 
 // Sourced is the standard envelope: a payload plus the provenance governing it.

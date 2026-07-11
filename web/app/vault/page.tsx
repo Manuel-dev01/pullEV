@@ -21,6 +21,25 @@ function gameLabel(g?: string): string {
   return "Card";
 }
 
+// A tiny real price-history sparkline (90-day FMV series from the Renaiss Index).
+function Spark({ points }: { points: number[] }) {
+  if (!points || points.length < 2) return null;
+  const w = 200;
+  const h = 26;
+  const min = Math.min(...points);
+  const max = Math.max(...points);
+  const span = max - min || 1;
+  const d = points
+    .map((p, i) => `${i === 0 ? "M" : "L"}${((i / (points.length - 1)) * w).toFixed(1)},${(h - ((p - min) / span) * h).toFixed(1)}`)
+    .join(" ");
+  const up = points[points.length - 1] >= points[0];
+  return (
+    <svg viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" className="mt-1 h-6 w-full" aria-hidden>
+      <path d={d} fill="none" stroke={up ? "#3ff0cf" : "#ff5fb4"} strokeWidth={1.4} strokeLinejoin="round" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+    </svg>
+  );
+}
+
 export default async function VaultPage() {
   const { data: cards, provenance, fallback } = await getCards();
 
@@ -109,6 +128,7 @@ export default async function VaultPage() {
                 <div style={{ color: "#8a83a0" }} className="truncate text-[11px]" title={c.set}>
                   {c.set}
                 </div>
+                {c.spark && c.spark.length >= 2 ? <Spark points={c.spark} /> : null}
                 <div className="mt-1 flex flex-wrap items-center gap-1.5">
                   <span
                     style={{ border: "1px solid rgba(255,255,255,.12)", color: "#b6afc8" }}
