@@ -16,7 +16,7 @@ export interface Provenance {
   fetchedAt: string;
   /** True only for confirmed-official Renaiss data. Mock/scraped => false. */
   isOfficial: boolean;
-  /** Human-readable caveats, e.g. "card FMVs are ASSUMPTION, PSA-10 range". */
+  /** Human-readable caveats, e.g. "pool membership and draw odds are a labeled PullEV model". */
   notes: string;
 }
 

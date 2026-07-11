@@ -545,8 +545,11 @@ export function Filmstrip({
                 {engineOpen ? "hide the math" : "see the math"}
               </span>
             </div>
-            {engineOpen && (
-              <div style={{ marginTop: 16 }}>
+            {/* animated reveal: grid-rows 0fr->1fr smoothly interpolates the auto height while the
+                body fades + slides in. Stays mounted so it animates open AND closed. */}
+            <div style={{ display: "grid", gridTemplateRows: engineOpen ? "1fr" : "0fr", transition: "grid-template-rows .42s cubic-bezier(.72,0,.18,1)" }}>
+              <div style={{ overflow: "hidden", minHeight: 0 }}>
+                <div style={{ paddingTop: 16, opacity: engineOpen ? 1 : 0, transform: engineOpen ? "translateY(0)" : "translateY(-6px)", transition: "opacity .3s ease, transform .35s cubic-bezier(.72,0,.18,1)" }}>
             <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, margin: "0 0 16px", maxWidth: 700, lineHeight: 1.5 }}>
               No black box. PullEV&apos;s own Go engine computes this verdict as a pure function of the pool
               above: one card is drawn, each card&apos;s probability = its weight ÷ the total weight. The same
@@ -593,8 +596,9 @@ export function Filmstrip({
                 <span style={{ color: C.teal }}>{liveCount}/{active.pool.cards.length}</span> prices LIVE Renaiss Index · pool membership + band odds = PullEV model
               </span>
             </div>
+                </div>
               </div>
-            )}
+            </div>
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 26 }}>

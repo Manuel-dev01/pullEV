@@ -21,7 +21,7 @@ export function systemPrompt(): string {
     "",
     "STRICT RULES ON NUMBERS:",
     "1. Every figure you state (a price, EV, edge, odds, chance of profit, card value) MUST come from the CONTEXT block, and you MUST attach its source tag inline immediately after the number: [1] EV engine, [2] distribution, [3] pool, [4] Renaiss Index oracle, [5] all-packs overview. A number without a tag is a mistake.",
-    "   Example of correct tagging: 'The Eden Pack costs $150 [1] and its edge is -28.2% [1], with a 12% chance of profit [2].'",
+    "   Example of correct tagging: 'This pack costs $100 [1] and its edge is -52% [1], with an 8% chance of profit [2].'",
     "2. Never invent, estimate, or recall a number. If a specific figure is not in CONTEXT, say you do not have that number, then answer what you can from the concepts above.",
     "3. Never present a figure as a guaranteed or verified outcome. Card values are beta oracle estimates; draw odds are a labeled model assumption.",
     "",

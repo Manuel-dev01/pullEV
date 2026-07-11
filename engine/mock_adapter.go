@@ -8,14 +8,15 @@ import (
 	"time"
 )
 
-// dataAsOf is the authored date of the deterministic fixtures. MockAdapter reports
-// this as fetchedAt — honest, because mock data was authored then, not "fetched now".
-const dataAsOf = "2026-06-25T00:00:00Z"
+// dataAsOf is the date the committed fixtures were last built/priced (bump when you re-run
+// `engine curate`/`repool`). MockAdapter reports it as fetchedAt for the offline fallback;
+// once the live loop runs, GetPool/ListPacks stamp the real refresh time instead.
+const dataAsOf = "2026-07-11T00:00:00Z"
 
-const mockNotes = "Deterministic offline fixtures for pool STRUCTURE. Pack prices verified where noted " +
-	"(Omega $48, Renacrypt $88); Eden price is an ASSUMPTION pending live re-confirmation. " +
-	"Most per-card FMVs are ASSUMPTIONs (PSA-10 market ranges); cards badged LIVE carry real " +
-	"Renaiss Index (beta) valuations. See each card's own source."
+const mockNotes = "Committed offline fixtures. Card PRICES are real Renaiss Index (beta) valuations " +
+	"from the last refresh, and each card carries its own LIVE freshness tag. What is a labeled " +
+	"PullEV model is only the pool MEMBERSHIP and draw odds (Renaiss exposes no pool/odds API). " +
+	"Pack prices are verified from the live Renaiss site. See each card's own source."
 
 // Draws are no longer static fixtures — example proofs are generated from the live
 // pool commitment (see merkle.go + the /example-proof handler).

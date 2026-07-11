@@ -80,14 +80,16 @@ export default async function Landing() {
         {/* floating slab chips — anchored to the hero and slanted, floating over the nebula (matches FOIL design) */}
         {featured && (
           <div style={{ position: "absolute", top: "9%", left: "6%", zIndex: 4, "--r": "-8deg", animation: "pv-floaty-r 7s ease-in-out infinite" } as CSSProperties}>
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>
+            <div title="Featured pack's live EV edge (expected value vs cost), computed by PullEV's EV engine" style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#3ff0cf", background: "rgba(12,9,18,.72)", border: "1px solid rgba(63,240,207,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap", cursor: "help" }}>
               {edgePct(featured.ev.evToCostRatio) >= 0 ? "+" : ""}{edgePct(featured.ev.evToCostRatio).toFixed(1)}% EDGE
             </div>
           </div>
         )}
-        <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 4, "--r": "6deg", animation: "pv-floaty-r 9s ease-in-out .6s infinite" } as CSSProperties}>
-          <div title={mythic ? `Rarest card in the featured pool: ${mythic.name}, ${mythic.pct.toFixed(1)}% draw chance in PullEV's model odds (labeled, not real Renaiss odds)` : "Illustrative rarity (PullEV model)"} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap", cursor: "help" }}>MYTHIC · {mythic ? mythic.pct.toFixed(1) : "1.2"}%</div>
-        </div>
+        {mythic && (
+          <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 4, "--r": "6deg", animation: "pv-floaty-r 9s ease-in-out .6s infinite" } as CSSProperties}>
+            <div title={`Rarest card in the featured pool: ${mythic.name}, ${mythic.pct.toFixed(1)}% draw chance in PullEV's model odds (labeled, not real Renaiss odds)`} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap", cursor: "help" }}>CHASE · {mythic.pct.toFixed(1)}%</div>
+          </div>
+        )}
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px clamp(18px,5vw,40px) 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 720, marginTop: 24 }}>

@@ -5,8 +5,8 @@ import { ProvenanceBadge, LiveTag } from "@/components/ProvenanceBadge";
 import type { Card } from "@shared/types";
 
 // The Vault Index: the full real graded-card library PullEV prices. Every card here is
-// a real Renaiss Index (beta) valuation, and the packs draw from exactly these cards, so
-// a judge can see the ground truth behind every EV number. Server-rendered.
+// a real Renaiss Index (beta) valuation, and the PullEV model pools are built from these
+// cards, so a judge can see the ground truth behind every EV number. Server-rendered.
 
 export const dynamic = "force-dynamic";
 
@@ -72,7 +72,7 @@ export default async function VaultPage() {
             </h1>
             <p style={{ color: "#c3bad8" }} className="mt-3 max-w-2xl text-sm leading-relaxed">
               The {cards.length} real graded cards PullEV prices from the Renaiss Index API (beta). The pools
-              PullEV models draw from exactly these, so every EV number traces back to a card you can see
+              PullEV models are built from these cards, so every EV number traces back to a card you can see
               here. Prices are real, cached, and labeled beta/experimental; the pool membership is a labeled
               PullEV model, not Renaiss&apos;s own pack contents.
             </p>

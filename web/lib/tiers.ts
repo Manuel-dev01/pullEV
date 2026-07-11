@@ -4,7 +4,7 @@ import type { Card, Pool } from "@shared/types";
 // counts vary by pack (e.g. OMEGA uses Tier S/A/B/C, Eden uses Crown/Bloom/Thorn), and the
 // exact per-tier chances aren't public. So PullEV does NOT claim a single Renaiss tier
 // scheme or real odds. Instead we model three labeled draw bands over the card prices — a
-// rare Chase band (~1%), a Mid band (~33%), and a Common band (~66%) — as OUR model. We set
+// rare Chase band (~1%), a Mid band (~29%), and a Common band (~70%) — as OUR model. We set
 // the rare band near ~1% as an assumption, consistent with Renaiss surfacing a sub-1% top
 // tier; it is not a sourced Renaiss odds figure. EVERY card is a real Index valuation, from
 // the cheap Common commons to the rare Chase; only the odds and pool membership are modeled.
@@ -26,8 +26,8 @@ export type TierRow = {
 
 const META: Record<TierRow["name"], { target: number; hue: string; blurb: string }> = {
   Chase: { target: 0.01, hue: "#ff5fb4", blurb: "Rare top band, the chase cards" },
-  Mid: { target: 0.33, hue: "#c95cf5", blurb: "Mid band" },
-  Common: { target: 0.66, hue: "#3ff0cf", blurb: "Common bulk" },
+  Mid: { target: 0.29, hue: "#c95cf5", blurb: "Mid band" },
+  Common: { target: 0.70, hue: "#3ff0cf", blurb: "Common bulk" },
 };
 
 /**

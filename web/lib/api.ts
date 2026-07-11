@@ -23,8 +23,9 @@ function snapshotProvenance(): Provenance {
     fetchedAt: snapshot.generatedAt,
     isOfficial: false,
     notes:
-      "BUNDLED SNAPSHOT, live engine unreachable, serving offline fallback data. " +
-      "Same deterministic fixtures; card FMVs and Eden price are ASSUMPTIONs.",
+      "BUNDLED SNAPSHOT: the live engine is unreachable, serving committed offline fixtures. " +
+      "Card prices are real Renaiss Index (beta) valuations from the last refresh; only the pool " +
+      "membership and draw odds are a labeled PullEV model.",
   };
 }
 
@@ -167,7 +168,7 @@ export async function getCards(): Promise<Fetched<Card[]>> {
       isOfficial: true,
       notes:
         "Real graded-card library priced by the Renaiss Index API (beta), bundled seed " +
-        "(engine unreachable). The packs draw from these cards.",
+        "(engine unreachable). The pools PullEV models draw from these cards.",
     },
     fallback: true,
   };

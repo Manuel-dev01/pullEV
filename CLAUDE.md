@@ -38,13 +38,13 @@ Every feature must defend itself against these five. If a feature doesn't move a
 - Renaiss = RWA liquidity infrastructure for real-world graded collectibles (trading cards first: Pokémon, One Piece), on **BNB Chain**.
 - Each PSA/BGS-graded physical card → an **ERC-721 NFT** mirrored to a vaulted physical asset. Card stays in custody; NFT moves on-chain.
 - **FMV/CMV oracle** aligns on-chain price to real market value. (FMV = fair market value; CMV = current market value.) This is our EV price source.
-- **Infinite Gacha** = perpetual packs with continuously refreshed, vault-backed pools. Known packs and prices at time of writing: **Eden $150** (BGS Black Label 10 pool), **Omega $48**, **Renacrypt $88** (Renaiss × Collector Crypt). Verify current prices/pools live before relying on them.
+- **Infinite Gacha** = perpetual packs with continuously refreshed, vault-backed pools. The real lineup (verified live): **3 rippable Infinite packs** — Eden $150 (top prize $4,434), OMEGA $48 ($1,532), RenaCrypt $88 ($2,415) — plus **Champion Pack $100** (limited, sold out) and **11 previous $100 limited packs** (sold-out showcase). Each pack publishes a tiered "what is loaded" odds structure (e.g. Crown/Bloom/Thorn, Tier S/A/B/C). PullEV prices a ~148-card real graded-card library and models 16-card pools (bands ~2 Chase / 4 Mid / 10 Common) from it. Verify current prices/pools live before relying on them.
 - Each pack draw is "sealed with blockchain-level fairness," anchored by **Merkle proofs + zero-knowledge validation**. This is the structure our verifier targets.
 - **RenaissOS** turns vaults/card shops into multi-sig on-chain verification nodes.
 - **No native token.** Identity/participation via **Soulbound Tokens (SBTs)**.
-- App layer: **renaiss.xyz** (open/closed beta). **No public API or SDK exists yet — it is roadmap-stage.**
+- App layer: **renaiss.xyz** (open/closed beta). The **Renaiss Index API (beta)** (`api.renaissos.com`) is now live and is PullEV's FMV oracle: real graded-card valuations by cert / structured card / search, plus market indices and price-history series (partner-keyed, X-Api-Key/X-Api-Secret). It exposes **no pool/odds/draw API**, so pool membership + draw odds stay a labeled PullEV model. The Renaiss gacha contract on BNB Chain exposes a real `getMerkleRoot(packId)`, which PullEV reads and displays for the 12 sealed packs (auditable on BscScan).
 
-**Anything not in this list, we verify before we trust.** Card prices, pool contents, and proof formats are assumptions until confirmed against live data or coaching input. Label them as assumptions in code and UI.
+**Anything not in this list, we verify before we trust.** Card prices are now REAL (Renaiss Index API, beta, cached); pool membership + draw odds remain a labeled PullEV model, and the client-side Merkle proof scheme is documented and pluggable. Label every model/assumption in code and UI.
 
 ## 4. ARCHITECTURE
 
@@ -54,7 +54,7 @@ Monorepo:
 /web        Next.js (App Router) + TS + Tailwind — UI, fairness verifier (client-side), AI route
 /engine     Go service — adapter layer, EV engine, caching, typed JSON API
 /shared     Shared type definitions (pack, card, draw, proof, EV result)
-/fixtures   Deterministic mock data for all three packs
+engine/fixtures  Real Index-priced pools + committed seed for the 15 real packs (offline-safe, embedded)
 docs/        README source, data-source labels, demo script
 ```
 
@@ -93,12 +93,12 @@ Rule: **the UI must never render a number without its provenance reachable.** A 
 - Output: `VERIFIED — recomputed locally` (green) or `MISMATCH` (red), showing each hash step.
 - If Renaiss's exact hashing/leaf-encoding scheme is unconfirmed, implement against the **documented Merkle-proof primitive**, keep the hash function and leaf encoding **pluggable**, and label the scheme assumption explicitly. Confirm the real scheme at the coaching session.
 
-### 4.4 AI Pull Advisor (grounded — Anthropic API)
+### 4.4 AI Pull Advisor (grounded — DeepSeek API)
 
 - Server route; the model receives ONLY the computed EV result + provenance as context.
 - System prompt hard rule: **every sentence must cite a number and its source from the provided context; refuse to assert anything not in context; never present estimates as facts.**
 - If asked something outside the data, it says so. This restraint is a feature we show off, not a limitation we hide.
-- Model string: use the current Sonnet model; keep it swappable in one config constant.
+- Model string: **DeepSeek** (`deepseek-chat`), OpenAI-compatible endpoint, kept swappable in one config constant (`web/lib/advisor.ts`). Deliberate deviation from the original Anthropic/Sonnet plan; key is server-only (`DEEPSEEK_API_KEY`, never `NEXT_PUBLIC`).
 
 ## 5. SCOPE DISCIPLINE (1 week, solo)
 
