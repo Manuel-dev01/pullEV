@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // PullEV design system fonts (from PullEV Pipeline.dc.html): Anton (display),
@@ -39,6 +40,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-neutral-950 text-neutral-100">
         {children}
+        <Analytics />
       </body>
     </html>
   );
