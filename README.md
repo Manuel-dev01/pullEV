@@ -19,8 +19,6 @@ source (EV engine, distribution, pool, or the Renaiss Index oracle). It refuses 
 - Engine health: https://pullev-engine-production.up.railway.app/api/health
 - Demo video (90s): https://www.youtube.com/watch?v=2mFQuAnavfQ
 
-The demo script behind the video lives in [`docs/demo-script.md`](docs/demo-script.md).
-
 ## Who it is for and the job it does
 
 PullEV serves everyone who touches an Infinite Gacha pack, with a concrete job for each:
