@@ -13,8 +13,6 @@ the two questions every ripper asks, and it grounds every number in a labeled so
 A grounded **AI Pull Advisor** explains each verdict in plain language and cites every number back to its
 source (EV engine, distribution, pool, or the Renaiss Index oracle). It refuses anything it cannot source.
 
-Built for the **Renaiss Tech Hackathon Season 1** (Tool track, with a grounded AI assist layer).
-
 ## Live demo
 
 - App: https://pullev.vercel.app
