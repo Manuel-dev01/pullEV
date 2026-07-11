@@ -17,8 +17,9 @@ source (EV engine, distribution, pool, or the Renaiss Index oracle). It refuses 
 
 - App: https://pullev.vercel.app
 - Engine health: https://pullev-engine-production.up.railway.app/api/health
+- Demo video (90s): https://www.youtube.com/watch?v=2mFQuAnavfQ
 
-A 90 second walkthrough lives in [`docs/demo-script.md`](docs/demo-script.md).
+The demo script behind the video lives in [`docs/demo-script.md`](docs/demo-script.md).
 
 ## Who it is for and the job it does
 
