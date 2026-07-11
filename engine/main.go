@@ -222,7 +222,9 @@ func handleExampleProof(w http.ResponseWriter, r *http.Request) {
 // This is the "Vault Index": every card the packs draw from, each a real Renaiss Index
 // (beta) valuation. Stamped with the live last-refresh time when the manager has run.
 func handleCards(w http.ResponseWriter, _ *http.Request) {
-	snap := valuationCache.SeedSnapshot()
+	// PoolLibrary (not SeedSnapshot) so ad-hoc /value cert lookups can't leak non-pool cards
+	// into the Vault Index — keeps the "the packs draw from exactly these" claim honest.
+	snap := valuationCache.PoolLibrary()
 	cards := make([]Card, 0, len(snap))
 	for key, v := range snap {
 		if !v.Found || v.PriceUsd <= 0 {

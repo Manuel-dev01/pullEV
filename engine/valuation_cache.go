@@ -80,6 +80,24 @@ func (vc *ValuationCache) SeedSnapshot() map[string]Valuation {
 	return out
 }
 
+// PoolLibrary returns the committed card library (the seed pool set) with any live-refreshed
+// prices overlaid, but EXCLUDING ad-hoc /value cert lookups. Those live in `mem` under bare
+// cert keys (e.g. "PSA149595098") which are NOT pool cards; SeedSnapshot would leak them into
+// the Vault Index. PoolLibrary keys strictly to the committed seed set (the cards the packs
+// draw from), taking the fresher live price when the same path key was re-priced.
+func (vc *ValuationCache) PoolLibrary() map[string]Valuation {
+	vc.mu.RLock()
+	defer vc.mu.RUnlock()
+	out := make(map[string]Valuation, len(vc.seed))
+	for k, v := range vc.seed {
+		if m, ok := vc.mem[k]; ok { // same path key, fresher live value wins
+			v = m
+		}
+		out[k] = v
+	}
+	return out
+}
+
 // SetMemBatch stores a batch of freshly-fetched valuations into the session cache (one
 // persist), so a background refresh updates prices for both the pool overlay and /value.
 func (vc *ValuationCache) SetMemBatch(vals map[string]Valuation) {

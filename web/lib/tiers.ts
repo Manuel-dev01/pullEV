@@ -2,11 +2,12 @@ import type { Card, Pool } from "@shared/types";
 
 // Renaiss publishes a per-pack "What is loaded" tiered structure, but the tier NAMES and
 // counts vary by pack (e.g. OMEGA uses Tier S/A/B/C, Eden uses Crown/Bloom/Thorn), and the
-// exact per-tier chances aren't all public. So PullEV does NOT claim a single Renaiss tier
-// scheme. Instead we model three honest draw bands over the real card prices — a rare Chase
-// band (~1%), a Mid band (~33%), and a Common band (~66%) — and label them as OUR model.
-// The one grounding that IS real and public: Renaiss's rarest tier is <1% (e.g. OMEGA Tier
-// S), which our ~1% Chase band mirrors.
+// exact per-tier chances aren't public. So PullEV does NOT claim a single Renaiss tier
+// scheme or real odds. Instead we model three labeled draw bands over the card prices — a
+// rare Chase band (~1%), a Mid band (~33%), and a Common band (~66%) — as OUR model. We set
+// the rare band near ~1% as an assumption, consistent with Renaiss surfacing a sub-1% top
+// tier; it is not a sourced Renaiss odds figure. Only the Chase band holds real Index-priced
+// cards; the Mid and Common bands are cheap labeled filler at assumed prices.
 //
 // Each card's draw weight encodes its band (every card in a band shares a weight, and a
 // band's weights sum to its chance), so we recover the bands straight from the pool the UI

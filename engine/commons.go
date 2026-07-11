@@ -9,30 +9,31 @@ import (
 	"time"
 )
 
-// Odds model — PullEV's three labeled draw bands over the real card prices: Crown (~1%,
-// rare chase), Bloom (~33%, mid), Thorn (~66%, cheap bulk). These are OUR model, not a
-// verbatim Renaiss scheme: Renaiss publishes a PER-PACK tiered "what is loaded" whose names
-// and counts vary (e.g. OMEGA = Tier S/A/B/C, Eden = Crown/Bloom/Thorn) and whose exact
-// per-tier chances aren't all public. The one public anchor we ground on: Renaiss's rarest
-// tier is <1% (e.g. OMEGA Tier S), which our ~1% Crown band mirrors. Card FMVs are real
-// Renaiss Index valuations; the per-pack band boundaries and the cheap Thorn filler are the
-// labeled assumption (fmvIsAssumption, fmvSource:Mock) — our library is chase-heavy while
-// Renaiss loads many cheap cards we don't price, so the filler stands in for that bulk.
+// Odds model — PullEV's three labeled draw bands over the card prices: Chase (~1%, rare),
+// Mid (~33%), Common (~66%, cheap bulk). These are OUR model, not a verbatim Renaiss scheme:
+// Renaiss publishes a PER-PACK tiered "what is loaded" whose names and counts vary (e.g.
+// OMEGA = Tier S/A/B/C, Eden = Crown/Bloom/Thorn) and whose exact per-tier chances aren't
+// public. We set the rare band near ~1% as an assumption, consistent with Renaiss surfacing
+// a sub-1% top tier; it is not a sourced Renaiss odds figure. Only the Chase band holds real
+// Renaiss Index valuations; the Mid and Common bands are cheap labeled filler
+// (fmvIsAssumption, fmvSource:Mock) — our library is chase-heavy while Renaiss loads many
+// cheap cards we don't price, so the filler stands in for that bulk. So for most packs the
+// bulk of the draw probability sits on assumed filler, and only the ~1% Chase band is real.
 //
 // `engine tiers` (offline, no API) reads each pool's real chase cards, bins them into the
 // three bands by FMV, adds the cheap filler, and weights each band so its total draw
 // probability equals its model chance. Idempotent (drops prior filler first). Run it AFTER
 // `engine curate`, then `engine snapshot`, then rebuild the binary.
 
-// Band draw chances (PullEV's model). The rarest-band ~1% is anchored to Renaiss's public
-// <1% rarest tier; the mid/common split is our model since per-pack chances aren't public.
+// Band draw chances (PullEV's model). The rare-band ~1% is a labeled assumption consistent
+// with Renaiss's sub-1% top tier; the mid/common split is our model (per-pack chances aren't public).
 const (
-	crownChance = 0.01
-	bloomChance = 0.33
-	thornChance = 0.66
+	chaseChance  = 0.01
+	midChance    = 0.33
+	commonChance = 0.66
 )
 
-// fillerCard is a labeled cheap card populating the Thorn bulk (assumed FMV, Mock source).
+// fillerCard is a labeled cheap card populating the Common bulk (assumed FMV, Mock source).
 type fillerCard struct {
 	name  string
 	grade string
@@ -40,22 +41,22 @@ type fillerCard struct {
 	fmv   float64
 }
 
-// tierConfig sets, per pack, the FMV boundaries between tiers and the cheap Thorn filler.
+// tierConfig sets, per pack, the FMV boundaries between tiers and the cheap Common-band filler.
 // Boundaries are calibrated so the computed edge reads believable (real chances + real
-// chase prices + this cheap filler). Chase cards >= crownFloor are Crown; [bloomFloor,
-// crownFloor) are Bloom; the rest plus filler are Thorn.
+// chase prices + this cheap filler). Chase cards >= chaseFloor are Chase; [midFloor,
+// chaseFloor) are Mid; the rest plus filler are Common.
 type tierConfig struct {
 	prefix     string
-	crownFloor float64
-	bloomFloor float64
+	chaseFloor float64
+	midFloor   float64
 	filler     []fillerCard
 }
 
-// Filler spans each pack's Thorn and Bloom bands with cheap labeled cards, scaled to the
-// pack price. The real chase cards (all pricier than any filler) sit above crownFloor and
-// so land in Crown (~1%, rare) — exactly how real gacha works: most pulls are cheap, the
+// Filler spans each pack's Common and Mid bands with cheap labeled cards, scaled to the
+// pack price. The real chase cards (all pricier than any filler) sit above chaseFloor and
+// so land in the Chase band (~1%, rare) — exactly how real gacha works: most pulls are cheap, the
 // chase is rare. This keeps the computed edge believable (house edge, thin margins) while
-// the tier chances stay Renaiss's published structure.
+// the band chances stay our labeled model.
 var omegaFiller = []fillerCard{ // OMEGA $48
 	{"Rattata", "PSA 9", "Pokemon Base Common", 8},
 	{"Pidgey", "PSA 9", "Pokemon Base Common", 14},
@@ -93,8 +94,8 @@ var edenFiller = []fillerCard{ // Eden $150 flagship (richer, so its house edge 
 	{"Caterpie", "PSA 9", "Pokemon Base Common", 260},
 }
 
-// Per-pack configs, calibrated via `engine tiers` verdict print. crownFloor sits above the
-// filler top so real chase cards fall in Crown; bloomFloor splits filler into Bloom/Thorn.
+// Per-pack configs, calibrated via `engine tiers` verdict print. chaseFloor sits above the
+// filler top so real chase cards fall in Chase; midFloor splits filler into Mid/Common.
 // Previous $100 packs share the default (premium) config.
 var tierConfigs = map[string]tierConfig{
 	"omega":     {"omega", 110, 40, omegaFiller},
@@ -118,8 +119,8 @@ func idPrefix(id string) string {
 	return strings.ReplaceAll(id, "-", "")
 }
 
-// applyTiers organizes a pack's real chase cards plus cheap filler into Crown/Bloom/Thorn
-// and weights each tier so its total draw probability equals its published chance. Pure
+// applyTiers organizes a pack's real chase cards plus cheap filler into Chase/Mid/Common
+// and weights each tier so its total draw probability equals its model chance. Pure
 // (no IO), so `engine tiers` and the live pool manager share one path.
 func applyTiers(id string, chase []PoolEntry) []PoolEntry {
 	cfg := tierFor(id)
@@ -147,21 +148,21 @@ func applyTiers(id string, chase []PoolEntry) []PoolEntry {
 		}})
 	}
 
-	// Bin into tiers by FMV.
-	var crown, bloom, thorn []PoolEntry
+	// Bin into bands by FMV.
+	var chaseBand, midBand, commonBand []PoolEntry
 	for _, e := range all {
 		switch {
-		case e.Card.FMVUsd >= cfg.crownFloor:
-			crown = append(crown, e)
-		case e.Card.FMVUsd >= cfg.bloomFloor:
-			bloom = append(bloom, e)
+		case e.Card.FMVUsd >= cfg.chaseFloor:
+			chaseBand = append(chaseBand, e)
+		case e.Card.FMVUsd >= cfg.midFloor:
+			midBand = append(midBand, e)
 		default:
-			thorn = append(thorn, e)
+			commonBand = append(commonBand, e)
 		}
 	}
 
-	// Weight each tier so its total draw probability equals its published chance
-	// (equal within a tier). ComputeEV normalizes by the weight sum, so proportions hold.
+	// Weight each tier so its total draw probability equals its model chance
+	// (equal within a band). ComputeEV normalizes by the weight sum, so proportions hold.
 	assign := func(entries []PoolEntry, chance float64) {
 		if len(entries) == 0 {
 			return
@@ -171,14 +172,14 @@ func applyTiers(id string, chase []PoolEntry) []PoolEntry {
 			entries[i].Weight = w
 		}
 	}
-	assign(crown, crownChance)
-	assign(bloom, bloomChance)
-	assign(thorn, thornChance)
+	assign(chaseBand, chaseChance)
+	assign(midBand, midChance)
+	assign(commonBand, commonChance)
 
 	out := make([]PoolEntry, 0, len(all))
-	out = append(out, crown...)
-	out = append(out, bloom...)
-	out = append(out, thorn...)
+	out = append(out, chaseBand...)
+	out = append(out, midBand...)
+	out = append(out, commonBand...)
 	return out
 }
 

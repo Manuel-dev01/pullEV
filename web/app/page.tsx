@@ -83,7 +83,7 @@ export default async function Landing() {
           </div>
         )}
         <div style={{ position: "absolute", top: "64%", left: "12%", zIndex: 4, "--r": "6deg", animation: "pv-floaty-r 9s ease-in-out .6s infinite" } as CSSProperties}>
-          <div title={mythic ? `Rarest card in the featured pool: ${mythic.name}, ${mythic.pct.toFixed(1)}% draw chance (live pool odds)` : "Illustrative rarity"} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap", cursor: "help" }}>MYTHIC · {mythic ? mythic.pct.toFixed(1) : "1.2"}%</div>
+          <div title={mythic ? `Rarest card in the featured pool: ${mythic.name}, ${mythic.pct.toFixed(1)}% draw chance in PullEV's model odds (labeled, not real Renaiss odds)` : "Illustrative rarity (PullEV model)"} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "#ff5fb4", background: "rgba(12,9,18,.72)", border: "1px solid rgba(255,95,180,.35)", borderRadius: 10, padding: "8px 12px", backdropFilter: "blur(6px)", whiteSpace: "nowrap", cursor: "help" }}>MYTHIC · {mythic ? mythic.pct.toFixed(1) : "1.2"}%</div>
         </div>
         <div style={{ position: "relative", zIndex: 5, maxWidth: 1360, margin: "0 auto", padding: "96px 40px 0" }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 20, flexWrap: "wrap" }}>

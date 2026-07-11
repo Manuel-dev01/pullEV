@@ -45,22 +45,24 @@ current packs (the 3 Infinite + Champion) re-price and rotate live; the 11 previ
 | On-chain Merkle root (12 sealed packs) | Renaiss gacha contract on BNB Chain, `getMerkleRoot(packId)`, read via public RPC | Real, on-chain, independently auditable on BscScan |
 | EV, distribution, chance of profit | PullEV EV engine, computed from the above | Derived, deterministic |
 
-## The odds model (labeled — not Renaiss's tiers)
+## The odds model (labeled, not Renaiss's tiers)
 
 Renaiss shipped a real Index API for card **valuations**, and commits each pack's pool as an on-chain Merkle
 root on BNB Chain (auditable via BscScan with the pack ID), but exposes no REST API for pool contents, odds,
 or the individual draw proofs. So PullEV grounds prices in real data and treats the rest as a clearly labeled
 model:
 
-- **Odds use PullEV's own three draw bands** over real card prices: Chase (~1%, rare top band), Mid (~33%),
-  Common (~66%). These are **our model**, not a Renaiss scheme. Renaiss publishes a *per-pack* tiered "what is
-  loaded" whose names and counts **vary by pack** (e.g. OMEGA uses Tier S/A/B/C, Eden uses Crown/Bloom/Thorn),
-  and the exact per-tier chances aren't all public. The one public, verifiable anchor we ground on: Renaiss's
-  **rarest tier is `<1%`** (visible on the OMEGA pack), which our ~1% Chase band mirrors.
-- **The Common bulk includes labeled filler.** Our real library is chase-heavy, while Renaiss loads many
-  cheap cards we don't price, so a small set of clearly-labeled cheap filler cards (real names, assumed FMVs,
-  `fmvSource:Mock`) fills the Common band so the EV and distribution read like real gacha (an honest house
-  edge) instead of "every pull profits." This filler is the only FMV assumption in a pool.
+- **Odds use PullEV's own three draw bands**: Chase (~1%, rare top band), Mid (~33%), Common (~66%). These are
+  **our model**, not a Renaiss scheme. Renaiss publishes a *per-pack* tiered "what is loaded" whose names and
+  counts **vary by pack** (e.g. OMEGA uses Tier S/A/B/C, Eden uses Crown/Bloom/Thorn), and the exact per-tier
+  chances aren't public. We set the rare band near ~1% as a labeled assumption, consistent with Renaiss
+  surfacing a sub-1% top tier; it is not a sourced Renaiss odds figure.
+- **Only the Chase band is real; the Mid and Common bands are labeled filler.** Our real library is
+  chase-heavy, while Renaiss loads many cheap cards we don't price, so cheap clearly-labeled filler cards (real
+  names, assumed FMVs, `fmvSource:Mock`) fill the Mid and Common bands so the EV and distribution read like real
+  gacha (an honest house edge) instead of "every pull profits." For most packs that means the ~33% Mid and
+  ~66% Common bulk both sit on assumed filler prices, and only the ~1% Chase band is real Index-priced cards.
+  Every card and band is tagged LIVE or ASSUMED so this is visible, not hidden.
 - **Draw weights are a PullEV assumption.** Each card's weight = its band chance / the number of cards in that
   band, so a band's total draw probability equals its model chance.
 - **Example proofs are labeled EXAMPLE.** The verification math is genuine and runs client-side; only the

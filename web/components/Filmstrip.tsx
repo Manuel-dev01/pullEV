@@ -473,12 +473,16 @@ export function Filmstrip({
                   <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.muted }}>top prize {money(active.pack.topPrizeUsd)}</div>
                 ) : null}
               </div>
-              <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, margin: "0 0 16px", maxWidth: 660, lineHeight: 1.5 }}>
-                PullEV models three draw bands over real card prices. Renaiss publishes a per-pack tiered
-                &quot;what is loaded&quot; (e.g. Tier S/A/B/C on OMEGA, Crown/Bloom/Thorn on Eden) whose exact
-                chances aren&apos;t all public, so these bands are our labeled model. The one public anchor:
-                Renaiss&apos;s rarest tier is &lt;1%, which our ~1% Chase band mirrors. Chances shown are this
-                pool&apos;s computed draw probabilities; the Common bulk includes labeled filler.
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, margin: "0 0 16px", maxWidth: 680, lineHeight: 1.5 }}>
+                PullEV models three draw bands. Only the rare <span style={{ color: C.teal }}>Chase</span> band
+                holds real Index-priced cards; the <span style={{ color: "#c95cf5" }}>Mid</span> and{" "}
+                <span style={{ color: C.teal }}>Common</span> bands are cheap labeled filler at{" "}
+                <span style={{ color: "#ffd76a" }}>assumed</span> prices (Renaiss loads many cheap cards we
+                do not price), so for most packs the bulk of the draw sits on assumed filler. Renaiss
+                publishes a per-pack tiered &quot;what is loaded&quot; (e.g. Tier S/A/B/C on OMEGA,
+                Crown/Bloom/Thorn on Eden) whose exact chances aren&apos;t public, so these bands and their
+                weights are our labeled model. We set the rare band near ~1%, consistent with Renaiss
+                surfacing a sub-1% top tier. Chances shown are this pool&apos;s computed draw probabilities.
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 14 }}>
                 {tiers.map((t) => (
@@ -494,12 +498,16 @@ export function Filmstrip({
                     </div>
                     <div style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.muted }}>
                       {money(t.min)}–{money(t.max)} · {t.count} card{t.count === 1 ? "" : "s"}
+                      {t.examples.every((c) => c.fmvIsAssumption) ? <AssumptionTag note="Cheap filler at assumed prices" /> : null}
                     </div>
                     <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 3 }}>
                       {t.examples.slice(0, 3).map((c, i) => (
-                        <div key={c.id + i} style={{ display: "flex", justifyContent: "space-between", gap: 8, fontFamily: "var(--font-mono)", fontSize: 9.5, color: "#b6afc8" }}>
+                        <div key={c.id + i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, fontFamily: "var(--font-mono)", fontSize: 9.5, color: "#b6afc8" }}>
                           <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.name}</span>
-                          <span style={{ flex: "none", color: C.dim }}>{money(c.fmvUsd)}</span>
+                          <span style={{ flex: "none", display: "inline-flex", alignItems: "center", color: C.dim }}>
+                            {money(c.fmvUsd)}
+                            {c.fmvSource === "Index" ? <LiveTag confidence={c.fmvConfidence} deltaPct={c.fmvDeltaPct} asOf={c.fmvAsOf} /> : c.fmvIsAssumption ? <AssumptionTag /> : null}
+                          </span>
                         </div>
                       ))}
                     </div>
