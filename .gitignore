@@ -24,3 +24,10 @@ Thumbs.db
 .idea/
 
 .vercel
+
+# local-only, not published to the repo (root-anchored so the web/public/ copies
+# the app actually serves are unaffected)
+/CLAUDE.md
+/image_1.jpg
+/image_2.webp
+/image_3.png
