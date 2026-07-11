@@ -122,19 +122,47 @@ func pickLowPlusChase(cards []curatedCard, nLow, nChase, offset int, cheapCap fl
 	}
 	sorted := sortAsc(cards)
 	n := len(sorted)
-	chase := sorted[n-nChase:] // the most valuable cards = the rare chase
+
+	// Chase band: the most valuable cards. Rather than always taking the single global top
+	// nChase (which makes every pack drawing from the same library surface the IDENTICAL chase),
+	// pick nChase from a small window of the top-value cards with a per-pack rotation, so packs
+	// get DISTINCT, still-genuinely-expensive chases. The library has real depth here (many
+	// cards well above the commons), so the window stays high-value.
+	window := nChase * 8
+	if window > n-nLow {
+		window = n - nLow
+	}
+	if window < nChase {
+		window = nChase
+	}
+	chase := pickSpreadRotated(sorted[n-window:], nChase, offset)
+	chosen := make(map[string]bool, nChase)
+	for _, c := range chase {
+		chosen[c.slug] = true
+	}
+
 	// Draw the commons from real cards under a price cap RELATIVE to the pack price, so the
 	// high-probability Common/Mid bands stay cheaper than the ticket (an even spread, or a
-	// flat cap above the ticket, would make the pack look absurdly +EV). Fall back to the
-	// cheapest cards if too few qualify.
+	// flat cap above the ticket, would make the pack look absurdly +EV). Exclude any card
+	// already chosen as chase; fall back to the cheapest cards if too few qualify.
 	cheap := make([]curatedCard, 0, n)
-	for _, c := range sorted[:n-nChase] {
-		if c.val.PriceUsd <= cheapCap {
-			cheap = append(cheap, c)
+	for _, c := range sorted {
+		if chosen[c.slug] || c.val.PriceUsd > cheapCap {
+			continue
 		}
+		cheap = append(cheap, c)
 	}
 	if len(cheap) < nLow {
-		cheap = sorted[:min(nLow, n-nChase)]
+		cheap = cheap[:0]
+		for _, c := range sorted {
+			if chosen[c.slug] {
+				continue
+			}
+			cheap = append(cheap, c)
+			if len(cheap) >= nLow {
+				break
+			}
+		}
 	}
 	low := pickSpreadRotated(cheap, nLow, offset)
 	return append(low, chase...)
@@ -246,7 +274,9 @@ func curateOffset(id string) int {
 	order := append([]string{"omega", "renacrypt", "eden", "champion"}, previousPackIDs...)
 	for i, p := range order {
 		if p == id {
-			return i * 3
+			// Step 7 is coprime to the chase window (nChase*8 = 16), so the 15 packs get 15
+			// distinct rotations and their chases (and thus their cover art) don't collide.
+			return i * 7
 		}
 	}
 	return 0

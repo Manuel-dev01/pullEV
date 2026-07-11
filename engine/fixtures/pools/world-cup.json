@@ -3,108 +3,92 @@
   "cards": [
     {
       "card": {
-        "id": "worldcup-pikachu-with-grey-felt-hat",
-        "name": "Pikachu with Grey Felt Hat",
-        "grade": "PSA 10",
-        "set": "Pokemon SVP Black Star Promos",
-        "fmvUsd": 2858.37,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T23:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.97
-      },
-      "weight": 0.004
-    },
-    {
-      "card": {
         "id": "worldcup-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4534.91,
+        "set": "A Fist Of Divine Speed",
+        "fmvUsd": 1600.04,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_118_ja_6dfff8cdbeee422f9bb6893cfcc070f6_sm.png?v=27bc9c36",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
+        "fmvAsOf": "2026-07-10T10:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -11.8
+        "fmvDeltaPct": -16.17
       },
       "weight": 0.004
     },
     {
       "card": {
-        "id": "worldcup-lt-surges-rattata",
-        "name": "Lt. Surge's Rattata",
+        "id": "worldcup-shanks",
+        "name": "Shanks",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
-        "fmvUsd": 39.22,
+        "set": "Romance Dawn",
+        "fmvUsd": 2169.46,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_120_manga-alternate-art_ja_sm.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-01T00:00:00.000Z",
+        "fmvAsOf": "2026-07-10T08:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -4.18
+      },
+      "weight": 0.004
+    },
+    {
+      "card": {
+        "id": "worldcup-caterpie",
+        "name": "Caterpie",
+        "grade": "CGC 10 Perfect",
+        "set": "FireRed \u0026 LeafGreen",
+        "fmvUsd": 39.9,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_rg_56_en_1bd6088c58a240ebbb688a024c218386_sm.png?v=8e5c57e6",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-05-18T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "worldcup-lt-surges-spearow",
-        "name": "Lt. Surge's Spearow",
+        "id": "worldcup-caterpie-x",
+        "name": "Caterpie",
         "grade": "PSA 10",
-        "set": "Gym Heroes",
-        "fmvUsd": 41.5,
+        "set": "Legendary Collection",
+        "fmvUsd": 43.19,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_g1_52_en_3fcbfd51967c454a9646febd10bfce93_sm.png?v=fd83a063",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-09-29T00:00:00.000Z",
+        "fmvAsOf": "2026-04-08T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "worldcup-nami",
-        "name": "Nami",
+        "id": "worldcup-franky-x",
+        "name": "Franky",
         "grade": "PSA 10",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 50.38,
+        "set": "Emperors In The New World",
+        "fmvUsd": 52.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_054_en_166d855141c04b2f99ad54c1a1e25a43_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-25T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -6.72
+        "fmvAsOf": "2026-06-04T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "worldcup-alvida",
-        "name": "Alvida",
+        "id": "worldcup-brook",
+        "name": "Brook",
         "grade": "Raw A",
         "set": "Adventure On Kami’s Island",
-        "fmvUsd": 6.21,
+        "fmvUsd": 6.31,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_003_ja_c9fa195fa0d34f6f8a27fa48504505c2_sm.png?v=e027d2b6",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-06T18:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "worldcup-usopp",
-        "name": "Usopp",
-        "grade": "Raw A",
-        "set": "Pillars Of Strength",
-        "fmvUsd": 7.64,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op03_041_ja_10023bca85c24cf191e287528089d9ce_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2023-02-11T00:00:00.000Z",
+        "fmvAsOf": "2026-05-16T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
@@ -141,46 +125,60 @@
     },
     {
       "card": {
-        "id": "worldcup-sanji",
-        "name": "Sanji",
+        "id": "worldcup-franky",
+        "name": "Franky",
         "grade": "CGC 10 Perfect",
-        "set": "The Three Captains",
-        "fmvUsd": 20.4,
+        "set": "Egghead",
+        "fmvUsd": 20.66,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_004_en_fe01b46ae64b469c82ff114e26532a63_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_010_en_064599dde4c347e8ae90bcec83de40b1_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-04-13T00:00:00.000Z",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "worldcup-pidgeot-ex",
-        "name": "Pidgeot ex",
+        "id": "worldcup-zubat",
+        "name": "Zubat",
         "grade": "PSA 10",
-        "set": "Ruler of the Black Flame",
-        "fmvUsd": 29.99,
+        "set": "Paradox Rift",
+        "fmvUsd": 21.23,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_par_110_en_322699f772934aa2a80005dc5802bfe4_sm.png?v=51015c14",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-01T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -24.93
+        "fmvAsOf": "2025-08-06T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "worldcup-alvida-x",
-        "name": "Alvida",
-        "grade": "BGS 10 Pristine",
-        "set": "Romance Dawn",
-        "fmvUsd": 34.5,
+        "id": "worldcup-usopp",
+        "name": "Usopp",
+        "grade": "CGC 10 Perfect",
+        "set": "Straw Hat Crew",
+        "fmvUsd": 30.48,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_002_en_d68b5c2706064321a741c91f7f548d91_sm.webp",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "worldcup-alvida",
+        "name": "Alvida",
+        "grade": "PSA 10",
+        "set": "Romance Dawn",
+        "fmvUsd": 36.76,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-23T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999

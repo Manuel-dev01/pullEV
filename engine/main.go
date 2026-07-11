@@ -34,6 +34,9 @@ func main() {
 		case "curate":
 			runCurate()
 			return
+		case "repool":
+			runRepool()
+			return
 		case "refresh":
 			runRefresh()
 			return

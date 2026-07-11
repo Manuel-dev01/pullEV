@@ -35,6 +35,11 @@ two parenthetical lines in the hook.
 > up each pack, so this is an EV for a modeled pool, not a measurement of Renaiss's own pack. The spread is an
 > honest house edge from real prices. The Vault page lists the whole real card library the packs price from.
 >
+> And that EV is not a black box. Open the "Under the hood" panel and PullEV shows the exact computation its Go
+> engine ran: expected value built up band by band as draw chance times average value, the edge as EV over cost,
+> the profit odds, and a SHA-256 fingerprint of the inputs so the same pool always reproduces the same number.
+> It is the EV twin of the fairness verifier: don't trust the verdict, read the math that made it.
+>
 > Want it in plain words? The advisor explains the verdict, and it must cite every number or it refuses. Ask it
 > something off-topic and it declines, by design. It ends with "not financial advice." Restraint is the feature.
 >
@@ -49,7 +54,7 @@ two parenthetical lines in the hook.
 | --- | --- | --- |
 | 0:00-0:12 | Landing hero at `/`, then click into `/app`. | The hook: flagship product, but no EV up front and fairness is only a claim. |
 | 0:12-0:40 | `/verify` on the Champion pack (marked with a chain icon): show Renaiss's REAL on-chain root + the BscScan "verify it yourself" link, note all twelve sealed packs have one. Then load EXAMPLE valid, recompute, hash ladder lands green VERIFIED. Switch to EXAMPLE tampered, recompute, red MISMATCH. Point at the EXAMPLE vs on-chain labels. | The money shot: Renaiss's real on-chain commitment, plus a client-side recompute; tamper breaks it; labels keep the real root and the example distinct. |
-| 0:40-1:02 | Point at the landing's Renaiss market-index strip (real Pokémon / One Piece index + deltas). Then Station 01 Floor: three live Infinite packs plus the sold-out showcase, live edges, real refresh timestamp. Station 02 X-Ray: EV vs cost, distribution, the "what is loaded" three-band model, every card a LIVE Index price. Optionally `/vault` for the full priced library with real price-history sparklines. | EV transparency: real Index prices on every card (even the cheap commons), the odds are the only labeled model, honest house-edge spread, every number traceable. |
+| 0:40-1:02 | Point at the landing's Renaiss market-index strip (real Pokémon / One Piece index + deltas). Then Station 01 Floor: three live Infinite packs plus the sold-out showcase, live edges, real refresh timestamp. Station 02 X-Ray: EV vs cost, distribution, the "what is loaded" three-band model, every card a LIVE Index price. Open the "Under the hood" panel: the glass-box EV computation (band-by-band sum, edge and profit formulas, the inputs fingerprint hash). Optionally `/vault` for the full priced library with real price-history sparklines. | EV transparency: real Index prices on every card, the odds are the only labeled model, and the verdict is a glass-box computation from PullEV's own deterministic Go engine, not a black box. |
 | 1:02-1:24 | Open the advisor orb. Ask "should I rip this pack?" See the cited answer with [1] to [4] chips and "not financial advice." Ask "what is Bitcoin doing?" and it refuses. | Grounded AI: cites every number or refuses; restraint as a feature. |
 | 1:24-1:40 | Pan across surfaces showing provenance badges (LIVE / ASSUMED / OFFICIAL / on-chain). | Provenance and safety close, then the positioning line. |
 

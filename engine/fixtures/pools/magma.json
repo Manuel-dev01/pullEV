@@ -3,17 +3,17 @@
   "cards": [
     {
       "card": {
-        "id": "magma-pikachu-with-grey-felt-hat",
-        "name": "Pikachu with Grey Felt Hat",
+        "id": "magma-luffy-\u0026-ace",
+        "name": "Luffy \u0026 Ace",
         "grade": "PSA 10",
-        "set": "Pokemon SVP Black Star Promos",
-        "fmvUsd": 2858.37,
+        "set": "Luffy \u0026 Ace",
+        "fmvUsd": 1001.19,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st30_001_ja_fe0bffccb8894bce885985b34b0e8dc0_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T23:00:00.000Z",
+        "fmvAsOf": "2026-07-11T01:00:00.000Z",
         "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.97
+        "fmvDeltaPct": -67.14
       },
       "weight": 0.004
     },
@@ -22,167 +22,165 @@
         "id": "magma-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4534.91,
+        "set": "Two Legends",
+        "fmvUsd": 1144.44,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_109_en_5f8397c7ab7c4785b82702592cb906d9_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -11.8
+        "fmvAsOf": "2026-07-10T00:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -31.92
       },
       "weight": 0.004
     },
     {
       "card": {
-        "id": "magma-rattata",
-        "name": "Rattata",
-        "grade": "PSA 10",
-        "set": "Expedition",
-        "fmvUsd": 38.08,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_e1_128_en_2bbd48a3ce8c433e96e3034dd8b545b4_sm.png?v=99e96114",
-        "fmvSource": "Index",
-        "fmvAsOf": "2025-09-07T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09733333333333333
-    },
-    {
-      "card": {
-        "id": "magma-sanji",
+        "id": "magma-sanji-x",
         "name": "Sanji",
         "grade": "PSA 10",
-        "set": "Royal Blood",
-        "fmvUsd": 41.3,
+        "set": "Kingdoms Of Intrigue",
+        "fmvUsd": 43.02,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op10_005_en_0aa1101bc8f945cf9106597e5cf115e1_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op04_104_ja_c8ed0892fe9a4ca88d3e747c8365b529_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-24T00:00:00.000Z",
+        "fmvAsOf": "2026-06-25T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "magma-team-rockets-mimikyu",
-        "name": "Team Rocket's Mimikyu",
+        "id": "magma-caterpie",
+        "name": "Caterpie",
         "grade": "PSA 10",
-        "set": "Mega Dream ex",
-        "fmvUsd": 47.34,
+        "set": "Legendary Collection",
+        "fmvUsd": 43.19,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m2a_205_ja_537f8812501c4db5b345b78c8c77f0d1_sm.webp?v=c60caf78",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T08:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -12.07
+        "fmvAsOf": "2026-04-08T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
-    },
-    {
-      "card": {
-        "id": "magma-zubat",
-        "name": "Zubat",
-        "grade": "CGC 9.5",
-        "set": "Shrouded Fable",
-        "fmvUsd": 6,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sfa_27_en_c31916a7881a45c0b8f262806aaebf92_sm.png?v=8a5d91dc",
-        "fmvSource": "Index",
-        "fmvAsOf": "2024-11-25T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "magma-pidgey",
-        "name": "Pidgey",
-        "grade": "Raw A",
-        "set": "Shiny Treasure ex",
-        "fmvUsd": 6.81,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_304_ja_a083451da4cf4015b9ec55ad3dde586d_sm.png?v=e0e1b96f",
-        "fmvSource": "Index",
-        "fmvAsOf": "2024-08-09T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "magma-buggy",
-        "name": "Buggy",
-        "grade": "Raw A",
-        "set": "The Time Of Battle",
-        "fmvUsd": 14.28,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op16_041_ja_c7e5ce58217e4cdfa41698807fcafdf6_sm.png?v=a025fc59",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T16:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -19.78
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "magma-weedle",
-        "name": "Weedle",
-        "grade": "Raw A",
-        "set": "Tag Bolt",
-        "fmvUsd": 18.54,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sm9_2_ja_982723d742784f49beab240851467b55_sm.png?v=200e5ee4",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-06-22T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
     },
     {
       "card": {
         "id": "magma-franky",
         "name": "Franky",
-        "grade": "CGC 10 Perfect",
-        "set": "One Piece Card The Best Vol.2",
-        "fmvUsd": 18.55,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_664a27075733415391a7c5d84e8ee3af_sm.png?v=a2948f02",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-03-22T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "magma-ekans",
-        "name": "Ekans",
-        "grade": "CGC 10 Pristine",
-        "set": "Dragon Frontiers",
-        "fmvUsd": 24,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_df_47_en_587422bd5f0c4cce856d26b493c0741c_sm.png?v=dba1927b",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-01-04T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "magma-spearow",
-        "name": "Spearow",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese M1l-Mega Brave",
-        "fmvUsd": 33,
+        "set": "Emperors In The New World",
+        "fmvUsd": 52.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_m1l_074_ja_9c84541975fe4ac3bbd699e911c82f30_sm.webp?v=c87637db",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T17:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -18.86
+        "fmvAsOf": "2026-06-04T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09733333333333333
+    },
+    {
+      "card": {
+        "id": "magma-brook",
+        "name": "Brook",
+        "grade": "Raw A",
+        "set": "Adventure On Kami’s Island",
+        "fmvUsd": 6.31,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-16T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "magma-helmeppo",
+        "name": "Helmeppo",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 9.6,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "magma-fearow",
+        "name": "Fearow",
+        "grade": "PSA 9",
+        "set": "Sun \u0026 Moon",
+        "fmvUsd": 15.39,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
+        "fmvSource": "Index",
+        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "magma-sanji",
+        "name": "Sanji",
+        "grade": "CGC 10 Perfect",
+        "set": "The Three Captains",
+        "fmvUsd": 20.4,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_004_en_fe01b46ae64b469c82ff114e26532a63_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-04-13T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "magma-pidgeot-ex",
+        "name": "Pidgeot ex",
+        "grade": "PSA 10",
+        "set": "Ruler of the Black Flame",
+        "fmvUsd": 29.99,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-01T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -24.93
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "magma-alvida",
+        "name": "Alvida",
+        "grade": "BGS 10 Pristine",
+        "set": "Romance Dawn",
+        "fmvUsd": 34.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "magma-lt-surges-rattata",
+        "name": "Lt. Surge's Rattata",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese Clk-Trading Card Game Classic Blastoise \u0026 Suicune Ex Deck",
+        "fmvUsd": 39.22,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_clk_015_ja_eb988caed1e746258ec064f99af6b5e7_sm.webp?v=2206ba2b",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-01T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
     }

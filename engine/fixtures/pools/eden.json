@@ -3,6 +3,22 @@
   "cards": [
     {
       "card": {
+        "id": "eden-pikachu-ex",
+        "name": "Pikachu Ex",
+        "grade": "PSA 10",
+        "set": "Pokemon Japanese MC-Start Deck 100 Battle Collection",
+        "fmvUsd": 2275.37,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mc_764_ja_f65addd1b0f74829a74ca5f4d6d0b4b0_sm.webp?v=21481669",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-11T06:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -34.91
+      },
+      "weight": 0.004
+    },
+    {
+      "card": {
         "id": "eden-pikachu-with-grey-felt-hat",
         "name": "Pikachu with Grey Felt Hat",
         "grade": "PSA 10",
@@ -14,22 +30,6 @@
         "fmvAsOf": "2026-07-10T23:00:00.000Z",
         "fmvConfidence": "prime",
         "fmvDeltaPct": -8.97
-      },
-      "weight": 0.004
-    },
-    {
-      "card": {
-        "id": "eden-monkeydluffy",
-        "name": "Monkey.D.Luffy",
-        "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4534.91,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -11.8
       },
       "weight": 0.004
     },
@@ -96,15 +96,15 @@
     },
     {
       "card": {
-        "id": "eden-koby",
-        "name": "Koby",
-        "grade": "Raw A",
-        "set": "Egghead Crisis",
-        "fmvUsd": 6.4,
+        "id": "eden-franky",
+        "name": "Franky",
+        "grade": "CGC 9",
+        "set": "One Piece Card The Best Vol.2",
+        "fmvUsd": 10,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb04_044_ja_edc99c002c5a429a938ecc025848573d_sm.png?v=8014a515",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_ja_6914656b52964308b0ada2eecdee818f_sm.png?v=07192cdd",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-02-09T00:00:00.000Z",
+        "fmvAsOf": "2026-07-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999

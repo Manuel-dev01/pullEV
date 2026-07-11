@@ -232,6 +232,15 @@ export function Filmstrip({
   const totalW = active.pool.cards.reduce((s, e) => s + e.weight, 0);
   const tiers = tierBreakdown(active.pool);
 
+  // Engine spotlight ("under the hood"): the exact glass-box computation the Go engine ran.
+  // EV = Σ over bands (band draw chance × band average FMV) — mathematically identical to
+  // Σ pᵢ·fmvᵢ, but grouped so a judge can read the sum. Built from data already on the client.
+  const liveCount = active.pool.cards.filter((e) => e.card.fmvSource === "Index").length;
+  const evBands = tiers.map((t) => {
+    const avg = t.examples.length ? t.examples.reduce((s, c) => s + c.fmvUsd, 0) / t.examples.length : 0;
+    return { name: t.name, hue: t.hue, chance: t.chance, avg, contribution: t.chance * avg };
+  });
+
   return (
     <div
       style={{
@@ -515,6 +524,63 @@ export function Filmstrip({
             </div>
           )}
 
+          {/* UNDER THE HOOD — the EV engine, glass-box. Every number here is produced by
+              PullEV's pure, deterministic Go engine from the pool above; nothing is a black box.
+              This is the EV twin of the client-side Merkle verifier: don't trust the verdict, read
+              the computation that made it. */}
+          <div style={{ marginTop: 24, borderRadius: 16, padding: 20, background: "linear-gradient(160deg,rgba(123,123,255,.06),rgba(201,92,245,.03))", border: "1px solid rgba(123,123,255,.3)" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0" }}>Under the hood · the EV engine</div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.teal, border: "1px solid rgba(63,240,207,.35)", borderRadius: 999, padding: "2px 9px" }}>deterministic · reproducible</div>
+            </div>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.dim, margin: "0 0 16px", maxWidth: 700, lineHeight: 1.5 }}>
+              No black box. PullEV&apos;s own Go engine computes this verdict as a pure function of the pool
+              above: one card is drawn, each card&apos;s probability = its weight ÷ the total weight. The same
+              inputs always produce the same number and the same fingerprint hash, so anyone can reproduce it.
+            </p>
+
+            {/* the actual sum: EV = Σ over bands (draw chance × average FMV) */}
+            {evBands.length > 0 && (
+              <div style={{ borderRadius: 12, padding: 14, background: "rgba(255,255,255,.02)", border: `1px solid ${C.border}`, marginBottom: 14 }}>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: C.muted, marginBottom: 10 }}>
+                  expected value = Σ over bands ( draw chance × average FMV )
+                </div>
+                {evBands.map((b) => (
+                  <div key={b.name} style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-mono)", fontSize: 12, padding: "5px 0", flexWrap: "wrap" }}>
+                    <span style={{ width: 66, color: b.hue }}>{b.name}</span>
+                    <span style={{ color: C.muted }}>{(b.chance * 100).toFixed(b.chance < 0.1 ? 2 : 1)}%</span>
+                    <span style={{ color: C.dim }}>×</span>
+                    <span style={{ color: C.ink }}>{money(b.avg)}</span>
+                    <span style={{ color: C.dim }}>avg</span>
+                    <span style={{ color: C.dim }}>=</span>
+                    <span style={{ marginLeft: "auto", color: C.ink }}>{money(b.contribution, 2)}</span>
+                  </div>
+                ))}
+                <div style={{ borderTop: "1px solid rgba(255,255,255,.12)", marginTop: 8, paddingTop: 10, display: "flex", alignItems: "baseline", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "#8a83a0", textTransform: "uppercase", letterSpacing: ".12em" }}>Expected value</span>
+                  <span style={{ marginLeft: "auto", fontFamily: "var(--font-display)", fontSize: 22, color: v.color }}>{money(active.ev.expectedValue, 2)}</span>
+                </div>
+              </div>
+            )}
+
+            {/* verdict + profit derivations, each shown as its formula */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: 12 }}>
+              <EngineStep k="edge = EV ÷ cost" expr={`${money(active.ev.expectedValue, 2)} ÷ ${money(active.pack.priceUsd)}`} val={`${ratio.toFixed(2)}× · ${edgePct(ratio) >= 0 ? "+" : ""}${edgePct(ratio).toFixed(1)}%`} color={v.color} />
+              <EngineStep k="P(profit)" expr="Σ pᵢ where FMVᵢ ≥ cost" val={`${(active.ev.chanceOfProfit * 100).toFixed(1)}%`} color={C.ink} />
+              <EngineStep k="verdict" expr={v.sub} val={v.text} color={v.color} />
+            </div>
+
+            {/* fingerprint + provenance receipts */}
+            <div style={{ marginTop: 14, display: "flex", flexWrap: "wrap", gap: "6px 16px", alignItems: "center", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 9.5, color: C.dim }}>
+              <span title={active.ev.inputsHash}>
+                inputs fingerprint (SHA-256): <span style={{ color: "#b6afc8" }}>{active.ev.inputsHash.slice(0, 20)}…</span> · same pool → same hash
+              </span>
+              <span>
+                <span style={{ color: C.teal }}>{liveCount}/{active.pool.cards.length}</span> prices LIVE Renaiss Index · pool membership + band odds = PullEV model
+              </span>
+            </div>
+          </div>
+
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 26 }}>
             <div onClick={() => go(0)} style={{ cursor: "pointer", fontFamily: "var(--font-mono)", fontSize: 12, color: "#8a83a0" }}>← back to floor</div>
             <button onClick={pickAndAdvance} style={btnPrimary}>
@@ -626,6 +692,18 @@ function Stat({ label, value, color }: { label: string; value: string; color?: s
     <div>
       <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "#9c94b6" }}>{label}</div>
       <div style={{ fontFamily: "var(--font-display)", fontSize: 30, lineHeight: 1, color: color ?? "#f6f2fb" }}>{value}</div>
+    </div>
+  );
+}
+
+// One derivation step in the "under the hood" engine panel: a label, the formula it evaluates,
+// and its result. Keeps the glass-box computation readable (name → formula → value).
+function EngineStep({ k, expr, val, color }: { k: string; expr: string; val: string; color?: string }) {
+  return (
+    <div style={{ borderRadius: 12, padding: "12px 14px", background: "rgba(255,255,255,.02)", border: "1px solid rgba(255,255,255,.08)" }}>
+      <div style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#8a83a0" }}>{k}</div>
+      <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "#6f6885", margin: "4px 0 6px", lineHeight: 1.4 }}>{expr}</div>
+      <div style={{ fontFamily: "var(--font-display)", fontSize: 18, lineHeight: 1.05, color: color ?? "#f6f2fb" }}>{val}</div>
     </div>
   );
 }

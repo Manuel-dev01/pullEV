@@ -3,33 +3,33 @@
   "cards": [
     {
       "card": {
-        "id": "plasma-pikachu-with-grey-felt-hat",
-        "name": "Pikachu with Grey Felt Hat",
+        "id": "plasma-monkeydluffy",
+        "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Pokemon SVP Black Star Promos",
-        "fmvUsd": 2858.37,
+        "set": "Promotion Pack Ex Vol.3",
+        "fmvUsd": 671.41,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_006_ja_1797bc085c834815b3408e2168caa868_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T23:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.97
+        "fmvAsOf": "2026-07-10T14:00:00.000Z",
+        "fmvConfidence": "high",
+        "fmvDeltaPct": -26.58
       },
       "weight": 0.004
     },
     {
       "card": {
-        "id": "plasma-monkeydluffy",
+        "id": "plasma-monkeydluffy-x",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4534.91,
+        "set": "Misc. Promos",
+        "fmvUsd": 681.21,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_p_055_en_48959d2235ee4a11bd92031c2894209c_sm.webp?v=37f641d4",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -11.8
+        "fmvAsOf": "2026-07-11T04:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -33.58
       },
       "weight": 0.004
     },
@@ -112,26 +112,57 @@
       "card": {
         "id": "plasma-fearow",
         "name": "Fearow",
-        "grade": "CGC 9.5",
-        "set": "Crystal Guardians",
-        "fmvUsd": 17.49,
+        "grade": "PSA 9",
+        "set": "Sun \u0026 Moon",
+        "fmvUsd": 15.39,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_cg_18_en_32f5b30a569c46c0b2f04fa08f1fd74d_sm.png?v=0aaf6421",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-24T00:00:00.000Z",
+        "fmvAsOf": "2021-09-29T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "plasma-pidgey",
-        "name": "Pidgey",
-        "grade": "CGC 10 Pristine",
-        "set": "Legendary Collection",
-        "fmvUsd": 17.5,
+        "id": "plasma-sanji",
+        "name": "Sanji",
+        "grade": "CGC 10 Perfect",
+        "set": "The Three Captains",
+        "fmvUsd": 20.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_85_en_4e99c2a1745b4104ba88207378b70d8f_sm.png?v=75302244",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_004_en_fe01b46ae64b469c82ff114e26532a63_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-04-13T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "plasma-pidgeot-ex",
+        "name": "Pidgeot ex",
+        "grade": "PSA 10",
+        "set": "Ruler of the Black Flame",
+        "fmvUsd": 29.99,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_89_ja_42fc93dd81ab4f6482a9d79c58b681d5_sm.png?v=44ad79e4",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-07-01T00:00:00.000Z",
+        "fmvConfidence": "low",
+        "fmvDeltaPct": -24.93
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "plasma-alvida",
+        "name": "Alvida",
+        "grade": "BGS 10 Pristine",
+        "set": "Romance Dawn",
+        "fmvUsd": 34.5,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_ja_70ee7ef609f94ee4979aa089fa7319fe_sm.png",
         "fmvSource": "Index",
         "fmvAsOf": "2025-11-01T00:00:00.000Z",
         "fmvConfidence": "low"
@@ -140,46 +171,17 @@
     },
     {
       "card": {
-        "id": "plasma-zubat",
-        "name": "Zubat",
+        "id": "plasma-ionos-wattrel",
+        "name": "Iono's Wattrel",
         "grade": "PSA 10",
-        "set": "Paradox Rift",
-        "fmvUsd": 21.23,
+        "set": "Pokemon Japanese Sv-P Promo",
+        "fmvUsd": 39.62,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_par_110_en_322699f772934aa2a80005dc5802bfe4_sm.png?v=51015c14",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_232_ja_0db0d0455adb4bbfa6fd4b7fc65693ef_sm.webp?v=a2de27fb",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-08-06T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "plasma-usopp",
-        "name": "Usopp",
-        "grade": "CGC 10 Perfect",
-        "set": "Straw Hat Crew",
-        "fmvUsd": 30.48,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_002_en_d68b5c2706064321a741c91f7f548d91_sm.webp",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-04-26T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "plasma-alvida",
-        "name": "Alvida",
-        "grade": "PSA 10",
-        "set": "Romance Dawn",
-        "fmvUsd": 36.76,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2025-02-23T00:00:00.000Z",
-        "fmvConfidence": "low"
+        "fmvAsOf": "2026-07-10T10:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -14.94
       },
       "weight": 0.09999999999999999
     }

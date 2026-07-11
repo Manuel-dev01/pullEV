@@ -3,17 +3,17 @@
   "cards": [
     {
       "card": {
-        "id": "champion-pikachu-with-grey-felt-hat",
-        "name": "Pikachu with Grey Felt Hat",
+        "id": "champion-mew-ex",
+        "name": "Mew Ex",
         "grade": "PSA 10",
-        "set": "Pokemon SVP Black Star Promos",
-        "fmvUsd": 2858.37,
+        "set": "Pokemon Japanese Sv4a-Shiny Treasure Ex",
+        "fmvUsd": 847.75,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_347_ja_3570bc6b826c4566bcc3916dd7d43f7d_sm.webp?v=db2f2d70",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T23:00:00.000Z",
+        "fmvAsOf": "2026-07-11T05:00:00.000Z",
         "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.97
+        "fmvDeltaPct": -12.53
       },
       "weight": 0.004
     },
@@ -22,44 +22,43 @@
         "id": "champion-monkeydluffy",
         "name": "Monkey.D.Luffy",
         "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4534.91,
+        "set": "One Piece Card Game English 2nd Anniversary Set",
+        "fmvUsd": 865.38,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_061_ja_49c376fa209c4d84a9802fe0289742a2_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
+        "fmvAsOf": "2026-07-11T02:00:00.000Z",
         "fmvConfidence": "high",
-        "fmvDeltaPct": -11.8
+        "fmvDeltaPct": -31.19
       },
       "weight": 0.004
     },
     {
       "card": {
-        "id": "champion-pidgeot-ex",
-        "name": "Pidgeot Ex",
+        "id": "champion-caterpie",
+        "name": "Caterpie",
         "grade": "CGC 10 Perfect",
-        "set": "Pokemon Japanese Sv3-Ruler Of The Black Flame",
-        "fmvUsd": 37.87,
+        "set": "FireRed \u0026 LeafGreen",
+        "fmvUsd": 39.9,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv3_128_ja_b773f65d593c4a50bb7e6965110798b3_sm.webp?v=cf200031",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_rg_56_en_1bd6088c58a240ebbb688a024c218386_sm.png?v=8e5c57e6",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-08T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": 45.65
+        "fmvAsOf": "2025-05-18T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "champion-brook",
-        "name": "Brook",
+        "id": "champion-caterpie-x",
+        "name": "Caterpie",
         "grade": "PSA 10",
-        "set": "Memorial Collection",
-        "fmvUsd": 41.17,
+        "set": "Legendary Collection",
+        "fmvUsd": 43.19,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb01_046_en_0aa805f453ff46dfabde524739ab47d8_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-24T00:00:00.000Z",
+        "fmvAsOf": "2026-04-08T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
@@ -69,28 +68,57 @@
         "id": "champion-franky",
         "name": "Franky",
         "grade": "PSA 10",
-        "set": "500 Years In The Future",
-        "fmvUsd": 45.73,
+        "set": "Emperors In The New World",
+        "fmvUsd": 52.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op07_107_ja_9bb660a11f214d3a8706db0970f62a00_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-28T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -33.38
+        "fmvAsOf": "2026-06-04T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
+        "id": "champion-brook",
+        "name": "Brook",
+        "grade": "Raw A",
+        "set": "Adventure On Kami’s Island",
+        "fmvUsd": 6.31,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-16T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
         "id": "champion-helmeppo",
         "name": "Helmeppo",
-        "grade": "CGC 9.5",
+        "grade": "CGC 10 Perfect",
         "set": "One Piece Card The Best",
-        "fmvUsd": 6,
+        "fmvUsd": 9.6,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_ja_ce3af4ca05fd40fe831c9d89fc0d283b_sm.png?v=4c05e60c",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2024-11-21T00:00:00.000Z",
+        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-fearow",
+        "name": "Fearow",
+        "grade": "CGC 9.5",
+        "set": "Crystal Guardians",
+        "fmvUsd": 17.49,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_cg_18_en_32f5b30a569c46c0b2f04fa08f1fd74d_sm.png?v=0aaf6421",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-05-24T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
@@ -99,73 +127,13 @@
       "card": {
         "id": "champion-pidgey",
         "name": "Pidgey",
-        "grade": "Raw A",
-        "set": "Shiny Treasure ex",
-        "fmvUsd": 6.81,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4a_304_ja_a083451da4cf4015b9ec55ad3dde586d_sm.png?v=e0e1b96f",
-        "fmvSource": "Index",
-        "fmvAsOf": "2024-08-09T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "champion-helmeppo-x",
-        "name": "Helmeppo",
-        "grade": "CGC 9.5",
-        "set": "A Fist Of Divine Speed",
-        "fmvUsd": 7.2,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op11_092_ja_5bdaf2a7565d4c12b950f4819d0ea83c_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2025-08-31T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "champion-team-rockets-ekans",
-        "name": "Team Rocket's Ekans",
-        "grade": "PSA 9",
-        "set": "Destined Rivals",
-        "fmvUsd": 14.5,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_dri_112_en_22219d8970da4d90b65d63c9c1266919_sm.png?v=7ef755e3",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-03-03T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "champion-weedle",
-        "name": "Weedle",
-        "grade": "Raw A",
-        "set": "Tag Bolt",
-        "fmvUsd": 18.54,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sm9_2_ja_982723d742784f49beab240851467b55_sm.png?v=200e5ee4",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-06-22T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "champion-spearow",
-        "name": "Spearow",
         "grade": "CGC 10 Pristine",
-        "set": "Majestic Dawn",
-        "fmvUsd": 21.5,
+        "set": "Legendary Collection",
+        "fmvUsd": 17.5,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_md_74_en_1e55a19256ff4b5eb1459984147ba840_sm.png?v=e2f5ac3b",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_85_en_4e99c2a1745b4104ba88207378b70d8f_sm.png?v=75302244",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-02-10T00:00:00.000Z",
+        "fmvAsOf": "2025-11-01T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
@@ -174,15 +142,44 @@
       "card": {
         "id": "champion-zubat",
         "name": "Zubat",
-        "grade": "CGC 10 Pristine",
-        "set": "Skyridge",
-        "fmvUsd": 31.48,
+        "grade": "PSA 10",
+        "set": "Paradox Rift",
+        "fmvUsd": 21.23,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_e3_117_en_def466f6afcf4fec916c529fb5092dde_sm.png?v=d9af87b3",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_par_110_en_322699f772934aa2a80005dc5802bfe4_sm.png?v=51015c14",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-07T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -6.31
+        "fmvAsOf": "2025-08-06T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-usopp",
+        "name": "Usopp",
+        "grade": "CGC 10 Perfect",
+        "set": "Straw Hat Crew",
+        "fmvUsd": 30.48,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_002_en_d68b5c2706064321a741c91f7f548d91_sm.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "champion-alvida",
+        "name": "Alvida",
+        "grade": "PSA 10",
+        "set": "Romance Dawn",
+        "fmvUsd": 36.76,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-23T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
     }

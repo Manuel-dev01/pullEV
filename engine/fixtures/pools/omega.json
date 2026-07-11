@@ -3,17 +3,17 @@
   "cards": [
     {
       "card": {
-        "id": "omega-pikachu-ex",
-        "name": "Pikachu Ex",
+        "id": "omega-fukuokas-pikachu",
+        "name": "Fukuoka's Pikachu",
         "grade": "PSA 10",
-        "set": "Pokemon Japanese MC-Start Deck 100 Battle Collection",
-        "fmvUsd": 2275.37,
+        "set": "Pokemon Japanese Sv-P Promo",
+        "fmvUsd": 267.36,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mc_764_ja_f65addd1b0f74829a74ca5f4d6d0b4b0_sm.webp?v=21481669",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv-p_289_ja_c8157b311e484ef394094399f9e394f8_sm.webp?v=0b5e82df",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-11T06:00:00.000Z",
+        "fmvAsOf": "2026-07-10T18:00:00.000Z",
         "fmvConfidence": "prime",
-        "fmvDeltaPct": -34.91
+        "fmvDeltaPct": -27.95
       },
       "weight": 0.004
     },

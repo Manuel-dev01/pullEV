@@ -112,9 +112,25 @@ matching `REFRESH_TOKEN`) triggers a cycle on demand.
 
 ### The EV engine (the trust core)
 
-`ComputeEV` in [`engine/ev.go`](engine/ev.go) is a pure, deterministic function: expected value, EV-to-cost
-ratio, a p10/median/p90 distribution, chance of profit, an inputs hash, and honest caveats. It exposes
-every input that produced the number and is covered by unit, determinism, and fuzz tests.
+The EV verdict is computed by PullEV's own Go engine, not estimated by a model or a language model.
+`ComputeEV` in [`engine/ev.go`](engine/ev.go) is a pure, deterministic function of its inputs: no clock, no
+network, no hidden state. Given the pool (each card's real FMV and its draw weight) and the pack cost, it
+computes:
+
+- `expectedValue = Σ pᵢ · fmvᵢ`, where `pᵢ = weightᵢ / Σ weight` (one card drawn per pull). Equivalently,
+  grouped by band, `EV = Σ (band draw chance × band average FMV)`.
+- `evToCostRatio = expectedValue / cost` (the edge), `chanceOfProfit = Σ pᵢ where fmvᵢ ≥ cost`.
+- a p10 / median / p90 distribution (inverse-CDF percentiles of the discrete outcome distribution).
+- `inputsHash`, a SHA-256 fingerprint of the canonical inputs (order-independent, excludes the timestamp),
+  so the same pool always reproduces the same verdict and the same hash.
+- honest `caveats` derived from the inputs (real vs. assumed prices, unconfirmed pack price, model odds).
+
+It is covered by unit, determinism, and fuzz tests ([`engine/ev_test.go`](engine/ev_test.go)). Because the
+verdict is the crux of the "should I rip this?" answer, the app does not hide the math: the **X-Ray Bay's
+"Under the hood" panel** ([`web/components/Filmstrip.tsx`](web/components/Filmstrip.tsx)) renders the exact
+band-by-band sum that builds the expected value, the edge and profit formulas with their real values, the
+`inputsHash`, and a live count of how many prices are real Renaiss Index reads. It is the EV twin of the
+client-side Merkle verifier: don't trust the verdict, read the computation that produced it.
 
 ### The Merkle scheme
 

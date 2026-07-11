@@ -3,186 +3,183 @@
   "cards": [
     {
       "card": {
-        "id": "aura-pikachu-with-grey-felt-hat",
-        "name": "Pikachu with Grey Felt Hat",
+        "id": "aura-birthday-pikachu-holo",
+        "name": "Birthday Pikachu-Holo",
         "grade": "PSA 10",
-        "set": "Pokemon SVP Black Star Promos",
-        "fmvUsd": 2858.37,
+        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
+        "fmvUsd": 735.01,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_svp_085_en_1ac559f47b0f4c0090345d1409ce01e7_sm.webp?v=2326c24d",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_007_ja_680e0afba87f4ad0b6360cc56dd22853_sm.webp?v=62c3d7fe",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T23:00:00.000Z",
+        "fmvAsOf": "2026-07-10T03:00:00.000Z",
         "fmvConfidence": "prime",
-        "fmvDeltaPct": -8.97
+        "fmvDeltaPct": -10.58
       },
       "weight": 0.004
     },
     {
       "card": {
-        "id": "aura-monkeydluffy",
-        "name": "Monkey.D.Luffy",
+        "id": "aura-charizard-holo",
+        "name": "Charizard-Holo",
         "grade": "PSA 10",
-        "set": "Dodgers One Piece Night",
-        "fmvUsd": 4534.91,
+        "set": "Pokemon Japanese Promo Card Pack 25th Anniversary Edition",
+        "fmvUsd": 785.07,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_010_en_5f8ebb3ced9349ee9b86a24f233767d4_sm.png?v=a475af63",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_s8a-p_001_ja_f3df80aa23b8463d940161109c82cc14_sm.webp?v=a40cdc01",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-09T02:00:00.000Z",
-        "fmvConfidence": "high",
-        "fmvDeltaPct": -11.8
+        "fmvAsOf": "2026-07-11T02:00:00.000Z",
+        "fmvConfidence": "prime",
+        "fmvDeltaPct": -21.11
       },
       "weight": 0.004
     },
     {
       "card": {
-        "id": "aura-nami",
-        "name": "Nami",
-        "grade": "PSA 10",
-        "set": "One Piece Card The Best Vol.2",
-        "fmvUsd": 40.5,
+        "id": "aura-caterpie",
+        "name": "Caterpie",
+        "grade": "CGC 10 Perfect",
+        "set": "FireRed \u0026 LeafGreen",
+        "fmvUsd": 39.9,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_prb02_012_ja_21a82a7497314b53ad1210bc00496dd1_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_rg_56_en_1bd6088c58a240ebbb688a024c218386_sm.png?v=8e5c57e6",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-02-13T00:00:00.000Z",
+        "fmvAsOf": "2025-05-18T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "aura-usopp",
-        "name": "Usopp",
+        "id": "aura-caterpie-x",
+        "name": "Caterpie",
         "grade": "PSA 10",
-        "set": "Anime 25th Collection",
-        "fmvUsd": 45.26,
+        "set": "Legendary Collection",
+        "fmvUsd": 43.19,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb02_022_ja_73e1a71da51b4aa6bb70f080991a70b8_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_lc_69_en_b2ba596148e84cc889fe447419a284e8_sm.png?v=f19cc7db",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-05-10T00:00:00.000Z",
+        "fmvAsOf": "2026-04-08T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
     },
     {
       "card": {
-        "id": "aura-nami-x",
-        "name": "Nami",
+        "id": "aura-franky-x",
+        "name": "Franky",
         "grade": "PSA 10",
-        "set": "Paramount War",
-        "fmvUsd": 52.48,
+        "set": "Emperors In The New World",
+        "fmvUsd": 52.4,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op02_036_ja_161674c488f34803939c5d73f79640b8_sm.png",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op09_072_en_ae600f8b000949168fcc2c5bb5e877b4_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-06-12T00:00:00.000Z",
+        "fmvAsOf": "2026-06-04T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09733333333333333
-    },
-    {
-      "card": {
-        "id": "aura-koby",
-        "name": "Koby",
-        "grade": "Raw A",
-        "set": "Egghead Crisis",
-        "fmvUsd": 6.4,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_eb04_044_ja_edc99c002c5a429a938ecc025848573d_sm.png?v=8014a515",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-02-09T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "aura-weedle",
-        "name": "Weedle",
-        "grade": "CGC 9.5",
-        "set": "Evolutions",
-        "fmvUsd": 13.9,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_evo_5_en_34ebefa1deae45398535d479f914c6b8_sm.png?v=188429f1",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-04-12T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "aura-buggy",
-        "name": "Buggy",
-        "grade": "Raw A",
-        "set": "The Time Of Battle",
-        "fmvUsd": 14.28,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op16_041_ja_c7e5ce58217e4cdfa41698807fcafdf6_sm.png?v=a025fc59",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T16:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": -19.78
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "aura-zubat",
-        "name": "Zubat",
-        "grade": "CGC 10 Pristine",
-        "set": "Hidden Legends",
-        "fmvUsd": 17.7,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_hl_83_en_5f0e6982e8b4425b844d77b459ea9ccc_sm.png?v=31e8944d",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-06-11T00:00:00.000Z",
-        "fmvConfidence": "low",
-        "fmvDeltaPct": 18.08
-      },
-      "weight": 0.09999999999999999
     },
     {
       "card": {
         "id": "aura-brook",
         "name": "Brook",
-        "grade": "CGC 10 Perfect",
-        "set": "Egghead",
-        "fmvUsd": 21.36,
-        "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st29_011_en_d85d76a4f1f74b3bbcb99ed8cc2e5a95_sm.png",
-        "fmvSource": "Index",
-        "fmvAsOf": "2026-05-17T00:00:00.000Z",
-        "fmvConfidence": "low"
-      },
-      "weight": 0.09999999999999999
-    },
-    {
-      "card": {
-        "id": "aura-counter-catcher",
-        "name": "Counter Catcher",
         "grade": "Raw A",
-        "set": "Future Flash",
-        "fmvUsd": 30.51,
+        "set": "Adventure On Kami’s Island",
+        "fmvUsd": 6.31,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sv4m_94_ja_c468646992a24a31bd6bdf8cfdcbf0a6_sm.png?v=503fac06",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op15_032_ja_627f3be1c4934c679ef04f8371c87e8c_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2025-02-19T00:00:00.000Z",
+        "fmvAsOf": "2026-05-16T00:00:00.000Z",
         "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
     },
     {
       "card": {
-        "id": "aura-mega-gengar-ex",
-        "name": "Mega Gengar Ex",
-        "grade": "PSA 10",
-        "set": "Pokemon Japanese Mbg-Mega Starter Set Mega Gengar Ex",
-        "fmvUsd": 37.09,
+        "id": "aura-helmeppo",
+        "name": "Helmeppo",
+        "grade": "CGC 10 Perfect",
+        "set": "One Piece Card The Best",
+        "fmvUsd": 9.6,
         "fmvIsAssumption": false,
-        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_mbg_003_ja_de0d46db148a4f6ba0d64f1195c73e6e_sm.webp?v=5c4e345e",
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st06_010_en_123b1d9a5c73456096b79eab75660a92_sm.png",
         "fmvSource": "Index",
-        "fmvAsOf": "2026-07-10T16:00:00.000Z",
-        "fmvConfidence": "prime",
-        "fmvDeltaPct": -22.78
+        "fmvAsOf": "2025-01-19T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-fearow",
+        "name": "Fearow",
+        "grade": "PSA 9",
+        "set": "Sun \u0026 Moon",
+        "fmvUsd": 15.39,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/pokemon_sum_98_en_a7a7c9b84b704638a485eb060343d3b1_sm.png?v=77b47974",
+        "fmvSource": "Index",
+        "fmvAsOf": "2021-09-29T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-sanji",
+        "name": "Sanji",
+        "grade": "CGC 10 Perfect",
+        "set": "The Three Captains",
+        "fmvUsd": 20.4,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st10_004_en_fe01b46ae64b469c82ff114e26532a63_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-04-13T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-franky",
+        "name": "Franky",
+        "grade": "PSA 10",
+        "set": "Royal Blood",
+        "fmvUsd": 30.2,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op10_090_ja_256c131148c742a2875e78da0488ae39_sm.png?v=5812b589",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-06-22T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-usopp",
+        "name": "Usopp",
+        "grade": "CGC 10 Perfect",
+        "set": "Straw Hat Crew",
+        "fmvUsd": 30.48,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_st01_002_en_d68b5c2706064321a741c91f7f548d91_sm.webp",
+        "fmvSource": "Index",
+        "fmvAsOf": "2026-04-26T00:00:00.000Z",
+        "fmvConfidence": "low"
+      },
+      "weight": 0.09999999999999999
+    },
+    {
+      "card": {
+        "id": "aura-alvida",
+        "name": "Alvida",
+        "grade": "PSA 10",
+        "set": "Romance Dawn",
+        "fmvUsd": 36.76,
+        "fmvIsAssumption": false,
+        "imageUrl": "https://bhshyxmgzwogzgcf.public.blob.vercel-storage.com/cards/one_piece_op01_064_en_17af6e7631ea4224b2abd0d79acca30b_sm.png",
+        "fmvSource": "Index",
+        "fmvAsOf": "2025-02-23T00:00:00.000Z",
+        "fmvConfidence": "low"
       },
       "weight": 0.09999999999999999
     }

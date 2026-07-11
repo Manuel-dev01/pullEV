@@ -61,11 +61,16 @@ model:
   Tier S/A/B/C, Eden uses Crown/Bloom/Thorn), and the exact per-tier chances aren't public, so we set the
   bands as a labeled assumption (rare band <1%, consistent with Renaiss's sub-1% top tier).
 - **The EV is real prices under a modeled pool, not a measurement of Renaiss's pack.** Because the pool
-  membership and odds are ours, the computed edge (a believable house edge, e.g. OMEGA −26%, Eden −61%) is
-  what a pool of these real cards under our odds would return, NOT a claim about Renaiss's actual pack, whose
-  true cheap contents and odds are not public. The prices are real; the pack model is labeled.
+  membership and odds are ours, the computed edge (a believable house edge, roughly −40% to −70% across the
+  packs) is what a pool of these real cards under our odds would return, NOT a claim about Renaiss's actual
+  pack, whose true cheap contents and odds are not public. The prices are real; the pack model is labeled.
 - **Draw weights are a PullEV assumption.** Each card's weight = its band chance / the number of cards in that
   band, so a band's total draw probability equals its model chance.
+- **The EV computation is a glass box, not a black box.** The verdict is produced by PullEV's own pure,
+  deterministic Go engine ([`engine/ev.go`](../engine/ev.go)): `EV = Σ pᵢ · fmvᵢ` (equivalently, a sum over
+  bands of draw chance × average value), with an `inputsHash` fingerprint so the same pool always reproduces
+  the same number. The app surfaces this in the X-Ray Bay's **"Under the hood" panel** so anyone can read the
+  exact sum, the edge and profit formulas, and the fingerprint behind the verdict.
 - **Example proofs are labeled EXAMPLE.** The verification math is genuine and runs client-side; only the
   input draw is a demonstration over the labeled pool. Separately, for sealed packs we display Renaiss's
   **real on-chain Merkle root**, read live from their gacha contract on BNB Chain and auditable on BscScan.
@@ -84,10 +89,14 @@ To rebuild the committed baseline (the offline fallback and cold-start fixtures)
 
 ```bash
 cd engine
-go run . curate     # rebuild pools from real cards (keeps distinct name+set variants)
+go run . curate     # rebuild pools from real cards, LIVE (re-prices every slug off the Index)
 go run . tiers      # bin the real cards into the three bands and weight each by its model chance
 go run . snapshot   # regenerate web/lib/snapshot.json + sync web/lib/valuations.seed.json
 ```
 
-After curating, rebuild the binary so the fixtures re-embed via go:embed. `go run . refresh` re-prices only
-the existing map into the committed seed without changing membership.
+`go run . repool` is an offline alternative to `curate`: it rebuilds pool membership straight from the
+committed seed (no live API calls, prices unchanged), so selection-logic changes land in the fixtures without
+re-pricing. Follow it with `tiers` then `snapshot` the same way.
+
+After curating or repooling, rebuild the binary so the fixtures re-embed via go:embed. `go run . refresh`
+re-prices only the existing map into the committed seed without changing membership.

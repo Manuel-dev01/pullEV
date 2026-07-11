@@ -71,9 +71,10 @@ export default async function VaultPage() {
               THE CARD LIBRARY.
             </h1>
             <p style={{ color: "#c3bad8" }} className="mt-3 max-w-2xl text-sm leading-relaxed">
-              The {cards.length} real graded cards PullEV prices from the Renaiss Index API (beta). The
-              Infinite Gacha packs draw from exactly these, so every EV number traces back to a card you can
-              see here. Prices are real, cached, and labeled beta/experimental.
+              The {cards.length} real graded cards PullEV prices from the Renaiss Index API (beta). The pools
+              PullEV models draw from exactly these, so every EV number traces back to a card you can see
+              here. Prices are real, cached, and labeled beta/experimental; the pool membership is a labeled
+              PullEV model, not Renaiss&apos;s own pack contents.
             </p>
           </div>
           <ProvenanceBadge provenance={provenance} fallback={fallback} align="right" />
