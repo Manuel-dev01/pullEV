@@ -260,12 +260,12 @@ export function Filmstrip({
           left: 0,
           right: 0,
           zIndex: 40,
-          padding: "16px 30px 10px",
+          padding: "16px clamp(12px,4vw,30px) 10px",
           backdropFilter: "blur(12px)",
           background: "linear-gradient(180deg,rgba(8,7,12,.85),rgba(8,7,12,.25))",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 20, maxWidth: 1180, margin: "0 auto" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "clamp(10px,3vw,20px)", maxWidth: 1180, margin: "0 auto" }}>
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: 9, flex: "none", textDecoration: "none", color: C.ink }}>
             <div style={{ width: 24, height: 24, transform: "rotate(45deg)", borderRadius: 6, background: HUES[0], boxShadow: "0 0 14px rgba(201,92,245,.6)" }} />
             <span style={{ fontFamily: "var(--font-display)", fontSize: 18 }}>
@@ -336,7 +336,7 @@ export function Filmstrip({
                     >
                       {done ? "✓" : String(i + 1).padStart(2, "0")}
                     </div>
-                    <span style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, letterSpacing: ".12em", color: activeNode ? C.ink : C.dim }}>{label}</span>
+                    <span className="pv-hide-xs" style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, letterSpacing: ".12em", color: activeNode ? C.ink : C.dim, whiteSpace: "nowrap" }}>{label}</span>
                   </div>
                 );
               })}
@@ -386,7 +386,7 @@ export function Filmstrip({
         {/* STATION 2 — X-RAY BAY */}
         <Station n="02" title="Station 02 · X-Ray Bay · see through the pack">
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, alignItems: "stretch" }}>
-            <div style={{ flex: "1 1 340px", minWidth: 320, display: "flex", flexDirection: "column", gap: 16 }}>
+            <div style={{ flex: "1 1 340px", minWidth: "min(320px, 100%)", display: "flex", flexDirection: "column", gap: 16 }}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 18, alignItems: "center", borderRadius: 16, padding: "20px 22px", background: "linear-gradient(120deg,rgba(63,240,207,.08),rgba(123,123,255,.06))", border: `1px solid ${v.color}44` }}>
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 30, color: v.color }}>{v.text}</div>
@@ -419,7 +419,7 @@ export function Filmstrip({
               )}
             </div>
 
-            <div style={{ flex: "0 0 320px", borderRadius: 16, padding: 20, background: C.panel, border: `1px solid ${C.border}`, alignSelf: "flex-start" }}>
+            <div style={{ flex: "1 1 300px", minWidth: "min(300px, 100%)", borderRadius: 16, padding: 20, background: C.panel, border: `1px solid ${C.border}`, alignSelf: "flex-start" }}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "#8a83a0", whiteSpace: "nowrap" }}>Pool · oracle-priced</div>
                 <ProvenanceBadge provenance={active.poolProvenance} fallback={active.poolFallback} align="right" />
@@ -663,10 +663,13 @@ export function Filmstrip({
         </Station>
       </div>
 
-      {/* swipe hint + disclaimer */}
-      <div style={{ position: "fixed", bottom: 20, left: "50%", transform: "translateX(-50%)", zIndex: 30, fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".14em", color: C.dim, textAlign: "center", pointerEvents: "none" }}>
-        ⟵ SWIPE OR SCROLL SIDEWAYS TO RIDE THE LINE ⟶
-        <div style={{ marginTop: 4, opacity: 0.7 }}>Independent tooling for Renaiss · not financial advice · card names for ID only (© their owners)</div>
+      {/* swipe hint + disclaimer — a full-width fade-to-background bar so scrolling station
+          content dissolves under it instead of visibly colliding with the text. */}
+      <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 30, padding: "34px 16px 12px", background: "linear-gradient(transparent, rgba(8,7,12,.94) 42%)", textAlign: "center", pointerEvents: "none" }}>
+        <div className="pv-hide-xs" style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".14em", color: C.dim }}>
+          ⟵ SWIPE OR SCROLL SIDEWAYS TO RIDE THE LINE ⟶
+        </div>
+        <div style={{ marginTop: 4, opacity: 0.7, fontFamily: "var(--font-mono)", fontSize: 9.5, letterSpacing: ".08em", color: C.dim, lineHeight: 1.4 }}>Independent tooling for Renaiss · not financial advice · card names for ID only (© their owners)</div>
       </div>
 
       {/* Floating grounded advisor */}
@@ -677,7 +680,7 @@ export function Filmstrip({
 
 function Station({ n, title, children, center }: { n: string; title: string; children: React.ReactNode; center?: boolean }) {
   return (
-    <div style={{ width: "100vw", height: "100vh", overflowY: "auto", position: "relative", padding: "112px 40px 60px", display: center ? "flex" : "block", alignItems: center ? "center" : undefined, justifyContent: center ? "center" : undefined }}>
+    <div style={{ width: "100vw", height: "100vh", overflowY: "auto", position: "relative", padding: "112px clamp(16px,5vw,40px) 96px", display: center ? "flex" : "block", alignItems: center ? "center" : undefined, justifyContent: center ? "center" : undefined }}>
       <div style={{ position: "absolute", top: 60, right: "5%", fontFamily: "var(--font-display)", fontSize: "34vw", lineHeight: 0.7, color: "transparent", WebkitTextStroke: "1.5px rgba(255,255,255,.035)", pointerEvents: "none", userSelect: "none" }}>{n}</div>
       <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", width: "100%" }}>
         {!center && <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "#8a83a0", marginBottom: 16 }}>{title}</div>}

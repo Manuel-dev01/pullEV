@@ -117,3 +117,9 @@ body {
      stacks, so it never overlaps the EV console. */
   .pv-hide-sm { display: none !important; }
 }
+@media (max-width: 560px) {
+  /* On phones the app rail is too narrow for the station text labels (they collide) and
+     the sideways-swipe hint is redundant (swiping is native). Hide both; the numbered
+     rail nodes and the in-body station title still orient the user. */
+  .pv-hide-xs { display: none !important; }
+}
