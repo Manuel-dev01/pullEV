@@ -68,6 +68,12 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
 }
+/* Hero EV console: float while holding its 3D tilt (a plain translateY keyframe
+   would clobber the base rotate* transform and render the card flat). */
+@keyframes pv-console-float {
+  0%, 100% { transform: translateY(0) rotateY(-16deg) rotateX(6deg) rotate(-4deg); }
+  50% { transform: translateY(10px) rotateY(-16deg) rotateX(6deg) rotate(-4deg); }
+}
 /* Slanted float for the hero slab chips (rotation held via --r, matches FOIL design). */
 @keyframes pv-floaty-r {
   0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
