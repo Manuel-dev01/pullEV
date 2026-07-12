@@ -17,7 +17,7 @@ It refuses anything it cannot source.
 **Video (90s):** [YouTube](https://www.youtube.com/watch?v=2mFQuAnavfQ) &middot;
 **Engine health:** [`/api/health`](https://pullev-engine-production.up.railway.app/api/health)
 
-> **New here? Judges start with the [guided walkthrough](docs/demo-script.md)** (drive it yourself in ~2 minutes),
+> **New here? start with the [guided walkthrough](docs/demo-script.md)** (drive it yourself in ~2 minutes),
 > then skim [Quickstart](#quickstart) and [Safety](#safety-and-responsible-handling).
 
 ## Contents
